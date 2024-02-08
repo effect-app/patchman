@@ -1,4 +1,4 @@
-import { Option, ReadonlyArray, pipe } from "effect";
+import { ReadonlyArray, pipe } from "effect";
 import fs from "fs";
 import path from "path";
 
@@ -20,7 +20,7 @@ const patches = (await import("./package.json", { assert: { type: "json" } }))
   .default.pnpm.patchedDependencies;
 
 const repos = repoNames.map((repo) => path.join(process.env.HOME!, "pj", repo));
-const desiredPatches = Object.entries(patches).map(([name, patch]) => {
+const availablePatches = Object.entries(patches).map(([name, patch]) => {
   return [name.substring(0, name.substring(1).indexOf("@") + 1), name, patch];
 });
 
@@ -30,25 +30,27 @@ await Promise.all(
       assert: { type: "json" },
     }).then((_) => _.default);
 
-    const patchies = pipe(
+    const desiredPatches = pipe(
       Object.entries(pj.pnpm.patchedDependencies).map(([name, patch]) => {
         return name.substring(0, name.substring(1).indexOf("@") + 1);
       }),
-      ReadonlyArray.filterMap((name) => {
-        const match = desiredPatches.find(
-          ([desiredName, desiredPatch]) => desiredName === name
-        );
-        return match ? Option.some(match) : Option.none();
-      })
+      ReadonlyArray.filterMap((name) =>
+        ReadonlyArray.findFirst(
+          availablePatches,
+          ([desiredName]) => desiredName === name
+        )
+      )
     );
 
     const repoPatches = path.join(repo, "patches");
-    fs.rmSync(repoPatches, { recursive: true });
+    if (fs.existsSync(repoPatches)) {
+      fs.rmSync(repoPatches, { recursive: true });
+    }
     fs.mkdirSync(repoPatches);
     await touch(repoPatches + "/.gitkeep");
 
-    pj.pnpm.patchedDependencies = patchies.reduce(
-      (acc, [name, desiredName, desiredPatch]) => {
+    pj.pnpm.patchedDependencies = desiredPatches.reduce(
+      (acc, [_, desiredName, desiredPatch]) => {
         acc[desiredName] = desiredPatch;
         return acc;
       },
@@ -59,7 +61,7 @@ await Promise.all(
       JSON.stringify(pj, null, 2)
     );
 
-    patchies.forEach(([name, desiredName, desiredPatch]) => {
+    desiredPatches.forEach(([_, __, desiredPatch]) => {
       fs.copyFileSync(desiredPatch, path.join(repo, desiredPatch));
     });
   })
