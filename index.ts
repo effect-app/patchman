@@ -11,6 +11,19 @@ const desiredPatches = Object.entries(patches).map(([name, patch]) => {
   return [name.substring(0, name.substring(1).indexOf("@") + 1), name, patch]
 })
 
+const touch = async (filename: string) => {
+  const time = new Date();
+
+await fs.promises.utimes(filename, time, time)
+.catch(async function (err) {
+    if ('ENOENT' !== err.code) {
+        throw err;
+    }
+    let fh = await fs.promises.open(filename, 'a');
+    await fh.close();
+});
+}
+
 await Promise.all(repos.map(async repo => {
   const pj = (await import(path.join(repo, "package.json"), { assert: { type: "json"}})).default
 
@@ -24,6 +37,7 @@ await Promise.all(repos.map(async repo => {
   const repoPatches = path.join(repo, "patches")
   fs.rmSync(repoPatches, { recursive: true })
   fs.mkdirSync(repoPatches)
+  await touch(repoPatches + "/.gitkeep")
 
   pj.pnpm.patchedDependencies = patchies.reduce((acc, [name, desiredName, desiredPatch]) => { acc[desiredName]= desiredPatch; return acc}, { } as any)
   fs.writeFileSync(path.join(repo, "package.json"), JSON.stringify(pj, null, 2))
