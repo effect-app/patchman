@@ -4,7 +4,9 @@ const patches = (await import("./package.json", { assert: { type: "json"}})).def
 import fs from "fs"
 import path from "path"
 
-const repos = ["macs-scanner", "macs-configurator", "getsignalz", "bufdy", "effect-app/libs", "effect-app/boilerplate"].map(repo => path.join(process.env.HOME!, "pj", repo))
+const repoNames = process.argv[2]?.split(",") ?? []
+
+const repos = repoNames.map(repo => path.join(process.env.HOME!, "pj", repo))
 const desiredPatches = Object.entries(patches).map(([name, patch]) => {
   return [name.substring(0, name.substring(1).indexOf("@") + 1), name, patch]
 })
@@ -19,7 +21,9 @@ await Promise.all(repos.map(async repo => {
     return match ? Option.some(match) : Option.none()
   }))
 
-  fs.rmdirSync(path.join(repo, "patches"), { recursive: true })
+  const repoPatches = path.join(repo, "patches")
+  fs.rmSync(repoPatches, { recursive: true })
+  fs.mkdirSync(repoPatches)
 
   pj.pnpm.patchedDependencies = patchies.reduce((acc, [name, desiredName, desiredPatch]) => { acc[desiredName]= desiredPatch; return acc}, { } as any)
   fs.writeFileSync(path.join(repo, "package.json"), JSON.stringify(pj, null, 2))
