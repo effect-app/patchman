@@ -1,0 +1,13 @@
+diff --git a/dist/module.mjs b/dist/module.mjs
+index 73a3c87b5c1af0571337c66dbe6f0aef36a0034e..319493594d33cdcf7b00f6a4e0d79fd5b43fe752 100644
+--- a/dist/module.mjs
++++ b/dist/module.mjs
+@@ -153,7 +153,7 @@ const icon = async (pwa) => {
+     getContents: () => `export type IconSize = number | ${options.sizes.map((size) => `'${size}'`).join(" | ")}`
+   }).dst.replace(/\.d\.ts$/, "");
+   nuxt.hook("prepare:types", ({ tsConfig }) => {
+-    tsConfig.compilerOptions.paths["#pwa"] = [relative(nuxt.options.srcDir, typesPath)];
++    tsConfig.compilerOptions.paths["#pwa"] = ["./" + relative(nuxt.options.srcDir, typesPath)];
+   });
+ };
+ 

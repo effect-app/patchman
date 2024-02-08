@@ -1,0 +1,41 @@
+{
+  "name": "patchman",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "vite-node": "^1.2.2",
+    "@types/node": "latest"
+  },
+  "dependencies": {
+    "@effect/language-service": "0.0.19",
+    "@typescript-eslint/scope-manager": "6.21.0",
+    "eslint-plugin-codegen": "0.17.0",
+    "@phaphoso/eslint-plugin-dprint": "0.5.2",
+    "@kevinmarrec/nuxt-pwa": "^0.17.0",
+    "date-fns": "2.30.0",
+    "fast-check": "3.15.1",
+    "@fp-ts/optic": "0.22.0",
+    "effect": "2.2.5",
+    "@effect/schema": "0.61.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@kevinmarrec/nuxt-pwa@0.17.0": "patches/@kevinmarrec__nuxt-pwa@0.17.0.patch",
+      "@effect/language-service@0.0.19": "patches/@effect__language-service@0.0.19.patch",
+      "@typescript-eslint/scope-manager@6.21.0": "patches/@typescript-eslint__scope-manager@6.21.0.patch",
+      "eslint-plugin-codegen@0.17.0": "patches/eslint-plugin-codegen@0.17.0.patch",
+      "@phaphoso/eslint-plugin-dprint@0.5.2": "patches/@phaphoso__eslint-plugin-dprint@0.5.2.patch",
+      "date-fns@2.30.0": "patches/date-fns@2.30.0.patch",
+      "fast-check@3.15.1": "patches/fast-check@3.15.1.patch",
+      "@fp-ts/optic@0.22.0": "patches/@fp-ts__optic@0.22.0.patch",
+      "effect@2.2.5": "patches/effect@2.2.5.patch",
+      "@effect/schema@0.61.7": "patches/@effect__schema@0.61.7.patch"
+    }
+  },
+  "scripts": {
+    "start": "vite-node ./index.ts"
+  }
+}
