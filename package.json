@@ -3,22 +3,22 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "vite-node": "^1.2.2",
-    "@types/node": "latest"
+    "@types/node": "latest",
+    "vite-node": "^1.2.2"
   },
   "dependencies": {
     "@effect/language-service": "0.0.19",
-    "@typescript-eslint/scope-manager": "6.21.0",
-    "eslint-plugin-codegen": "0.17.0",
-    "@phaphoso/eslint-plugin-dprint": "0.5.2",
+    "@effect/schema": "^0.62.0",
+    "@fp-ts/optic": "^0.22.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
-    "date-fns": "2.30.0",
-    "fast-check": "3.15.1",
+    "@phaphoso/eslint-plugin-dprint": "^0.5.2",
+    "@typescript-eslint/scope-manager": "^6.21.0",
     "clipboardy": "^3.0.0",
-    "@fp-ts/optic": "0.22.0",
-    "primevue": "3.47.1",
-    "effect": "2.2.5",
-    "@effect/schema": "0.61.7"
+    "date-fns": "2.30.0",
+    "effect": "^2.3.0",
+    "eslint-plugin-codegen": "^0.17.0",
+    "fast-check": "^3.15.1",
+    "primevue": "3.47.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -35,8 +35,8 @@
       "date-fns@2.30.0": "patches/date-fns@2.30.0.patch",
       "fast-check@3.15.1": "patches/fast-check@3.15.1.patch",
       "@fp-ts/optic@0.22.0": "patches/@fp-ts__optic@0.22.0.patch",
-      "effect@2.2.5": "patches/effect@2.2.5.patch",
-      "@effect/schema@0.61.7": "patches/@effect__schema@0.61.7.patch"
+      "effect@2.3.0": "patches/effect@2.3.0.patch",
+      "@effect/schema@0.62.0": "patches/@effect__schema@0.62.0.patch"
     }
   },
   "scripts": {
