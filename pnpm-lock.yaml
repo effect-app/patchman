@@ -30,7 +30,7 @@ patchedDependencies:
     hash: g5hqt5bhnjezqo5vnkpprfkba4
     path: patches/date-fns@2.30.0.patch
   effect@2.3.1:
-    hash: r2henvujbies6s5rt3kblmuz6i
+    hash: p57rapm53cubac4bocawyxkdwa
     path: patches/effect@2.3.1.patch
   eslint-plugin-codegen@0.17.0:
     hash: 3ogk7peuefdu45q3hbzcgdiuna
@@ -69,7 +69,7 @@ dependencies:
     version: 2.30.0(patch_hash=g5hqt5bhnjezqo5vnkpprfkba4)
   effect:
     specifier: ^2.3.1
-    version: 2.3.1(patch_hash=r2henvujbies6s5rt3kblmuz6i)
+    version: 2.3.1(patch_hash=p57rapm53cubac4bocawyxkdwa)
   eslint-plugin-codegen:
     specifier: ^0.17.0
     version: 0.17.0(patch_hash=3ogk7peuefdu45q3hbzcgdiuna)
@@ -326,7 +326,7 @@ packages:
       effect: ^2.3.1
       fast-check: ^3.13.2
     dependencies:
-      effect: 2.3.1(patch_hash=r2henvujbies6s5rt3kblmuz6i)
+      effect: 2.3.1(patch_hash=p57rapm53cubac4bocawyxkdwa)
       fast-check: 3.15.1(patch_hash=gmhutzas2jzobvkhr72gjyjori)
     dev: false
     patched: true
@@ -336,7 +336,7 @@ packages:
     peerDependencies:
       effect: ^2.3.0
     dependencies:
-      effect: 2.3.1(patch_hash=r2henvujbies6s5rt3kblmuz6i)
+      effect: 2.3.1(patch_hash=p57rapm53cubac4bocawyxkdwa)
     dev: false
 
   /@esbuild/aix-ppc64@0.19.12:
@@ -600,7 +600,7 @@ packages:
       effect: ^2.0.0
     dependencies:
       '@effect/typeclass': 0.22.15(effect@2.3.1)
-      effect: 2.3.1(patch_hash=r2henvujbies6s5rt3kblmuz6i)
+      effect: 2.3.1(patch_hash=p57rapm53cubac4bocawyxkdwa)
     dev: false
     patched: true
 
@@ -1274,7 +1274,7 @@ packages:
       esutils: 2.0.3
     dev: false
 
-  /effect@2.3.1(patch_hash=r2henvujbies6s5rt3kblmuz6i):
+  /effect@2.3.1(patch_hash=p57rapm53cubac4bocawyxkdwa):
     resolution: {integrity: sha512-bOmhWIt3WjccP2DXan8eJmIqjVXwan0hj+Y6BHJOauHt8HNEuQndp6D7bAUsUsjPoKGCU70J9sMeT5QEVYlgbQ==}
     dev: false
     patched: true
