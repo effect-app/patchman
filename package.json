@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@effect/language-service": "0.0.19",
-    "@effect/schema": "^0.62.3",
+    "@effect/schema": "^0.62.4",
     "@fp-ts/optic": "^0.22.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
@@ -35,8 +35,8 @@
       "date-fns@2.30.0": "patches/date-fns@2.30.0.patch",
       "fast-check@3.15.1": "patches/fast-check@3.15.1.patch",
       "@fp-ts/optic@0.22.0": "patches/@fp-ts__optic@0.22.0.patch",
-      "@effect/schema@0.62.3": "patches/@effect__schema@0.62.3.patch",
-      "effect@2.3.3": "patches/effect@2.3.3.patch"
+      "effect@2.3.3": "patches/effect@2.3.3.patch",
+      "@effect/schema@0.62.4": "patches/@effect__schema@0.62.4.patch"
     }
   },
   "scripts": {
