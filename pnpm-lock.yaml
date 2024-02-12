@@ -8,9 +8,9 @@ patchedDependencies:
   '@effect/language-service@0.0.19':
     hash: izp2ue34jjv4swyrhg2ux4ha3e
     path: patches/@effect__language-service@0.0.19.patch
-  '@effect/schema@0.62.2':
-    hash: ewi33bvjf3buetg2gkyu2ezj64
-    path: patches/@effect__schema@0.62.2.patch
+  '@effect/schema@0.62.3':
+    hash: 2uflyfaiw7gy2thojjrrtq57eu
+    path: patches/@effect__schema@0.62.3.patch
   '@fp-ts/optic@0.22.0':
     hash: 2yuoegl5dhwsslauskmjxbvoeu
     path: patches/@fp-ts__optic@0.22.0.patch
@@ -29,9 +29,9 @@ patchedDependencies:
   date-fns@2.30.0:
     hash: g5hqt5bhnjezqo5vnkpprfkba4
     path: patches/date-fns@2.30.0.patch
-  effect@2.3.2:
-    hash: twvxtuzcxyd4bhff2ata6usk6m
-    path: patches/effect@2.3.2.patch
+  effect@2.3.3:
+    hash: 6qkhwljniyysmghky2w7gjmpn4
+    path: patches/effect@2.3.3.patch
   eslint-plugin-codegen@0.17.0:
     hash: 3ogk7peuefdu45q3hbzcgdiuna
     path: patches/eslint-plugin-codegen@0.17.0.patch
@@ -47,11 +47,11 @@ dependencies:
     specifier: 0.0.19
     version: 0.0.19(patch_hash=izp2ue34jjv4swyrhg2ux4ha3e)
   '@effect/schema':
-    specifier: ^0.62.2
-    version: 0.62.2(patch_hash=ewi33bvjf3buetg2gkyu2ezj64)(effect@2.3.2)(fast-check@3.15.1)
+    specifier: ^0.62.3
+    version: 0.62.3(patch_hash=2uflyfaiw7gy2thojjrrtq57eu)(effect@2.3.3)(fast-check@3.15.1)
   '@fp-ts/optic':
     specifier: ^0.22.0
-    version: 0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.17)(effect@2.3.2)
+    version: 0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.18)(effect@2.3.3)
   '@kevinmarrec/nuxt-pwa':
     specifier: ^0.17.0
     version: 0.17.0(patch_hash=czkfnsqo5zyse2ghr474rk4p6a)
@@ -68,8 +68,8 @@ dependencies:
     specifier: 2.30.0
     version: 2.30.0(patch_hash=g5hqt5bhnjezqo5vnkpprfkba4)
   effect:
-    specifier: ^2.3.2
-    version: 2.3.2(patch_hash=twvxtuzcxyd4bhff2ata6usk6m)
+    specifier: ^2.3.3
+    version: 2.3.3(patch_hash=6qkhwljniyysmghky2w7gjmpn4)
   eslint-plugin-codegen:
     specifier: ^0.17.0
     version: 0.17.0(patch_hash=3ogk7peuefdu45q3hbzcgdiuna)
@@ -320,23 +320,23 @@ packages:
     dev: false
     patched: true
 
-  /@effect/schema@0.62.2(patch_hash=ewi33bvjf3buetg2gkyu2ezj64)(effect@2.3.2)(fast-check@3.15.1):
-    resolution: {integrity: sha512-pEHBjiaSxrF/nIRrt06X6PWJh06kJJndZx4JbLlWY5HDhE9v307AfbmUgf97aqJsl5SWofuMlfRBYt9JH4mP0Q==}
+  /@effect/schema@0.62.3(patch_hash=2uflyfaiw7gy2thojjrrtq57eu)(effect@2.3.3)(fast-check@3.15.1):
+    resolution: {integrity: sha512-kstVDXQGarDoOlb05tsszRDPrnudW+oHJ5ZJtCs8TOfR6WJOih1c24LTUSgAiyccENi/5lFC6CMFHcwroU8NDQ==}
     peerDependencies:
-      effect: ^2.3.2
+      effect: ^2.3.3
       fast-check: ^3.13.2
     dependencies:
-      effect: 2.3.2(patch_hash=twvxtuzcxyd4bhff2ata6usk6m)
+      effect: 2.3.3(patch_hash=6qkhwljniyysmghky2w7gjmpn4)
       fast-check: 3.15.1(patch_hash=gmhutzas2jzobvkhr72gjyjori)
     dev: false
     patched: true
 
-  /@effect/typeclass@0.22.17(effect@2.3.2):
-    resolution: {integrity: sha512-4cJev/bY4SiAafjcxnfkih6ZWuf9NzA12vhn0bAhuMgLlIPJGFdnIPURvrdtV6uQMsDVQpaBjoyWKqrmCAtb1Q==}
+  /@effect/typeclass@0.22.18(effect@2.3.3):
+    resolution: {integrity: sha512-TJY3q+HNrWSMNiVMKuqKoofjgSz2xAkQWR85NT5fvS/TUMXaKSvjyJmIioyFfyI3UQ35Gfc07WFP7UhI6ViaVQ==}
     peerDependencies:
-      effect: ^2.3.2
+      effect: ^2.3.3
     dependencies:
-      effect: 2.3.2(patch_hash=twvxtuzcxyd4bhff2ata6usk6m)
+      effect: 2.3.3(patch_hash=6qkhwljniyysmghky2w7gjmpn4)
     dev: false
 
   /@esbuild/aix-ppc64@0.19.12:
@@ -593,14 +593,14 @@ packages:
       '@fp-ts/core': 0.0.11
     dev: false
 
-  /@fp-ts/optic@0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.17)(effect@2.3.2):
+  /@fp-ts/optic@0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.18)(effect@2.3.3):
     resolution: {integrity: sha512-Kpg9bdA+q3d1I+ulENsax4iV6ge5TzRH6nj2/kdPPg42wtTmlir42oBlpbiwp3l3uNDja9rBWmuya0Q6GAmakQ==}
     peerDependencies:
       '@effect/typeclass': ^0.22.0
       effect: ^2.0.0
     dependencies:
-      '@effect/typeclass': 0.22.17(effect@2.3.2)
-      effect: 2.3.2(patch_hash=twvxtuzcxyd4bhff2ata6usk6m)
+      '@effect/typeclass': 0.22.18(effect@2.3.3)
+      effect: 2.3.3(patch_hash=6qkhwljniyysmghky2w7gjmpn4)
     dev: false
     patched: true
 
@@ -1073,7 +1073,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001585
+      caniuse-lite: 1.0.30001587
       electron-to-chromium: 1.4.665
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.3)
@@ -1106,8 +1106,8 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /caniuse-lite@1.0.30001585:
-    resolution: {integrity: sha512-yr2BWR1yLXQ8fMpdS/4ZZXpseBgE7o4g41x3a6AJOqZuOi+iE/WdJYAuZ6Y95i4Ohd2Y+9MzIWRR+uGABH4s3Q==}
+  /caniuse-lite@1.0.30001587:
+    resolution: {integrity: sha512-HMFNotUmLXn71BQxg8cijvqxnIAofforZOwGsxyXJ0qugTdspUF4sPSJ2vhgprHCB996tIDzEq1ubumPDV8ULA==}
     dev: false
 
   /chalk@2.4.2:
@@ -1274,8 +1274,8 @@ packages:
       esutils: 2.0.3
     dev: false
 
-  /effect@2.3.2(patch_hash=twvxtuzcxyd4bhff2ata6usk6m):
-    resolution: {integrity: sha512-cEgbb56c9415hiHwX55mG3w8IH147bk1W9i12fEpM+LBCmMISrFoYFXPTxVYA1ezNKJW/6rrBdNTRBM8DVYrBw==}
+  /effect@2.3.3(patch_hash=6qkhwljniyysmghky2w7gjmpn4):
+    resolution: {integrity: sha512-ZmcaQqedKhQT2Zb1X+sCCIXJgz0MAJ/F9rXe53WsjjU6pgtJlgRwGChk+E51uH/8iz/hP99JiPrltuIutes9yw==}
     dev: false
     patched: true
 
