@@ -8,9 +8,9 @@ patchedDependencies:
   '@effect/language-service@0.0.19':
     hash: izp2ue34jjv4swyrhg2ux4ha3e
     path: patches/@effect__language-service@0.0.19.patch
-  '@effect/schema@0.62.5':
-    hash: hp7gu2tfjvz7bidhtlbrypkafm
-    path: patches/@effect__schema@0.62.5.patch
+  '@effect/schema@0.62.6':
+    hash: xl7hmec6rnt5wfsg6fv4tjlqma
+    path: patches/@effect__schema@0.62.6.patch
   '@fp-ts/optic@0.22.0':
     hash: 2yuoegl5dhwsslauskmjxbvoeu
     path: patches/@fp-ts__optic@0.22.0.patch
@@ -29,9 +29,9 @@ patchedDependencies:
   date-fns@2.30.0:
     hash: g5hqt5bhnjezqo5vnkpprfkba4
     path: patches/date-fns@2.30.0.patch
-  effect@2.3.4:
-    hash: psx555u4x742ak7efaavifd7tq
-    path: patches/effect@2.3.4.patch
+  effect@2.3.5:
+    hash: 7flqffzzb5nemzq6gsay3plece
+    path: patches/effect@2.3.5.patch
   eslint-plugin-codegen@0.17.0:
     hash: 3ogk7peuefdu45q3hbzcgdiuna
     path: patches/eslint-plugin-codegen@0.17.0.patch
@@ -47,11 +47,11 @@ dependencies:
     specifier: 0.0.19
     version: 0.0.19(patch_hash=izp2ue34jjv4swyrhg2ux4ha3e)
   '@effect/schema':
-    specifier: ^0.62.5
-    version: 0.62.5(patch_hash=hp7gu2tfjvz7bidhtlbrypkafm)(effect@2.3.4)(fast-check@3.15.1)
+    specifier: ^0.62.6
+    version: 0.62.6(patch_hash=xl7hmec6rnt5wfsg6fv4tjlqma)(effect@2.3.5)(fast-check@3.15.1)
   '@fp-ts/optic':
     specifier: ^0.22.0
-    version: 0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.19)(effect@2.3.4)
+    version: 0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.20)(effect@2.3.5)
   '@kevinmarrec/nuxt-pwa':
     specifier: ^0.17.0
     version: 0.17.0(patch_hash=czkfnsqo5zyse2ghr474rk4p6a)
@@ -68,8 +68,8 @@ dependencies:
     specifier: 2.30.0
     version: 2.30.0(patch_hash=g5hqt5bhnjezqo5vnkpprfkba4)
   effect:
-    specifier: ^2.3.4
-    version: 2.3.4(patch_hash=psx555u4x742ak7efaavifd7tq)
+    specifier: ^2.3.5
+    version: 2.3.5(patch_hash=7flqffzzb5nemzq6gsay3plece)
   eslint-plugin-codegen:
     specifier: ^0.17.0
     version: 0.17.0(patch_hash=3ogk7peuefdu45q3hbzcgdiuna)
@@ -78,7 +78,7 @@ dependencies:
     version: 3.15.1(patch_hash=gmhutzas2jzobvkhr72gjyjori)
   primevue:
     specifier: 3.47.1
-    version: 3.47.1(patch_hash=vtoc5dfd36a3w4ts5pkgsixqqq)(vue@3.4.18)
+    version: 3.47.1(patch_hash=vtoc5dfd36a3w4ts5pkgsixqqq)(vue@3.4.19)
   typescript:
     specifier: ^5.0.0
     version: 5.3.3
@@ -320,23 +320,23 @@ packages:
     dev: false
     patched: true
 
-  /@effect/schema@0.62.5(patch_hash=hp7gu2tfjvz7bidhtlbrypkafm)(effect@2.3.4)(fast-check@3.15.1):
-    resolution: {integrity: sha512-nMtU72HNnzoAj0d0KTY8D+hDm6Xg0A2J3+UW1+cF+L3rm2PGeqNkSfj7LzL74gf2/PBIbEX6v80Kg4Cjugnflw==}
+  /@effect/schema@0.62.6(patch_hash=xl7hmec6rnt5wfsg6fv4tjlqma)(effect@2.3.5)(fast-check@3.15.1):
+    resolution: {integrity: sha512-Y/vkQ63EXcQUiJM01lbZ5lb7wCEK8gTcM5wZ1L20TvqFuAXHLp0cs66L3Sk3eIbiX0mv4aYxBWSKhwvhWAhc6g==}
     peerDependencies:
-      effect: ^2.3.4
+      effect: ^2.3.5
       fast-check: ^3.13.2
     dependencies:
-      effect: 2.3.4(patch_hash=psx555u4x742ak7efaavifd7tq)
+      effect: 2.3.5(patch_hash=7flqffzzb5nemzq6gsay3plece)
       fast-check: 3.15.1(patch_hash=gmhutzas2jzobvkhr72gjyjori)
     dev: false
     patched: true
 
-  /@effect/typeclass@0.22.19(effect@2.3.4):
-    resolution: {integrity: sha512-SzOlnb5QRRyS+BJvqxEouUM9v22SYlCI8nbCiS4QVeL2S6Sn0dAqgJsYbDZZAQNsL3GCTWlVww3SQdPEG/Y2QQ==}
+  /@effect/typeclass@0.22.20(effect@2.3.5):
+    resolution: {integrity: sha512-UMb8lJb/1inZXEXZLbLEcu8ImL/vdiFEZeKIEbM6mGZvAPwL53+77Bh6xBV85c12C4Szhdvvo6omlZJ5SuNnAg==}
     peerDependencies:
-      effect: ^2.3.4
+      effect: ^2.3.5
     dependencies:
-      effect: 2.3.4(patch_hash=psx555u4x742ak7efaavifd7tq)
+      effect: 2.3.5(patch_hash=7flqffzzb5nemzq6gsay3plece)
     dev: false
 
   /@esbuild/aix-ppc64@0.19.12:
@@ -593,14 +593,14 @@ packages:
       '@fp-ts/core': 0.0.11
     dev: false
 
-  /@fp-ts/optic@0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.19)(effect@2.3.4):
+  /@fp-ts/optic@0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.20)(effect@2.3.5):
     resolution: {integrity: sha512-Kpg9bdA+q3d1I+ulENsax4iV6ge5TzRH6nj2/kdPPg42wtTmlir42oBlpbiwp3l3uNDja9rBWmuya0Q6GAmakQ==}
     peerDependencies:
       '@effect/typeclass': ^0.22.0
       effect: ^2.0.0
     dependencies:
-      '@effect/typeclass': 0.22.19(effect@2.3.4)
-      effect: 2.3.4(patch_hash=psx555u4x742ak7efaavifd7tq)
+      '@effect/typeclass': 0.22.20(effect@2.3.5)
+      effect: 2.3.5(patch_hash=7flqffzzb5nemzq6gsay3plece)
     dev: false
     patched: true
 
@@ -882,77 +882,77 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: false
 
-  /@vue/compiler-core@3.4.18:
-    resolution: {integrity: sha512-F7YK8lMK0iv6b9/Gdk15A67wM0KKZvxDxed0RR60C1z9tIJTKta+urs4j0RTN5XqHISzI3etN3mX0uHhjmoqjQ==}
+  /@vue/compiler-core@3.4.19:
+    resolution: {integrity: sha512-gj81785z0JNzRcU0Mq98E56e4ltO1yf8k5PQ+tV/7YHnbZkrM0fyFyuttnN8ngJZjbpofWE/m4qjKBiLl8Ju4w==}
     dependencies:
       '@babel/parser': 7.23.9
-      '@vue/shared': 3.4.18
+      '@vue/shared': 3.4.19
       entities: 4.5.0
       estree-walker: 2.0.2
       source-map-js: 1.0.2
     dev: false
 
-  /@vue/compiler-dom@3.4.18:
-    resolution: {integrity: sha512-24Eb8lcMfInefvQ6YlEVS18w5Q66f4+uXWVA+yb7praKbyjHRNuKVWGuinfSSjM0ZIiPi++QWukhkgznBaqpEA==}
+  /@vue/compiler-dom@3.4.19:
+    resolution: {integrity: sha512-vm6+cogWrshjqEHTzIDCp72DKtea8Ry/QVpQRYoyTIg9k7QZDX6D8+HGURjtmatfgM8xgCFtJJaOlCaRYRK3QA==}
     dependencies:
-      '@vue/compiler-core': 3.4.18
-      '@vue/shared': 3.4.18
+      '@vue/compiler-core': 3.4.19
+      '@vue/shared': 3.4.19
     dev: false
 
-  /@vue/compiler-sfc@3.4.18:
-    resolution: {integrity: sha512-rG5tqtnzwrVpMqAQ7FHtvHaV70G6LLfJIWLYZB/jZ9m/hrnZmIQh+H3ewnC5onwe/ibljm9+ZupxeElzqCkTAw==}
+  /@vue/compiler-sfc@3.4.19:
+    resolution: {integrity: sha512-LQ3U4SN0DlvV0xhr1lUsgLCYlwQfUfetyPxkKYu7dkfvx7g3ojrGAkw0AERLOKYXuAGnqFsEuytkdcComei3Yg==}
     dependencies:
       '@babel/parser': 7.23.9
-      '@vue/compiler-core': 3.4.18
-      '@vue/compiler-dom': 3.4.18
-      '@vue/compiler-ssr': 3.4.18
-      '@vue/shared': 3.4.18
+      '@vue/compiler-core': 3.4.19
+      '@vue/compiler-dom': 3.4.19
+      '@vue/compiler-ssr': 3.4.19
+      '@vue/shared': 3.4.19
       estree-walker: 2.0.2
       magic-string: 0.30.7
       postcss: 8.4.35
       source-map-js: 1.0.2
     dev: false
 
-  /@vue/compiler-ssr@3.4.18:
-    resolution: {integrity: sha512-hSlv20oUhPxo2UYUacHgGaxtqP0tvFo6ixxxD6JlXIkwzwoZ9eKK6PFQN4hNK/R13JlNyldwWt/fqGBKgWJ6nQ==}
+  /@vue/compiler-ssr@3.4.19:
+    resolution: {integrity: sha512-P0PLKC4+u4OMJ8sinba/5Z/iDT84uMRRlrWzadgLA69opCpI1gG4N55qDSC+dedwq2fJtzmGald05LWR5TFfLw==}
     dependencies:
-      '@vue/compiler-dom': 3.4.18
-      '@vue/shared': 3.4.18
+      '@vue/compiler-dom': 3.4.19
+      '@vue/shared': 3.4.19
     dev: false
 
-  /@vue/reactivity@3.4.18:
-    resolution: {integrity: sha512-7uda2/I0jpLiRygprDo5Jxs2HJkOVXcOMlyVlY54yRLxoycBpwGJRwJT9EdGB4adnoqJDXVT2BilUAYwI7qvmg==}
+  /@vue/reactivity@3.4.19:
+    resolution: {integrity: sha512-+VcwrQvLZgEclGZRHx4O2XhyEEcKaBi50WbxdVItEezUf4fqRh838Ix6amWTdX0CNb/b6t3Gkz3eOebfcSt+UA==}
     dependencies:
-      '@vue/shared': 3.4.18
+      '@vue/shared': 3.4.19
     dev: false
 
-  /@vue/runtime-core@3.4.18:
-    resolution: {integrity: sha512-7mU9diCa+4e+8/wZ7Udw5pwTH10A11sZ1nldmHOUKJnzCwvZxfJqAtw31mIf4T5H2FsLCSBQT3xgioA9vIjyDQ==}
+  /@vue/runtime-core@3.4.19:
+    resolution: {integrity: sha512-/Z3tFwOrerJB/oyutmJGoYbuoadphDcJAd5jOuJE86THNZji9pYjZroQ2NFsZkTxOq0GJbb+s2kxTYToDiyZzw==}
     dependencies:
-      '@vue/reactivity': 3.4.18
-      '@vue/shared': 3.4.18
+      '@vue/reactivity': 3.4.19
+      '@vue/shared': 3.4.19
     dev: false
 
-  /@vue/runtime-dom@3.4.18:
-    resolution: {integrity: sha512-2y1Mkzcw1niSfG7z3Qx+2ir9Gb4hdTkZe5p/I8x1aTIKQE0vY0tPAEUPhZm5tx6183gG3D/KwHG728UR0sIufA==}
+  /@vue/runtime-dom@3.4.19:
+    resolution: {integrity: sha512-IyZzIDqfNCF0OyZOauL+F4yzjMPN2rPd8nhqPP2N1lBn3kYqJpPHHru+83Rkvo2lHz5mW+rEeIMEF9qY3PB94g==}
     dependencies:
-      '@vue/runtime-core': 3.4.18
-      '@vue/shared': 3.4.18
+      '@vue/runtime-core': 3.4.19
+      '@vue/shared': 3.4.19
       csstype: 3.1.3
     dev: false
 
-  /@vue/server-renderer@3.4.18(vue@3.4.18):
-    resolution: {integrity: sha512-YJd1wa7mzUN3NRqLEsrwEYWyO+PUBSROIGlCc3J/cvn7Zu6CxhNLgXa8Z4zZ5ja5/nviYO79J1InoPeXgwBTZA==}
+  /@vue/server-renderer@3.4.19(vue@3.4.19):
+    resolution: {integrity: sha512-eAj2p0c429RZyyhtMRnttjcSToch+kTWxFPHlzGMkR28ZbF1PDlTcmGmlDxccBuqNd9iOQ7xPRPAGgPVj+YpQw==}
     peerDependencies:
-      vue: 3.4.18
+      vue: 3.4.19
     dependencies:
-      '@vue/compiler-ssr': 3.4.18
-      '@vue/shared': 3.4.18
-      vue: 3.4.18(typescript@5.3.3)
+      '@vue/compiler-ssr': 3.4.19
+      '@vue/shared': 3.4.19
+      vue: 3.4.19(typescript@5.3.3)
     dev: false
 
-  /@vue/shared@3.4.18:
-    resolution: {integrity: sha512-CxouGFxxaW5r1WbrSmWwck3No58rApXgRSBxrqgnY1K+jk20F6DrXJkHdH9n4HVT+/B6G2CAn213Uq3npWiy8Q==}
+  /@vue/shared@3.4.19:
+    resolution: {integrity: sha512-/KliRRHMF6LoiThEy+4c1Z4KB/gbPrGjWwJR+crg2otgrf/egKzRaCPvJ51S5oetgsgXLfc4Rm5ZgrKHZrtMSw==}
     dev: false
 
   /acorn-jsx@5.3.2(acorn@8.11.3):
@@ -1275,8 +1275,8 @@ packages:
       esutils: 2.0.3
     dev: false
 
-  /effect@2.3.4(patch_hash=psx555u4x742ak7efaavifd7tq):
-    resolution: {integrity: sha512-ojmCOnql+5HzBEy6l78E9t4PiuFNxRwzzRulF5BGhFnnBbVlU/LieOm3V/2MHVK4SqK0F3YDFG69PQpFe/49UQ==}
+  /effect@2.3.5(patch_hash=7flqffzzb5nemzq6gsay3plece):
+    resolution: {integrity: sha512-qarp/WBRty4VM//ZEKDY8Bu3Tolr1afEIwFVZtU3eMOtBZpRIQkLVQMTOjUTt3qeJAAIHfYfEk7GiKg6ABCWlg==}
     dev: false
     patched: true
 
@@ -2454,12 +2454,12 @@ packages:
       react-is: 17.0.2
     dev: false
 
-  /primevue@3.47.1(patch_hash=vtoc5dfd36a3w4ts5pkgsixqqq)(vue@3.4.18):
+  /primevue@3.47.1(patch_hash=vtoc5dfd36a3w4ts5pkgsixqqq)(vue@3.4.19):
     resolution: {integrity: sha512-khBr3xu63dlsJDnLISlplMuS/2R1mqjEArpHQE1jpw8+S3dI5MTabnL6Q/RM+o6SYbknafMH/8mjwkO+m8Cvjw==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
-      vue: 3.4.18(typescript@5.3.3)
+      vue: 3.4.19(typescript@5.3.3)
     dev: false
     patched: true
 
@@ -3057,19 +3057,19 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vue@3.4.18(typescript@5.3.3):
-    resolution: {integrity: sha512-0zLRYamFRe0wF4q2L3O24KQzLyLpL64ye1RUToOgOxuWZsb/FhaNRdGmeozdtVYLz6tl94OXLaK7/WQIrVCw1A==}
+  /vue@3.4.19(typescript@5.3.3):
+    resolution: {integrity: sha512-W/7Fc9KUkajFU8dBeDluM4sRGc/aa4YJnOYck8dkjgZoXtVsn3OeTGni66FV1l3+nvPA7VBFYtPioaGKUmEADw==}
     peerDependencies:
       typescript: '*'
     peerDependenciesMeta:
       typescript:
         optional: true
     dependencies:
-      '@vue/compiler-dom': 3.4.18
-      '@vue/compiler-sfc': 3.4.18
-      '@vue/runtime-dom': 3.4.18
-      '@vue/server-renderer': 3.4.18(vue@3.4.18)
-      '@vue/shared': 3.4.18
+      '@vue/compiler-dom': 3.4.19
+      '@vue/compiler-sfc': 3.4.19
+      '@vue/runtime-dom': 3.4.19
+      '@vue/server-renderer': 3.4.19(vue@3.4.19)
+      '@vue/shared': 3.4.19
       typescript: 5.3.3
     dev: false
 
