@@ -20,9 +20,9 @@ patchedDependencies:
   '@phaphoso/eslint-plugin-dprint@0.5.2':
     hash: 5r3oafqkulzxdb6awceadivssy
     path: patches/@phaphoso__eslint-plugin-dprint@0.5.2.patch
-  '@typescript-eslint/scope-manager@6.21.0':
+  '@typescript-eslint/scope-manager@7.0.1':
     hash: nrjotwpevdhz7eyb6bwy6orwfq
-    path: patches/@typescript-eslint__scope-manager@6.21.0.patch
+    path: patches/@typescript-eslint__scope-manager@7.0.1.patch
   clipboardy@3.0.0:
     hash: 4ps6fxnufqoaju3nlikai6k6ru
     path: patches/clipboardy@3.0.0.patch
@@ -59,8 +59,8 @@ dependencies:
     specifier: ^0.5.2
     version: 0.5.2(patch_hash=5r3oafqkulzxdb6awceadivssy)(eslint@8.56.0)
   '@typescript-eslint/scope-manager':
-    specifier: ^6.21.0
-    version: 6.21.0(patch_hash=nrjotwpevdhz7eyb6bwy6orwfq)
+    specifier: ^7.0.1
+    version: 7.0.1(patch_hash=nrjotwpevdhz7eyb6bwy6orwfq)
   clipboardy:
     specifier: ^3.0.0
     version: 3.0.0(patch_hash=4ps6fxnufqoaju3nlikai6k6ru)
@@ -856,25 +856,25 @@ packages:
       '@types/yargs-parser': 21.0.3
     dev: false
 
-  /@typescript-eslint/scope-manager@6.21.0(patch_hash=nrjotwpevdhz7eyb6bwy6orwfq):
-    resolution: {integrity: sha512-OwLUIWZJry80O99zvqXVEioyniJMa+d2GrqpUTqi5/v5D5rOrppJVBPa0yKCblcigC0/aYAzxxqQ1B+DS2RYsg==}
+  /@typescript-eslint/scope-manager@7.0.1(patch_hash=nrjotwpevdhz7eyb6bwy6orwfq):
+    resolution: {integrity: sha512-v7/T7As10g3bcWOOPAcbnMDuvctHzCFYCG/8R4bK4iYzdFqsZTbXGln0cZNVcwQcwewsYU2BJLay8j0/4zOk4w==}
     engines: {node: ^16.0.0 || >=18.0.0}
     dependencies:
-      '@typescript-eslint/types': 6.21.0
-      '@typescript-eslint/visitor-keys': 6.21.0
+      '@typescript-eslint/types': 7.0.1
+      '@typescript-eslint/visitor-keys': 7.0.1
     dev: false
     patched: true
 
-  /@typescript-eslint/types@6.21.0:
-    resolution: {integrity: sha512-1kFmZ1rOm5epu9NZEZm1kckCDGj5UJEf7P1kliH4LKu/RkwpsfqqGmY2OOcUs18lSlQBKLDYBOGxRVtrMN5lpg==}
+  /@typescript-eslint/types@7.0.1:
+    resolution: {integrity: sha512-uJDfmirz4FHib6ENju/7cz9SdMSkeVvJDK3VcMFvf/hAShg8C74FW+06MaQPODHfDJp/z/zHfgawIJRjlu0RLg==}
     engines: {node: ^16.0.0 || >=18.0.0}
     dev: false
 
-  /@typescript-eslint/visitor-keys@6.21.0:
-    resolution: {integrity: sha512-JJtkDduxLi9bivAB+cYOVMtbkqdPOhZ+ZI5LC47MIRrDV4Yn2o+ZnW10Nkmr28xRpSpdJ6Sm42Hjf2+REYXm0A==}
+  /@typescript-eslint/visitor-keys@7.0.1:
+    resolution: {integrity: sha512-hwAgrOyk++RTXrP4KzCg7zB2U0xt7RUU0ZdMSCsqF3eKUwkdXUMyTb0qdCuji7VIbcpG62kKTU9M1J1c9UpFBw==}
     engines: {node: ^16.0.0 || >=18.0.0}
     dependencies:
-      '@typescript-eslint/types': 6.21.0
+      '@typescript-eslint/types': 7.0.1
       eslint-visitor-keys: 3.4.3
     dev: false
 
