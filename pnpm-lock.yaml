@@ -9,7 +9,7 @@ patchedDependencies:
     hash: izp2ue34jjv4swyrhg2ux4ha3e
     path: patches/@effect__language-service@0.0.19.patch
   '@effect/schema@0.62.6':
-    hash: xl7hmec6rnt5wfsg6fv4tjlqma
+    hash: v6xywzwahv3erjswpgkgffb4gi
     path: patches/@effect__schema@0.62.6.patch
   '@fp-ts/optic@0.22.0':
     hash: 2yuoegl5dhwsslauskmjxbvoeu
@@ -48,7 +48,7 @@ dependencies:
     version: 0.0.19(patch_hash=izp2ue34jjv4swyrhg2ux4ha3e)
   '@effect/schema':
     specifier: ^0.62.6
-    version: 0.62.6(patch_hash=xl7hmec6rnt5wfsg6fv4tjlqma)(effect@2.3.5)(fast-check@3.15.1)
+    version: 0.62.6(patch_hash=v6xywzwahv3erjswpgkgffb4gi)(effect@2.3.5)(fast-check@3.15.1)
   '@fp-ts/optic':
     specifier: ^0.22.0
     version: 0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.20)(effect@2.3.5)
@@ -320,7 +320,7 @@ packages:
     dev: false
     patched: true
 
-  /@effect/schema@0.62.6(patch_hash=xl7hmec6rnt5wfsg6fv4tjlqma)(effect@2.3.5)(fast-check@3.15.1):
+  /@effect/schema@0.62.6(patch_hash=v6xywzwahv3erjswpgkgffb4gi)(effect@2.3.5)(fast-check@3.15.1):
     resolution: {integrity: sha512-Y/vkQ63EXcQUiJM01lbZ5lb7wCEK8gTcM5wZ1L20TvqFuAXHLp0cs66L3Sk3eIbiX0mv4aYxBWSKhwvhWAhc6g==}
     peerDependencies:
       effect: ^2.3.5
@@ -1026,7 +1026,7 @@ packages:
       array-buffer-byte-length: 1.0.1
       call-bind: 1.0.7
       define-properties: 1.2.1
-      es-abstract: 1.22.3
+      es-abstract: 1.22.4
       es-errors: 1.3.0
       get-intrinsic: 1.2.4
       is-array-buffer: 3.0.4
@@ -1074,7 +1074,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001587
-      electron-to-chromium: 1.4.667
+      electron-to-chromium: 1.4.668
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.3)
     dev: false
@@ -1234,21 +1234,20 @@ packages:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: false
 
-  /define-data-property@1.1.3:
-    resolution: {integrity: sha512-h3GBouC+RPtNX2N0hHVLo2ZwPYurq8mLmXpOLTsw71gr7lHt5VaI4vVkDUNOfiWmm48JEXe3VM7PmLX45AMmmg==}
+  /define-data-property@1.1.4:
+    resolution: {integrity: sha512-rBMvIzlpA8v6E+SJZoo++HAYqsLrkg7MSfIinMPFhmkorw7X+dOXVJQs+QT69zGkzMyfDnIMN2Wid1+NbL3T+A==}
     engines: {node: '>= 0.4'}
     dependencies:
+      es-define-property: 1.0.0
       es-errors: 1.3.0
-      get-intrinsic: 1.2.4
       gopd: 1.0.1
-      has-property-descriptors: 1.0.2
     dev: false
 
   /define-properties@1.2.1:
     resolution: {integrity: sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg==}
     engines: {node: '>= 0.4'}
     dependencies:
-      define-data-property: 1.1.3
+      define-data-property: 1.1.4
       has-property-descriptors: 1.0.2
       object-keys: 1.1.1
     dev: false
@@ -1280,8 +1279,8 @@ packages:
     dev: false
     patched: true
 
-  /electron-to-chromium@1.4.667:
-    resolution: {integrity: sha512-66L3pLlWhTNVUhnmSA5+qDM3fwnXsM6KAqE36e2w4KN0g6pkEtlT5bs41FQtQwVwKnfhNBXiWRLPs30HSxd7Kw==}
+  /electron-to-chromium@1.4.668:
+    resolution: {integrity: sha512-ZOBocMYCehr9W31+GpMclR+KBaDZOoAEabLdhpZ8oU1JFDwIaFY0UDbpXVEUFc0BIP2O2Qn3rkfCjQmMR4T/bQ==}
     dev: false
 
   /end-of-stream@1.4.4:
@@ -1301,14 +1300,16 @@ packages:
       is-arrayish: 0.2.1
     dev: false
 
-  /es-abstract@1.22.3:
-    resolution: {integrity: sha512-eiiY8HQeYfYH2Con2berK+To6GrK2RxbPawDkGq4UiCQQfZHb6wX9qQqkbpPqaxQFcl8d9QzZqo0tGE0VcrdwA==}
+  /es-abstract@1.22.4:
+    resolution: {integrity: sha512-vZYJlk2u6qHYxBOTjAeg7qUxHdNfih64Uu2J8QqWgXZ2cri0ZpJAkzDUK/q593+mvKwlxyaxr6F1Q+3LKoQRgg==}
     engines: {node: '>= 0.4'}
     dependencies:
       array-buffer-byte-length: 1.0.1
       arraybuffer.prototype.slice: 1.0.3
       available-typed-arrays: 1.0.6
       call-bind: 1.0.7
+      es-define-property: 1.0.0
+      es-errors: 1.3.0
       es-set-tostringtag: 2.0.2
       es-to-primitive: 1.2.1
       function.prototype.name: 1.1.6
@@ -1688,7 +1689,7 @@ packages:
     dependencies:
       call-bind: 1.0.7
       define-properties: 1.2.1
-      es-abstract: 1.22.3
+      es-abstract: 1.22.4
       functions-have-names: 1.2.3
     dev: false
 
@@ -2639,7 +2640,7 @@ packages:
     resolution: {integrity: sha512-j4t6ccc+VsKwYHso+kElc5neZpjtq9EnRICFZtWyBsLojhmeF/ZBd/elqm22WJh/BziDe/SBiOeAt0m2mfLD0g==}
     engines: {node: '>= 0.4'}
     dependencies:
-      define-data-property: 1.1.3
+      define-data-property: 1.1.4
       es-errors: 1.3.0
       function-bind: 1.1.2
       get-intrinsic: 1.2.4
@@ -2651,7 +2652,7 @@ packages:
     resolution: {integrity: sha512-tMNCiqYVkXIZgc2Hnoy2IvC/f8ezc5koaRFkCjrpWzGpCd3qbZXPzVy9MAZzK1ch/X0jvSkojys3oqJN0qCmdA==}
     engines: {node: '>= 0.4'}
     dependencies:
-      define-data-property: 1.1.3
+      define-data-property: 1.1.4
       functions-have-names: 1.2.3
       has-property-descriptors: 1.0.2
     dev: false
@@ -2771,7 +2772,7 @@ packages:
     dependencies:
       call-bind: 1.0.7
       define-properties: 1.2.1
-      es-abstract: 1.22.3
+      es-abstract: 1.22.4
       get-intrinsic: 1.2.4
       has-symbols: 1.0.3
       internal-slot: 1.0.7
@@ -2786,7 +2787,7 @@ packages:
     dependencies:
       call-bind: 1.0.7
       define-properties: 1.2.1
-      es-abstract: 1.22.3
+      es-abstract: 1.22.4
     dev: false
 
   /string.prototype.trimend@1.0.7:
@@ -2794,7 +2795,7 @@ packages:
     dependencies:
       call-bind: 1.0.7
       define-properties: 1.2.1
-      es-abstract: 1.22.3
+      es-abstract: 1.22.4
     dev: false
 
   /string.prototype.trimstart@1.0.7:
@@ -2802,7 +2803,7 @@ packages:
     dependencies:
       call-bind: 1.0.7
       define-properties: 1.2.1
-      es-abstract: 1.22.3
+      es-abstract: 1.22.4
     dev: false
 
   /string_decoder@1.3.0:
@@ -3009,7 +3010,7 @@ packages:
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.1.1(@types/node@20.11.17)
+      vite: 5.1.2(@types/node@20.11.17)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -3021,8 +3022,8 @@ packages:
       - terser
     dev: true
 
-  /vite@5.1.1(@types/node@20.11.17):
-    resolution: {integrity: sha512-wclpAgY3F1tR7t9LL5CcHC41YPkQIpKUGeIuT8MdNwNZr6OqOTLs7JX5vIHAtzqLWXts0T+GDrh9pN2arneKqg==}
+  /vite@5.1.2(@types/node@20.11.17):
+    resolution: {integrity: sha512-uwiFebQbTWRIGbCaTEBVAfKqgqKNKMJ2uPXsXeLIZxM8MVMjoS3j0cG8NrPxdDIadaWnPSjrkLWffLSC+uiP3Q==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
