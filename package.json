@@ -10,6 +10,7 @@
     "@effect/language-service": "0.0.19",
     "@effect/schema": "^0.62.6",
     "@fp-ts/optic": "^0.22.0",
+    "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
     "@typescript-eslint/scope-manager": "^7.0.1",
@@ -36,7 +37,8 @@
       "fast-check@3.15.1": "patches/fast-check@3.15.1.patch",
       "@fp-ts/optic@0.22.0": "patches/@fp-ts__optic@0.22.0.patch",
       "effect@2.3.5": "patches/effect@2.3.5.patch",
-      "@effect/schema@0.62.6": "patches/@effect__schema@0.62.6.patch"
+      "@effect/schema@0.62.6": "patches/@effect__schema@0.62.6.patch",
+      "@hebilicious/vue-query-nuxt@0.3.0": "patches/@hebilicious__vue-query-nuxt@0.3.0.patch"
     }
   },
   "scripts": {
