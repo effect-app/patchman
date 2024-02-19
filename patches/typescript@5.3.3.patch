@@ -1,0 +1,24 @@
+diff --git a/lib/lib.dom.d.ts b/lib/lib.dom.d.ts
+index ac946bae15f0c3cc49ad8c5d2c4b455ab92e425e..84bf96d6c81cf7dd01580344f20004376eb4a667 100644
+--- a/lib/lib.dom.d.ts
++++ b/lib/lib.dom.d.ts
+@@ -25828,6 +25828,9 @@ interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandler
+     addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+     removeEventListener<K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
++    Option: {
++        new(text?: string, value?: string, defaultSelected?: boolean, selected?: boolean): HTMLOptionElement;
++    };
+     [index: number]: Window;
+ }
+ 
+@@ -27173,9 +27176,6 @@ declare var Audio: {
+ declare var Image: {
+     new(width?: number, height?: number): HTMLImageElement;
+ };
+-declare var Option: {
+-    new(text?: string, value?: string, defaultSelected?: boolean, selected?: boolean): HTMLOptionElement;
+-};
+ /**
+  * @deprecated This is a legacy alias of `navigator`.
+  *
