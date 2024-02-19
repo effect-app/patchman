@@ -33,7 +33,7 @@ patchedDependencies:
     hash: g5hqt5bhnjezqo5vnkpprfkba4
     path: patches/date-fns@2.30.0.patch
   effect@2.3.7:
-    hash: xnrr6xxhhmjhwjvap4sbme5u7q
+    hash: jvkrpyvp7n3vcht32p4lpnk55e
     path: patches/effect@2.3.7.patch
   eslint-plugin-codegen@0.17.0:
     hash: 3ogk7peuefdu45q3hbzcgdiuna
@@ -45,7 +45,7 @@ patchedDependencies:
     hash: vtoc5dfd36a3w4ts5pkgsixqqq
     path: patches/primevue@3.47.1.patch
   typescript@5.3.3:
-    hash: 2gaqvlgzr7uafr4xxdtf6dx66u
+    hash: 3ycef2ljpgonrdhyvp6so6fiwe
     path: patches/typescript@5.3.3.patch
 
 dependencies:
@@ -78,7 +78,7 @@ dependencies:
     version: 2.30.0(patch_hash=g5hqt5bhnjezqo5vnkpprfkba4)
   effect:
     specifier: ^2.3.7
-    version: 2.3.7(patch_hash=xnrr6xxhhmjhwjvap4sbme5u7q)
+    version: 2.3.7(patch_hash=jvkrpyvp7n3vcht32p4lpnk55e)
   eslint-plugin-codegen:
     specifier: ^0.17.0
     version: 0.17.0(patch_hash=3ogk7peuefdu45q3hbzcgdiuna)
@@ -90,7 +90,7 @@ dependencies:
     version: 3.47.1(patch_hash=vtoc5dfd36a3w4ts5pkgsixqqq)(vue@3.4.19)
   typescript:
     specifier: ^5.3.3
-    version: 5.3.3(patch_hash=2gaqvlgzr7uafr4xxdtf6dx66u)
+    version: 5.3.3(patch_hash=3ycef2ljpgonrdhyvp6so6fiwe)
 
 devDependencies:
   '@types/node':
@@ -487,7 +487,7 @@ packages:
       effect: ^2.3.7
       fast-check: ^3.13.2
     dependencies:
-      effect: 2.3.7(patch_hash=xnrr6xxhhmjhwjvap4sbme5u7q)
+      effect: 2.3.7(patch_hash=jvkrpyvp7n3vcht32p4lpnk55e)
       fast-check: 3.15.1(patch_hash=gmhutzas2jzobvkhr72gjyjori)
     dev: false
     patched: true
@@ -497,7 +497,7 @@ packages:
     peerDependencies:
       effect: ^2.3.7
     dependencies:
-      effect: 2.3.7(patch_hash=xnrr6xxhhmjhwjvap4sbme5u7q)
+      effect: 2.3.7(patch_hash=jvkrpyvp7n3vcht32p4lpnk55e)
     dev: false
 
   /@esbuild/aix-ppc64@0.19.12:
@@ -950,7 +950,7 @@ packages:
       effect: ^2.0.0
     dependencies:
       '@effect/typeclass': 0.22.22(effect@2.3.7)
-      effect: 2.3.7(patch_hash=xnrr6xxhhmjhwjvap4sbme5u7q)
+      effect: 2.3.7(patch_hash=jvkrpyvp7n3vcht32p4lpnk55e)
     dev: false
     patched: true
 
@@ -3222,7 +3222,7 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /effect@2.3.7(patch_hash=xnrr6xxhhmjhwjvap4sbme5u7q):
+  /effect@2.3.7(patch_hash=jvkrpyvp7n3vcht32p4lpnk55e):
     resolution: {integrity: sha512-hFiMy3mX7h0AlCjzZjZCnVlJD6SBePBmkg9IKUAiEEzmH68z0ZBVtiwNhukmaEWxgDSG20lxA1M4Bi1yR3pkhQ==}
     dev: false
     patched: true
@@ -7172,7 +7172,7 @@ packages:
       is-typed-array: 1.1.13
     dev: false
 
-  /typescript@5.3.3(patch_hash=2gaqvlgzr7uafr4xxdtf6dx66u):
+  /typescript@5.3.3(patch_hash=3ycef2ljpgonrdhyvp6so6fiwe):
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
@@ -7504,7 +7504,7 @@ packages:
       semver: 7.6.0
       strip-ansi: 6.0.1
       tiny-invariant: 1.3.1
-      typescript: 5.3.3(patch_hash=2gaqvlgzr7uafr4xxdtf6dx66u)
+      typescript: 5.3.3(patch_hash=3ycef2ljpgonrdhyvp6so6fiwe)
       vite: 5.1.1(@types/node@20.11.19)
       vscode-languageclient: 7.0.0
       vscode-languageserver: 7.0.0
@@ -7715,7 +7715,7 @@ packages:
       '@vue/runtime-dom': 3.4.19
       '@vue/server-renderer': 3.4.19(vue@3.4.19)
       '@vue/shared': 3.4.19
-      typescript: 5.3.3(patch_hash=2gaqvlgzr7uafr4xxdtf6dx66u)
+      typescript: 5.3.3(patch_hash=3ycef2ljpgonrdhyvp6so6fiwe)
     dev: false
 
   /webidl-conversions@3.0.1:
