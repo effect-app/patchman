@@ -45,7 +45,7 @@ patchedDependencies:
     hash: vtoc5dfd36a3w4ts5pkgsixqqq
     path: patches/primevue@3.47.1.patch
   typescript@5.3.3:
-    hash: 2jtocvfouvltk3oqyvn7yivb3a
+    hash: 2gaqvlgzr7uafr4xxdtf6dx66u
     path: patches/typescript@5.3.3.patch
 
 dependencies:
@@ -90,7 +90,7 @@ dependencies:
     version: 3.47.1(patch_hash=vtoc5dfd36a3w4ts5pkgsixqqq)(vue@3.4.19)
   typescript:
     specifier: ^5.3.3
-    version: 5.3.3(patch_hash=2jtocvfouvltk3oqyvn7yivb3a)
+    version: 5.3.3(patch_hash=2gaqvlgzr7uafr4xxdtf6dx66u)
 
 devDependencies:
   '@types/node':
@@ -7172,7 +7172,7 @@ packages:
       is-typed-array: 1.1.13
     dev: false
 
-  /typescript@5.3.3(patch_hash=2jtocvfouvltk3oqyvn7yivb3a):
+  /typescript@5.3.3(patch_hash=2gaqvlgzr7uafr4xxdtf6dx66u):
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
@@ -7504,7 +7504,7 @@ packages:
       semver: 7.6.0
       strip-ansi: 6.0.1
       tiny-invariant: 1.3.1
-      typescript: 5.3.3(patch_hash=2jtocvfouvltk3oqyvn7yivb3a)
+      typescript: 5.3.3(patch_hash=2gaqvlgzr7uafr4xxdtf6dx66u)
       vite: 5.1.1(@types/node@20.11.19)
       vscode-languageclient: 7.0.0
       vscode-languageserver: 7.0.0
@@ -7715,7 +7715,7 @@ packages:
       '@vue/runtime-dom': 3.4.19
       '@vue/server-renderer': 3.4.19(vue@3.4.19)
       '@vue/shared': 3.4.19
-      typescript: 5.3.3(patch_hash=2jtocvfouvltk3oqyvn7yivb3a)
+      typescript: 5.3.3(patch_hash=2gaqvlgzr7uafr4xxdtf6dx66u)
     dev: false
 
   /webidl-conversions@3.0.1:
