@@ -19,7 +19,7 @@
     "effect": "^2.3.8",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.15.1",
-    "primevue": "3.47.1",
+    "primevue": "3.48.1",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
@@ -28,7 +28,6 @@
   "pnpm": {
     "patchedDependencies": {
       "clipboardy@3.0.0": "patches/clipboardy@3.0.0.patch",
-      "primevue@3.47.1": "patches/primevue@3.47.1.patch",
       "@kevinmarrec/nuxt-pwa@0.17.0": "patches/@kevinmarrec__nuxt-pwa@0.17.0.patch",
       "@effect/language-service@0.0.19": "patches/@effect__language-service@0.0.19.patch",
       "@typescript-eslint/scope-manager@7.0.2": "patches/@typescript-eslint__scope-manager@7.0.2.patch",
@@ -40,7 +39,8 @@
       "@hebilicious/vue-query-nuxt@0.3.0": "patches/@hebilicious__vue-query-nuxt@0.3.0.patch",
       "typescript@5.3.3": "patches/typescript@5.3.3.patch",
       "effect@2.3.8": "patches/effect@2.3.8.patch",
-      "@effect/schema@0.62.9": "patches/@effect__schema@0.62.9.patch"
+      "@effect/schema@0.62.9": "patches/@effect__schema@0.62.9.patch",
+      "primevue@3.48.1": "patches/primevue@3.48.1.patch"
     }
   },
   "scripts": {
