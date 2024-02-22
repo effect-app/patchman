@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@effect/language-service": "0.0.19",
-    "@effect/schema": "^0.62.9",
+    "@effect/schema": "^0.63.0",
     "@fp-ts/optic": "^0.22.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
@@ -16,7 +16,7 @@
     "@typescript-eslint/scope-manager": "^7.0.2",
     "clipboardy": "^3.0.0",
     "date-fns": "2.30.0",
-    "effect": "^2.3.8",
+    "effect": "^2.4.0",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.15.1",
     "primevue": "3.48.1",
@@ -38,9 +38,9 @@
       "@fp-ts/optic@0.22.0": "patches/@fp-ts__optic@0.22.0.patch",
       "@hebilicious/vue-query-nuxt@0.3.0": "patches/@hebilicious__vue-query-nuxt@0.3.0.patch",
       "typescript@5.3.3": "patches/typescript@5.3.3.patch",
-      "effect@2.3.8": "patches/effect@2.3.8.patch",
-      "@effect/schema@0.62.9": "patches/@effect__schema@0.62.9.patch",
-      "primevue@3.48.1": "patches/primevue@3.48.1.patch"
+      "primevue@3.48.1": "patches/primevue@3.48.1.patch",
+      "effect@2.4.0": "patches/effect@2.4.0.patch",
+      "@effect/schema@0.63.0": "patches/@effect__schema@0.63.0.patch"
     }
   },
   "scripts": {
