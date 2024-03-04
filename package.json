@@ -17,7 +17,7 @@
     "date-fns": "2.30.0",
     "effect": "^2.4.1",
     "eslint-plugin-codegen": "^0.17.0",
-    "fast-check": "^3.15.1",
+    "fast-check": "^3.16.0",
     "primevue": "3.48.1",
     "typescript": "^5.3.3"
   },
@@ -31,7 +31,7 @@
       "eslint-plugin-codegen@0.17.0": "patches/eslint-plugin-codegen@0.17.0.patch",
       "@phaphoso/eslint-plugin-dprint@0.5.2": "patches/@phaphoso__eslint-plugin-dprint@0.5.2.patch",
       "date-fns@2.30.0": "patches/date-fns@2.30.0.patch",
-      "fast-check@3.15.1": "patches/fast-check@3.15.1.patch",
+      "fast-check@3.16.0": "patches/fast-check@3.16.0.patch",
       "@fp-ts/optic@0.22.0": "patches/@fp-ts__optic@0.22.0.patch",
       "@hebilicious/vue-query-nuxt@0.3.0": "patches/@hebilicious__vue-query-nuxt@0.3.0.patch",
       "typescript@5.3.3": "patches/typescript@5.3.3.patch",
