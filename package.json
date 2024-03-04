@@ -13,7 +13,6 @@
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
-    "@typescript-eslint/scope-manager": "^7.1.0",
     "date-fns": "2.30.0",
     "effect": "^2.4.1",
     "eslint-plugin-codegen": "^0.17.0",
