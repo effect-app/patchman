@@ -35,9 +35,9 @@ patchedDependencies:
   fast-check@3.16.0:
     hash: gmhutzas2jzobvkhr72gjyjori
     path: patches/fast-check@3.16.0.patch
-  primevue@3.48.1:
-    hash: k4bj5z6k64p3hlh5ykfpxer42e
-    path: patches/primevue@3.48.1.patch
+  primevue@3.49.1:
+    hash: izwlzze2wubg23k2dfxd4ih7ji
+    path: patches/primevue@3.49.1.patch
   typescript@5.3.3:
     hash: 47b6int3mwc6awldrhxqdqbz3e
     path: patches/typescript@5.3.3.patch
@@ -74,8 +74,8 @@ dependencies:
     specifier: ^3.16.0
     version: 3.16.0(patch_hash=gmhutzas2jzobvkhr72gjyjori)
   primevue:
-    specifier: 3.48.1
-    version: 3.48.1(patch_hash=k4bj5z6k64p3hlh5ykfpxer42e)(vue@3.4.21)
+    specifier: 3.49.1
+    version: 3.49.1(patch_hash=izwlzze2wubg23k2dfxd4ih7ji)(vue@3.4.21)
   typescript:
     specifier: ^5.3.3
     version: 5.3.3(patch_hash=47b6int3mwc6awldrhxqdqbz3e)
@@ -6127,8 +6127,8 @@ packages:
       react-is: 17.0.2
     dev: false
 
-  /primevue@3.48.1(patch_hash=k4bj5z6k64p3hlh5ykfpxer42e)(vue@3.4.21):
-    resolution: {integrity: sha512-lyJ+E0ZCv2pR9jIpdPLBysU8zB2hOKrN7q78orloWelPx05zSYoMVKAWaqKTHNpunD52xffjaqovt1y6B/9XoQ==}
+  /primevue@3.49.1(patch_hash=izwlzze2wubg23k2dfxd4ih7ji)(vue@3.4.21):
+    resolution: {integrity: sha512-OmUTqbKbPB63Zqf7uA49cipDi+Qh+/13AYJPwgvsVsI4QmAKIkeibBwkOgj1CNIFlopfF79YmyBshFUAPqlw9A==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
