@@ -18,7 +18,7 @@
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.16.0",
     "primevue": "3.49.1",
-    "typescript": "^5.4.1-rc"
+    "typescript": "^5.4.2"
   },
   "pnpm": {
     "patchedDependencies": {
@@ -33,7 +33,7 @@
       "effect@2.4.1": "patches/effect@2.4.1.patch",
       "@effect/schema@0.63.2": "patches/@effect__schema@0.63.2.patch",
       "primevue@3.49.1": "patches/primevue@3.49.1.patch",
-      "typescript@5.4.1-rc": "patches/typescript@5.4.1-rc.patch"
+      "typescript@5.4.2": "patches/typescript@5.4.2.patch"
     }
   },
   "scripts": {
