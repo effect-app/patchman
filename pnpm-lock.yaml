@@ -9,7 +9,7 @@ patchedDependencies:
     hash: izp2ue34jjv4swyrhg2ux4ha3e
     path: patches/@effect__language-service@0.0.19.patch
   '@effect/schema@0.63.4':
-    hash: 3vjzncjn3ffumvbharabt4iqli
+    hash: fpgmwmixizw2ku2mtt72mhd5m4
     path: patches/@effect__schema@0.63.4.patch
   '@fp-ts/optic@0.22.0':
     hash: 2yuoegl5dhwsslauskmjxbvoeu
@@ -48,7 +48,7 @@ dependencies:
     version: 0.0.19(patch_hash=izp2ue34jjv4swyrhg2ux4ha3e)
   '@effect/schema':
     specifier: ^0.63.4
-    version: 0.63.4(patch_hash=3vjzncjn3ffumvbharabt4iqli)(effect@2.4.3)(fast-check@3.16.0)
+    version: 0.63.4(patch_hash=fpgmwmixizw2ku2mtt72mhd5m4)(effect@2.4.3)(fast-check@3.16.0)
   '@fp-ts/optic':
     specifier: ^0.22.0
     version: 0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.23)(effect@2.4.3)
@@ -469,7 +469,7 @@ packages:
     dev: false
     patched: true
 
-  /@effect/schema@0.63.4(patch_hash=3vjzncjn3ffumvbharabt4iqli)(effect@2.4.3)(fast-check@3.16.0):
+  /@effect/schema@0.63.4(patch_hash=fpgmwmixizw2ku2mtt72mhd5m4)(effect@2.4.3)(fast-check@3.16.0):
     resolution: {integrity: sha512-59b7N0XntkfivwhTSutyP13t1utlbJ9wDWDwEdAivNPpXBfpUlAWnZw7MAi86qI8J1LVz3ZDlz5p0pkDSu7p9g==}
     peerDependencies:
       effect: ^2.4.3
