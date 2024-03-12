@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@effect/language-service": "0.0.19",
+    "@effect/platform": "^0.47.1",
     "@effect/schema": "^0.63.4",
     "@fp-ts/optic": "^0.22.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
@@ -33,7 +34,8 @@
       "primevue@3.49.1": "patches/primevue@3.49.1.patch",
       "typescript@5.4.2": "patches/typescript@5.4.2.patch",
       "effect@2.4.3": "patches/effect@2.4.3.patch",
-      "@effect/schema@0.63.4": "patches/@effect__schema@0.63.4.patch"
+      "@effect/schema@0.63.4": "patches/@effect__schema@0.63.4.patch",
+      "@effect/platform@0.47.1": "patches/@effect__platform@0.47.1.patch"
     }
   },
   "scripts": {
