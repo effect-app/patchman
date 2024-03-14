@@ -8,9 +8,9 @@ patchedDependencies:
   '@effect/language-service@0.0.19':
     hash: izp2ue34jjv4swyrhg2ux4ha3e
     path: patches/@effect__language-service@0.0.19.patch
-  '@effect/schema@0.64.1':
-    hash: bxgppmpkfu423s56ec2mtblel4
-    path: patches/@effect__schema@0.64.1.patch
+  '@effect/schema@0.64.2':
+    hash: jkbdteopu3jctwfkutjp3dxw5m
+    path: patches/@effect__schema@0.64.2.patch
   '@fp-ts/optic@0.22.0':
     hash: 2yuoegl5dhwsslauskmjxbvoeu
     path: patches/@fp-ts__optic@0.22.0.patch
@@ -26,9 +26,9 @@ patchedDependencies:
   date-fns@2.30.0:
     hash: g5hqt5bhnjezqo5vnkpprfkba4
     path: patches/date-fns@2.30.0.patch
-  effect@2.4.5:
-    hash: gx4ghzbqcc7f5yvwdlsq2is7ae
-    path: patches/effect@2.4.5.patch
+  effect@2.4.6:
+    hash: xlbebrbripwiaexe5zrec2nl6u
+    path: patches/effect@2.4.6.patch
   eslint-plugin-codegen@0.17.0:
     hash: 3ogk7peuefdu45q3hbzcgdiuna
     path: patches/eslint-plugin-codegen@0.17.0.patch
@@ -48,13 +48,13 @@ dependencies:
     version: 0.0.19(patch_hash=izp2ue34jjv4swyrhg2ux4ha3e)
   '@effect/platform':
     specifier: ^0.47.1
-    version: 0.47.1(@effect/schema@0.64.1)(effect@2.4.5)(ws@8.16.0)
+    version: 0.47.1(@effect/schema@0.64.2)(effect@2.4.6)(ws@8.16.0)
   '@effect/schema':
-    specifier: ^0.64.1
-    version: 0.64.1(patch_hash=bxgppmpkfu423s56ec2mtblel4)(effect@2.4.5)(fast-check@3.16.0)
+    specifier: ^0.64.2
+    version: 0.64.2(patch_hash=jkbdteopu3jctwfkutjp3dxw5m)(effect@2.4.6)(fast-check@3.16.0)
   '@fp-ts/optic':
     specifier: ^0.22.0
-    version: 0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.23)(effect@2.4.5)
+    version: 0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.23)(effect@2.4.6)
   '@hebilicious/vue-query-nuxt':
     specifier: ^0.3.0
     version: 0.3.0(patch_hash=5dcq766eeuesmqdcvoqrnf6tzi)(@tanstack/vue-query@5.28.0)(nuxt@3.10.3)
@@ -68,8 +68,8 @@ dependencies:
     specifier: 2.30.0
     version: 2.30.0(patch_hash=g5hqt5bhnjezqo5vnkpprfkba4)
   effect:
-    specifier: ^2.4.5
-    version: 2.4.5(patch_hash=gx4ghzbqcc7f5yvwdlsq2is7ae)
+    specifier: ^2.4.6
+    version: 2.4.6(patch_hash=xlbebrbripwiaexe5zrec2nl6u)
   eslint-plugin-codegen:
     specifier: ^0.17.0
     version: 0.17.0(patch_hash=3ogk7peuefdu45q3hbzcgdiuna)
@@ -472,14 +472,14 @@ packages:
     dev: false
     patched: true
 
-  /@effect/platform@0.47.1(@effect/schema@0.64.1)(effect@2.4.5)(ws@8.16.0):
+  /@effect/platform@0.47.1(@effect/schema@0.64.2)(effect@2.4.6)(ws@8.16.0):
     resolution: {integrity: sha512-nuetGrtEDAmaSdQMVxe3gxyKTzrC+H65iBLK3LKoAjgLj5F6+qgZ8HIOGCyrwtQa2YIbm2aJ+o3onpRr7VGoaw==}
     peerDependencies:
       '@effect/schema': ^0.63.4
       effect: ^2.4.3
     dependencies:
-      '@effect/schema': 0.64.1(patch_hash=bxgppmpkfu423s56ec2mtblel4)(effect@2.4.5)(fast-check@3.16.0)
-      effect: 2.4.5(patch_hash=gx4ghzbqcc7f5yvwdlsq2is7ae)
+      '@effect/schema': 0.64.2(patch_hash=jkbdteopu3jctwfkutjp3dxw5m)(effect@2.4.6)(fast-check@3.16.0)
+      effect: 2.4.6(patch_hash=xlbebrbripwiaexe5zrec2nl6u)
       find-my-way-ts: 0.1.1
       isomorphic-ws: 5.0.0(ws@8.16.0)
       multipasta: 0.1.21
@@ -488,23 +488,23 @@ packages:
       - ws
     dev: false
 
-  /@effect/schema@0.64.1(patch_hash=bxgppmpkfu423s56ec2mtblel4)(effect@2.4.5)(fast-check@3.16.0):
-    resolution: {integrity: sha512-DyulEoi+/nNkXfg1LusABQTsFNICQn1HkeGQPG0iVnDn7TUdhD6lFWOXgr5lmBWfGKE/XlIydcneYDtpbKMuQw==}
+  /@effect/schema@0.64.2(patch_hash=jkbdteopu3jctwfkutjp3dxw5m)(effect@2.4.6)(fast-check@3.16.0):
+    resolution: {integrity: sha512-0Rz81HIG0CkJGjGlUuYlUFZmOkyVsqxmlZigfg3BHMjyDjp8NdPQHfT9pGZbenZH6DHUvtEckV8AccbGTzONMA==}
     peerDependencies:
-      effect: ^2.4.5
+      effect: ^2.4.6
       fast-check: ^3.13.2
     dependencies:
-      effect: 2.4.5(patch_hash=gx4ghzbqcc7f5yvwdlsq2is7ae)
+      effect: 2.4.6(patch_hash=xlbebrbripwiaexe5zrec2nl6u)
       fast-check: 3.16.0(patch_hash=gmhutzas2jzobvkhr72gjyjori)
     dev: false
     patched: true
 
-  /@effect/typeclass@0.22.23(effect@2.4.5):
+  /@effect/typeclass@0.22.23(effect@2.4.6):
     resolution: {integrity: sha512-Wh5wr47//is2CTet8m5lxaySFyg8zk6fLMfWzLe0V5T7mgTRLhBIQ3/RCxoNcuHNF9vqTA2yCpy0AJlb3EJ+HQ==}
     peerDependencies:
       effect: ^2.3.8
     dependencies:
-      effect: 2.4.5(patch_hash=gx4ghzbqcc7f5yvwdlsq2is7ae)
+      effect: 2.4.6(patch_hash=xlbebrbripwiaexe5zrec2nl6u)
     dev: false
 
   /@esbuild/aix-ppc64@0.19.12:
@@ -950,14 +950,14 @@ packages:
       '@fp-ts/core': 0.0.11
     dev: false
 
-  /@fp-ts/optic@0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.23)(effect@2.4.5):
+  /@fp-ts/optic@0.22.0(patch_hash=2yuoegl5dhwsslauskmjxbvoeu)(@effect/typeclass@0.22.23)(effect@2.4.6):
     resolution: {integrity: sha512-Kpg9bdA+q3d1I+ulENsax4iV6ge5TzRH6nj2/kdPPg42wtTmlir42oBlpbiwp3l3uNDja9rBWmuya0Q6GAmakQ==}
     peerDependencies:
       '@effect/typeclass': ^0.22.0
       effect: ^2.0.0
     dependencies:
-      '@effect/typeclass': 0.22.23(effect@2.4.5)
-      effect: 2.4.5(patch_hash=gx4ghzbqcc7f5yvwdlsq2is7ae)
+      '@effect/typeclass': 0.22.23(effect@2.4.6)
+      effect: 2.4.6(patch_hash=xlbebrbripwiaexe5zrec2nl6u)
     dev: false
     patched: true
 
@@ -1996,42 +1996,42 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: false
 
-  /@unhead/dom@1.8.16:
-    resolution: {integrity: sha512-n4wHKDI1ihpbbGrnQHwmWhaKwfdEWGA/1nSra7vqc8vmrIPtnOLrfU0cuepEomHZ/ziUsI6SX/RFB+Jm21D9fw==}
+  /@unhead/dom@1.8.18:
+    resolution: {integrity: sha512-F6ckuW+IAojGCSb++WFQlDeI3/80OALpD6yDcDrhAxZ8ogQatd5gXWjTmSiuV/0M2XIeDq3jwampvq6oomU6Gw==}
     dependencies:
-      '@unhead/schema': 1.8.16
-      '@unhead/shared': 1.8.16
+      '@unhead/schema': 1.8.18
+      '@unhead/shared': 1.8.18
     dev: false
 
-  /@unhead/schema@1.8.16:
-    resolution: {integrity: sha512-q/AH7uWlE/KrYqZJWKRCguSV1f3U04PKqy1A3YA5ZppRAW2IHqNQ0P2ntc3b0dIdulhN23nkiH8sLyU7dAZdXw==}
+  /@unhead/schema@1.8.18:
+    resolution: {integrity: sha512-E4oq4juwGJkXPOJlc4Qdp1iVTe79H4TSMWkOB8sSlU44vhvcuZduFYH9CCn29JvtV/640Uaf2QeX4o+wX96LRQ==}
     dependencies:
       hookable: 5.5.3
       zhead: 2.2.4
     dev: false
 
-  /@unhead/shared@1.8.16:
-    resolution: {integrity: sha512-UNbCyO5WS2aimRdB5Ov38ZEDUl5kYI4vnnF5rCfmUKwexe2qb0HXixueMbNwQSoKKsGxTYm5pkIFCZlHCoZrVQ==}
+  /@unhead/shared@1.8.18:
+    resolution: {integrity: sha512-2Tw5oyTjMkPn11UoR9AB3kSk2nDVG+7nCS4dZUwdxTMqndUnYyWoGB0EcO2WbK6YpkpulLIlfmiXVzWW4PTrWg==}
     dependencies:
-      '@unhead/schema': 1.8.16
+      '@unhead/schema': 1.8.18
     dev: false
 
-  /@unhead/ssr@1.8.16:
-    resolution: {integrity: sha512-KalKMwogqaWQ3IBDuZ4Bhi2VufPS8U0yqG4dWQxxiFI68p6lgrtkZ+4+tlfR4n00T90YJDvnE8SI+Mh7nBPMqg==}
+  /@unhead/ssr@1.8.18:
+    resolution: {integrity: sha512-l66PSAHartxcWvOW5E/zx8LJJFnRiMBZnDh3Ve9KnGIA8w5B/0Mhhhe/tcv2yyXEV4K/q6ke0taeBy2mD3/Auw==}
     dependencies:
-      '@unhead/schema': 1.8.16
-      '@unhead/shared': 1.8.16
+      '@unhead/schema': 1.8.18
+      '@unhead/shared': 1.8.18
     dev: false
 
-  /@unhead/vue@1.8.16(vue@3.4.21):
-    resolution: {integrity: sha512-jWKvMfLEz1A8VSvCgxyl2nWXb1eRQs41UNiTr2q1wMQX3g+GHiuLx5CpDSIR0uRyEBynmejHbmhu90yE2Tw/hg==}
+  /@unhead/vue@1.8.18(vue@3.4.21):
+    resolution: {integrity: sha512-aKsDCYAiQ27Cjs8nyUHaYNYOQjdhhobMswrelNddekGpk63Y25bRO2NT3DheAOqAAcH4Qdt7JIe5Bu4N1HG5Gg==}
     peerDependencies:
       vue: '>=2.7 || >=3'
     dependencies:
-      '@unhead/schema': 1.8.16
-      '@unhead/shared': 1.8.16
+      '@unhead/schema': 1.8.18
+      '@unhead/shared': 1.8.18
       hookable: 5.5.3
-      unhead: 1.8.16
+      unhead: 1.8.18
       vue: 3.4.21(typescript@5.4.2)
     dev: false
 
@@ -2211,7 +2211,7 @@ packages:
   /@vue/server-renderer@3.4.21(vue@3.4.21):
     resolution: {integrity: sha512-aV1gXyKSN6Rz+6kZ6kr5+Ll14YzmIbeuWe7ryJl5muJ4uwSwY/aStXTixx76TwkZFJLm1aAlA/HSWEJ4EyiMkg==}
     peerDependencies:
-      vue: 3.4.21
+      vue: ^3.4.21
     dependencies:
       '@vue/compiler-ssr': 3.4.21
       '@vue/shared': 3.4.21
@@ -2548,7 +2548,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001597
-      electron-to-chromium: 1.4.703
+      electron-to-chromium: 1.4.704
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: false
@@ -3238,13 +3238,13 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /effect@2.4.5(patch_hash=gx4ghzbqcc7f5yvwdlsq2is7ae):
-    resolution: {integrity: sha512-eQiKdI8GIxojn1Tia6uSMfFKCU18j7XcOeI0kiafpikCr3T91RrYmcazYRFKFGGWLM2JF0k96n7Cq3Iy4bWQ6A==}
+  /effect@2.4.6(patch_hash=xlbebrbripwiaexe5zrec2nl6u):
+    resolution: {integrity: sha512-gaZC+aopWvS67SX8RFT3mirabjpVBk5qshj/Z3IKW35DjzpQ8WhAE7VWwfBBWWMBuQ/B0RsbzKR8YGN2AivIgQ==}
     dev: false
     patched: true
 
-  /electron-to-chromium@1.4.703:
-    resolution: {integrity: sha512-094ZZC4nHXPKl/OwPinSMtLN9+hoFkdfQGKnvXbY+3WEAYtVDpz9UhJIViiY6Zb8agvqxiaJzNG9M+pRZWvSZw==}
+  /electron-to-chromium@1.4.704:
+    resolution: {integrity: sha512-OK01+86Qvby1V6cTiowVbhp25aX4DLZnwar+NocAOXdzKAByd+jq5156bmo4kHwevWMknznW18Y/Svfk2dU91A==}
     dev: false
 
   /emoji-regex@8.0.0:
@@ -5486,9 +5486,9 @@ packages:
       '@nuxt/ui-templates': 1.3.1
       '@nuxt/vite-builder': 3.10.3(@types/node@20.11.27)(eslint@8.57.0)(typescript@5.4.2)(vue@3.4.21)
       '@types/node': 20.11.27
-      '@unhead/dom': 1.8.16
-      '@unhead/ssr': 1.8.16
-      '@unhead/vue': 1.8.16(vue@3.4.21)
+      '@unhead/dom': 1.8.18
+      '@unhead/ssr': 1.8.18
+      '@unhead/vue': 1.8.18(vue@3.4.21)
       '@vue/shared': 3.4.21
       acorn: 8.11.3
       c12: 1.10.0
@@ -7300,12 +7300,12 @@ packages:
       pathe: 1.1.2
     dev: false
 
-  /unhead@1.8.16:
-    resolution: {integrity: sha512-ZcOWOyrVhL+/8zmsfeFy+vuTAvQE3xOwEpMHG15aiQEXH5mYbwcPil2Bb+GEBdcEGVigl7B0TZL3IJ7xJ47+7g==}
+  /unhead@1.8.18:
+    resolution: {integrity: sha512-XmCGVev0bwo+jy5qh6PW1vACnPoQvv3MEwqo4w0+49W2ZGPMZYPtIa8GAZiaWgkycrlie1WgZejjJEG9bYVgZw==}
     dependencies:
-      '@unhead/dom': 1.8.16
-      '@unhead/schema': 1.8.16
-      '@unhead/shared': 1.8.16
+      '@unhead/dom': 1.8.18
+      '@unhead/schema': 1.8.18
+      '@unhead/shared': 1.8.18
       hookable: 5.5.3
     dev: false
 
