@@ -13,7 +13,7 @@ index 60bf2875e54ae5dd88bf56541ab5fd5089acc718..993b019a0265a68bf9862e5b02faf884
 +  }
 +  return Object.setPrototypeOf(copy, Object.getPrototypeOf(original));
 +};
-+export const cloneTrait = /*#__PURE__*/Symbol();
++export const cloneTrait = /*#__PURE__*/Symbol.for("clone-trait");
  /**
   * Compose two optics when the piece of the whole returned by the get
   * operator of the first optic is not needed by the set operator of the
