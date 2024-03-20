@@ -1,16 +1,15 @@
 diff --git a/dist/cjs/fluentExtensions.js b/dist/cjs/fluentExtensions.js
 new file mode 100644
-index 0000000000000000000000000000000000000000..1c7a783d9ad46f05a1b80da0174b8dfdd005848f
+index 0000000000000000000000000000000000000000..485c6fae012a2ed97153c0f810914f35760bd2d6
 --- /dev/null
 +++ b/dist/cjs/fluentExtensions.js
-@@ -0,0 +1,275 @@
+@@ -0,0 +1,274 @@
 +"use strict";
 +
 +Object.defineProperty(exports, "__esModule", {
 +  value: true
 +});
 +exports.patch = patch;
-+var _effect = /*#__PURE__*/require("effect");
 +var Cause = /*#__PURE__*/_interopRequireWildcard( /*#__PURE__*/require("effect/Cause"));
 +var Config = /*#__PURE__*/_interopRequireWildcard( /*#__PURE__*/require("effect/Config"));
 +var Context = /*#__PURE__*/_interopRequireWildcard( /*#__PURE__*/require("effect/Context"));
@@ -236,7 +235,7 @@ index 0000000000000000000000000000000000000000..1c7a783d9ad46f05a1b80da0174b8dfd
 +    ...settings,
 +    value(...args) {
 +      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-+      return (0, _effect.pipe)(this, ...args);
++      return (0, _Function.pipe)(this, ...args);
 +    }
 +  });
 +  [Array.prototype, Map.prototype, Set.prototype].forEach(proto => Object.defineProperty(proto, "forEachEffect", {
@@ -282,14 +281,14 @@ index 0000000000000000000000000000000000000000..1c7a783d9ad46f05a1b80da0174b8dfd
 \ No newline at end of file
 diff --git a/dist/cjs/fluentExtensions.js.map b/dist/cjs/fluentExtensions.js.map
 new file mode 100644
-index 0000000000000000000000000000000000000000..5b9bc454ecaa01a618a78abad0b1bccb8173830f
+index 0000000000000000000000000000000000000000..b61ba6bb8c44d4ccc36fb3ef017fd2ea2a83727b
 --- /dev/null
 +++ b/dist/cjs/fluentExtensions.js.map
 @@ -0,0 +1 @@
-+{"version":3,"file":"fluentExtensions.js","names":["_effect","require","Cause","_interopRequireWildcard","Config","Context","Effect","_Effectable","Either","Option","ReadonlyArray","_Function","_getRequireWildcardCache","e","WeakMap","r","t","__esModule","default","has","get","n","__proto__","a","Object","defineProperty","getOwnPropertyDescriptor","u","prototype","hasOwnProperty","call","i","set","toNonEmptyArray","length","some","none","settings","enumerable","configurable","writable","installFluentExtensions","unit","fail","step","empty","succeed","GenericTag","map","effect","getPrototypeOf","StructuralClass","Class","EffectPrototype","CommitPrototype","StructuralCommitPrototype","forEach","assign","andThen","arg","tap","flatMap","value","asUnit","orDie","opt","getOrElse","dual","self","f","isFunction","b","isEither","isEffect","right","either","left","Array","args","pipe","Map","Set","proto","findFirst","filterMap","patched","patch"],"sources":["../../src/fluentExtensions.ts"],"sourcesContent":[null],"mappings":"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"}
++{"version":3,"file":"fluentExtensions.js","names":["Cause","_interopRequireWildcard","require","Config","Context","Effect","_Effectable","Either","Option","ReadonlyArray","_Function","_getRequireWildcardCache","e","WeakMap","r","t","__esModule","default","has","get","n","__proto__","a","Object","defineProperty","getOwnPropertyDescriptor","u","prototype","hasOwnProperty","call","i","set","toNonEmptyArray","length","some","none","settings","enumerable","configurable","writable","installFluentExtensions","unit","fail","step","empty","succeed","GenericTag","map","effect","getPrototypeOf","StructuralClass","Class","EffectPrototype","CommitPrototype","StructuralCommitPrototype","forEach","assign","andThen","arg","tap","flatMap","value","asUnit","orDie","opt","getOrElse","dual","self","f","isFunction","b","isEither","isEffect","right","either","left","Array","args","pipe","Map","Set","proto","findFirst","filterMap","patched","patch"],"sources":["../../src/fluentExtensions.ts"],"sourcesContent":[null],"mappings":"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"}
 \ No newline at end of file
 diff --git a/dist/cjs/index.js b/dist/cjs/index.js
-index 30a65460cb62bbb7f882c8247c2a26f4edb2afd8..9642e77b6a772648e2f664849f0103a1d83cada0 100644
+index 30a65460cb62bbb7f882c8247c2a26f4edb2afd8..0fbb7630182ace1f742f241a37e5711beffc5212 100644
 --- a/dist/cjs/index.js
 +++ b/dist/cjs/index.js
 @@ -17,6 +17,7 @@ Object.defineProperty(exports, "flow", {
@@ -300,23 +299,778 @@ index 30a65460cb62bbb7f882c8247c2a26f4edb2afd8..9642e77b6a772648e2f664849f0103a1
  Object.defineProperty(exports, "hole", {
    enumerable: true,
    get: function () {
-@@ -343,6 +344,8 @@ var _UpstreamPullStrategy = /*#__PURE__*/_interopRequireWildcard( /*#__PURE__*/r
- exports.UpstreamPullStrategy = _UpstreamPullStrategy;
- var _Utils = /*#__PURE__*/_interopRequireWildcard( /*#__PURE__*/require("./Utils.js"));
- exports.Utils = _Utils;
-+var _fluentExtensions = /*#__PURE__*/_interopRequireWildcard( /*#__PURE__*/require("./fluentExtensions.js"));
-+exports.fluentExtensions = _fluentExtensions;
- function _getRequireWildcardCache(e) {
-   if ("function" != typeof WeakMap) return null;
-   var r = new WeakMap(),
+@@ -41,6 +42,9 @@ Object.defineProperty(exports, "unsafeCoerce", {
+     return _Function.unsafeCoerce;
+   }
+ });
++var _fluentExtensions2 = /*#__PURE__*/_interopRequireWildcard( /*#__PURE__*/require("./fluentExtensions.js"));
++var _fluentExtensions = _fluentExtensions2;
++exports.fluentExtensions = _fluentExtensions2;
+ var _Function = /*#__PURE__*/_interopRequireWildcard( /*#__PURE__*/require("./Function.js"));
+ exports.Function = _Function;
+ var _BigDecimal = /*#__PURE__*/_interopRequireWildcard( /*#__PURE__*/require("./BigDecimal.js"));
+@@ -368,4 +372,752 @@ function _interopRequireWildcard(e, r) {
+   }
+   return n.default = e, t && t.set(e, n), n;
+ }
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides utility functions and type class instances for working with the `BigDecimal` type in TypeScript.
++ * It includes functions for basic arithmetic operations, as well as type class instances for `Equivalence` and `Order`.
++ *
++ * A `BigDecimal` allows storing any real number to arbitrary precision; which avoids common floating point errors
++ * (such as 0.1 + 0.2 ≠ 0.3) at the cost of complexity.
++ *
++ * Internally, `BigDecimal` uses a `BigInt` object, paired with a 64-bit integer which determines the position of the
++ * decimal point. Therefore, the precision *is not* actually arbitrary, but limited to 2<sup>63</sup> decimal places.
++ *
++ * It is not recommended to convert a floating point number to a decimal directly, as the floating point representation
++ * may be unexpected.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides utility functions and type class instances for working with the `bigint` type in TypeScript.
++ * It includes functions for basic arithmetic operations, as well as type class instances for
++ * `Equivalence` and `Order`.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides utility functions and type class instances for working with the `boolean` type in TypeScript.
++ * It includes functions for basic boolean operations, as well as type class instances for
++ * `Equivalence` and `Order`.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides types and utility functions to create and work with branded types,
++ * which are TypeScript types with an added type tag to prevent accidental usage of a value in the wrong context.
++ *
++ * The `refined` and `nominal` functions are both used to create branded types in TypeScript.
++ * The main difference between them is that `refined` allows for validation of the data, while `nominal` does not.
++ *
++ * The `nominal` function is used to create a new branded type that has the same underlying type as the input, but with a different name.
++ * This is useful when you want to distinguish between two values of the same type that have different meanings.
++ * The `nominal` function does not perform any validation of the input data.
++ *
++ * On the other hand, the `refined` function is used to create a new branded type that has the same underlying type as the input,
++ * but with a different name, and it also allows for validation of the input data.
++ * The `refined` function takes a predicate that is used to validate the input data.
++ * If the input data fails the validation, a `BrandErrors` is returned, which provides information about the specific validation failure.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * The `Effect<A, E, R>` type is polymorphic in values of type `E` and we can
++ * work with any error type that we want. However, there is a lot of information
++ * that is not inside an arbitrary `E` value. So as a result, an `Effect` needs
++ * somewhere to store things like unexpected errors or defects, stack and
++ * execution traces, causes of fiber interruptions, and so forth.
++ *
++ * Effect-TS is very strict about preserving the full information related to a
++ * failure. It captures all type of errors into the `Cause` data type. `Effect`
++ * uses the `Cause<E>` data type to store the full story of failure. So its
++ * error model is lossless. It doesn't throw information related to the failure
++ * result. So we can figure out exactly what happened during the operation of
++ * our effects.
++ *
++ * It is important to note that `Cause` is an underlying data type representing
++ * errors occuring within an `Effect` workflow. Thus, we don't usually deal with
++ * `Cause`s directly. Even though it is not a data type that we deal with very
++ * often, the `Cause` of a failing `Effect` workflow can be accessed at any
++ * time, which gives us total access to all parallel and sequential errors in
++ * occurring within our codebase.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides a data structure called `Context` that can be used for dependency injection in effectful
++ * programs. It is essentially a table mapping `Tag`s to their implementations (called `Service`s), and can be used to
++ * manage dependencies in a type-safe way. The `Context` data structure is essentially a way of providing access to a set
++ * of related services that can be passed around as a single unit. This module provides functions to create, modify, and
++ * query the contents of a `Context`, as well as a number of utility types for working with tags and services.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides encoding & decoding functionality for:
++ *
++ * - base64 (RFC4648)
++ * - base64 (URL)
++ * - hex
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides an implementation of the `Equivalence` type class, which defines a binary relation
++ * that is reflexive, symmetric, and transitive. In other words, it defines a notion of equivalence between values of a certain type.
++ * These properties are also known in mathematics as an "equivalence relation".
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * A `Layer<ROut, E, RIn>` describes how to build one or more services in your
++ * application. Services can be injected into effects via
++ * `Effect.provideService`. Effects can require services via `Effect.service`.
++ *
++ * Layer can be thought of as recipes for producing bundles of services, given
++ * their dependencies (other services).
++ *
++ * Construction of services can be effectful and utilize resources that must be
++ * acquired and safely released when the services are done being utilized.
++ *
++ * By default layers are shared, meaning that if the same layer is used twice
++ * the layer will only be allocated a single time.
++ *
++ * Because of their excellent composition properties, layers are the idiomatic
++ * way in Effect-TS to create services that depend on other services.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * A data type for immutable linked lists representing ordered collections of elements of type `A`.
++ *
++ * This data type is optimal for last-in-first-out (LIFO), stack-like access patterns. If you need another access pattern, for example, random access or FIFO, consider using a collection more suited to this than `List`.
++ *
++ * **Performance**
++ *
++ * - Time: `List` has `O(1)` prepend and head/tail access. Most other operations are `O(n)` on the number of elements in the list. This includes the index-based lookup of elements, `length`, `append` and `reverse`.
++ * - Space: `List` implements structural sharing of the tail list. This means that many operations are either zero- or constant-memory cost.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 1.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ *
++ * Enables low level framework authors to run on their own isolated effect version
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides utility functions and type class instances for working with the `number` type in TypeScript.
++ * It includes functions for basic arithmetic operations, as well as type class instances for
++ * `Equivalence` and `Order`.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * Limits the number of calls to a resource to a maximum amount in some interval.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides utility functions for working with arrays in TypeScript.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides utility functions for working with records in TypeScript.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides utility functions and type class instances for working with the `string` type in TypeScript.
++ * It includes functions for basic string manipulation, as well as type class instances for
++ * `Equivalence` and `Order`.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides utility functions for working with structs in TypeScript.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * A `Supervisor<T>` is allowed to supervise the launching and termination of
++ * fibers, producing some visible value of type `T` from the supervision.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * A `Trie` is used for locating specific `string` keys from within a set.
++ *
++ * It works similar to `HashMap`, but with keys required to be `string`.
++ * This constraint unlocks some performance optimizations and new methods to get string prefixes (e.g. `keysWithPrefix`, `longestPrefixOf`).
++ *
++ * Prefix search is also the main feature that makes a `Trie` more suited than `HashMap` for certain usecases.
++ *
++ * A `Trie` is often used to store a dictionary (list of words) that can be searched
++ * in a manner that allows for efficient generation of completion lists
++ * (e.g. predict the rest of a word a user is typing).
++ *
++ * A `Trie` has O(n) lookup time where `n` is the size of the key,
++ * or even less than `n` on search misses.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * This module provides utility functions for working with tuples in TypeScript.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * A collection of types that are commonly used types.
++ *
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * @since 2.0.0
++ */
++
++/**
++ * useful in e.g frontend projects that do not use tsplus, but still has the most useful extensions installed.
++ */
++
++(0, _fluentExtensions2.patch)();
+ //# sourceMappingURL=index.js.map
+\ No newline at end of file
 diff --git a/dist/cjs/index.js.map b/dist/cjs/index.js.map
-index 23247b374cf9fb4307d0159e42d90706fbe1430d..ff599aa7adb024bf82f9848c9a0660a6f20a42ac 100644
+index 23247b374cf9fb4307d0159e42d90706fbe1430d..6b7542d57f2f542f9eb681c0056709c76c03275d 100644
 --- a/dist/cjs/index.js.map
 +++ b/dist/cjs/index.js.map
 @@ -1 +1 @@
 -{"version":3,"file":"index.js","names":["_Function","_interopRequireWildcard","require","exports","Function","_BigDecimal","BigDecimal","_BigInt","BigInt","_Boolean","Boolean","_Brand","Brand","_Cache","Cache","_Cause","Cause","_Channel","Channel","_ChildExecutorDecision","ChildExecutorDecision","_Chunk","Chunk","_Clock","Clock","_Config","Config","_ConfigError","ConfigError","_ConfigProvider","ConfigProvider","_ConfigProviderPathPatch","ConfigProviderPathPatch","_Console","Console","_Context","Context","_Cron","Cron","_Data","Data","_DefaultServices","DefaultServices","_Deferred","Deferred","_Differ","Differ","_Duration","Duration","_Effect","Effect","_Effectable","Effectable","_Either","Either","_Encoding","Encoding","_Equal","Equal","_Equivalence","Equivalence","_ExecutionStrategy","ExecutionStrategy","_Exit","Exit","_Fiber","Fiber","_FiberId","FiberId","_FiberMap","FiberMap","_FiberRef","FiberRef","_FiberRefs","FiberRefs","_FiberRefsPatch","FiberRefsPatch","_FiberSet","FiberSet","_FiberStatus","FiberStatus","_GlobalValue","GlobalValue","_GroupBy","GroupBy","_HKT","HKT","_Hash","Hash","_HashMap","HashMap","_HashSet","HashSet","_Inspectable","Inspectable","_KeyedPool","KeyedPool","_Layer","Layer","_List","List","_LogLevel","LogLevel","_LogSpan","LogSpan","_Logger","Logger","_ManagedRuntime","ManagedRuntime","_Match","Match","_MergeDecision","MergeDecision","_MergeState","MergeState","_MergeStrategy","MergeStrategy","_Metric","Metric","_MetricBoundaries","MetricBoundaries","_MetricHook","MetricHook","_MetricKey","MetricKey","_MetricKeyType","MetricKeyType","_MetricLabel","MetricLabel","_MetricPair","MetricPair","_MetricPolling","MetricPolling","_MetricRegistry","MetricRegistry","_MetricState","MetricState","_ModuleVersion","ModuleVersion","_MutableHashMap","MutableHashMap","_MutableHashSet","MutableHashSet","_MutableList","MutableList","_MutableQueue","MutableQueue","_MutableRef","MutableRef","_NonEmptyIterable","NonEmptyIterable","_Number","Number","_Option","Option","_Order","Order","_Ordering","Ordering","_Pipeable","Pipeable","_Pool","Pool","_Predicate","Predicate","_PrimaryKey","PrimaryKey","_PubSub","PubSub","_Queue","Queue","_Random","Random","_RateLimiter","RateLimiter","_ReadonlyArray","ReadonlyArray","_ReadonlyRecord","ReadonlyRecord","_RedBlackTree","RedBlackTree","_Ref","Ref","_Reloadable","Reloadable","_Request","Request","_RequestBlock","RequestBlock","_RequestResolver","RequestResolver","_Resource","Resource","_Runtime","Runtime","_RuntimeFlags","RuntimeFlags","_RuntimeFlagsPatch","RuntimeFlagsPatch","_STM","STM","_Schedule","Schedule","_ScheduleDecision","ScheduleDecision","_ScheduleInterval","ScheduleInterval","_ScheduleIntervals","ScheduleIntervals","_Scheduler","Scheduler","_Scope","Scope","_ScopedCache","ScopedCache","_ScopedRef","ScopedRef","_Secret","Secret","_SingleProducerAsyncInput","SingleProducerAsyncInput","_Sink","Sink","_SortedMap","SortedMap","_SortedSet","SortedSet","_Stream","Stream","_StreamEmit","StreamEmit","_StreamHaltStrategy","StreamHaltStrategy","_Streamable","Streamable","_String","String","_Struct","Struct","_SubscriptionRef","SubscriptionRef","_Supervisor","Supervisor","_Symbol","Symbol","_SynchronizedRef","SynchronizedRef","_TArray","TArray","_TDeferred","TDeferred","_TMap","TMap","_TPriorityQueue","TPriorityQueue","_TPubSub","TPubSub","_TQueue","TQueue","_TRandom","TRandom","_TReentrantLock","TReentrantLock","_TRef","TRef","_TSemaphore","TSemaphore","_TSet","TSet","_Take","Take","_TestAnnotation","TestAnnotation","_TestAnnotationMap","TestAnnotationMap","_TestAnnotations","TestAnnotations","_TestClock","TestClock","_TestConfig","TestConfig","_TestContext","TestContext","_TestLive","TestLive","_TestServices","TestServices","_TestSized","TestSized","_Tracer","Tracer","_Trie","Trie","_Tuple","Tuple","_Types","Types","_Unify","Unify","_UpstreamPullRequest","UpstreamPullRequest","_UpstreamPullStrategy","UpstreamPullStrategy","_Utils","Utils","_getRequireWildcardCache","e","WeakMap","r","t","__esModule","default","has","get","n","__proto__","a","Object","defineProperty","getOwnPropertyDescriptor","u","prototype","hasOwnProperty","call","i","set"],"sources":["../../src/index.ts"],"sourcesContent":[null],"mappings":"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"}
 \ No newline at end of file
-+{"version":3,"file":"index.js","names":["_Function","_interopRequireWildcard","require","exports","Function","_BigDecimal","BigDecimal","_BigInt","BigInt","_Boolean","Boolean","_Brand","Brand","_Cache","Cache","_Cause","Cause","_Channel","Channel","_ChildExecutorDecision","ChildExecutorDecision","_Chunk","Chunk","_Clock","Clock","_Config","Config","_ConfigError","ConfigError","_ConfigProvider","ConfigProvider","_ConfigProviderPathPatch","ConfigProviderPathPatch","_Console","Console","_Context","Context","_Cron","Cron","_Data","Data","_DefaultServices","DefaultServices","_Deferred","Deferred","_Differ","Differ","_Duration","Duration","_Effect","Effect","_Effectable","Effectable","_Either","Either","_Encoding","Encoding","_Equal","Equal","_Equivalence","Equivalence","_ExecutionStrategy","ExecutionStrategy","_Exit","Exit","_Fiber","Fiber","_FiberId","FiberId","_FiberMap","FiberMap","_FiberRef","FiberRef","_FiberRefs","FiberRefs","_FiberRefsPatch","FiberRefsPatch","_FiberSet","FiberSet","_FiberStatus","FiberStatus","_GlobalValue","GlobalValue","_GroupBy","GroupBy","_HKT","HKT","_Hash","Hash","_HashMap","HashMap","_HashSet","HashSet","_Inspectable","Inspectable","_KeyedPool","KeyedPool","_Layer","Layer","_List","List","_LogLevel","LogLevel","_LogSpan","LogSpan","_Logger","Logger","_ManagedRuntime","ManagedRuntime","_Match","Match","_MergeDecision","MergeDecision","_MergeState","MergeState","_MergeStrategy","MergeStrategy","_Metric","Metric","_MetricBoundaries","MetricBoundaries","_MetricHook","MetricHook","_MetricKey","MetricKey","_MetricKeyType","MetricKeyType","_MetricLabel","MetricLabel","_MetricPair","MetricPair","_MetricPolling","MetricPolling","_MetricRegistry","MetricRegistry","_MetricState","MetricState","_ModuleVersion","ModuleVersion","_MutableHashMap","MutableHashMap","_MutableHashSet","MutableHashSet","_MutableList","MutableList","_MutableQueue","MutableQueue","_MutableRef","MutableRef","_NonEmptyIterable","NonEmptyIterable","_Number","Number","_Option","Option","_Order","Order","_Ordering","Ordering","_Pipeable","Pipeable","_Pool","Pool","_Predicate","Predicate","_PrimaryKey","PrimaryKey","_PubSub","PubSub","_Queue","Queue","_Random","Random","_RateLimiter","RateLimiter","_ReadonlyArray","ReadonlyArray","_ReadonlyRecord","ReadonlyRecord","_RedBlackTree","RedBlackTree","_Ref","Ref","_Reloadable","Reloadable","_Request","Request","_RequestBlock","RequestBlock","_RequestResolver","RequestResolver","_Resource","Resource","_Runtime","Runtime","_RuntimeFlags","RuntimeFlags","_RuntimeFlagsPatch","RuntimeFlagsPatch","_STM","STM","_Schedule","Schedule","_ScheduleDecision","ScheduleDecision","_ScheduleInterval","ScheduleInterval","_ScheduleIntervals","ScheduleIntervals","_Scheduler","Scheduler","_Scope","Scope","_ScopedCache","ScopedCache","_ScopedRef","ScopedRef","_Secret","Secret","_SingleProducerAsyncInput","SingleProducerAsyncInput","_Sink","Sink","_SortedMap","SortedMap","_SortedSet","SortedSet","_Stream","Stream","_StreamEmit","StreamEmit","_StreamHaltStrategy","StreamHaltStrategy","_Streamable","Streamable","_String","String","_Struct","Struct","_SubscriptionRef","SubscriptionRef","_Supervisor","Supervisor","_Symbol","Symbol","_SynchronizedRef","SynchronizedRef","_TArray","TArray","_TDeferred","TDeferred","_TMap","TMap","_TPriorityQueue","TPriorityQueue","_TPubSub","TPubSub","_TQueue","TQueue","_TRandom","TRandom","_TReentrantLock","TReentrantLock","_TRef","TRef","_TSemaphore","TSemaphore","_TSet","TSet","_Take","Take","_TestAnnotation","TestAnnotation","_TestAnnotationMap","TestAnnotationMap","_TestAnnotations","TestAnnotations","_TestClock","TestClock","_TestConfig","TestConfig","_TestContext","TestContext","_TestLive","TestLive","_TestServices","TestServices","_TestSized","TestSized","_Tracer","Tracer","_Trie","Trie","_Tuple","Tuple","_Types","Types","_Unify","Unify","_UpstreamPullRequest","UpstreamPullRequest","_UpstreamPullStrategy","UpstreamPullStrategy","_Utils","Utils","_fluentExtensions","fluentExtensions","_getRequireWildcardCache","e","WeakMap","r","t","__esModule","default","has","get","n","__proto__","a","Object","defineProperty","getOwnPropertyDescriptor","u","prototype","hasOwnProperty","call","i","set"],"sources":["../../src/index.ts"],"sourcesContent":[null],"mappings":"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"}
++{"version":3,"file":"index.js","names":["_fluentExtensions2","_interopRequireWildcard","require","_fluentExtensions","exports","fluentExtensions","_Function","Function","_BigDecimal","BigDecimal","_BigInt","BigInt","_Boolean","Boolean","_Brand","Brand","_Cache","Cache","_Cause","Cause","_Channel","Channel","_ChildExecutorDecision","ChildExecutorDecision","_Chunk","Chunk","_Clock","Clock","_Config","Config","_ConfigError","ConfigError","_ConfigProvider","ConfigProvider","_ConfigProviderPathPatch","ConfigProviderPathPatch","_Console","Console","_Context","Context","_Cron","Cron","_Data","Data","_DefaultServices","DefaultServices","_Deferred","Deferred","_Differ","Differ","_Duration","Duration","_Effect","Effect","_Effectable","Effectable","_Either","Either","_Encoding","Encoding","_Equal","Equal","_Equivalence","Equivalence","_ExecutionStrategy","ExecutionStrategy","_Exit","Exit","_Fiber","Fiber","_FiberId","FiberId","_FiberMap","FiberMap","_FiberRef","FiberRef","_FiberRefs","FiberRefs","_FiberRefsPatch","FiberRefsPatch","_FiberSet","FiberSet","_FiberStatus","FiberStatus","_GlobalValue","GlobalValue","_GroupBy","GroupBy","_HKT","HKT","_Hash","Hash","_HashMap","HashMap","_HashSet","HashSet","_Inspectable","Inspectable","_KeyedPool","KeyedPool","_Layer","Layer","_List","List","_LogLevel","LogLevel","_LogSpan","LogSpan","_Logger","Logger","_ManagedRuntime","ManagedRuntime","_Match","Match","_MergeDecision","MergeDecision","_MergeState","MergeState","_MergeStrategy","MergeStrategy","_Metric","Metric","_MetricBoundaries","MetricBoundaries","_MetricHook","MetricHook","_MetricKey","MetricKey","_MetricKeyType","MetricKeyType","_MetricLabel","MetricLabel","_MetricPair","MetricPair","_MetricPolling","MetricPolling","_MetricRegistry","MetricRegistry","_MetricState","MetricState","_ModuleVersion","ModuleVersion","_MutableHashMap","MutableHashMap","_MutableHashSet","MutableHashSet","_MutableList","MutableList","_MutableQueue","MutableQueue","_MutableRef","MutableRef","_NonEmptyIterable","NonEmptyIterable","_Number","Number","_Option","Option","_Order","Order","_Ordering","Ordering","_Pipeable","Pipeable","_Pool","Pool","_Predicate","Predicate","_PrimaryKey","PrimaryKey","_PubSub","PubSub","_Queue","Queue","_Random","Random","_RateLimiter","RateLimiter","_ReadonlyArray","ReadonlyArray","_ReadonlyRecord","ReadonlyRecord","_RedBlackTree","RedBlackTree","_Ref","Ref","_Reloadable","Reloadable","_Request","Request","_RequestBlock","RequestBlock","_RequestResolver","RequestResolver","_Resource","Resource","_Runtime","Runtime","_RuntimeFlags","RuntimeFlags","_RuntimeFlagsPatch","RuntimeFlagsPatch","_STM","STM","_Schedule","Schedule","_ScheduleDecision","ScheduleDecision","_ScheduleInterval","ScheduleInterval","_ScheduleIntervals","ScheduleIntervals","_Scheduler","Scheduler","_Scope","Scope","_ScopedCache","ScopedCache","_ScopedRef","ScopedRef","_Secret","Secret","_SingleProducerAsyncInput","SingleProducerAsyncInput","_Sink","Sink","_SortedMap","SortedMap","_SortedSet","SortedSet","_Stream","Stream","_StreamEmit","StreamEmit","_StreamHaltStrategy","StreamHaltStrategy","_Streamable","Streamable","_String","String","_Struct","Struct","_SubscriptionRef","SubscriptionRef","_Supervisor","Supervisor","_Symbol","Symbol","_SynchronizedRef","SynchronizedRef","_TArray","TArray","_TDeferred","TDeferred","_TMap","TMap","_TPriorityQueue","TPriorityQueue","_TPubSub","TPubSub","_TQueue","TQueue","_TRandom","TRandom","_TReentrantLock","TReentrantLock","_TRef","TRef","_TSemaphore","TSemaphore","_TSet","TSet","_Take","Take","_TestAnnotation","TestAnnotation","_TestAnnotationMap","TestAnnotationMap","_TestAnnotations","TestAnnotations","_TestClock","TestClock","_TestConfig","TestConfig","_TestContext","TestContext","_TestLive","TestLive","_TestServices","TestServices","_TestSized","TestSized","_Tracer","Tracer","_Trie","Trie","_Tuple","Tuple","_Types","Types","_Unify","Unify","_UpstreamPullRequest","UpstreamPullRequest","_UpstreamPullStrategy","UpstreamPullStrategy","_Utils","Utils","_getRequireWildcardCache","e","WeakMap","r","t","__esModule","default","has","get","n","__proto__","a","Object","defineProperty","getOwnPropertyDescriptor","u","prototype","hasOwnProperty","call","i","set","patch"],"sources":["../../src/index.ts"],"sourcesContent":[null],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAIA,IAAAA,kBAAA,gBAAAC,uBAAA,eAAAC,OAAA;AAA6C,IAAAC,iBAAA,GAAAH,kBAAA;AAAAI,OAAA,CAAAC,gBAAA,GAAAL,kBAAA;AAE7C,IAAAM,SAAA,gBAAAL,uBAAA,eAAAC,OAAA;AAyBsBE,OAAA,CAAAG,QAAA,GAAAD,SAAA;AAAA,IAAAE,WAAA,gBAAAP,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAK,UAAA,GAAAD,WAAA;AAAA,IAAAE,OAAA,gBAAAT,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAO,MAAA,GAAAD,OAAA;AAAA,IAAAE,QAAA,gBAAAX,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAS,OAAA,GAAAD,QAAA;AAAA,IAAAE,MAAA,gBAAAb,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAW,KAAA,GAAAD,MAAA;AAAA,IAAAE,MAAA,gBAAAf,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAa,KAAA,GAAAD,MAAA;AAAA,IAAAE,MAAA,gBAAAjB,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAe,KAAA,GAAAD,MAAA;AAAA,IAAAE,QAAA,gBAAAnB,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiB,OAAA,GAAAD,QAAA;AAAA,IAAAE,sBAAA,gBAAArB,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmB,qBAAA,GAAAD,sBAAA;AAAA,IAAAE,MAAA,gBAAAvB,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqB,KAAA,GAAAD,MAAA;AAAA,IAAAE,MAAA,gBAAAzB,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuB,KAAA,GAAAD,MAAA;AAAA,IAAAE,OAAA,gBAAA3B,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyB,MAAA,GAAAD,OAAA;AAAA,IAAAE,YAAA,gBAAA7B,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2B,WAAA,GAAAD,YAAA;AAAA,IAAAE,eAAA,gBAAA/B,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6B,cAAA,GAAAD,eAAA;AAAA,IAAAE,wBAAA,gBAAAjC,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+B,uBAAA,GAAAD,wBAAA;AAAA,IAAAE,QAAA,gBAAAnC,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiC,OAAA,GAAAD,QAAA;AAAA,IAAAE,QAAA,gBAAArC,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmC,OAAA,GAAAD,QAAA;AAAA,IAAAE,KAAA,gBAAAvC,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqC,IAAA,GAAAD,KAAA;AAAA,IAAAE,KAAA,gBAAAzC,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuC,IAAA,GAAAD,KAAA;AAAA,IAAAE,gBAAA,gBAAA3C,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyC,eAAA,GAAAD,gBAAA;AAAA,IAAAE,SAAA,gBAAA7C,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2C,QAAA,GAAAD,SAAA;AAAA,IAAAE,OAAA,gBAAA/C,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6C,MAAA,GAAAD,OAAA;AAAA,IAAAE,SAAA,gBAAAjD,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+C,QAAA,GAAAD,SAAA;AAAA,IAAAE,OAAA,gBAAAnD,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiD,MAAA,GAAAD,OAAA;AAAA,IAAAE,WAAA,gBAAArD,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmD,UAAA,GAAAD,WAAA;AAAA,IAAAE,OAAA,gBAAAvD,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqD,MAAA,GAAAD,OAAA;AAAA,IAAAE,SAAA,gBAAAzD,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuD,QAAA,GAAAD,SAAA;AAAA,IAAAE,MAAA,gBAAA3D,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyD,KAAA,GAAAD,MAAA;AAAA,IAAAE,YAAA,gBAAA7D,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2D,WAAA,GAAAD,YAAA;AAAA,IAAAE,kBAAA,gBAAA/D,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6D,iBAAA,GAAAD,kBAAA;AAAA,IAAAE,KAAA,gBAAAjE,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+D,IAAA,GAAAD,KAAA;AAAA,IAAAE,MAAA,gBAAAnE,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiE,KAAA,GAAAD,MAAA;AAAA,IAAAE,QAAA,gBAAArE,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmE,OAAA,GAAAD,QAAA;AAAA,IAAAE,SAAA,gBAAAvE,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqE,QAAA,GAAAD,SAAA;AAAA,IAAAE,SAAA,gBAAAzE,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuE,QAAA,GAAAD,SAAA;AAAA,IAAAE,UAAA,gBAAA3E,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyE,SAAA,GAAAD,UAAA;AAAA,IAAAE,eAAA,gBAAA7E,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2E,cAAA,GAAAD,eAAA;AAAA,IAAAE,SAAA,gBAAA/E,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6E,QAAA,GAAAD,SAAA;AAAA,IAAAE,YAAA,gBAAAjF,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+E,WAAA,GAAAD,YAAA;AAAA,IAAAE,YAAA,gBAAAnF,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiF,WAAA,GAAAD,YAAA;AAAA,IAAAE,QAAA,gBAAArF,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmF,OAAA,GAAAD,QAAA;AAAA,IAAAE,IAAA,gBAAAvF,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqF,GAAA,GAAAD,IAAA;AAAA,IAAAE,KAAA,gBAAAzF,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuF,IAAA,GAAAD,KAAA;AAAA,IAAAE,QAAA,gBAAA3F,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyF,OAAA,GAAAD,QAAA;AAAA,IAAAE,QAAA,gBAAA7F,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2F,OAAA,GAAAD,QAAA;AAAA,IAAAE,YAAA,gBAAA/F,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6F,WAAA,GAAAD,YAAA;AAAA,IAAAE,UAAA,gBAAAjG,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+F,SAAA,GAAAD,UAAA;AAAA,IAAAE,MAAA,gBAAAnG,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiG,KAAA,GAAAD,MAAA;AAAA,IAAAE,KAAA,gBAAArG,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmG,IAAA,GAAAD,KAAA;AAAA,IAAAE,SAAA,gBAAAvG,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqG,QAAA,GAAAD,SAAA;AAAA,IAAAE,QAAA,gBAAAzG,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuG,OAAA,GAAAD,QAAA;AAAA,IAAAE,OAAA,gBAAA3G,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyG,MAAA,GAAAD,OAAA;AAAA,IAAAE,eAAA,gBAAA7G,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2G,cAAA,GAAAD,eAAA;AAAA,IAAAE,MAAA,gBAAA/G,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6G,KAAA,GAAAD,MAAA;AAAA,IAAAE,cAAA,gBAAAjH,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+G,aAAA,GAAAD,cAAA;AAAA,IAAAE,WAAA,gBAAAnH,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiH,UAAA,GAAAD,WAAA;AAAA,IAAAE,cAAA,gBAAArH,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmH,aAAA,GAAAD,cAAA;AAAA,IAAAE,OAAA,gBAAAvH,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqH,MAAA,GAAAD,OAAA;AAAA,IAAAE,iBAAA,gBAAAzH,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuH,gBAAA,GAAAD,iBAAA;AAAA,IAAAE,WAAA,gBAAA3H,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyH,UAAA,GAAAD,WAAA;AAAA,IAAAE,UAAA,gBAAA7H,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2H,SAAA,GAAAD,UAAA;AAAA,IAAAE,cAAA,gBAAA/H,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6H,aAAA,GAAAD,cAAA;AAAA,IAAAE,YAAA,gBAAAjI,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+H,WAAA,GAAAD,YAAA;AAAA,IAAAE,WAAA,gBAAAnI,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiI,UAAA,GAAAD,WAAA;AAAA,IAAAE,cAAA,gBAAArI,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmI,aAAA,GAAAD,cAAA;AAAA,IAAAE,eAAA,gBAAAvI,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqI,cAAA,GAAAD,eAAA;AAAA,IAAAE,YAAA,gBAAAzI,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuI,WAAA,GAAAD,YAAA;AAAA,IAAAE,cAAA,gBAAA3I,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyI,aAAA,GAAAD,cAAA;AAAA,IAAAE,eAAA,gBAAA7I,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2I,cAAA,GAAAD,eAAA;AAAA,IAAAE,eAAA,gBAAA/I,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6I,cAAA,GAAAD,eAAA;AAAA,IAAAE,YAAA,gBAAAjJ,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+I,WAAA,GAAAD,YAAA;AAAA,IAAAE,aAAA,gBAAAnJ,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiJ,YAAA,GAAAD,aAAA;AAAA,IAAAE,WAAA,gBAAArJ,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmJ,UAAA,GAAAD,WAAA;AAAA,IAAAE,iBAAA,gBAAAvJ,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqJ,gBAAA,GAAAD,iBAAA;AAAA,IAAAE,OAAA,gBAAAzJ,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuJ,MAAA,GAAAD,OAAA;AAAA,IAAAE,OAAA,gBAAA3J,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyJ,MAAA,GAAAD,OAAA;AAAA,IAAAE,MAAA,gBAAA7J,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2J,KAAA,GAAAD,MAAA;AAAA,IAAAE,SAAA,gBAAA/J,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6J,QAAA,GAAAD,SAAA;AAAA,IAAAE,SAAA,gBAAAjK,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+J,QAAA,GAAAD,SAAA;AAAA,IAAAE,KAAA,gBAAAnK,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiK,IAAA,GAAAD,KAAA;AAAA,IAAAE,UAAA,gBAAArK,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmK,SAAA,GAAAD,UAAA;AAAA,IAAAE,WAAA,gBAAAvK,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqK,UAAA,GAAAD,WAAA;AAAA,IAAAE,OAAA,gBAAAzK,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuK,MAAA,GAAAD,OAAA;AAAA,IAAAE,MAAA,gBAAA3K,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyK,KAAA,GAAAD,MAAA;AAAA,IAAAE,OAAA,gBAAA7K,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2K,MAAA,GAAAD,OAAA;AAAA,IAAAE,YAAA,gBAAA/K,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6K,WAAA,GAAAD,YAAA;AAAA,IAAAE,cAAA,gBAAAjL,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+K,aAAA,GAAAD,cAAA;AAAA,IAAAE,eAAA,gBAAAnL,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiL,cAAA,GAAAD,eAAA;AAAA,IAAAE,aAAA,gBAAArL,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmL,YAAA,GAAAD,aAAA;AAAA,IAAAE,IAAA,gBAAAvL,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqL,GAAA,GAAAD,IAAA;AAAA,IAAAE,WAAA,gBAAAzL,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuL,UAAA,GAAAD,WAAA;AAAA,IAAAE,QAAA,gBAAA3L,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyL,OAAA,GAAAD,QAAA;AAAA,IAAAE,aAAA,gBAAA7L,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2L,YAAA,GAAAD,aAAA;AAAA,IAAAE,gBAAA,gBAAA/L,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6L,eAAA,GAAAD,gBAAA;AAAA,IAAAE,SAAA,gBAAAjM,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+L,QAAA,GAAAD,SAAA;AAAA,IAAAE,QAAA,gBAAAnM,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiM,OAAA,GAAAD,QAAA;AAAA,IAAAE,aAAA,gBAAArM,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmM,YAAA,GAAAD,aAAA;AAAA,IAAAE,kBAAA,gBAAAvM,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqM,iBAAA,GAAAD,kBAAA;AAAA,IAAAE,IAAA,gBAAAzM,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuM,GAAA,GAAAD,IAAA;AAAA,IAAAE,SAAA,gBAAA3M,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyM,QAAA,GAAAD,SAAA;AAAA,IAAAE,iBAAA,gBAAA7M,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2M,gBAAA,GAAAD,iBAAA;AAAA,IAAAE,iBAAA,gBAAA/M,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6M,gBAAA,GAAAD,iBAAA;AAAA,IAAAE,kBAAA,gBAAAjN,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+M,iBAAA,GAAAD,kBAAA;AAAA,IAAAE,UAAA,gBAAAnN,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiN,SAAA,GAAAD,UAAA;AAAA,IAAAE,MAAA,gBAAArN,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmN,KAAA,GAAAD,MAAA;AAAA,IAAAE,YAAA,gBAAAvN,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqN,WAAA,GAAAD,YAAA;AAAA,IAAAE,UAAA,gBAAAzN,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuN,SAAA,GAAAD,UAAA;AAAA,IAAAE,OAAA,gBAAA3N,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyN,MAAA,GAAAD,OAAA;AAAA,IAAAE,yBAAA,gBAAA7N,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2N,wBAAA,GAAAD,yBAAA;AAAA,IAAAE,KAAA,gBAAA/N,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6N,IAAA,GAAAD,KAAA;AAAA,IAAAE,UAAA,gBAAAjO,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+N,SAAA,GAAAD,UAAA;AAAA,IAAAE,UAAA,gBAAAnO,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiO,SAAA,GAAAD,UAAA;AAAA,IAAAE,OAAA,gBAAArO,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmO,MAAA,GAAAD,OAAA;AAAA,IAAAE,WAAA,gBAAAvO,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqO,UAAA,GAAAD,WAAA;AAAA,IAAAE,mBAAA,gBAAAzO,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuO,kBAAA,GAAAD,mBAAA;AAAA,IAAAE,WAAA,gBAAA3O,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyO,UAAA,GAAAD,WAAA;AAAA,IAAAE,OAAA,gBAAA7O,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2O,MAAA,GAAAD,OAAA;AAAA,IAAAE,OAAA,gBAAA/O,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6O,MAAA,GAAAD,OAAA;AAAA,IAAAE,gBAAA,gBAAAjP,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+O,eAAA,GAAAD,gBAAA;AAAA,IAAAE,WAAA,gBAAAnP,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiP,UAAA,GAAAD,WAAA;AAAA,IAAAE,OAAA,gBAAArP,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmP,MAAA,GAAAD,OAAA;AAAA,IAAAE,gBAAA,gBAAAvP,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqP,eAAA,GAAAD,gBAAA;AAAA,IAAAE,OAAA,gBAAAzP,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuP,MAAA,GAAAD,OAAA;AAAA,IAAAE,UAAA,gBAAA3P,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyP,SAAA,GAAAD,UAAA;AAAA,IAAAE,KAAA,gBAAA7P,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2P,IAAA,GAAAD,KAAA;AAAA,IAAAE,eAAA,gBAAA/P,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6P,cAAA,GAAAD,eAAA;AAAA,IAAAE,QAAA,gBAAAjQ,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+P,OAAA,GAAAD,QAAA;AAAA,IAAAE,OAAA,gBAAAnQ,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiQ,MAAA,GAAAD,OAAA;AAAA,IAAAE,QAAA,gBAAArQ,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmQ,OAAA,GAAAD,QAAA;AAAA,IAAAE,eAAA,gBAAAvQ,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqQ,cAAA,GAAAD,eAAA;AAAA,IAAAE,KAAA,gBAAAzQ,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuQ,IAAA,GAAAD,KAAA;AAAA,IAAAE,WAAA,gBAAA3Q,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyQ,UAAA,GAAAD,WAAA;AAAA,IAAAE,KAAA,gBAAA7Q,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2Q,IAAA,GAAAD,KAAA;AAAA,IAAAE,KAAA,gBAAA/Q,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6Q,IAAA,GAAAD,KAAA;AAAA,IAAAE,eAAA,gBAAAjR,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+Q,cAAA,GAAAD,eAAA;AAAA,IAAAE,kBAAA,gBAAAnR,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiR,iBAAA,GAAAD,kBAAA;AAAA,IAAAE,gBAAA,gBAAArR,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmR,eAAA,GAAAD,gBAAA;AAAA,IAAAE,UAAA,gBAAAvR,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqR,SAAA,GAAAD,UAAA;AAAA,IAAAE,WAAA,gBAAAzR,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuR,UAAA,GAAAD,WAAA;AAAA,IAAAE,YAAA,gBAAA3R,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyR,WAAA,GAAAD,YAAA;AAAA,IAAAE,SAAA,gBAAA7R,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2R,QAAA,GAAAD,SAAA;AAAA,IAAAE,aAAA,gBAAA/R,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6R,YAAA,GAAAD,aAAA;AAAA,IAAAE,UAAA,gBAAAjS,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+R,SAAA,GAAAD,UAAA;AAAA,IAAAE,OAAA,gBAAAnS,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAiS,MAAA,GAAAD,OAAA;AAAA,IAAAE,KAAA,gBAAArS,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAmS,IAAA,GAAAD,KAAA;AAAA,IAAAE,MAAA,gBAAAvS,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAqS,KAAA,GAAAD,MAAA;AAAA,IAAAE,MAAA,gBAAAzS,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAuS,KAAA,GAAAD,MAAA;AAAA,IAAAE,MAAA,gBAAA3S,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAAyS,KAAA,GAAAD,MAAA;AAAA,IAAAE,oBAAA,gBAAA7S,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA2S,mBAAA,GAAAD,oBAAA;AAAA,IAAAE,qBAAA,gBAAA/S,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA6S,oBAAA,GAAAD,qBAAA;AAAA,IAAAE,MAAA,gBAAAjT,uBAAA,eAAAC,OAAA;AAAAE,OAAA,CAAA+S,KAAA,GAAAD,MAAA;AAAA,SAAAE,yBAAAC,CAAA;EAAA,yBAAAC,OAAA;EAAA,IAAAC,CAAA,OAAAD,OAAA;IAAAE,CAAA,OAAAF,OAAA;EAAA,QAAAF,wBAAA,YAAAA,CAAAC,CAAA;IAAA,OAAAA,CAAA,GAAAG,CAAA,GAAAD,CAAA;EAAA,GAAAF,CAAA;AAAA;AAAA,SAAApT,wBAAAoT,CAAA,EAAAE,CAAA;EAAA,KAAAA,CAAA,IAAAF,CAAA,IAAAA,CAAA,CAAAI,UAAA,SAAAJ,CAAA;EAAA,aAAAA,CAAA,uBAAAA,CAAA,yBAAAA,CAAA;IAAAK,OAAA,EAAAL;EAAA;EAAA,IAAAG,CAAA,GAAAJ,wBAAA,CAAAG,CAAA;EAAA,IAAAC,CAAA,IAAAA,CAAA,CAAAG,GAAA,CAAAN,CAAA,UAAAG,CAAA,CAAAI,GAAA,CAAAP,CAAA;EAAA,IAAAQ,CAAA;MAAAC,SAAA;IAAA;IAAAC,CAAA,GAAAC,MAAA,CAAAC,cAAA,IAAAD,MAAA,CAAAE,wBAAA;EAAA,SAAAC,CAAA,IAAAd,CAAA,oBAAAc,CAAA,IAAAH,MAAA,CAAAI,SAAA,CAAAC,cAAA,CAAAC,IAAA,CAAAjB,CAAA,EAAAc,CAAA;IAAA,IAAAI,CAAA,GAAAR,CAAA,GAAAC,MAAA,CAAAE,wBAAA,CAAAb,CAAA,EAAAc,CAAA;IAAAI,CAAA,KAAAA,CAAA,CAAAX,GAAA,IAAAW,CAAA,CAAAC,GAAA,IAAAR,MAAA,CAAAC,cAAA,CAAAJ,CAAA,EAAAM,CAAA,EAAAI,CAAA,IAAAV,CAAA,CAAAM,CAAA,IAAAd,CAAA,CAAAc,CAAA;EAAA;EAAA,OAAAN,CAAA,CAAAH,OAAA,GAAAL,CAAA,EAAAG,CAAA,IAAAA,CAAA,CAAAgB,GAAA,CAAAnB,CAAA,EAAAQ,CAAA,GAAAA,CAAA;AAAA;AA/BtB;;;;AAiCA;;;;;;;;;;;;;;;;AAiBA;;;;;;;;AASA;;;;;;;;AASA;;;;;;;;;;;;;;;;;;;AAoBA;;;;AAKA;;;;;;;;;;;;;;;;;;;;;;;;AAyBA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;;;;;;;AAWA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;;;;;;;AAWA;;;;AAKA;;;;;;;;AASA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;;;;;;;;;;;;;;;;;AAqBA;;;;;;;;;;;;;AAcA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;;;AAOA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;;;;;AASA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;;;AAOA;;;;;;AAOA;;;;;;AAOA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;;;;;AASA;;;;;;AAOA;;;;AAKA;;;;;;;AAQA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;;;;;;;;;;;;;;;AAmBA;;;;;;AAOA;;;;;;AAOA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA;;;;AAKA,IAAA7T,kBAAA,CAAAyU,KAAK,GAAE"}
 \ No newline at end of file
 diff --git a/dist/cjs/internal/fiberRuntime.js b/dist/cjs/internal/fiberRuntime.js
 index 8af2ae6742e04f6bba6108cb8c2f19b2e61c8a0e..3039bcce9c71eab556bd117f6899418b3636572a 100644
@@ -366,11 +1120,11 @@ index 0000000000000000000000000000000000000000..13abc168c9db0a6b23f5e530617054a0
 \ No newline at end of file
 diff --git a/dist/dts/fluentExtensions.d.ts.map b/dist/dts/fluentExtensions.d.ts.map
 new file mode 100644
-index 0000000000000000000000000000000000000000..20cc26a09de7c654e90050474a32f56b51f3420e
+index 0000000000000000000000000000000000000000..5825fbc05cdd322bde7557fe108ede7291c7f09a
 --- /dev/null
 +++ b/dist/dts/fluentExtensions.d.ts.map
 @@ -0,0 +1 @@
-+{"version":3,"file":"fluentExtensions.d.ts","sourceRoot":"","sources":["../../src/fluentExtensions.ts"],"names":[],"mappings":"AAiRA,wBAAgB,KAAK,SAQpB;AAID,OAAO,EAAE,CAAA"}
++{"version":3,"file":"fluentExtensions.d.ts","sourceRoot":"","sources":["../../src/fluentExtensions.ts"],"names":[],"mappings":"AAgRA,wBAAgB,KAAK,SAQpB;AAID,OAAO,EAAE,CAAA"}
 \ No newline at end of file
 diff --git a/dist/dts/index.d.ts b/dist/dts/index.d.ts
 index 65dae114b2ec87cc9e11978cc38330d522e5986f..4726e4ea5b8f77f3b6223566889a4eb8256bec42 100644
@@ -387,22 +1141,21 @@ index 65dae114b2ec87cc9e11978cc38330d522e5986f..4726e4ea5b8f77f3b6223566889a4eb8
  //# sourceMappingURL=index.d.ts.map
 \ No newline at end of file
 diff --git a/dist/dts/index.d.ts.map b/dist/dts/index.d.ts.map
-index b847019aad3fd55a27933f6221a44430bd109d05..b03ad029482ca86bb077ef3b68b8f3283f8f27e6 100644
+index b847019aad3fd55a27933f6221a44430bd109d05..c2d71e00ec0065a02386e25672c52a447cbb09cb 100644
 --- a/dist/dts/index.d.ts.map
 +++ b/dist/dts/index.d.ts.map
 @@ -1 +1 @@
 -{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/index.ts"],"names":[],"mappings":"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"}
 \ No newline at end of file
-+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/index.ts"],"names":[],"mappings":"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"}
++{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/index.ts"],"names":[],"mappings":"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"}
 \ No newline at end of file
 diff --git a/dist/esm/fluentExtensions.js b/dist/esm/fluentExtensions.js
 new file mode 100644
-index 0000000000000000000000000000000000000000..b1e056e78c99645d2ecb7ca5390256266cf83c44
+index 0000000000000000000000000000000000000000..521128cde6368200ed649a3bed58b9dbd3a3e201
 --- /dev/null
 +++ b/dist/esm/fluentExtensions.js
-@@ -0,0 +1,243 @@
+@@ -0,0 +1,242 @@
 +/* eslint-disable @typescript-eslint/no-explicit-any */
-+import { pipe } from "effect";
 +import * as Cause from "effect/Cause";
 +import * as Config from "effect/Config";
 +import * as Context from "effect/Context";
@@ -411,7 +1164,7 @@ index 0000000000000000000000000000000000000000..b1e056e78c99645d2ecb7ca539025626
 +import * as Either from "effect/Either";
 +import * as Option from "effect/Option";
 +import * as ReadonlyArray from "effect/ReadonlyArray";
-+import { dual, isFunction } from "./Function.js";
++import { dual, isFunction, pipe } from "./Function.js";
 +const toNonEmptyArray = a => a.length ? Option.some(a) : Option.none();
 +const settings = {
 +  enumerable: false,
@@ -647,17 +1400,25 @@ index 0000000000000000000000000000000000000000..b1e056e78c99645d2ecb7ca539025626
 \ No newline at end of file
 diff --git a/dist/esm/fluentExtensions.js.map b/dist/esm/fluentExtensions.js.map
 new file mode 100644
-index 0000000000000000000000000000000000000000..235c84bf19f42247e3b257616ace290cf54a11dc
+index 0000000000000000000000000000000000000000..4e2fa69b534f5f612b155338b867d46e67a477b3
 --- /dev/null
 +++ b/dist/esm/fluentExtensions.js.map
 @@ -0,0 +1 @@
-+{"version":3,"file":"fluentExtensions.js","names":["pipe","Cause","Config","Context","Effect","Class","CommitPrototype","EffectPrototype","StructuralClass","StructuralCommitPrototype","Either","Option","ReadonlyArray","dual","isFunction","toNonEmptyArray","a","length","some","none","settings","enumerable","configurable","writable","installFluentExtensions","unit","fail","step","empty","succeed","GenericTag","map","effect","Object","getPrototypeOf","prototype","forEach","assign","andThen","arg","tap","flatMap","defineProperty","value","asUnit","orDie","opt","getOrElse","self","f","b","isEither","isEffect","right","either","left","Array","args","Map","Set","proto","findFirst","filterMap","patched","patch"],"sources":["../../src/fluentExtensions.ts"],"sourcesContent":[null],"mappings":"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"}
++{"version":3,"file":"fluentExtensions.js","names":["Cause","Config","Context","Effect","Class","CommitPrototype","EffectPrototype","StructuralClass","StructuralCommitPrototype","Either","Option","ReadonlyArray","dual","isFunction","pipe","toNonEmptyArray","a","length","some","none","settings","enumerable","configurable","writable","installFluentExtensions","unit","fail","step","empty","succeed","GenericTag","map","effect","Object","getPrototypeOf","prototype","forEach","assign","andThen","arg","tap","flatMap","defineProperty","value","asUnit","orDie","opt","getOrElse","self","f","b","isEither","isEffect","right","either","left","Array","args","Map","Set","proto","findFirst","filterMap","patched","patch"],"sources":["../../src/fluentExtensions.ts"],"sourcesContent":[null],"mappings":"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"}
 \ No newline at end of file
 diff --git a/dist/esm/index.js b/dist/esm/index.js
-index e8eadccc8ba7aac8d9af852569d2df009b033dd4..4caad0f25e0752b8f47eec738643a7877b958dca 100644
+index e8eadccc8ba7aac8d9af852569d2df009b033dd4..daa03d908e6b2522490a6bb6f478a53b6be11cc8 100644
 --- a/dist/esm/index.js
 +++ b/dist/esm/index.js
-@@ -765,4 +765,8 @@ export * as UpstreamPullStrategy from "./UpstreamPullStrategy.js";
+@@ -1,6 +1,7 @@
+ /**
+  * @since 2.0.0
+  */
++import { patch } from "./fluentExtensions.js";
+ export {
+ /**
+  * @since 2.0.0
+@@ -765,4 +766,9 @@ export * as UpstreamPullStrategy from "./UpstreamPullStrategy.js";
   * @since 2.0.0
   */
  export * as Utils from "./Utils.js";
@@ -665,16 +1426,17 @@ index e8eadccc8ba7aac8d9af852569d2df009b033dd4..4caad0f25e0752b8f47eec738643a787
 + * useful in e.g frontend projects that do not use tsplus, but still has the most useful extensions installed.
 + */
 +export * as fluentExtensions from "./fluentExtensions.js";
++patch();
  //# sourceMappingURL=index.js.map
 \ No newline at end of file
 diff --git a/dist/esm/index.js.map b/dist/esm/index.js.map
-index dcf51ee89a1443b32208c7533b5208f214a8a5ff..6b2215e4bf2fe4eb7a2f80265cde178f5ddcd4b4 100644
+index dcf51ee89a1443b32208c7533b5208f214a8a5ff..831d9912c414142da8a5a0d379336ec56b16094d 100644
 --- a/dist/esm/index.js.map
 +++ b/dist/esm/index.js.map
 @@ -1 +1 @@
 -{"version":3,"file":"index.js","names":["absurd","flow","hole","identity","pipe","unsafeCoerce","BigDecimal","BigInt","Boolean","Brand","Cache","Cause","Channel","ChildExecutorDecision","Chunk","Clock","Config","ConfigError","ConfigProvider","ConfigProviderPathPatch","Console","Context","Cron","Data","DefaultServices","Deferred","Differ","Duration","Effect","Effectable","Either","Encoding","Equal","Equivalence","ExecutionStrategy","Exit","Fiber","FiberId","FiberMap","FiberRef","FiberRefs","FiberRefsPatch","FiberSet","FiberStatus","Function","GlobalValue","GroupBy","HKT","Hash","HashMap","HashSet","Inspectable","KeyedPool","Layer","List","LogLevel","LogSpan","Logger","ManagedRuntime","Match","MergeDecision","MergeState","MergeStrategy","Metric","MetricBoundaries","MetricHook","MetricKey","MetricKeyType","MetricLabel","MetricPair","MetricPolling","MetricRegistry","MetricState","ModuleVersion","MutableHashMap","MutableHashSet","MutableList","MutableQueue","MutableRef","NonEmptyIterable","Number","Option","Order","Ordering","Pipeable","Pool","Predicate","PrimaryKey","PubSub","Queue","Random","RateLimiter","ReadonlyArray","ReadonlyRecord","RedBlackTree","Ref","Reloadable","Request","RequestBlock","RequestResolver","Resource","Runtime","RuntimeFlags","RuntimeFlagsPatch","STM","Schedule","ScheduleDecision","ScheduleInterval","ScheduleIntervals","Scheduler","Scope","ScopedCache","ScopedRef","Secret","SingleProducerAsyncInput","Sink","SortedMap","SortedSet","Stream","StreamEmit","StreamHaltStrategy","Streamable","String","Struct","SubscriptionRef","Supervisor","Symbol","SynchronizedRef","TArray","TDeferred","TMap","TPriorityQueue","TPubSub","TQueue","TRandom","TReentrantLock","TRef","TSemaphore","TSet","Take","TestAnnotation","TestAnnotationMap","TestAnnotations","TestClock","TestConfig","TestContext","TestLive","TestServices","TestSized","Tracer","Trie","Tuple","Types","Unify","UpstreamPullRequest","UpstreamPullStrategy","Utils"],"sources":["../../src/index.ts"],"sourcesContent":[null],"mappings":"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"}
 \ No newline at end of file
-+{"version":3,"file":"index.js","names":["absurd","flow","hole","identity","pipe","unsafeCoerce","BigDecimal","BigInt","Boolean","Brand","Cache","Cause","Channel","ChildExecutorDecision","Chunk","Clock","Config","ConfigError","ConfigProvider","ConfigProviderPathPatch","Console","Context","Cron","Data","DefaultServices","Deferred","Differ","Duration","Effect","Effectable","Either","Encoding","Equal","Equivalence","ExecutionStrategy","Exit","Fiber","FiberId","FiberMap","FiberRef","FiberRefs","FiberRefsPatch","FiberSet","FiberStatus","Function","GlobalValue","GroupBy","HKT","Hash","HashMap","HashSet","Inspectable","KeyedPool","Layer","List","LogLevel","LogSpan","Logger","ManagedRuntime","Match","MergeDecision","MergeState","MergeStrategy","Metric","MetricBoundaries","MetricHook","MetricKey","MetricKeyType","MetricLabel","MetricPair","MetricPolling","MetricRegistry","MetricState","ModuleVersion","MutableHashMap","MutableHashSet","MutableList","MutableQueue","MutableRef","NonEmptyIterable","Number","Option","Order","Ordering","Pipeable","Pool","Predicate","PrimaryKey","PubSub","Queue","Random","RateLimiter","ReadonlyArray","ReadonlyRecord","RedBlackTree","Ref","Reloadable","Request","RequestBlock","RequestResolver","Resource","Runtime","RuntimeFlags","RuntimeFlagsPatch","STM","Schedule","ScheduleDecision","ScheduleInterval","ScheduleIntervals","Scheduler","Scope","ScopedCache","ScopedRef","Secret","SingleProducerAsyncInput","Sink","SortedMap","SortedSet","Stream","StreamEmit","StreamHaltStrategy","Streamable","String","Struct","SubscriptionRef","Supervisor","Symbol","SynchronizedRef","TArray","TDeferred","TMap","TPriorityQueue","TPubSub","TQueue","TRandom","TReentrantLock","TRef","TSemaphore","TSet","Take","TestAnnotation","TestAnnotationMap","TestAnnotations","TestClock","TestConfig","TestContext","TestLive","TestServices","TestSized","Tracer","Trie","Tuple","Types","Unify","UpstreamPullRequest","UpstreamPullStrategy","Utils","fluentExtensions"],"sources":["../../src/index.ts"],"sourcesContent":[null],"mappings":"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"}
++{"version":3,"file":"index.js","names":["patch","absurd","flow","hole","identity","pipe","unsafeCoerce","BigDecimal","BigInt","Boolean","Brand","Cache","Cause","Channel","ChildExecutorDecision","Chunk","Clock","Config","ConfigError","ConfigProvider","ConfigProviderPathPatch","Console","Context","Cron","Data","DefaultServices","Deferred","Differ","Duration","Effect","Effectable","Either","Encoding","Equal","Equivalence","ExecutionStrategy","Exit","Fiber","FiberId","FiberMap","FiberRef","FiberRefs","FiberRefsPatch","FiberSet","FiberStatus","Function","GlobalValue","GroupBy","HKT","Hash","HashMap","HashSet","Inspectable","KeyedPool","Layer","List","LogLevel","LogSpan","Logger","ManagedRuntime","Match","MergeDecision","MergeState","MergeStrategy","Metric","MetricBoundaries","MetricHook","MetricKey","MetricKeyType","MetricLabel","MetricPair","MetricPolling","MetricRegistry","MetricState","ModuleVersion","MutableHashMap","MutableHashSet","MutableList","MutableQueue","MutableRef","NonEmptyIterable","Number","Option","Order","Ordering","Pipeable","Pool","Predicate","PrimaryKey","PubSub","Queue","Random","RateLimiter","ReadonlyArray","ReadonlyRecord","RedBlackTree","Ref","Reloadable","Request","RequestBlock","RequestResolver","Resource","Runtime","RuntimeFlags","RuntimeFlagsPatch","STM","Schedule","ScheduleDecision","ScheduleInterval","ScheduleIntervals","Scheduler","Scope","ScopedCache","ScopedRef","Secret","SingleProducerAsyncInput","Sink","SortedMap","SortedSet","Stream","StreamEmit","StreamHaltStrategy","Streamable","String","Struct","SubscriptionRef","Supervisor","Symbol","SynchronizedRef","TArray","TDeferred","TMap","TPriorityQueue","TPubSub","TQueue","TRandom","TReentrantLock","TRef","TSemaphore","TSet","Take","TestAnnotation","TestAnnotationMap","TestAnnotations","TestClock","TestConfig","TestContext","TestLive","TestServices","TestSized","Tracer","Trie","Tuple","Types","Unify","UpstreamPullRequest","UpstreamPullStrategy","Utils","fluentExtensions"],"sources":["../../src/index.ts"],"sourcesContent":[null],"mappings":"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"}
 \ No newline at end of file
 diff --git a/dist/esm/internal/fiberRuntime.js b/dist/esm/internal/fiberRuntime.js
 index a5ce9d232758976ab59c6da85fc31cc7a10580d5..2ff71388bb2cc2560d36adb29a3af2dea8a1af75 100644
@@ -752,12 +1514,11 @@ index 62e52aa44b8324c0e652ea96da7f00d2506232e7..14fb4a0485f4b0ed7fa74bb2c18a3a6d
    }
 diff --git a/src/fluentExtensions.ts b/src/fluentExtensions.ts
 new file mode 100644
-index 0000000000000000000000000000000000000000..f77be31840f819a9179f29c00a00542431bf59c0
+index 0000000000000000000000000000000000000000..c9c0e6a2ddfb1cf3e32bc7e3a55ac03ad31880da
 --- /dev/null
 +++ b/src/fluentExtensions.ts
-@@ -0,0 +1,286 @@
+@@ -0,0 +1,285 @@
 +/* eslint-disable @typescript-eslint/no-explicit-any */
-+import { pipe } from "effect"
 +import * as Cause from "effect/Cause"
 +import * as Config from "effect/Config"
 +import * as Context from "effect/Context"
@@ -766,7 +1527,7 @@ index 0000000000000000000000000000000000000000..f77be31840f819a9179f29c00a005424
 +import * as Either from "effect/Either"
 +import * as Option from "effect/Option"
 +import * as ReadonlyArray from "effect/ReadonlyArray"
-+import { dual, isFunction } from "./Function.js"
++import { dual, isFunction, pipe } from "./Function.js"
 +
 +const toNonEmptyArray = <A>(a: ReadonlyArray<A>) =>
 +  a.length ? Option.some(a as ReadonlyArray.NonEmptyReadonlyArray<A>) : Option.none()
@@ -1043,10 +1804,19 @@ index 0000000000000000000000000000000000000000..f77be31840f819a9179f29c00a005424
 +
 +export {}
 diff --git a/src/index.ts b/src/index.ts
-index 0c60509dcac777df16a1a9f91d209a4a58fd6738..6d6084718952badb226cc8a168117778c573ddd3 100644
+index 0c60509dcac777df16a1a9f91d209a4a58fd6738..7d6bb27091c745090ccf3711d19d769697a7266a 100644
 --- a/src/index.ts
 +++ b/src/index.ts
-@@ -918,3 +918,8 @@ export * as UpstreamPullStrategy from "./UpstreamPullStrategy.js"
+@@ -2,6 +2,8 @@
+  * @since 2.0.0
+  */
+ 
++import { patch } from "./fluentExtensions.js"
++
+ export {
+   /**
+    * @since 2.0.0
+@@ -918,3 +920,10 @@ export * as UpstreamPullStrategy from "./UpstreamPullStrategy.js"
   * @since 2.0.0
   */
  export * as Utils from "./Utils.js"
@@ -1055,6 +1825,8 @@ index 0c60509dcac777df16a1a9f91d209a4a58fd6738..6d6084718952badb226cc8a168117778
 + * useful in e.g frontend projects that do not use tsplus, but still has the most useful extensions installed.
 + */
 +export * as fluentExtensions from "./fluentExtensions.js"
++
++patch()
 diff --git a/src/internal/fiberRuntime.ts b/src/internal/fiberRuntime.ts
 index 352b0114f3389f258c2a5c355fed43710d35fd0a..5d512f527bceaf64a210ef228a0437a808e59a37 100644
 --- a/src/internal/fiberRuntime.ts
