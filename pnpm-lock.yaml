@@ -33,7 +33,7 @@ patchedDependencies:
     hash: g5hqt5bhnjezqo5vnkpprfkba4
     path: patches/date-fns@2.30.0.patch
   effect@2.4.9:
-    hash: ucls44n74kqaervnothroydk4e
+    hash: ulhkzjkclvg2pdipgzdwxrmome
     path: patches/effect@2.4.9.patch
   eslint-plugin-codegen@0.17.0:
     hash: 3ogk7peuefdu45q3hbzcgdiuna
@@ -81,7 +81,7 @@ dependencies:
     version: 2.30.0(patch_hash=g5hqt5bhnjezqo5vnkpprfkba4)
   effect:
     specifier: ^2.4.9
-    version: 2.4.9(patch_hash=ucls44n74kqaervnothroydk4e)
+    version: 2.4.9(patch_hash=ulhkzjkclvg2pdipgzdwxrmome)
   eslint-plugin-codegen:
     specifier: ^0.17.0
     version: 0.17.0(patch_hash=3ogk7peuefdu45q3hbzcgdiuna)
@@ -517,7 +517,7 @@ packages:
       '@opentelemetry/resources': 1.22.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-metrics': 1.22.0(patch_hash=6gn5tm7gzqavbxydbhkefohwai)(@opentelemetry/api@1.8.0)
       '@opentelemetry/semantic-conventions': 1.22.0
-      effect: 2.4.9(patch_hash=ucls44n74kqaervnothroydk4e)
+      effect: 2.4.9(patch_hash=ulhkzjkclvg2pdipgzdwxrmome)
     dev: false
     patched: true
 
@@ -528,7 +528,7 @@ packages:
       effect: ^2.4.3
     dependencies:
       '@effect/schema': 0.64.9(patch_hash=xe5dsgs2lh7h5efzntdslauwnm)(effect@2.4.9)(fast-check@3.16.0)
-      effect: 2.4.9(patch_hash=ucls44n74kqaervnothroydk4e)
+      effect: 2.4.9(patch_hash=ulhkzjkclvg2pdipgzdwxrmome)
       find-my-way-ts: 0.1.1
       isomorphic-ws: 5.0.0(ws@8.16.0)
       multipasta: 0.1.21
@@ -543,7 +543,7 @@ packages:
       effect: ^2.4.9
       fast-check: ^3.13.2
     dependencies:
-      effect: 2.4.9(patch_hash=ucls44n74kqaervnothroydk4e)
+      effect: 2.4.9(patch_hash=ulhkzjkclvg2pdipgzdwxrmome)
       fast-check: 3.16.0(patch_hash=gmhutzas2jzobvkhr72gjyjori)
     dev: false
     patched: true
@@ -553,7 +553,7 @@ packages:
     peerDependencies:
       effect: ^2.3.8
     dependencies:
-      effect: 2.4.9(patch_hash=ucls44n74kqaervnothroydk4e)
+      effect: 2.4.9(patch_hash=ulhkzjkclvg2pdipgzdwxrmome)
     dev: false
 
   /@esbuild/aix-ppc64@0.19.12:
@@ -1006,7 +1006,7 @@ packages:
       effect: ^2.0.0
     dependencies:
       '@effect/typeclass': 0.22.23(effect@2.4.9)
-      effect: 2.4.9(patch_hash=ucls44n74kqaervnothroydk4e)
+      effect: 2.4.9(patch_hash=ulhkzjkclvg2pdipgzdwxrmome)
     dev: false
     patched: true
 
@@ -3358,7 +3358,7 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /effect@2.4.9(patch_hash=ucls44n74kqaervnothroydk4e):
+  /effect@2.4.9(patch_hash=ulhkzjkclvg2pdipgzdwxrmome):
     resolution: {integrity: sha512-hRTy37jVylIYOC4k/VKfgmGkIMEOjR8MOurLzr1J0AD7ufagbcoO7voygZkT2B1STXfBXEsKNWj8yDAzUcPpAA==}
     dev: false
     patched: true
