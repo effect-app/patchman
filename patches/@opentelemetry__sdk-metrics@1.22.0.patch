@@ -1,0 +1,39 @@
+diff --git a/build/esm/export/ConsoleMetricExporter.js b/build/esm/export/ConsoleMetricExporter.js
+index c2992b962ef0778d38caf8f20f585b57c8737c50..5d3474a879ade21113908910f2cc589e454831e2 100644
+--- a/build/esm/export/ConsoleMetricExporter.js
++++ b/build/esm/export/ConsoleMetricExporter.js
+@@ -64,7 +64,7 @@ var ConsoleMetricExporter = /** @class */ (function () {
+                             descriptor: metric.descriptor,
+                             dataPointType: metric.dataPointType,
+                             dataPoints: metric.dataPoints,
+-                        });
++                        }, { depth: null });
+                     }
+                 }
+                 catch (e_2_1) { e_2 = { error: e_2_1 }; }
+diff --git a/build/esnext/export/ConsoleMetricExporter.js b/build/esnext/export/ConsoleMetricExporter.js
+index 7cfffc0bb7727df20c41c001c80d7310d257dd46..feef9535ca8f55784082622e35b497979ad437c7 100644
+--- a/build/esnext/export/ConsoleMetricExporter.js
++++ b/build/esnext/export/ConsoleMetricExporter.js
+@@ -48,7 +48,7 @@ export class ConsoleMetricExporter {
+                     descriptor: metric.descriptor,
+                     dataPointType: metric.dataPointType,
+                     dataPoints: metric.dataPoints,
+-                });
++                }, { depth: null });
+             }
+         }
+         done({ code: ExportResultCode.SUCCESS });
+diff --git a/build/src/export/ConsoleMetricExporter.js b/build/src/export/ConsoleMetricExporter.js
+index f55ac3c5305e712cf43c2ec4be580db66fc5ea21..88871eaed1a04577b9041e0ec0f2f577509c954c 100644
+--- a/build/src/export/ConsoleMetricExporter.js
++++ b/build/src/export/ConsoleMetricExporter.js
+@@ -51,7 +51,7 @@ class ConsoleMetricExporter {
+                     descriptor: metric.descriptor,
+                     dataPointType: metric.dataPointType,
+                     dataPoints: metric.dataPoints,
+-                });
++                },{ depth: null });
+             }
+         }
+         done({ code: core_1.ExportResultCode.SUCCESS });
