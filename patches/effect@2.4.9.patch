@@ -738,24 +738,10 @@ index 0000000000000000000000000000000000000000..ef33f5fdb1a491789756df94765013a8
 +  "sideEffects": []
 +}
 diff --git a/package.json b/package.json
-index 62e52aa44b8324c0e652ea96da7f00d2506232e7..994c357af62709c7b7b1ffdefa8f3893d97eb4e4 100644
+index 62e52aa44b8324c0e652ea96da7f00d2506232e7..14fb4a0485f4b0ed7fa74bb2c18a3a6dc7688069 100644
 --- a/package.json
 +++ b/package.json
-@@ -8,7 +8,12 @@
-     "url": "https://github.com/effect-ts/effect.git",
-     "directory": "packages/effect"
-   },
--  "sideEffects": [],
-+  "sideEffects": [
-+    "./dist/esm/fluentExtensions.js",
-+    "./dist/cjs/fluentExtensions.js",
-+    "./dist/esm/index.js",
-+    "./dist/cjs/index.js"
-+  ],
-   "main": "./dist/cjs/index.js",
-   "module": "./dist/esm/index.js",
-   "types": "./dist/dts/index.d.ts",
-@@ -773,6 +778,11 @@
+@@ -773,6 +773,11 @@
        "types": "./dist/dts/Utils.d.ts",
        "import": "./dist/esm/Utils.js",
        "default": "./dist/cjs/Utils.js"
@@ -767,7 +753,7 @@ index 62e52aa44b8324c0e652ea96da7f00d2506232e7..994c357af62709c7b7b1ffdefa8f3893
      }
    },
    "typesVersions": {
-@@ -1229,6 +1239,9 @@
+@@ -1229,6 +1234,9 @@
        ],
        "Utils": [
          "./dist/dts/Utils.d.ts"

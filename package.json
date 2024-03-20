@@ -21,6 +21,7 @@
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.16.0",
     "primevue": "3.49.1",
+    "tsx": "^4.7.1",
     "typescript": "^5.4.2"
   },
   "pnpm": {
