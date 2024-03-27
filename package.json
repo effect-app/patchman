@@ -8,18 +8,18 @@
   },
   "dependencies": {
     "@effect/language-service": "0.0.19",
-    "@effect/opentelemetry": "^0.31.20",
+    "@effect/opentelemetry": "^0.31.25",
     "@effect/platform": "^0.47.1",
-    "@effect/schema": "^0.64.10",
+    "@effect/schema": "^0.64.15",
     "@fp-ts/optic": "^0.22.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@opentelemetry/sdk-metrics": "^1.22.0",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
     "date-fns": "2.30.0",
-    "effect": "^2.4.10",
+    "effect": "^2.4.15",
     "eslint-plugin-codegen": "^0.17.0",
-    "fast-check": "^3.16.0",
+    "fast-check": "^3.17.0",
     "primevue": "3.49.1",
     "tsx": "^4.7.1",
     "typescript": "^5.4.3"
@@ -31,14 +31,14 @@
       "eslint-plugin-codegen@0.17.0": "patches/eslint-plugin-codegen@0.17.0.patch",
       "@phaphoso/eslint-plugin-dprint@0.5.2": "patches/@phaphoso__eslint-plugin-dprint@0.5.2.patch",
       "date-fns@2.30.0": "patches/date-fns@2.30.0.patch",
-      "fast-check@3.16.0": "patches/fast-check@3.16.0.patch",
+      "fast-check@3.17.0": "patches/fast-check@3.17.0.patch",
       "@fp-ts/optic@0.22.0": "patches/@fp-ts__optic@0.22.0.patch",
       "@hebilicious/vue-query-nuxt@0.3.0": "patches/@hebilicious__vue-query-nuxt@0.3.0.patch",
       "primevue@3.49.1": "patches/primevue@3.49.1.patch",
       "typescript@5.4.3": "patches/typescript@5.4.3.patch",
       "@opentelemetry/sdk-metrics@1.22.0": "patches/@opentelemetry__sdk-metrics@1.22.0.patch",
-      "effect@2.4.10": "patches/effect@2.4.10.patch",
-      "@effect/schema@0.64.10": "patches/@effect__schema@0.64.10.patch"
+      "effect@2.4.15": "patches/effect@2.4.15.patch",
+      "@effect/schema@0.64.15": "patches/@effect__schema@0.64.15.patch"
     }
   },
   "scripts": {
