@@ -8,16 +8,16 @@
   },
   "dependencies": {
     "@effect/language-service": "0.0.19",
-    "@effect/opentelemetry": "^0.31.25",
+    "@effect/opentelemetry": "^0.31.27",
     "@effect/platform": "^0.47.1",
-    "@effect/schema": "^0.64.16",
+    "@effect/schema": "^0.64.18",
     "@fp-ts/optic": "^0.22.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
-    "@opentelemetry/sdk-metrics": "^1.22.0",
+    "@opentelemetry/sdk-metrics": "^1.23.0",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
     "date-fns": "2.30.0",
-    "effect": "^2.4.15",
+    "effect": "^2.4.17",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.17.1",
     "primevue": "3.49.1",
@@ -35,9 +35,8 @@
       "@hebilicious/vue-query-nuxt@0.3.0": "patches/@hebilicious__vue-query-nuxt@0.3.0.patch",
       "primevue@3.49.1": "patches/primevue@3.49.1.patch",
       "typescript@5.4.3": "patches/typescript@5.4.3.patch",
-      "@opentelemetry/sdk-metrics@1.22.0": "patches/@opentelemetry__sdk-metrics@1.22.0.patch",
-      "effect@2.4.15": "patches/effect@2.4.15.patch",
-      "@effect/schema@0.64.16": "patches/@effect__schema@0.64.16.patch"
+      "effect@2.4.17": "patches/effect@2.4.17.patch",
+      "@effect/schema@0.64.18": "patches/@effect__schema@0.64.18.patch"
     }
   },
   "scripts": {
