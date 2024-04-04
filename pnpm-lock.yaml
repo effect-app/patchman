@@ -9,7 +9,7 @@ patchedDependencies:
     hash: izp2ue34jjv4swyrhg2ux4ha3e
     path: patches/@effect__language-service@0.0.19.patch
   '@effect/schema@0.64.18':
-    hash: 7hnzcloeoya4xtz3uueiiderau
+    hash: ap6yanvizqcxf7ooeotokfgbla
     path: patches/@effect__schema@0.64.18.patch
   '@fp-ts/optic@0.22.0':
     hash: vbz73cdpsr75kq5arjl3uuoa3i
@@ -51,7 +51,7 @@ dependencies:
     version: 0.47.1(@effect/schema@0.64.18)(effect@2.4.17)(ws@8.16.0)
   '@effect/schema':
     specifier: ^0.64.18
-    version: 0.64.18(patch_hash=7hnzcloeoya4xtz3uueiiderau)(effect@2.4.17)(fast-check@3.17.1)
+    version: 0.64.18(patch_hash=ap6yanvizqcxf7ooeotokfgbla)(effect@2.4.17)(fast-check@3.17.1)
   '@fp-ts/optic':
     specifier: ^0.22.0
     version: 0.22.0(patch_hash=vbz73cdpsr75kq5arjl3uuoa3i)(@effect/typeclass@0.22.23)(effect@2.4.17)
@@ -553,7 +553,7 @@ packages:
       '@effect/schema': ^0.63.4
       effect: ^2.4.3
     dependencies:
-      '@effect/schema': 0.64.18(patch_hash=7hnzcloeoya4xtz3uueiiderau)(effect@2.4.17)(fast-check@3.17.1)
+      '@effect/schema': 0.64.18(patch_hash=ap6yanvizqcxf7ooeotokfgbla)(effect@2.4.17)(fast-check@3.17.1)
       effect: 2.4.17(patch_hash=j3pw4odjze3nxziobfze5lsebe)
       find-my-way-ts: 0.1.1
       isomorphic-ws: 5.0.0(ws@8.16.0)
@@ -563,7 +563,7 @@ packages:
       - ws
     dev: false
 
-  /@effect/schema@0.64.18(patch_hash=7hnzcloeoya4xtz3uueiiderau)(effect@2.4.17)(fast-check@3.17.1):
+  /@effect/schema@0.64.18(patch_hash=ap6yanvizqcxf7ooeotokfgbla)(effect@2.4.17)(fast-check@3.17.1):
     resolution: {integrity: sha512-utMVAjcKqmNlkJ8hzdXf3FWBOsekKbe3xhYzWLLLFCpdbTMkCFeN52l1QRXTk7rla87sNTYdMA+xcES9maOEog==}
     peerDependencies:
       effect: ^2.4.17
