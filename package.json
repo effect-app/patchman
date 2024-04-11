@@ -22,7 +22,7 @@
     "fast-check": "^3.17.1",
     "primevue": "3.49.1",
     "tsx": "^4.7.2",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.5"
   },
   "pnpm": {
     "patchedDependencies": {
@@ -34,7 +34,7 @@
       "@fp-ts/optic@0.22.0": "patches/@fp-ts__optic@0.22.0.patch",
       "@hebilicious/vue-query-nuxt@0.3.0": "patches/@hebilicious__vue-query-nuxt@0.3.0.patch",
       "primevue@3.49.1": "patches/primevue@3.49.1.patch",
-      "typescript@5.4.4": "patches/typescript@5.4.4.patch",
+      "typescript@5.4.5": "patches/typescript@5.4.5.patch",
       "effect@2.4.18": "patches/effect@2.4.18.patch",
       "@effect/schema@0.64.20": "patches/@effect__schema@0.64.20.patch"
     }
