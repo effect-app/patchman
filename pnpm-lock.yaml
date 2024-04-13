@@ -8,6 +8,9 @@ patchedDependencies:
   '@effect/language-service@0.0.19':
     hash: izp2ue34jjv4swyrhg2ux4ha3e
     path: patches/@effect__language-service@0.0.19.patch
+  '@effect/platform-node@0.45.29':
+    hash: frqz37zumoo3aiebd3mssw7aoa
+    path: patches/@effect__platform-node@0.45.29.patch
   '@effect/schema@0.64.20':
     hash: frnqv6vfxkawiery3gbg4q6qju
     path: patches/@effect__schema@0.64.20.patch
@@ -49,6 +52,9 @@ dependencies:
   '@effect/platform':
     specifier: ^0.47.1
     version: 0.47.1(@effect/schema@0.64.20)(effect@2.4.18)(ws@8.16.0)
+  '@effect/platform-node':
+    specifier: ^0.45.29
+    version: 0.45.29(patch_hash=frqz37zumoo3aiebd3mssw7aoa)(@effect/platform@0.47.1)(effect@2.4.18)
   '@effect/schema':
     specifier: ^0.64.20
     version: 0.64.20(patch_hash=frnqv6vfxkawiery3gbg4q6qju)(effect@2.4.18)(fast-check@3.17.1)
@@ -546,6 +552,36 @@ packages:
       '@opentelemetry/semantic-conventions': 1.23.0
       effect: 2.4.18(patch_hash=zt2zp4yndz3eqqzk3szpaaeitu)
     dev: false
+
+  /@effect/platform-node-shared@0.3.27(@effect/platform@0.47.1)(effect@2.4.18):
+    resolution: {integrity: sha512-SMlcE0Q3+i5C20ur0tp/XWo+mg2oIwdSq47NPViTgqtpyoqXpHlCQm9IUIMSyzhYDuPRXO44FVCt7Aw//0pLxA==}
+    peerDependencies:
+      '@effect/platform': ^0.48.27
+      effect: ^2.4.18
+    dependencies:
+      '@effect/platform': 0.47.1(@effect/schema@0.64.20)(effect@2.4.18)(ws@8.16.0)
+      '@parcel/watcher': 2.4.1
+      effect: 2.4.18(patch_hash=zt2zp4yndz3eqqzk3szpaaeitu)
+      multipasta: 0.2.0
+    dev: false
+
+  /@effect/platform-node@0.45.29(patch_hash=frqz37zumoo3aiebd3mssw7aoa)(@effect/platform@0.47.1)(effect@2.4.18):
+    resolution: {integrity: sha512-/GrESdPrAfLww8e3IzHofJUV6F3DxblC8E3fwL6iK/8CONBOPRnNrgvzJLSTBOGJIEEnNdsqFdWnlHs0OPwiqQ==}
+    peerDependencies:
+      '@effect/platform': ^0.48.27
+      effect: ^2.4.18
+    dependencies:
+      '@effect/platform': 0.47.1(@effect/schema@0.64.20)(effect@2.4.18)(ws@8.16.0)
+      '@effect/platform-node-shared': 0.3.27(@effect/platform@0.47.1)(effect@2.4.18)
+      effect: 2.4.18(patch_hash=zt2zp4yndz3eqqzk3szpaaeitu)
+      mime: 3.0.0
+      undici: 6.13.0
+      ws: 8.16.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: false
+    patched: true
 
   /@effect/platform@0.47.1(@effect/schema@0.64.20)(effect@2.4.18)(ws@8.16.0):
     resolution: {integrity: sha512-nuetGrtEDAmaSdQMVxe3gxyKTzrC+H65iBLK3LKoAjgLj5F6+qgZ8HIOGCyrwtQa2YIbm2aJ+o3onpRr7VGoaw==}
@@ -5827,6 +5863,10 @@ packages:
     resolution: {integrity: sha512-HpF9156uifsQu1L8KKW1EqXIt3DacHJTzQ+JSm6IShkcyyf+krOWzfOgT3OLHzesM40hbs6/QW5CJWSEdDPQag==}
     dev: false
 
+  /multipasta@0.2.0:
+    resolution: {integrity: sha512-MNAym1D9GTpY0/CKYJFDmaJ3TfhblfsQyyipCCSsgasMZCAyR2fCNDJhR7lACfJ0YMwQSDi5RHeIdJcsze6WMg==}
+    dev: false
+
   /nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -8052,6 +8092,11 @@ packages:
     engines: {node: '>=14.0'}
     dependencies:
       '@fastify/busboy': 2.1.1
+    dev: false
+
+  /undici@6.13.0:
+    resolution: {integrity: sha512-Q2rtqmZWrbP8nePMq7mOJIN98M0fYvSgV89vwl/BQRT4mDOeY2GXZngfGpcBBhtky3woM7G24wZV3Q304Bv6cw==}
+    engines: {node: '>=18.0'}
     dev: false
 
   /unenv@1.9.0:
