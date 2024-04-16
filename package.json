@@ -11,7 +11,7 @@
     "@effect/opentelemetry": "^0.31.29",
     "@effect/platform": "^0.47.1",
     "@effect/platform-node": "^0.45.31",
-    "@effect/schema": "^0.65.0",
+    "@effect/schema": "^0.66.0",
     "@fp-ts/optic": "^0.22.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
@@ -36,8 +36,8 @@
       "@hebilicious/vue-query-nuxt@0.3.0": "patches/@hebilicious__vue-query-nuxt@0.3.0.patch",
       "primevue@3.49.1": "patches/primevue@3.49.1.patch",
       "typescript@5.4.5": "patches/typescript@5.4.5.patch",
-      "@effect/schema@0.65.0": "patches/@effect__schema@0.65.0.patch",
-      "effect@3.0.0": "patches/effect@3.0.0.patch"
+      "effect@3.0.0": "patches/effect@3.0.0.patch",
+      "@effect/schema@0.66.0": "patches/@effect__schema@0.66.0.patch"
     }
   },
   "scripts": {
