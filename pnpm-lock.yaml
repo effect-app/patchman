@@ -11,9 +11,9 @@ patchedDependencies:
   '@effect/schema@0.66.0':
     hash: ixoqei3yj4dmf6z73ued6oe74y
     path: patches/@effect__schema@0.66.0.patch
-  '@fp-ts/optic@0.22.0':
-    hash: vbz73cdpsr75kq5arjl3uuoa3i
-    path: patches/@fp-ts__optic@0.22.0.patch
+  '@fp-ts/optic@0.23.0':
+    hash: jwgpobme23obb6qkb2u2irhmoa
+    path: patches/@fp-ts__optic@0.23.0.patch
   '@hebilicious/vue-query-nuxt@0.3.0':
     hash: 5dcq766eeuesmqdcvoqrnf6tzi
     path: patches/@hebilicious__vue-query-nuxt@0.3.0.patch
@@ -56,8 +56,8 @@ dependencies:
     specifier: ^0.66.0
     version: 0.66.0(patch_hash=ixoqei3yj4dmf6z73ued6oe74y)(effect@3.0.0)(fast-check@3.17.1)
   '@fp-ts/optic':
-    specifier: ^0.22.0
-    version: 0.22.0(patch_hash=vbz73cdpsr75kq5arjl3uuoa3i)(@effect/typeclass@0.22.23)(effect@3.0.0)
+    specifier: ^0.23.0
+    version: 0.23.0(patch_hash=jwgpobme23obb6qkb2u2irhmoa)(@effect/typeclass@0.23.19)(effect@3.0.0)
   '@hebilicious/vue-query-nuxt':
     specifier: ^0.3.0
     version: 0.3.0(patch_hash=5dcq766eeuesmqdcvoqrnf6tzi)(@tanstack/vue-query@5.29.0)(nuxt@3.11.2)
@@ -606,10 +606,10 @@ packages:
     dev: false
     patched: true
 
-  /@effect/typeclass@0.22.23(effect@3.0.0):
-    resolution: {integrity: sha512-Wh5wr47//is2CTet8m5lxaySFyg8zk6fLMfWzLe0V5T7mgTRLhBIQ3/RCxoNcuHNF9vqTA2yCpy0AJlb3EJ+HQ==}
+  /@effect/typeclass@0.23.19(effect@3.0.0):
+    resolution: {integrity: sha512-35DIE+EXKOZqCKIeI1Qbi1cppAWhePBbupHPtrAe14jNqHTxyXgqhYflcXo4E9muawHVq4R4X3y0zbYMFHTmSQ==}
     peerDependencies:
-      effect: ^2.3.8
+      effect: ^2.4.19
     dependencies:
       effect: 3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu)
     dev: false
@@ -1073,13 +1073,13 @@ packages:
       '@fp-ts/core': 0.0.11
     dev: false
 
-  /@fp-ts/optic@0.22.0(patch_hash=vbz73cdpsr75kq5arjl3uuoa3i)(@effect/typeclass@0.22.23)(effect@3.0.0):
-    resolution: {integrity: sha512-Kpg9bdA+q3d1I+ulENsax4iV6ge5TzRH6nj2/kdPPg42wtTmlir42oBlpbiwp3l3uNDja9rBWmuya0Q6GAmakQ==}
+  /@fp-ts/optic@0.23.0(patch_hash=jwgpobme23obb6qkb2u2irhmoa)(@effect/typeclass@0.23.19)(effect@3.0.0):
+    resolution: {integrity: sha512-I1++9VQPvtXgwQzEGaBcdfg50yYMlxMXsqcXPCXgz9QbDKFPDIhVKKP4cNg+DbbupVdBHuBh093GRQ49NKglHg==}
     peerDependencies:
-      '@effect/typeclass': ^0.22.0
-      effect: ^2.0.0
+      '@effect/typeclass': ^0.23.0
+      effect: ^2.4.0
     dependencies:
-      '@effect/typeclass': 0.22.23(effect@3.0.0)
+      '@effect/typeclass': 0.23.19(effect@3.0.0)
       effect: 3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu)
     dev: false
     patched: true
