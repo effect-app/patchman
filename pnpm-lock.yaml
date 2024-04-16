@@ -27,7 +27,7 @@ patchedDependencies:
     hash: g5hqt5bhnjezqo5vnkpprfkba4
     path: patches/date-fns@2.30.0.patch
   effect@3.0.0:
-    hash: hfu34f4pab7mkrs7tjlvu73lnu
+    hash: hdmrs7phl5uhn3tb2njjlagnma
     path: patches/effect@3.0.0.patch
   eslint-plugin-codegen@0.17.0:
     hash: 3ogk7peuefdu45q3hbzcgdiuna
@@ -75,7 +75,7 @@ dependencies:
     version: 2.30.0(patch_hash=g5hqt5bhnjezqo5vnkpprfkba4)
   effect:
     specifier: ^3.0.0
-    version: 3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu)
+    version: 3.0.0(patch_hash=hdmrs7phl5uhn3tb2njjlagnma)
   eslint-plugin-codegen:
     specifier: ^0.17.0
     version: 0.17.0(patch_hash=3ogk7peuefdu45q3hbzcgdiuna)
@@ -547,7 +547,7 @@ packages:
       '@opentelemetry/resources': 1.23.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-metrics': 1.23.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/semantic-conventions': 1.23.0
-      effect: 3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu)
+      effect: 3.0.0(patch_hash=hdmrs7phl5uhn3tb2njjlagnma)
     dev: false
 
   /@effect/platform-node-shared@0.3.29(@effect/platform@0.47.1)(effect@3.0.0):
@@ -558,7 +558,7 @@ packages:
     dependencies:
       '@effect/platform': 0.47.1(@effect/schema@0.66.0)(effect@3.0.0)(ws@8.16.0)
       '@parcel/watcher': 2.4.1
-      effect: 3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu)
+      effect: 3.0.0(patch_hash=hdmrs7phl5uhn3tb2njjlagnma)
       multipasta: 0.2.0
     dev: false
 
@@ -570,7 +570,7 @@ packages:
     dependencies:
       '@effect/platform': 0.47.1(@effect/schema@0.66.0)(effect@3.0.0)(ws@8.16.0)
       '@effect/platform-node-shared': 0.3.29(@effect/platform@0.47.1)(effect@3.0.0)
-      effect: 3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu)
+      effect: 3.0.0(patch_hash=hdmrs7phl5uhn3tb2njjlagnma)
       mime: 3.0.0
       undici: 6.13.0
       ws: 8.16.0
@@ -586,7 +586,7 @@ packages:
       effect: ^2.4.3
     dependencies:
       '@effect/schema': 0.66.0(patch_hash=ixoqei3yj4dmf6z73ued6oe74y)(effect@3.0.0)(fast-check@3.17.1)
-      effect: 3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu)
+      effect: 3.0.0(patch_hash=hdmrs7phl5uhn3tb2njjlagnma)
       find-my-way-ts: 0.1.1
       isomorphic-ws: 5.0.0(ws@8.16.0)
       multipasta: 0.1.21
@@ -601,7 +601,7 @@ packages:
       effect: ^3.0.0
       fast-check: ^3.13.2
     dependencies:
-      effect: 3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu)
+      effect: 3.0.0(patch_hash=hdmrs7phl5uhn3tb2njjlagnma)
       fast-check: 3.17.1
     dev: false
     patched: true
@@ -611,7 +611,7 @@ packages:
     peerDependencies:
       effect: ^2.4.19
     dependencies:
-      effect: 3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu)
+      effect: 3.0.0(patch_hash=hdmrs7phl5uhn3tb2njjlagnma)
     dev: false
 
   /@esbuild/aix-ppc64@0.19.12:
@@ -1080,7 +1080,7 @@ packages:
       effect: ^2.4.0
     dependencies:
       '@effect/typeclass': 0.23.19(effect@3.0.0)
-      effect: 3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu)
+      effect: 3.0.0(patch_hash=hdmrs7phl5uhn3tb2njjlagnma)
     dev: false
     patched: true
 
@@ -3891,7 +3891,7 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /effect@3.0.0(patch_hash=hfu34f4pab7mkrs7tjlvu73lnu):
+  /effect@3.0.0(patch_hash=hdmrs7phl5uhn3tb2njjlagnma):
     resolution: {integrity: sha512-8yVxuahojpD8Y6ynrvIlSWD2xsea/PyGnjA4V5c7v0fOMJafgsKUNUHErBAr6YoPikmtOfR9zqNWRd9u5QaWEQ==}
     dev: false
     patched: true
