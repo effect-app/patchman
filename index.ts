@@ -1,4 +1,4 @@
-import { ReadonlyArray, pipe } from "effect";
+import { Array, pipe } from "effect";
 import fs from "fs";
 import path from "path";
 
@@ -34,8 +34,8 @@ await Promise.all(
       Object.entries(pj.pnpm.patchedDependencies).map(([name, patch]) => {
         return name.substring(0, name.substring(1).indexOf("@") + 1);
       }),
-      ReadonlyArray.filterMap((name) =>
-        ReadonlyArray.findFirst(
+      Array.filterMap((name) =>
+        Array.findFirst(
           availablePatches,
           ([desiredName]) => desiredName === name
         )
