@@ -12,7 +12,7 @@ patchedDependencies:
     hash: ixoqei3yj4dmf6z73ued6oe74y
     path: patches/@effect__schema@0.66.0.patch
   '@fp-ts/optic@0.23.0':
-    hash: jwgpobme23obb6qkb2u2irhmoa
+    hash: zmyksyllmzx5sunu54bhytzapa
     path: patches/@fp-ts__optic@0.23.0.patch
   '@hebilicious/vue-query-nuxt@0.3.0':
     hash: 5dcq766eeuesmqdcvoqrnf6tzi
@@ -57,7 +57,7 @@ dependencies:
     version: 0.66.0(patch_hash=ixoqei3yj4dmf6z73ued6oe74y)(effect@3.0.0)(fast-check@3.17.1)
   '@fp-ts/optic':
     specifier: ^0.23.0
-    version: 0.23.0(patch_hash=jwgpobme23obb6qkb2u2irhmoa)(@effect/typeclass@0.23.19)(effect@3.0.0)
+    version: 0.23.0(patch_hash=zmyksyllmzx5sunu54bhytzapa)(@effect/typeclass@0.23.19)(effect@3.0.0)
   '@hebilicious/vue-query-nuxt':
     specifier: ^0.3.0
     version: 0.3.0(patch_hash=5dcq766eeuesmqdcvoqrnf6tzi)(@tanstack/vue-query@5.29.0)(nuxt@3.11.2)
@@ -1073,7 +1073,7 @@ packages:
       '@fp-ts/core': 0.0.11
     dev: false
 
-  /@fp-ts/optic@0.23.0(patch_hash=jwgpobme23obb6qkb2u2irhmoa)(@effect/typeclass@0.23.19)(effect@3.0.0):
+  /@fp-ts/optic@0.23.0(patch_hash=zmyksyllmzx5sunu54bhytzapa)(@effect/typeclass@0.23.19)(effect@3.0.0):
     resolution: {integrity: sha512-I1++9VQPvtXgwQzEGaBcdfg50yYMlxMXsqcXPCXgz9QbDKFPDIhVKKP4cNg+DbbupVdBHuBh093GRQ49NKglHg==}
     peerDependencies:
       '@effect/typeclass': ^0.23.0
