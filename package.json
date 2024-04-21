@@ -2,6 +2,10 @@
   "name": "patchman",
   "module": "index.ts",
   "type": "module",
+  "packageManager": "pnpm@9.0.4",
+  "engines": {
+    "pnpm": ">= 9.0.4"
+  },
   "devDependencies": {
     "@types/node": "latest",
     "vite-node": "^1.5.0"
