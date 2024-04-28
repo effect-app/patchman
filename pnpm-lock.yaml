@@ -15,7 +15,7 @@ patchedDependencies:
     hash: tpms5vycnibd4dxmmitkbwgbvu
     path: patches/@effect__platform@0.50.7.patch
   '@effect/schema@0.66.10':
-    hash: qzczynpqyrk4hlvcylbes7gwi4
+    hash: 42byqzagftbkawjvmqi4cq3qvu
     path: patches/@effect__schema@0.66.10.patch
   '@fp-ts/optic@0.23.0':
     hash: zmyksyllmzx5sunu54bhytzapa
@@ -57,13 +57,13 @@ importers:
         version: 0.33.4(patch_hash=k5q7jyxhok7qigtqvuxnm7clfq)(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.24.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.24.0(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.24.0)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))
       '@effect/platform':
         specifier: ^0.50.7
-        version: 0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0)
+        version: 0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0)
       '@effect/platform-node':
         specifier: ^0.47.7
-        version: 0.47.7(@effect/platform@0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))
+        version: 0.47.7(@effect/platform@0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))
       '@effect/schema':
         specifier: ^0.66.10
-        version: 0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0)
+        version: 0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0)
       '@fp-ts/optic':
         specifier: ^0.23.0
         version: 0.23.0(patch_hash=zmyksyllmzx5sunu54bhytzapa)(@effect/typeclass@0.23.19(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq)))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))
@@ -4907,17 +4907,17 @@ snapshots:
     optionalDependencies:
       '@opentelemetry/sdk-metrics': 1.24.0(@opentelemetry/api@1.8.0)
 
-  '@effect/platform-node-shared@0.4.12(@effect/platform@0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))':
+  '@effect/platform-node-shared@0.4.12(@effect/platform@0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))':
     dependencies:
-      '@effect/platform': 0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0)
+      '@effect/platform': 0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0)
       '@parcel/watcher': 2.4.1
       effect: 3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq)
       multipasta: 0.2.0
 
-  '@effect/platform-node@0.47.7(@effect/platform@0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))':
+  '@effect/platform-node@0.47.7(@effect/platform@0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))':
     dependencies:
-      '@effect/platform': 0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0)
-      '@effect/platform-node-shared': 0.4.12(@effect/platform@0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))
+      '@effect/platform': 0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0)
+      '@effect/platform-node-shared': 0.4.12(@effect/platform@0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))
       effect: 3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq)
       mime: 3.0.0
       undici: 6.14.1
@@ -4926,9 +4926,9 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@effect/platform@0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0)':
+  '@effect/platform@0.50.7(patch_hash=tpms5vycnibd4dxmmitkbwgbvu)(@effect/schema@0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0))(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(ws@8.17.0)':
     dependencies:
-      '@effect/schema': 0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0)
+      '@effect/schema': 0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0)
       effect: 3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq)
       find-my-way-ts: 0.1.1
       isows: 1.0.4(ws@8.17.0)
@@ -4937,7 +4937,7 @@ snapshots:
     transitivePeerDependencies:
       - ws
 
-  '@effect/schema@0.66.10(patch_hash=qzczynpqyrk4hlvcylbes7gwi4)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0)':
+  '@effect/schema@0.66.10(patch_hash=42byqzagftbkawjvmqi4cq3qvu)(effect@3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq))(fast-check@3.18.0)':
     dependencies:
       effect: 3.0.7(patch_hash=n2byx4mxq3rrbn2qoh74vlroyq)
       fast-check: 3.18.0
