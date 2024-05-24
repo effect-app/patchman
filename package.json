@@ -6,6 +6,7 @@
     "pnpm": ">= 9.0.4"
   },
   "devDependencies": {
+    "pnpm-patch-i": "^0.3.0",
     "@types/node": "latest",
     "vite-node": "^1.6.0"
   },
