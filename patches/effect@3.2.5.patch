@@ -665,46 +665,6 @@ index 0000000000000000000000000000000000000000..ef33f5fdb1a491789756df94765013a8
 +  "types": "../dist/dts/fluentExtensions.d.ts",
 +  "sideEffects": []
 +}
-diff --git a/package.json b/package.json
-index 0837c72a504bfccbffbec562f80a7709a4d72978..fb992ca0e069efb861ecc225b03a1374b9d26586 100644
---- a/package.json
-+++ b/package.json
-@@ -8,7 +8,12 @@
-     "url": "https://github.com/Effect-TS/effect.git",
-     "directory": "packages/effect"
-   },
--  "sideEffects": [],
-+  "sideEffects": [
-+    "./dist/esm/fluentExtensions.js",
-+    "./dist/esm/index.js",
-+    "./dist/cjs/fluentExtensions.js",
-+    "./dist/cjs/index.js"
-+  ],
-   "publishConfig": {
-     "provenance": true
-   },
-@@ -801,6 +806,11 @@
-       "types": "./dist/dts/Utils.d.ts",
-       "import": "./dist/esm/Utils.js",
-       "default": "./dist/cjs/Utils.js"
-+    },
-+    "./fluentExtensions": {
-+      "types": "./dist/dts/fluentExtensions.d.ts",
-+      "import": "./dist/esm/fluentExtensions.js",
-+      "default": "./dist/cjs/fluentExtensions.js"
-     }
-   },
-   "typesVersions": {
-@@ -1272,6 +1282,9 @@
-       ],
-       "Utils": [
-         "./dist/dts/Utils.d.ts"
-+      ],
-+      "fluentExtensions": [
-+        "./dist/dts/fluentExtensions.d.ts"
-       ]
-     }
-   }
 diff --git a/src/fluentExtensions.ts b/src/fluentExtensions.ts
 new file mode 100644
 index 0000000000000000000000000000000000000000..6471cb630a595f502400a28386f38d4ea77abcf9
