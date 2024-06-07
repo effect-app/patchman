@@ -6,26 +6,26 @@
     "pnpm": ">= 9.0.4"
   },
   "devDependencies": {
-    "pnpm-patch-i": "^0.3.0",
     "@types/node": "latest",
+    "pnpm-patch-i": "^0.3.4",
     "vite-node": "^1.6.0"
   },
   "dependencies": {
-    "@effect/opentelemetry": "^0.34.12",
-    "@effect/platform": "^0.55.0",
-    "@effect/platform-node": "^0.51.0",
-    "@effect/schema": "^0.67.13",
+    "@effect/opentelemetry": "^0.34.17",
+    "@effect/platform": "^0.56.0",
+    "@effect/platform-node": "^0.51.8",
+    "@effect/schema": "^0.67.21",
     "@fp-ts/optic": "^0.23.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
-    "@opentelemetry/sdk-metrics": "^1.24.1",
+    "@opentelemetry/sdk-metrics": "^1.25.0",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
     "date-fns": "2.30.0",
-    "effect": "^3.2.5",
+    "effect": "^3.3.0",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.19.0",
     "primevue": "3.49.1",
-    "tsx": "^4.11.0",
+    "tsx": "^4.13.2",
     "typescript": "^5.4.5"
   },
   "pnpm": {
@@ -38,9 +38,9 @@
       "primevue@3.49.1": "patches/primevue@3.49.1.patch",
       "typescript@5.4.5": "patches/typescript@5.4.5.patch",
       "@fp-ts/optic@0.23.0": "patches/@fp-ts__optic@0.23.0.patch",
-      "effect@3.2.5": "patches/effect@3.2.5.patch",
-      "@effect/schema@0.67.13": "patches/@effect__schema@0.67.13.patch",
-      "@effect/platform@0.55.0": "patches/@effect__platform@0.55.0.patch"
+      "effect@3.3.0": "patches/effect@3.3.0.patch",
+      "@effect/schema@0.67.21": "patches/@effect__schema@0.67.21.patch",
+      "@effect/platform@0.56.0": "patches/@effect__platform@0.56.0.patch"
     }
   },
   "scripts": {
