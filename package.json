@@ -26,7 +26,7 @@
     "fast-check": "^3.20.0",
     "primevue": "3.49.1",
     "tsx": "^4.16.2",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   },
   "pnpm": {
     "patchedDependencies": {
@@ -37,7 +37,7 @@
       "@hebilicious/vue-query-nuxt@0.3.0": "patches/@hebilicious__vue-query-nuxt@0.3.0.patch",
       "primevue@3.49.1": "patches/primevue@3.49.1.patch",
       "@fp-ts/optic@0.23.0": "patches/@fp-ts__optic@0.23.0.patch",
-      "typescript@5.5.3": "patches/typescript@5.5.3.patch",
+      "typescript@5.5.4": "patches/typescript@5.5.4.patch",
       "effect@3.5.7": "patches/effect@3.5.7.patch",
       "@effect/schema@0.68.27": "patches/@effect__schema@0.68.27.patch",
       "@effect/platform@0.59.3": "patches/@effect__platform@0.59.3.patch"
