@@ -12,9 +12,9 @@
   },
   "dependencies": {
     "@effect/opentelemetry": "^0.35.0",
-    "@effect/platform": "^0.61.0",
-    "@effect/platform-node": "^0.56.0",
-    "@effect/schema": "^0.70.0",
+    "@effect/platform": "^0.61.2",
+    "@effect/platform-node": "^0.56.2",
+    "@effect/schema": "^0.70.1",
     "@fp-ts/optic": "^0.23.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
@@ -25,7 +25,7 @@
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.20.0",
     "primevue": "3.49.1",
-    "tsx": "^4.16.2",
+    "tsx": "^4.16.4",
     "typescript": "^5.5.4"
   },
   "pnpm": {
@@ -39,8 +39,8 @@
       "@fp-ts/optic@0.23.0": "patches/@fp-ts__optic@0.23.0.patch",
       "typescript@5.5.4": "patches/typescript@5.5.4.patch",
       "effect@3.6.0": "patches/effect@3.6.0.patch",
-      "@effect/schema@0.70.0": "patches/@effect__schema@0.70.0.patch",
-      "@effect/platform@0.61.0": "patches/@effect__platform@0.61.0.patch"
+      "@effect/schema@0.70.1": "patches/@effect__schema@0.70.1.patch",
+      "@effect/platform@0.61.2": "patches/@effect__platform@0.61.2.patch"
     }
   },
   "scripts": {
