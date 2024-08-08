@@ -21,7 +21,13 @@ const patches = (await import("./package.json", { assert: { type: "json" } }))
 
 const repos = repoNames.map((repo) => path.join(process.env.HOME!, "pj", repo));
 const availablePatches = Object.entries(patches).map(([name, patch]) => {
-  return [name.substring(0, name.substring(1).indexOf("@") + 1), name, patch];
+  return [
+    name.substring(1).includes("@")
+      ? name.substring(0, name.substring(1).indexOf("@") + 1)
+      : name,
+    name,
+    patch,
+  ];
 });
 
 await Promise.all(
@@ -32,7 +38,9 @@ await Promise.all(
 
     const desiredPatches = pipe(
       Object.entries(pj.pnpm.patchedDependencies).map(([name, patch]) => {
-        return name.substring(0, name.substring(1).indexOf("@") + 1);
+        return name.substring(1).includes("@")
+          ? name.substring(0, name.substring(1).indexOf("@") + 1)
+          : name;
       }),
       Array.filterMap((name) =>
         Array.findFirst(
