@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@effect/opentelemetry": "^0.36.2",
-    "@effect/platform": "^0.63.2",
-    "@effect/platform-node": "^0.58.2",
+    "@effect/platform": "^0.63.3",
+    "@effect/platform-node": "^0.58.3",
     "@effect/schema": "^0.72.2",
-    "@fp-ts/optic": "^0.23.0",
+    "@fp-ts/optic": "~0.23.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@opentelemetry/sdk-metrics": "^1.26.0",
