@@ -9,7 +9,7 @@ patchedDependencies:
     hash: cpmr4vgjuoxtb7rzedpvowhgpi
     path: patches/@effect__platform.patch
   '@effect/schema':
-    hash: jqvwryoubddmf26i5bho72ttii
+    hash: tirk3bsqw4jk2kcdeju6mb4efy
     path: patches/@effect__schema.patch
   '@fp-ts/optic@0.23.0':
     hash: zmyksyllmzx5sunu54bhytzapa
@@ -48,13 +48,13 @@ importers:
         version: 0.36.2(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.26.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.26.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.27.0)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
       '@effect/platform':
         specifier: ^0.64.0
-        version: 0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
+        version: 0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
       '@effect/platform-node':
         specifier: ^0.59.0
-        version: 0.59.0(@effect/platform@0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
+        version: 0.59.0(@effect/platform@0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
       '@effect/schema':
         specifier: ^0.72.3
-        version: 0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
+        version: 0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
       '@fp-ts/optic':
         specifier: ~0.23.0
         version: 0.23.0(patch_hash=zmyksyllmzx5sunu54bhytzapa)(@effect/typeclass@0.23.19(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
@@ -4700,17 +4700,17 @@ snapshots:
       '@opentelemetry/sdk-trace-base': 1.25.1(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-node': 1.25.1(@opentelemetry/api@1.8.0)
 
-  '@effect/platform-node-shared@0.14.0(@effect/platform@0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))':
+  '@effect/platform-node-shared@0.14.0(@effect/platform@0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))':
     dependencies:
-      '@effect/platform': 0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
+      '@effect/platform': 0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
       '@parcel/watcher': 2.4.1
       effect: 3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)
       multipasta: 0.2.5
 
-  '@effect/platform-node@0.59.0(@effect/platform@0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))':
+  '@effect/platform-node@0.59.0(@effect/platform@0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))':
     dependencies:
-      '@effect/platform': 0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
-      '@effect/platform-node-shared': 0.14.0(@effect/platform@0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
+      '@effect/platform': 0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
+      '@effect/platform-node-shared': 0.14.0(@effect/platform@0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
       effect: 3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)
       mime: 3.0.0
       undici: 6.19.8
@@ -4719,14 +4719,14 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@effect/platform@0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))':
+  '@effect/platform@0.64.0(patch_hash=cpmr4vgjuoxtb7rzedpvowhgpi)(@effect/schema@0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)))(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))':
     dependencies:
-      '@effect/schema': 0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
+      '@effect/schema': 0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))
       effect: 3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)
       find-my-way-ts: 0.1.5
       multipasta: 0.2.5
 
-  '@effect/schema@0.72.3(patch_hash=jqvwryoubddmf26i5bho72ttii)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))':
+  '@effect/schema@0.72.3(patch_hash=tirk3bsqw4jk2kcdeju6mb4efy)(effect@3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby))':
     dependencies:
       effect: 3.7.2(patch_hash=igfw26krdlnc6swtbm3v5i3uby)
       fast-check: 3.22.0
@@ -5331,7 +5331,7 @@ snapshots:
 
   '@nuxt/telemetry@2.5.4(magicast@0.3.5)(rollup@4.21.2)(webpack-sources@3.2.3)':
     dependencies:
-      '@nuxt/kit': 3.11.2(magicast@0.3.5)(rollup@4.21.2)(webpack-sources@3.2.3)
+      '@nuxt/kit': 3.13.1(magicast@0.3.5)(rollup@4.21.2)(webpack-sources@3.2.3)
       ci-info: 4.0.0
       consola: 3.2.3
       create-require: 1.1.1
@@ -5767,8 +5767,8 @@ snapshots:
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.11(encoding@0.1.13)
       '@rollup/pluginutils': 4.2.1
-      acorn: 8.11.3
-      acorn-import-attributes: 1.9.5(acorn@8.11.3)
+      acorn: 8.12.1
+      acorn-import-attributes: 1.9.5(acorn@8.12.1)
       async-sema: 3.1.1
       bindings: 1.5.0
       estree-walker: 2.0.2
@@ -5957,9 +5957,9 @@ snapshots:
     dependencies:
       event-target-shim: 5.0.1
 
-  acorn-import-attributes@1.9.5(acorn@8.11.3):
+  acorn-import-attributes@1.9.5(acorn@8.12.1):
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.1
 
   acorn-jsx@5.3.2(acorn@8.12.1):
     dependencies:
@@ -8797,7 +8797,7 @@ snapshots:
   terser@5.31.6:
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.11.3
+      acorn: 8.12.1
       commander: 2.20.3
       source-map-support: 0.5.21
 
