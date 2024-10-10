@@ -45,7 +45,8 @@
       "@effect/schema": "patches/@effect__schema.patch",
       "@effect/platform": "patches/@effect__platform.patch",
       "typescript-transform-paths": "patches/typescript-transform-paths.patch",
-      "@effect/sql": "patches/@effect__sql.patch"
+      "@effect/sql": "patches/@effect__sql.patch",
+      "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch"
     }
   },
   "scripts": {
