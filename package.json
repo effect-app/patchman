@@ -41,7 +41,6 @@
       "primevue@3.49.1": "patches/primevue@3.49.1.patch",
       "@fp-ts/optic": "patches/@fp-ts__optic.patch",
       "typescript": "patches/typescript.patch",
-      "effect": "patches/effect.patch",
       "@effect/schema": "patches/@effect__schema.patch",
       "@effect/platform": "patches/@effect__platform.patch",
       "typescript-transform-paths": "patches/typescript-transform-paths.patch",
