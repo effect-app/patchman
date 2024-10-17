@@ -29,6 +29,9 @@ patchedDependencies:
   '@vitejs/plugin-vue':
     hash: 2g7kaqtrfqk6hg64apenfnbgou
     path: patches/@vitejs__plugin-vue.patch
+  '@vue/compiler-core':
+    hash: 22zishatgqeygohqwzt3bj5emq
+    path: patches/@vue__compiler-core.patch
   date-fns@2.30.0:
     hash: g5hqt5bhnjezqo5vnkpprfkba4
     path: patches/date-fns@2.30.0.patch
@@ -1515,6 +1518,9 @@ packages:
 
   '@types/node@22.7.5':
     resolution: {integrity: sha512-jML7s2NAzMWc//QSJ1a3prpk78cOPchGvXJsC3C6R6PSMoooztvRVQEz89gmBTBY1SPMaqo5teB4uNHPdetShQ==}
+
+  '@types/node@22.7.6':
+    resolution: {integrity: sha512-/d7Rnj0/ExXDMcioS78/kf1lMzYk4BZV8MZGTBKzTGZ6/406ukkbYlIsZmMPhcR5KlkunDHQLrtAVmSq7r+mSw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -6174,7 +6180,7 @@ snapshots:
 
   '@types/http-proxy@1.17.15':
     dependencies:
-      '@types/node': 22.7.5
+      '@types/node': 22.7.6
 
   '@types/istanbul-lib-coverage@2.0.6': {}
 
@@ -6187,6 +6193,10 @@ snapshots:
       '@types/istanbul-lib-report': 3.0.3
 
   '@types/node@22.7.5':
+    dependencies:
+      undici-types: 6.19.8
+
+  '@types/node@22.7.6':
     dependencies:
       undici-types: 6.19.8
 
@@ -6328,7 +6338,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vue/compiler-core@3.4.23':
+  '@vue/compiler-core@3.4.23(patch_hash=22zishatgqeygohqwzt3bj5emq)':
     dependencies:
       '@babel/parser': 7.25.8
       '@vue/shared': 3.4.23
@@ -6336,7 +6346,7 @@ snapshots:
       estree-walker: 2.0.2
       source-map-js: 1.2.1
 
-  '@vue/compiler-core@3.5.12':
+  '@vue/compiler-core@3.5.12(patch_hash=22zishatgqeygohqwzt3bj5emq)':
     dependencies:
       '@babel/parser': 7.25.8
       '@vue/shared': 3.5.12
@@ -6346,18 +6356,18 @@ snapshots:
 
   '@vue/compiler-dom@3.4.23':
     dependencies:
-      '@vue/compiler-core': 3.4.23
+      '@vue/compiler-core': 3.4.23(patch_hash=22zishatgqeygohqwzt3bj5emq)
       '@vue/shared': 3.4.23
 
   '@vue/compiler-dom@3.5.12':
     dependencies:
-      '@vue/compiler-core': 3.5.12
+      '@vue/compiler-core': 3.5.12(patch_hash=22zishatgqeygohqwzt3bj5emq)
       '@vue/shared': 3.5.12
 
   '@vue/compiler-sfc@3.4.23':
     dependencies:
       '@babel/parser': 7.25.8
-      '@vue/compiler-core': 3.4.23
+      '@vue/compiler-core': 3.4.23(patch_hash=22zishatgqeygohqwzt3bj5emq)
       '@vue/compiler-dom': 3.4.23
       '@vue/compiler-ssr': 3.4.23
       '@vue/shared': 3.4.23
@@ -6369,7 +6379,7 @@ snapshots:
   '@vue/compiler-sfc@3.5.12':
     dependencies:
       '@babel/parser': 7.25.8
-      '@vue/compiler-core': 3.5.12
+      '@vue/compiler-core': 3.5.12(patch_hash=22zishatgqeygohqwzt3bj5emq)
       '@vue/compiler-dom': 3.5.12
       '@vue/compiler-ssr': 3.5.12
       '@vue/shared': 3.5.12

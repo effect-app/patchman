@@ -47,7 +47,8 @@
       "typescript-transform-paths": "patches/typescript-transform-paths.patch",
       "@effect/sql": "patches/@effect__sql.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
-      "madge": "patches/madge.patch"
+      "madge": "patches/madge.patch",
+      "@vue/compiler-core": "patches/@vue__compiler-core.patch"
     }
   },
   "scripts": {
