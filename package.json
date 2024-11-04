@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@effect/opentelemetry": "^0.39.9",
-    "@effect/platform": "^0.69.14",
-    "@effect/platform-node": "^0.64.15",
-    "@effect/sql": "^0.18.15",
+    "@effect/platform": "^0.69.15",
+    "@effect/platform-node": "^0.64.16",
+    "@effect/sql": "^0.18.16",
     "@effect/typeclass": "^0.29.9",
     "@fp-ts/optic": "^0.25.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
