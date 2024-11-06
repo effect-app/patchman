@@ -12,24 +12,24 @@
     "vite-node": "^1.6.0"
   },
   "dependencies": {
-    "@effect/opentelemetry": "^0.39.10",
-    "@effect/platform": "^0.69.16",
-    "@effect/platform-node": "^0.64.18",
+    "@effect/opentelemetry": "^0.39.12",
+    "@effect/platform": "^0.69.18",
+    "@effect/platform-node": "^0.64.20",
     "@effect/sql": "^0.18.16",
-    "@effect/typeclass": "^0.29.10",
+    "@effect/typeclass": "^0.29.12",
     "@fp-ts/optic": "^0.25.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@opentelemetry/sdk-metrics": "^1.27.0",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
     "date-fns": "2.30.0",
-    "effect": "^3.10.10",
+    "effect": "^3.10.12",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.1",
     "primevue": "3.49.1",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
-    "typescript-transform-paths": "^3.5.1"
+    "typescript-transform-paths": "^3.5.2"
   },
   "pnpm": {
     "patchedDependencies": {
@@ -42,7 +42,6 @@
       "@fp-ts/optic": "patches/@fp-ts__optic.patch",
       "typescript": "patches/typescript.patch",
       "@effect/platform": "patches/@effect__platform.patch",
-      "typescript-transform-paths": "patches/typescript-transform-paths.patch",
       "@effect/sql": "patches/@effect__sql.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "madge": "patches/madge.patch",

@@ -50,32 +50,29 @@ patchedDependencies:
   typescript:
     hash: yoypwiw4x7ikhinpyfewievf3q
     path: patches/typescript.patch
-  typescript-transform-paths:
-    hash: rky5qwxwr4edphkcx7hov2lbiy
-    path: patches/typescript-transform-paths.patch
 
 importers:
 
   .:
     dependencies:
       '@effect/opentelemetry':
-        specifier: ^0.39.10
-        version: 0.39.10(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.27.0)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+        specifier: ^0.39.12
+        version: 0.39.12(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.27.0)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
       '@effect/platform':
-        specifier: ^0.69.16
-        version: 0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+        specifier: ^0.69.18
+        version: 0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
       '@effect/platform-node':
-        specifier: ^0.64.18
-        version: 0.64.18(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+        specifier: ^0.64.20
+        version: 0.64.20(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
       '@effect/sql':
         specifier: ^0.18.16
-        version: 0.18.16(patch_hash=japjuqfj47fm3nzitaxpiz5rj4)(@effect/experimental@0.27.3(@effect/platform-node@0.64.18(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/schema@0.75.5(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))(ioredis@5.4.1)(ws@8.18.0))(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+        version: 0.18.16(patch_hash=japjuqfj47fm3nzitaxpiz5rj4)(@effect/experimental@0.27.3(@effect/platform-node@0.64.20(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/schema@0.75.5(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))(ioredis@5.4.1)(ws@8.18.0))(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
       '@effect/typeclass':
-        specifier: ^0.29.10
-        version: 0.29.10(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+        specifier: ^0.29.12
+        version: 0.29.12(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
       '@fp-ts/optic':
         specifier: ^0.25.0
-        version: 0.25.0(patch_hash=fhvf4znrot5oqowbfpeaq3qsnq)(@effect/typeclass@0.29.10(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+        version: 0.25.0(patch_hash=fhvf4znrot5oqowbfpeaq3qsnq)(@effect/typeclass@0.29.12(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
       '@hebilicious/vue-query-nuxt':
         specifier: ^0.3.0
         version: 0.3.0(patch_hash=5dcq766eeuesmqdcvoqrnf6tzi)(@tanstack/vue-query@5.29.0(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))))(nuxt@3.11.2(@parcel/watcher@2.5.0)(@types/node@22.9.0)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(terser@5.36.0)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3))(rollup@4.24.4)(webpack-sources@3.2.3)
@@ -92,8 +89,8 @@ importers:
         specifier: 2.30.0
         version: 2.30.0(patch_hash=g5hqt5bhnjezqo5vnkpprfkba4)
       effect:
-        specifier: ^3.10.10
-        version: 3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
+        specifier: ^3.10.12
+        version: 3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
       eslint-plugin-codegen:
         specifier: ^0.17.0
         version: 0.17.0(patch_hash=lbafaxqz7cfo7kkr24anyngo7i)
@@ -110,8 +107,8 @@ importers:
         specifier: ^5.6.3
         version: 5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)
       typescript-transform-paths:
-        specifier: ^3.5.1
-        version: 3.5.1(patch_hash=rky5qwxwr4edphkcx7hov2lbiy)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))
+        specifier: ^3.5.2
+        version: 3.5.2(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))
     devDependencies:
       '@types/node':
         specifier: ^22.9.0
@@ -310,8 +307,8 @@ packages:
       ws:
         optional: true
 
-  '@effect/opentelemetry@0.39.10':
-    resolution: {integrity: sha512-n/AqWh/o/CTccA3ZttfNZvTA0ijmywmFCNSNLqMqsPGjXLRxOkTZsFOpfPpwxiImZSapwzfRKA2DmWnkSuGodg==}
+  '@effect/opentelemetry@0.39.12':
+    resolution: {integrity: sha512-3WIgknu7fuePLfZ6qEQMwlecMu8io5z9tjqgk45TM1KKiSRJOfe5qcRMbDc6KO14lu0Fq/5PCNz1s9ZHBJAyww==}
     peerDependencies:
       '@opentelemetry/api': ^1.6
       '@opentelemetry/resources': ^1.22
@@ -320,7 +317,7 @@ packages:
       '@opentelemetry/sdk-trace-node': ^1.22
       '@opentelemetry/sdk-trace-web': ^1.22
       '@opentelemetry/semantic-conventions': ^1.24.1
-      effect: ^3.10.10
+      effect: ^3.10.12
     peerDependenciesMeta:
       '@opentelemetry/sdk-metrics':
         optional: true
@@ -331,22 +328,22 @@ packages:
       '@opentelemetry/sdk-trace-web':
         optional: true
 
-  '@effect/platform-node-shared@0.19.17':
-    resolution: {integrity: sha512-GY8mOin/UK79Lm+bJbJVc5SfLViCSIKdyZSvXWZgo8WGu2/rjBejS19AouIaMBguMoH0W5J7YHjPc7rvXE3KpQ==}
+  '@effect/platform-node-shared@0.19.19':
+    resolution: {integrity: sha512-9uNGlLXOne3IclxJska6rEmUt3js2TBpm/R6yY8TVzriHkdKLiZKomIfsGzhJ/9/F9EjVr4x8/vHePHIfs9RRA==}
     peerDependencies:
-      '@effect/platform': ^0.69.16
-      effect: ^3.10.10
+      '@effect/platform': ^0.69.18
+      effect: ^3.10.12
 
-  '@effect/platform-node@0.64.18':
-    resolution: {integrity: sha512-RzCJrbVdwHZ1ZrtAf5Hgxnxw7NgrxXrAhnL+pn9LtRKejzq1sVIctzID6pYEDBxCd84V/Un5GoZt05XW8BDsBg==}
+  '@effect/platform-node@0.64.20':
+    resolution: {integrity: sha512-hAjabgbfmrPdctC3RaDzvV6s+MRByXo2vmrQoxfQh4tDYSU72M7iNCjObl7lk5ONGbnAWnfCI1P9cSRyJV6TJg==}
     peerDependencies:
-      '@effect/platform': ^0.69.16
-      effect: ^3.10.10
+      '@effect/platform': ^0.69.18
+      effect: ^3.10.12
 
-  '@effect/platform@0.69.16':
-    resolution: {integrity: sha512-c+odYnSHjL6DsHfqwYpmjQ+6CCAvOeJVj3X4SBLYUbIqUeokq8LNOTKT53j+WkCKKyEQzwWarh+e1KwxIMN6OA==}
+  '@effect/platform@0.69.18':
+    resolution: {integrity: sha512-PU8bgY6J16UJyMrsVbvyYzgEFJe9/xFAF+LQUuBhNhUB/YVLtKQsD1odRTw/Rr+BTrIoZ0gN74naIoabLZVctw==}
     peerDependencies:
-      effect: ^3.10.10
+      effect: ^3.10.12
 
   '@effect/schema@0.75.5':
     resolution: {integrity: sha512-TQInulTVCuF+9EIbJpyLP6dvxbQJMphrnRqgexm/Ze39rSjfhJuufF7XvU3SxTgg3HnL7B/kpORTJbHhlE6thw==}
@@ -360,10 +357,10 @@ packages:
       '@effect/platform': ^0.69.15
       effect: ^3.10.9
 
-  '@effect/typeclass@0.29.10':
-    resolution: {integrity: sha512-vm9c/x+2W74QwAAiBo9WU87uOXniljYrmhagc0HKAlzyYq8PphArRJOwVjmytMzynw4zlRYYl6MNiB0LolGutQ==}
+  '@effect/typeclass@0.29.12':
+    resolution: {integrity: sha512-io7/ryprHRW8SPRWAAbH+q+X78VJGPu2lSzbFWXbg3o2kZWsBCDsNZU1/1cQX2lyzzXgtSHzlZv56IfbStBADA==}
     peerDependencies:
-      effect: ^3.10.10
+      effect: ^3.10.12
 
   '@esbuild/aix-ppc64@0.19.12':
     resolution: {integrity: sha512-bmoCYyWdEL3wDQIVbcyzRyeKLgk2WtWLTWz1ZIAZF/EGbNOwSA6ew3PftJ1PqMiOOGu0OyFMzG53L0zqIpPeNA==}
@@ -1831,8 +1828,8 @@ packages:
     peerDependencies:
       vue: '>=2.7 || >=3'
 
-  '@vercel/nft@0.27.5':
-    resolution: {integrity: sha512-b2A7M+4yMHdWKY7xCC+kBEcnMrpaSE84CnuauTjhKKoCEeej0byJMAB8h/RBVnw/HdZOAFVcxR0Izr3LL24FwA==}
+  '@vercel/nft@0.27.6':
+    resolution: {integrity: sha512-mwuyUxskdcV8dd7N7JnxBgvFEz1D9UOePI/WyLLzktv6HSCwgPNQGit/UJ2IykAWGlypKw4pBQjOKWvIbXITSg==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -1910,8 +1907,8 @@ packages:
   '@vue/devtools-kit@7.4.4':
     resolution: {integrity: sha512-awK/4NfsUG0nQ7qnTM37m7ZkEUMREyPh8taFCX+uQYps/MTFEum0AD05VeGDRMXwWvMmGIcWX9xp8ZiBddY0jw==}
 
-  '@vue/devtools-shared@7.6.2':
-    resolution: {integrity: sha512-lcjyJ7hCC0W0kNwnCGMLVTMvDLoZgjcq9BvboPgS+6jQyDul7fpzRSKTGtGhCHoxrDox7qBAKGbAl2Rcf7GE1A==}
+  '@vue/devtools-shared@7.6.3':
+    resolution: {integrity: sha512-wJW5QF27i16+sNQIaes8QoEZg1eqEgF83GkiPUlEQe9k7ZoHXHV7PRrnrxOKem42sIHPU813J2V/ZK1uqTJe6g==}
 
   '@vue/reactivity@3.4.23':
     resolution: {integrity: sha512-GlXR9PL+23fQ3IqnbSQ8OQKLodjqCyoCrmdLKZk3BP7jN6prWheAfU7a3mrltewTkoBm+N7qMEb372VHIkQRMQ==}
@@ -2597,8 +2594,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  effect@3.10.10:
-    resolution: {integrity: sha512-Kwu6PbhTyn/03Njw9A1FFq/vXlYLpPhE6YR8BLEMLABtH5Ta6yFAJCNUwnnDXg+T/SogBlZLavtiAeS3tYS2mQ==}
+  effect@3.10.12:
+    resolution: {integrity: sha512-+IqqTQS5+jM13qZHzfAX+RpCGOl0oBWIR7nec/zq76HyN/hdGQYnfr/LLLOVxUt8uIbckBea8rkwBKrQ0Hb/aA==}
 
   electron-to-chromium@1.5.50:
     resolution: {integrity: sha512-eMVObiUQ2LdgeO1F/ySTXsvqvxb6ZH2zPGaMYsWzRDdOddUa77tdmI0ltg+L16UpbWdhPmuF3wIQYyQq65WfZw==}
@@ -3693,8 +3690,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  nitropack@2.10.2:
-    resolution: {integrity: sha512-DxmaAcT33CpeBGU6ppVfT9g1nbjxxkwa4ZEkMwFrbsvTrShAQ7mZf3bTkdAB18iZmthlSovBpY8ecE1FbNvtQw==}
+  nitropack@2.10.3:
+    resolution: {integrity: sha512-7n+ITF7RbCMwZZzyacxJ9eMCnWuE60omGJEyLM5PQRKS4Vu5w6OOCvf4C6E3UC0UryFuUIwGbJ3M+tIP9Az9OQ==}
     engines: {node: ^16.11.0 || >=17.0.0}
     hasBin: true
     peerDependencies:
@@ -4770,8 +4767,8 @@ packages:
     resolution: {integrity: sha512-/OxDN6OtAk5KBpGb28T+HZc2M+ADtvRxXrKKbUwtsLgdoxgX13hyy7ek6bFRl5+aBs2yZzB0c4CnQfAtVypW/g==}
     engines: {node: '>= 0.4'}
 
-  typescript-transform-paths@3.5.1:
-    resolution: {integrity: sha512-nq+exuF+38rAby9zrP+S6t0HWuwv69jeFu0I5UwjdoCIDPmnKIAr6a7JfYkbft7h5OzYKEDRhT/jLvvtTvWF4Q==}
+  typescript-transform-paths@3.5.2:
+    resolution: {integrity: sha512-IRDVXfU7oscLwTvLabXprFrFCMUdBJbdUDtxbHFEsau9FlqrrdgS8PfwUltKDAh75vJFkQ8QdXAt/nzIWWp+fA==}
     peerDependencies:
       typescript: '>=3.6.5'
 
@@ -5387,40 +5384,40 @@ snapshots:
       gonzales-pe: 4.3.0
       node-source-walk: 7.0.0
 
-  '@effect/experimental@0.27.3(@effect/platform-node@0.64.18(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/schema@0.75.5(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))(ioredis@5.4.1)(ws@8.18.0)':
+  '@effect/experimental@0.27.3(@effect/platform-node@0.64.20(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/schema@0.75.5(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))(ioredis@5.4.1)(ws@8.18.0)':
     dependencies:
-      '@effect/platform': 0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
-      '@effect/schema': 0.75.5(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
-      effect: 3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
+      '@effect/platform': 0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+      '@effect/schema': 0.75.5(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+      effect: 3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
       msgpackr: 1.11.2
     optionalDependencies:
-      '@effect/platform-node': 0.64.18(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+      '@effect/platform-node': 0.64.20(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
       ioredis: 5.4.1
       ws: 8.18.0
 
-  '@effect/opentelemetry@0.39.10(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.27.0)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
+  '@effect/opentelemetry@0.39.12(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.27.0)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
     dependencies:
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/resources': 1.27.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/semantic-conventions': 1.27.0
-      effect: 3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
+      effect: 3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
     optionalDependencies:
       '@opentelemetry/sdk-metrics': 1.27.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-base': 1.25.1(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-node': 1.25.1(@opentelemetry/api@1.8.0)
 
-  '@effect/platform-node-shared@0.19.17(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
+  '@effect/platform-node-shared@0.19.19(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
     dependencies:
-      '@effect/platform': 0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+      '@effect/platform': 0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
       '@parcel/watcher': 2.5.0
-      effect: 3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
+      effect: 3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
       multipasta: 0.2.5
 
-  '@effect/platform-node@0.64.18(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
+  '@effect/platform-node@0.64.20(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
     dependencies:
-      '@effect/platform': 0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
-      '@effect/platform-node-shared': 0.19.17(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
-      effect: 3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
+      '@effect/platform': 0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+      '@effect/platform-node-shared': 0.19.19(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+      effect: 3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
       mime: 3.0.0
       undici: 6.20.1
       ws: 8.18.0
@@ -5428,27 +5425,27 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
+  '@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
     dependencies:
-      effect: 3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
+      effect: 3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
       find-my-way-ts: 0.1.5
       multipasta: 0.2.5
 
-  '@effect/schema@0.75.5(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
+  '@effect/schema@0.75.5(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
     dependencies:
-      effect: 3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
+      effect: 3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
       fast-check: 3.23.1
 
-  '@effect/sql@0.18.16(patch_hash=japjuqfj47fm3nzitaxpiz5rj4)(@effect/experimental@0.27.3(@effect/platform-node@0.64.18(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/schema@0.75.5(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))(ioredis@5.4.1)(ws@8.18.0))(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
+  '@effect/sql@0.18.16(patch_hash=japjuqfj47fm3nzitaxpiz5rj4)(@effect/experimental@0.27.3(@effect/platform-node@0.64.20(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/schema@0.75.5(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))(ioredis@5.4.1)(ws@8.18.0))(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
     dependencies:
-      '@effect/experimental': 0.27.3(@effect/platform-node@0.64.18(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/platform@0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/schema@0.75.5(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))(ioredis@5.4.1)(ws@8.18.0)
-      '@effect/platform': 0.69.16(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+      '@effect/experimental': 0.27.3(@effect/platform-node@0.64.20(patch_hash=ykl6duy4kxb3pusqojnfzrauci)(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/platform@0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(@effect/schema@0.75.5(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))(ioredis@5.4.1)(ws@8.18.0)
+      '@effect/platform': 0.69.18(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
       '@opentelemetry/semantic-conventions': 1.27.0
-      effect: 3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
+      effect: 3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
 
-  '@effect/typeclass@0.29.10(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
+  '@effect/typeclass@0.29.12(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
     dependencies:
-      effect: 3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
+      effect: 3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
 
   '@esbuild/aix-ppc64@0.19.12':
     optional: true
@@ -5824,10 +5821,10 @@ snapshots:
 
   '@eslint/js@9.1.1': {}
 
-  '@fp-ts/optic@0.25.0(patch_hash=fhvf4znrot5oqowbfpeaq3qsnq)(@effect/typeclass@0.29.10(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
+  '@fp-ts/optic@0.25.0(patch_hash=fhvf4znrot5oqowbfpeaq3qsnq)(@effect/typeclass@0.29.12(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)))(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))':
     dependencies:
-      '@effect/typeclass': 0.29.10(effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
-      effect: 3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
+      '@effect/typeclass': 0.29.12(effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i))
+      effect: 3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i)
 
   '@hebilicious/vue-query-nuxt@0.3.0(patch_hash=5dcq766eeuesmqdcvoqrnf6tzi)(@tanstack/vue-query@5.29.0(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))))(nuxt@3.11.2(@parcel/watcher@2.5.0)(@types/node@22.9.0)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.4)(terser@5.36.0)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3))(rollup@4.24.4)(webpack-sources@3.2.3)':
     dependencies:
@@ -6748,7 +6745,7 @@ snapshots:
       unhead: 1.11.11
       vue: 3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))
 
-  '@vercel/nft@0.27.5(encoding@0.1.13)':
+  '@vercel/nft@0.27.6(encoding@0.1.13)':
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.11(encoding@0.1.13)
       '@rollup/pluginutils': 4.2.1
@@ -6889,7 +6886,7 @@ snapshots:
   '@vue/devtools-core@7.4.4(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))':
     dependencies:
       '@vue/devtools-kit': 7.4.4
-      '@vue/devtools-shared': 7.6.2
+      '@vue/devtools-shared': 7.6.3
       mitt: 3.0.1
       nanoid: 3.3.7
       pathe: 1.1.2
@@ -6900,7 +6897,7 @@ snapshots:
 
   '@vue/devtools-kit@7.4.4':
     dependencies:
-      '@vue/devtools-shared': 7.6.2
+      '@vue/devtools-shared': 7.6.3
       birpc: 0.2.19
       hookable: 5.5.3
       mitt: 3.0.1
@@ -6908,7 +6905,7 @@ snapshots:
       speakingurl: 14.0.1
       superjson: 2.2.1
 
-  '@vue/devtools-shared@7.6.2':
+  '@vue/devtools-shared@7.6.3':
     dependencies:
       rfdc: 1.4.1
 
@@ -7618,7 +7615,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  effect@3.10.10(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i):
+  effect@3.10.12(patch_hash=kkv6uskse6wm4g6vkxtg2u7r6i):
     dependencies:
       fast-check: 3.23.1
 
@@ -8903,7 +8900,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  nitropack@2.10.2(encoding@0.1.13)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(webpack-sources@3.2.3):
+  nitropack@2.10.3(encoding@0.1.13)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(webpack-sources@3.2.3):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@netlify/functions': 2.8.2
@@ -8916,7 +8913,7 @@ snapshots:
       '@rollup/plugin-terser': 0.4.4(rollup@4.24.4)
       '@rollup/pluginutils': 5.1.3(rollup@4.24.4)
       '@types/http-proxy': 1.17.15
-      '@vercel/nft': 0.27.5(encoding@0.1.13)
+      '@vercel/nft': 0.27.6(encoding@0.1.13)
       archiver: 7.0.1
       c12: 2.0.1(magicast@0.3.5)
       chokidar: 3.6.0
@@ -9100,7 +9097,7 @@ snapshots:
       knitwork: 1.1.0
       magic-string: 0.30.12
       mlly: 1.7.2
-      nitropack: 2.10.2(encoding@0.1.13)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(webpack-sources@3.2.3)
+      nitropack: 2.10.3(encoding@0.1.13)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(webpack-sources@3.2.3)
       nuxi: 3.15.0
       nypm: 0.3.12
       ofetch: 1.4.1
@@ -10266,7 +10263,7 @@ snapshots:
       is-typed-array: 1.1.13
       possible-typed-array-names: 1.0.0
 
-  typescript-transform-paths@3.5.1(patch_hash=rky5qwxwr4edphkcx7hov2lbiy)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)):
+  typescript-transform-paths@3.5.2(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)):
     dependencies:
       minimatch: 9.0.5
       typescript: 5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)
