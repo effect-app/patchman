@@ -33,7 +33,7 @@ patchedDependencies:
     hash: g5hqt5bhnjezqo5vnkpprfkba4
     path: patches/date-fns@2.30.0.patch
   effect:
-    hash: i5etcfemkxcctmrtkhb4wshv2y
+    hash: abl7xwvob5jcp7mgz2pfmn726m
     path: patches/effect.patch
   eslint-plugin-codegen@0.17.0:
     hash: lbafaxqz7cfo7kkr24anyngo7i
@@ -53,26 +53,26 @@ importers:
   .:
     dependencies:
       '@effect/opentelemetry':
-        specifier: ^0.39.13
-        version: 0.39.13(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.27.0)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
+        specifier: ^0.39.14
+        version: 0.39.14(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.27.0)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
       '@effect/platform':
-        specifier: ^0.69.20
-        version: 0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
+        specifier: ^0.69.21
+        version: 0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
       '@effect/platform-node':
-        specifier: ^0.64.22
-        version: 0.64.22(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
+        specifier: ^0.64.23
+        version: 0.64.23(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
       '@effect/sql':
         specifier: ^0.18.16
-        version: 0.18.16(patch_hash=japjuqfj47fm3nzitaxpiz5rj4)(@effect/experimental@0.27.3(@effect/platform-node@0.64.22(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(@effect/schema@0.75.5(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))(ioredis@5.4.1)(ws@8.18.0))(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
+        version: 0.18.16(patch_hash=japjuqfj47fm3nzitaxpiz5rj4)(@effect/experimental@0.27.3(@effect/platform-node@0.64.23(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(@effect/schema@0.75.5(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))(ioredis@5.4.1)(ws@8.18.0))(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
       '@effect/typeclass':
-        specifier: ^0.29.13
-        version: 0.29.13(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
+        specifier: ^0.29.14
+        version: 0.29.14(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
       '@fp-ts/optic':
         specifier: ^0.25.0
-        version: 0.25.0(patch_hash=fhvf4znrot5oqowbfpeaq3qsnq)(@effect/typeclass@0.29.13(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
+        version: 0.25.0(patch_hash=fhvf4znrot5oqowbfpeaq3qsnq)(@effect/typeclass@0.29.14(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
       '@hebilicious/vue-query-nuxt':
         specifier: ^0.3.0
-        version: 0.3.0(patch_hash=5dcq766eeuesmqdcvoqrnf6tzi)(@tanstack/vue-query@5.29.0(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))))(nuxt@3.11.2(@parcel/watcher@2.5.0)(@types/node@22.9.0)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.25.0)(terser@5.36.0)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3))(rollup@4.25.0)(webpack-sources@3.2.3)
+        version: 0.3.0(patch_hash=5dcq766eeuesmqdcvoqrnf6tzi)(@tanstack/vue-query@5.29.0(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))))(nuxt@3.11.2(@parcel/watcher@2.5.0)(@types/node@22.9.0)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.25.0)(terser@5.36.0)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3))(rollup@4.25.0)(webpack-sources@3.2.3)
       '@kevinmarrec/nuxt-pwa':
         specifier: ^0.17.0
         version: 0.17.0(patch_hash=czkfnsqo5zyse2ghr474rk4p6a)
@@ -86,8 +86,8 @@ importers:
         specifier: 2.30.0
         version: 2.30.0(patch_hash=g5hqt5bhnjezqo5vnkpprfkba4)
       effect:
-        specifier: ^3.10.13
-        version: 3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)
+        specifier: ^3.10.14
+        version: 3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)
       eslint-plugin-codegen:
         specifier: ^0.17.0
         version: 0.17.0(patch_hash=lbafaxqz7cfo7kkr24anyngo7i)
@@ -304,8 +304,8 @@ packages:
       ws:
         optional: true
 
-  '@effect/opentelemetry@0.39.13':
-    resolution: {integrity: sha512-1EuJnRINVjM68dTbf8RWEzr1ZTF0QLvtoN41k46JYe8aHJbEtEVvRznQ1ZarC8CUy+X4YdtikcsjMgWFWHks0Q==}
+  '@effect/opentelemetry@0.39.14':
+    resolution: {integrity: sha512-VY8GUUYXMf2G5EUys7Pykrhx7vXMkvf6S1YVJmwF+ph2oBihq/4gh/Ks3LO2IKN3EvyEIWLVLd2cWxi8LCABXg==}
     peerDependencies:
       '@opentelemetry/api': ^1.6
       '@opentelemetry/resources': ^1.22
@@ -314,7 +314,7 @@ packages:
       '@opentelemetry/sdk-trace-node': ^1.22
       '@opentelemetry/sdk-trace-web': ^1.22
       '@opentelemetry/semantic-conventions': ^1.24.1
-      effect: ^3.10.13
+      effect: ^3.10.14
     peerDependenciesMeta:
       '@opentelemetry/sdk-metrics':
         optional: true
@@ -325,22 +325,22 @@ packages:
       '@opentelemetry/sdk-trace-web':
         optional: true
 
-  '@effect/platform-node-shared@0.19.21':
-    resolution: {integrity: sha512-1MMM/TpbjTmqRvhUUFf8OhCLyVtZfPwsb6QDpCt/w2dI/9v3H6xSYVRTiVyzrtOXz0ErhcnQitw3r4PxDLp2xg==}
+  '@effect/platform-node-shared@0.19.22':
+    resolution: {integrity: sha512-ltneO5yn6DuT9+7R/ADvioqJwxvdOKED8nPajKdzrlj+AOi33QHBJdUWON0Nyh73UvsQaC/775SSgcn6m971Tw==}
     peerDependencies:
-      '@effect/platform': ^0.69.20
-      effect: ^3.10.13
+      '@effect/platform': ^0.69.21
+      effect: ^3.10.14
 
-  '@effect/platform-node@0.64.22':
-    resolution: {integrity: sha512-0tqWw/g34DkSaDwYflgrDRDOSAlZqwiOnC4K0nqOAFnXoDNphD1tTxKUCyteZrdhcO89rfZCRCKgzs0EhokXMQ==}
+  '@effect/platform-node@0.64.23':
+    resolution: {integrity: sha512-3hqoy8WluGQ7CQsvSnjXj0NXTgfNVOjA5pQsVCS7jP1oTiaHra0XHyg78904oiu2gRruLQejevlsHSwaVewRzQ==}
     peerDependencies:
-      '@effect/platform': ^0.69.20
-      effect: ^3.10.13
+      '@effect/platform': ^0.69.21
+      effect: ^3.10.14
 
-  '@effect/platform@0.69.20':
-    resolution: {integrity: sha512-xO96rj+719UBNYzuC+KKDyzDNXZM6VnaNfSEPWWgmFI74ytiWa/VyeJFHwOVMdUvgAnvmPk4P7LO5YHMvNv46A==}
+  '@effect/platform@0.69.21':
+    resolution: {integrity: sha512-xTa1mEVlSW/UdE3BSyP3/Y8+DFXCnhVEsvlSXaNoVOffJCvNhQ4w0lUYi03+P5eHu8ZDVlceVfT0XA8k8jy0zw==}
     peerDependencies:
-      effect: ^3.10.13
+      effect: ^3.10.14
 
   '@effect/schema@0.75.5':
     resolution: {integrity: sha512-TQInulTVCuF+9EIbJpyLP6dvxbQJMphrnRqgexm/Ze39rSjfhJuufF7XvU3SxTgg3HnL7B/kpORTJbHhlE6thw==}
@@ -354,10 +354,10 @@ packages:
       '@effect/platform': ^0.69.15
       effect: ^3.10.9
 
-  '@effect/typeclass@0.29.13':
-    resolution: {integrity: sha512-VZwlfxJVnm0Ap3F2O9g/5pT8idFtPttYGwislOq0+G24D2m+MigH3zqWW/RspvXjab4Azicv6042uNTwJu2BQg==}
+  '@effect/typeclass@0.29.14':
+    resolution: {integrity: sha512-w2BUcN0iovoV3Dl2AUYejh+FFgmTO7lyhd9hZZvXV+PvhO4qR9rMei5vRIra5/D40MpdvAWIP2CJ4nbieaQEjw==}
     peerDependencies:
-      effect: ^3.10.13
+      effect: ^3.10.14
 
   '@esbuild/aix-ppc64@0.19.12':
     resolution: {integrity: sha512-bmoCYyWdEL3wDQIVbcyzRyeKLgk2WtWLTWz1ZIAZF/EGbNOwSA6ew3PftJ1PqMiOOGu0OyFMzG53L0zqIpPeNA==}
@@ -1837,8 +1837,8 @@ packages:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.0.0
 
-  '@vitejs/plugin-vue@5.1.4':
-    resolution: {integrity: sha512-N2XSI2n3sQqp5w7Y/AN/L2XDjBIRGqXko+eDp42sydYSBeJuSm5a1sLf8zakmo8u7tA8NmBgoDLA1HeOESjp9A==}
+  '@vitejs/plugin-vue@5.1.5':
+    resolution: {integrity: sha512-dlnib73G05CDBAUR/YpuZcQQ47fpjihnnNouAAqN62z+oqSsWJ+kh52GRzIxpkgFG3q11eXK7Di7RMmoCwISZA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0
@@ -1904,8 +1904,8 @@ packages:
   '@vue/devtools-kit@7.4.4':
     resolution: {integrity: sha512-awK/4NfsUG0nQ7qnTM37m7ZkEUMREyPh8taFCX+uQYps/MTFEum0AD05VeGDRMXwWvMmGIcWX9xp8ZiBddY0jw==}
 
-  '@vue/devtools-shared@7.6.3':
-    resolution: {integrity: sha512-wJW5QF27i16+sNQIaes8QoEZg1eqEgF83GkiPUlEQe9k7ZoHXHV7PRrnrxOKem42sIHPU813J2V/ZK1uqTJe6g==}
+  '@vue/devtools-shared@7.6.4':
+    resolution: {integrity: sha512-nD6CUvBEel+y7zpyorjiUocy0nh77DThZJ0k1GRnJeOmY3ATq2fWijEp7wk37gb023Cb0R396uYh5qMSBQ5WFg==}
 
   '@vue/reactivity@3.4.23':
     resolution: {integrity: sha512-GlXR9PL+23fQ3IqnbSQ8OQKLodjqCyoCrmdLKZk3BP7jN6prWheAfU7a3mrltewTkoBm+N7qMEb372VHIkQRMQ==}
@@ -2160,8 +2160,8 @@ packages:
   caniuse-lite@1.0.30001677:
     resolution: {integrity: sha512-fmfjsOlJUpMWu+mAAtZZZHz7UEwsUxIIvu1TJfO1HqFQvB/B+ii0xr9B5HpbZY/mC4XZ8SvjHJqtAY6pDPQEog==}
 
-  caniuse-lite@1.0.30001679:
-    resolution: {integrity: sha512-j2YqID/YwpLnKzCmBOS4tlZdWprXm3ZmQLBH9ZBXFOhoxLA46fwyBvx6toCBWBmnuwUY/qB3kEU6gFx8qgCroA==}
+  caniuse-lite@1.0.30001680:
+    resolution: {integrity: sha512-rPQy70G6AGUMnbwS1z6Xg+RkHYPAi18ihs47GH0jcxIG7wArmPgY3XbS2sRdBbxJljp3thdT8BIqv9ccCypiPA==}
 
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -2598,8 +2598,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  effect@3.10.13:
-    resolution: {integrity: sha512-7L8BGZldtMpXx5mw5MRTsnW6j4zpa+K6Rn2pU5CJ4LyH9jm2Hopfgaq3YurkTmv5HWpCQnhqCkMhbaSG3Nporw==}
+  effect@3.10.14:
+    resolution: {integrity: sha512-NtEeDltifeP6SX1JptGL+k1k6CDjB++Yc7enAKEj3Pd7/4Llb4CDgZybqyiyqBkGK805ZLOIkyAyELdoJpmcqg==}
 
   electron-to-chromium@1.5.50:
     resolution: {integrity: sha512-eMVObiUQ2LdgeO1F/ySTXsvqvxb6ZH2zPGaMYsWzRDdOddUa77tdmI0ltg+L16UpbWdhPmuF3wIQYyQq65WfZw==}
@@ -4164,6 +4164,10 @@ packages:
     resolution: {integrity: sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==}
     engines: {node: ^10 || ^12 || >=14}
 
+  postcss@8.4.49:
+    resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
+    engines: {node: ^10 || ^12 || >=14}
+
   prebuild-install@7.1.2:
     resolution: {integrity: sha512-UnNke3IQb6sgarcZIDU3gbMeTp/9SSU1DAIkil7PrqG1vZlBtY5msYccSKSHDqa3hNg436IXK+SNImReuA1wEQ==}
     engines: {node: '>=10'}
@@ -5010,6 +5014,37 @@ packages:
       terser:
         optional: true
 
+  vite@5.4.11:
+    resolution: {integrity: sha512-c7jFQRklXua0mTzneGW9QVyxFjUgwcihC4bXEtujIo2ouWCe1Ajt/amn2PCxYnhYfd5k09JX3SB7OYWFKYqj8Q==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || >=20.0.0
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      sass-embedded: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+
   vscode-jsonrpc@6.0.0:
     resolution: {integrity: sha512-wnJA4BnEjOSyFMvjZdpiOwhSq9uDoK8e/kpRJDTaMYzwlkrhG1fwDIZI94CLsLzlCK5cIbMMtFlJlfR57Lavmg==}
     engines: {node: '>=8.0.0 || >=10.0.0'}
@@ -5391,40 +5426,40 @@ snapshots:
       gonzales-pe: 4.3.0
       node-source-walk: 7.0.0
 
-  '@effect/experimental@0.27.3(@effect/platform-node@0.64.22(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(@effect/schema@0.75.5(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))(ioredis@5.4.1)(ws@8.18.0)':
+  '@effect/experimental@0.27.3(@effect/platform-node@0.64.23(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(@effect/schema@0.75.5(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))(ioredis@5.4.1)(ws@8.18.0)':
     dependencies:
-      '@effect/platform': 0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
-      '@effect/schema': 0.75.5(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
-      effect: 3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)
+      '@effect/platform': 0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
+      '@effect/schema': 0.75.5(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
+      effect: 3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)
       msgpackr: 1.11.2
     optionalDependencies:
-      '@effect/platform-node': 0.64.22(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
+      '@effect/platform-node': 0.64.23(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
       ioredis: 5.4.1
       ws: 8.18.0
 
-  '@effect/opentelemetry@0.39.13(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.27.0)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))':
+  '@effect/opentelemetry@0.39.14(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.27.0(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.27.0)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))':
     dependencies:
       '@opentelemetry/api': 1.8.0
       '@opentelemetry/resources': 1.27.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/semantic-conventions': 1.27.0
-      effect: 3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)
+      effect: 3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)
     optionalDependencies:
       '@opentelemetry/sdk-metrics': 1.27.0(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-base': 1.25.1(@opentelemetry/api@1.8.0)
       '@opentelemetry/sdk-trace-node': 1.25.1(@opentelemetry/api@1.8.0)
 
-  '@effect/platform-node-shared@0.19.21(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))':
+  '@effect/platform-node-shared@0.19.22(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))':
     dependencies:
-      '@effect/platform': 0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
+      '@effect/platform': 0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
       '@parcel/watcher': 2.5.0
-      effect: 3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)
+      effect: 3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)
       multipasta: 0.2.5
 
-  '@effect/platform-node@0.64.22(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))':
+  '@effect/platform-node@0.64.23(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))':
     dependencies:
-      '@effect/platform': 0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
-      '@effect/platform-node-shared': 0.19.21(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
-      effect: 3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)
+      '@effect/platform': 0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
+      '@effect/platform-node-shared': 0.19.22(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
+      effect: 3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)
       mime: 3.0.0
       undici: 6.20.1
       ws: 8.18.0
@@ -5432,27 +5467,27 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))':
+  '@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))':
     dependencies:
-      effect: 3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)
+      effect: 3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)
       find-my-way-ts: 0.1.5
       multipasta: 0.2.5
 
-  '@effect/schema@0.75.5(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))':
+  '@effect/schema@0.75.5(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))':
     dependencies:
-      effect: 3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)
+      effect: 3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)
       fast-check: 3.23.1
 
-  '@effect/sql@0.18.16(patch_hash=japjuqfj47fm3nzitaxpiz5rj4)(@effect/experimental@0.27.3(@effect/platform-node@0.64.22(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(@effect/schema@0.75.5(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))(ioredis@5.4.1)(ws@8.18.0))(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))':
+  '@effect/sql@0.18.16(patch_hash=japjuqfj47fm3nzitaxpiz5rj4)(@effect/experimental@0.27.3(@effect/platform-node@0.64.23(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(@effect/schema@0.75.5(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))(ioredis@5.4.1)(ws@8.18.0))(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))':
     dependencies:
-      '@effect/experimental': 0.27.3(@effect/platform-node@0.64.22(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(@effect/platform@0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(@effect/schema@0.75.5(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))(ioredis@5.4.1)(ws@8.18.0)
-      '@effect/platform': 0.69.20(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
+      '@effect/experimental': 0.27.3(@effect/platform-node@0.64.23(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(@effect/platform@0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(@effect/schema@0.75.5(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))(ioredis@5.4.1)(ws@8.18.0)
+      '@effect/platform': 0.69.21(patch_hash=xrhj34svzsaswoalw65buaxr7q)(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
       '@opentelemetry/semantic-conventions': 1.27.0
-      effect: 3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)
+      effect: 3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)
 
-  '@effect/typeclass@0.29.13(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))':
+  '@effect/typeclass@0.29.14(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))':
     dependencies:
-      effect: 3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)
+      effect: 3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)
 
   '@esbuild/aix-ppc64@0.19.12':
     optional: true
@@ -5828,19 +5863,19 @@ snapshots:
 
   '@eslint/js@9.1.1': {}
 
-  '@fp-ts/optic@0.25.0(patch_hash=fhvf4znrot5oqowbfpeaq3qsnq)(@effect/typeclass@0.29.13(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)))(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))':
+  '@fp-ts/optic@0.25.0(patch_hash=fhvf4znrot5oqowbfpeaq3qsnq)(@effect/typeclass@0.29.14(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)))(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))':
     dependencies:
-      '@effect/typeclass': 0.29.13(effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y))
-      effect: 3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y)
+      '@effect/typeclass': 0.29.14(effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m))
+      effect: 3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m)
 
-  '@hebilicious/vue-query-nuxt@0.3.0(patch_hash=5dcq766eeuesmqdcvoqrnf6tzi)(@tanstack/vue-query@5.29.0(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))))(nuxt@3.11.2(@parcel/watcher@2.5.0)(@types/node@22.9.0)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.25.0)(terser@5.36.0)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3))(rollup@4.25.0)(webpack-sources@3.2.3)':
+  '@hebilicious/vue-query-nuxt@0.3.0(patch_hash=5dcq766eeuesmqdcvoqrnf6tzi)(@tanstack/vue-query@5.29.0(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))))(nuxt@3.11.2(@parcel/watcher@2.5.0)(@types/node@22.9.0)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.25.0)(terser@5.36.0)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3))(rollup@4.25.0)(webpack-sources@3.2.3)':
     dependencies:
       '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       '@tanstack/vue-query': 5.29.0(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))
       defu: 6.1.4
       esbuild: 0.19.12
       magicast: 0.3.5
-      nuxt: 3.11.2(@parcel/watcher@2.5.0)(@types/node@22.9.0)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.25.0)(terser@5.36.0)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3)
+      nuxt: 3.11.2(@parcel/watcher@2.5.0)(@types/node@22.9.0)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.25.0)(terser@5.36.0)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -5973,12 +6008,12 @@ snapshots:
 
   '@nuxt/devalue@2.0.2': {}
 
-  '@nuxt/devtools-kit@1.6.0(magicast@0.3.5)(rollup@4.25.0)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3)':
+  '@nuxt/devtools-kit@1.6.0(magicast@0.3.5)(rollup@4.25.0)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3)':
     dependencies:
       '@nuxt/kit': 3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       '@nuxt/schema': 3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       execa: 7.2.0
-      vite: 5.4.10(@types/node@22.9.0)(terser@5.36.0)
+      vite: 5.4.11(@types/node@22.9.0)(terser@5.36.0)
     transitivePeerDependencies:
       - magicast
       - rollup
@@ -5998,13 +6033,13 @@ snapshots:
       rc9: 2.1.2
       semver: 7.6.3
 
-  '@nuxt/devtools@1.6.0(rollup@4.25.0)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))(webpack-sources@3.2.3)':
+  '@nuxt/devtools@1.6.0(rollup@4.25.0)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))(webpack-sources@3.2.3)':
     dependencies:
       '@antfu/utils': 0.7.10
-      '@nuxt/devtools-kit': 1.6.0(magicast@0.3.5)(rollup@4.25.0)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3)
+      '@nuxt/devtools-kit': 1.6.0(magicast@0.3.5)(rollup@4.25.0)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3)
       '@nuxt/devtools-wizard': 1.6.0
       '@nuxt/kit': 3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
-      '@vue/devtools-core': 7.4.4(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))
+      '@vue/devtools-core': 7.4.4(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))
       '@vue/devtools-kit': 7.4.4
       birpc: 0.2.19
       consola: 3.2.3
@@ -6033,9 +6068,9 @@ snapshots:
       sirv: 2.0.4
       tinyglobby: 0.2.10
       unimport: 3.13.1(rollup@4.25.0)(webpack-sources@3.2.3)
-      vite: 5.4.10(@types/node@22.9.0)(terser@5.36.0)
-      vite-plugin-inspect: 0.8.7(@nuxt/kit@3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3))(rollup@4.25.0)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))
-      vite-plugin-vue-inspector: 5.1.3(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))
+      vite: 5.4.11(@types/node@22.9.0)(terser@5.36.0)
+      vite-plugin-inspect: 0.8.7(@nuxt/kit@3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3))(rollup@4.25.0)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))
+      vite-plugin-vue-inspector: 5.1.3(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))
       which: 3.0.1
       ws: 8.18.0
     transitivePeerDependencies:
@@ -6218,12 +6253,12 @@ snapshots:
     dependencies:
       '@nuxt/kit': 3.11.2(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       '@rollup/plugin-replace': 5.0.7(rollup@4.25.0)
-      '@vitejs/plugin-vue': 5.1.4(patch_hash=2g7kaqtrfqk6hg64apenfnbgou)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))
-      '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))
-      autoprefixer: 10.4.20(postcss@8.4.47)
+      '@vitejs/plugin-vue': 5.1.5(patch_hash=2g7kaqtrfqk6hg64apenfnbgou)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))
+      '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))
+      autoprefixer: 10.4.20(postcss@8.4.49)
       clear: 0.1.0
       consola: 3.2.3
-      cssnano: 6.1.2(postcss@8.4.47)
+      cssnano: 6.1.2(postcss@8.4.49)
       defu: 6.1.4
       esbuild: 0.20.2
       escape-string-regexp: 5.0.0
@@ -6239,16 +6274,16 @@ snapshots:
       pathe: 1.1.2
       perfect-debounce: 1.0.0
       pkg-types: 1.2.1
-      postcss: 8.4.47
+      postcss: 8.4.49
       rollup-plugin-visualizer: 5.12.0(rollup@4.25.0)
       std-env: 3.8.0
       strip-literal: 2.1.0
       ufo: 1.5.4
       unenv: 1.10.0
       unplugin: 1.15.0(webpack-sources@3.2.3)
-      vite: 5.4.10(@types/node@22.9.0)(terser@5.36.0)
+      vite: 5.4.11(@types/node@22.9.0)(terser@5.36.0)
       vite-node: 1.6.0(@types/node@22.9.0)(terser@5.36.0)
-      vite-plugin-checker: 0.6.4(eslint@9.1.0)(optionator@0.9.4)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))
+      vite-plugin-checker: 0.6.4(eslint@9.1.0)(optionator@0.9.4)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))
       vue: 3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))
       vue-bundle-renderer: 2.1.1
     transitivePeerDependencies:
@@ -6770,19 +6805,19 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vitejs/plugin-vue-jsx@3.1.0(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))':
+  '@vitejs/plugin-vue-jsx@3.1.0(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-transform-typescript': 7.25.9(@babel/core@7.26.0)
       '@vue/babel-plugin-jsx': 1.2.5(@babel/core@7.26.0)
-      vite: 5.4.10(@types/node@22.9.0)(terser@5.36.0)
+      vite: 5.4.11(@types/node@22.9.0)(terser@5.36.0)
       vue: 3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@5.1.4(patch_hash=2g7kaqtrfqk6hg64apenfnbgou)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))':
+  '@vitejs/plugin-vue@5.1.5(patch_hash=2g7kaqtrfqk6hg64apenfnbgou)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))':
     dependencies:
-      vite: 5.4.10(@types/node@22.9.0)(terser@5.36.0)
+      vite: 5.4.11(@types/node@22.9.0)(terser@5.36.0)
       vue: 3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))
 
   '@vue-macros/common@1.15.0(rollup@4.25.0)(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))':
@@ -6863,7 +6898,7 @@ snapshots:
       '@vue/shared': 3.4.23
       estree-walker: 2.0.2
       magic-string: 0.30.12
-      postcss: 8.4.47
+      postcss: 8.4.49
       source-map-js: 1.2.1
 
   '@vue/compiler-sfc@3.5.12':
@@ -6890,21 +6925,21 @@ snapshots:
 
   '@vue/devtools-api@6.6.4': {}
 
-  '@vue/devtools-core@7.4.4(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))':
+  '@vue/devtools-core@7.4.4(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))':
     dependencies:
       '@vue/devtools-kit': 7.4.4
-      '@vue/devtools-shared': 7.6.3
+      '@vue/devtools-shared': 7.6.4
       mitt: 3.0.1
       nanoid: 3.3.7
       pathe: 1.1.2
-      vite-hot-client: 0.2.3(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))
+      vite-hot-client: 0.2.3(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))
       vue: 3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))
     transitivePeerDependencies:
       - vite
 
   '@vue/devtools-kit@7.4.4':
     dependencies:
-      '@vue/devtools-shared': 7.6.3
+      '@vue/devtools-shared': 7.6.4
       birpc: 0.2.19
       hookable: 5.5.3
       mitt: 3.0.1
@@ -6912,7 +6947,7 @@ snapshots:
       speakingurl: 14.0.1
       superjson: 2.2.1
 
-  '@vue/devtools-shared@7.6.3':
+  '@vue/devtools-shared@7.6.4':
     dependencies:
       rfdc: 1.4.1
 
@@ -7080,14 +7115,14 @@ snapshots:
 
   async@3.2.6: {}
 
-  autoprefixer@10.4.20(postcss@8.4.47):
+  autoprefixer@10.4.20(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
-      caniuse-lite: 1.0.30001679
+      caniuse-lite: 1.0.30001680
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
@@ -7206,13 +7241,13 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.24.2
-      caniuse-lite: 1.0.30001679
+      caniuse-lite: 1.0.30001680
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
   caniuse-lite@1.0.30001677: {}
 
-  caniuse-lite@1.0.30001679: {}
+  caniuse-lite@1.0.30001680: {}
 
   chalk@4.1.2:
     dependencies:
@@ -7360,9 +7395,9 @@ snapshots:
     dependencies:
       uncrypto: 0.1.3
 
-  css-declaration-sorter@7.2.0(postcss@8.4.47):
+  css-declaration-sorter@7.2.0(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
 
   css-select@5.1.0:
     dependencies:
@@ -7386,49 +7421,49 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  cssnano-preset-default@6.1.2(postcss@8.4.47):
+  cssnano-preset-default@6.1.2(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
-      css-declaration-sorter: 7.2.0(postcss@8.4.47)
-      cssnano-utils: 4.0.2(postcss@8.4.47)
-      postcss: 8.4.47
-      postcss-calc: 9.0.1(postcss@8.4.47)
-      postcss-colormin: 6.1.0(postcss@8.4.47)
-      postcss-convert-values: 6.1.0(postcss@8.4.47)
-      postcss-discard-comments: 6.0.2(postcss@8.4.47)
-      postcss-discard-duplicates: 6.0.3(postcss@8.4.47)
-      postcss-discard-empty: 6.0.3(postcss@8.4.47)
-      postcss-discard-overridden: 6.0.2(postcss@8.4.47)
-      postcss-merge-longhand: 6.0.5(postcss@8.4.47)
-      postcss-merge-rules: 6.1.1(postcss@8.4.47)
-      postcss-minify-font-values: 6.1.0(postcss@8.4.47)
-      postcss-minify-gradients: 6.0.3(postcss@8.4.47)
-      postcss-minify-params: 6.1.0(postcss@8.4.47)
-      postcss-minify-selectors: 6.0.4(postcss@8.4.47)
-      postcss-normalize-charset: 6.0.2(postcss@8.4.47)
-      postcss-normalize-display-values: 6.0.2(postcss@8.4.47)
-      postcss-normalize-positions: 6.0.2(postcss@8.4.47)
-      postcss-normalize-repeat-style: 6.0.2(postcss@8.4.47)
-      postcss-normalize-string: 6.0.2(postcss@8.4.47)
-      postcss-normalize-timing-functions: 6.0.2(postcss@8.4.47)
-      postcss-normalize-unicode: 6.1.0(postcss@8.4.47)
-      postcss-normalize-url: 6.0.2(postcss@8.4.47)
-      postcss-normalize-whitespace: 6.0.2(postcss@8.4.47)
-      postcss-ordered-values: 6.0.2(postcss@8.4.47)
-      postcss-reduce-initial: 6.1.0(postcss@8.4.47)
-      postcss-reduce-transforms: 6.0.2(postcss@8.4.47)
-      postcss-svgo: 6.0.3(postcss@8.4.47)
-      postcss-unique-selectors: 6.0.4(postcss@8.4.47)
+      css-declaration-sorter: 7.2.0(postcss@8.4.49)
+      cssnano-utils: 4.0.2(postcss@8.4.49)
+      postcss: 8.4.49
+      postcss-calc: 9.0.1(postcss@8.4.49)
+      postcss-colormin: 6.1.0(postcss@8.4.49)
+      postcss-convert-values: 6.1.0(postcss@8.4.49)
+      postcss-discard-comments: 6.0.2(postcss@8.4.49)
+      postcss-discard-duplicates: 6.0.3(postcss@8.4.49)
+      postcss-discard-empty: 6.0.3(postcss@8.4.49)
+      postcss-discard-overridden: 6.0.2(postcss@8.4.49)
+      postcss-merge-longhand: 6.0.5(postcss@8.4.49)
+      postcss-merge-rules: 6.1.1(postcss@8.4.49)
+      postcss-minify-font-values: 6.1.0(postcss@8.4.49)
+      postcss-minify-gradients: 6.0.3(postcss@8.4.49)
+      postcss-minify-params: 6.1.0(postcss@8.4.49)
+      postcss-minify-selectors: 6.0.4(postcss@8.4.49)
+      postcss-normalize-charset: 6.0.2(postcss@8.4.49)
+      postcss-normalize-display-values: 6.0.2(postcss@8.4.49)
+      postcss-normalize-positions: 6.0.2(postcss@8.4.49)
+      postcss-normalize-repeat-style: 6.0.2(postcss@8.4.49)
+      postcss-normalize-string: 6.0.2(postcss@8.4.49)
+      postcss-normalize-timing-functions: 6.0.2(postcss@8.4.49)
+      postcss-normalize-unicode: 6.1.0(postcss@8.4.49)
+      postcss-normalize-url: 6.0.2(postcss@8.4.49)
+      postcss-normalize-whitespace: 6.0.2(postcss@8.4.49)
+      postcss-ordered-values: 6.0.2(postcss@8.4.49)
+      postcss-reduce-initial: 6.1.0(postcss@8.4.49)
+      postcss-reduce-transforms: 6.0.2(postcss@8.4.49)
+      postcss-svgo: 6.0.3(postcss@8.4.49)
+      postcss-unique-selectors: 6.0.4(postcss@8.4.49)
 
-  cssnano-utils@4.0.2(postcss@8.4.47):
+  cssnano-utils@4.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
 
-  cssnano@6.1.2(postcss@8.4.47):
+  cssnano@6.1.2(postcss@8.4.49):
     dependencies:
-      cssnano-preset-default: 6.1.2(postcss@8.4.47)
+      cssnano-preset-default: 6.1.2(postcss@8.4.49)
       lilconfig: 3.1.2
-      postcss: 8.4.47
+      postcss: 8.4.49
 
   csso@5.0.5:
     dependencies:
@@ -7630,7 +7665,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  effect@3.10.13(patch_hash=i5etcfemkxcctmrtkhb4wshv2y):
+  effect@3.10.14(patch_hash=abl7xwvob5jcp7mgz2pfmn726m):
     dependencies:
       fast-check: 3.23.1
 
@@ -9080,10 +9115,10 @@ snapshots:
 
   nuxi@3.15.0: {}
 
-  nuxt@3.11.2(@parcel/watcher@2.5.0)(@types/node@22.9.0)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.25.0)(terser@5.36.0)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3):
+  nuxt@3.11.2(@parcel/watcher@2.5.0)(@types/node@22.9.0)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.25.0)(terser@5.36.0)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(webpack-sources@3.2.3):
     dependencies:
       '@nuxt/devalue': 2.0.2
-      '@nuxt/devtools': 1.6.0(rollup@4.25.0)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))(webpack-sources@3.2.3)
+      '@nuxt/devtools': 1.6.0(rollup@4.25.0)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue@3.4.23(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)))(webpack-sources@3.2.3)
       '@nuxt/kit': 3.11.2(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       '@nuxt/schema': 3.11.2(rollup@4.25.0)(webpack-sources@3.2.3)
       '@nuxt/telemetry': 2.6.0(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
@@ -9386,140 +9421,140 @@ snapshots:
 
   possible-typed-array-names@1.0.0: {}
 
-  postcss-calc@9.0.1(postcss@8.4.47):
+  postcss-calc@9.0.1(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-selector-parser: 6.1.2
       postcss-value-parser: 4.2.0
 
-  postcss-colormin@6.1.0(postcss@8.4.47):
+  postcss-colormin@6.1.0(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
       caniuse-api: 3.0.0
       colord: 2.9.3
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-convert-values@6.1.0(postcss@8.4.47):
+  postcss-convert-values@6.1.0(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-discard-comments@6.0.2(postcss@8.4.47):
+  postcss-discard-comments@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
 
-  postcss-discard-duplicates@6.0.3(postcss@8.4.47):
+  postcss-discard-duplicates@6.0.3(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
 
-  postcss-discard-empty@6.0.3(postcss@8.4.47):
+  postcss-discard-empty@6.0.3(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
 
-  postcss-discard-overridden@6.0.2(postcss@8.4.47):
+  postcss-discard-overridden@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
 
-  postcss-merge-longhand@6.0.5(postcss@8.4.47):
+  postcss-merge-longhand@6.0.5(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
-      stylehacks: 6.1.1(postcss@8.4.47)
+      stylehacks: 6.1.1(postcss@8.4.49)
 
-  postcss-merge-rules@6.1.1(postcss@8.4.47):
+  postcss-merge-rules@6.1.1(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
       caniuse-api: 3.0.0
-      cssnano-utils: 4.0.2(postcss@8.4.47)
-      postcss: 8.4.47
+      cssnano-utils: 4.0.2(postcss@8.4.49)
+      postcss: 8.4.49
       postcss-selector-parser: 6.1.2
 
-  postcss-minify-font-values@6.1.0(postcss@8.4.47):
+  postcss-minify-font-values@6.1.0(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-minify-gradients@6.0.3(postcss@8.4.47):
+  postcss-minify-gradients@6.0.3(postcss@8.4.49):
     dependencies:
       colord: 2.9.3
-      cssnano-utils: 4.0.2(postcss@8.4.47)
-      postcss: 8.4.47
+      cssnano-utils: 4.0.2(postcss@8.4.49)
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-minify-params@6.1.0(postcss@8.4.47):
+  postcss-minify-params@6.1.0(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
-      cssnano-utils: 4.0.2(postcss@8.4.47)
-      postcss: 8.4.47
+      cssnano-utils: 4.0.2(postcss@8.4.49)
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-minify-selectors@6.0.4(postcss@8.4.47):
+  postcss-minify-selectors@6.0.4(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-selector-parser: 6.1.2
 
-  postcss-normalize-charset@6.0.2(postcss@8.4.47):
+  postcss-normalize-charset@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
 
-  postcss-normalize-display-values@6.0.2(postcss@8.4.47):
+  postcss-normalize-display-values@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-positions@6.0.2(postcss@8.4.47):
+  postcss-normalize-positions@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-repeat-style@6.0.2(postcss@8.4.47):
+  postcss-normalize-repeat-style@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-string@6.0.2(postcss@8.4.47):
+  postcss-normalize-string@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-timing-functions@6.0.2(postcss@8.4.47):
+  postcss-normalize-timing-functions@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-unicode@6.1.0(postcss@8.4.47):
+  postcss-normalize-unicode@6.1.0(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-url@6.0.2(postcss@8.4.47):
+  postcss-normalize-url@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-normalize-whitespace@6.0.2(postcss@8.4.47):
+  postcss-normalize-whitespace@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-ordered-values@6.0.2(postcss@8.4.47):
+  postcss-ordered-values@6.0.2(postcss@8.4.49):
     dependencies:
-      cssnano-utils: 4.0.2(postcss@8.4.47)
-      postcss: 8.4.47
+      cssnano-utils: 4.0.2(postcss@8.4.49)
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
-  postcss-reduce-initial@6.1.0(postcss@8.4.47):
+  postcss-reduce-initial@6.1.0(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
       caniuse-api: 3.0.0
-      postcss: 8.4.47
+      postcss: 8.4.49
 
-  postcss-reduce-transforms@6.0.2(postcss@8.4.47):
+  postcss-reduce-transforms@6.0.2(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
 
   postcss-selector-parser@6.1.2:
@@ -9527,15 +9562,15 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-svgo@6.0.3(postcss@8.4.47):
+  postcss-svgo@6.0.3(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-value-parser: 4.2.0
       svgo: 3.3.2
 
-  postcss-unique-selectors@6.0.4(postcss@8.4.47):
+  postcss-unique-selectors@6.0.4(postcss@8.4.49):
     dependencies:
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-selector-parser: 6.1.2
 
   postcss-value-parser@4.2.0: {}
@@ -9548,6 +9583,12 @@ snapshots:
       quote-unquote: 1.0.0
 
   postcss@8.4.47:
+    dependencies:
+      nanoid: 3.3.7
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
+  postcss@8.4.49:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.1.1
@@ -10112,10 +10153,10 @@ snapshots:
     dependencies:
       js-tokens: 9.0.0
 
-  stylehacks@6.1.1(postcss@8.4.47):
+  stylehacks@6.1.1(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
-      postcss: 8.4.47
+      postcss: 8.4.49
       postcss-selector-parser: 6.1.2
 
   stylus-lookup@6.0.0:
@@ -10449,9 +10490,9 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-hot-client@0.2.3(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0)):
+  vite-hot-client@0.2.3(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0)):
     dependencies:
-      vite: 5.4.10(@types/node@22.9.0)(terser@5.36.0)
+      vite: 5.4.11(@types/node@22.9.0)(terser@5.36.0)
 
   vite-node@1.6.0(@types/node@22.9.0)(terser@5.36.0):
     dependencies:
@@ -10471,7 +10512,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-checker@0.6.4(eslint@9.1.0)(optionator@0.9.4)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0)):
+  vite-plugin-checker@0.6.4(eslint@9.1.0)(optionator@0.9.4)(typescript@5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q))(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0)):
     dependencies:
       '@babel/code-frame': 7.26.2
       ansi-escapes: 4.3.2
@@ -10484,7 +10525,7 @@ snapshots:
       semver: 7.6.3
       strip-ansi: 6.0.1
       tiny-invariant: 1.3.3
-      vite: 5.4.10(@types/node@22.9.0)(terser@5.36.0)
+      vite: 5.4.11(@types/node@22.9.0)(terser@5.36.0)
       vscode-languageclient: 7.0.0
       vscode-languageserver: 7.0.0
       vscode-languageserver-textdocument: 1.0.12
@@ -10494,7 +10535,7 @@ snapshots:
       optionator: 0.9.4
       typescript: 5.6.3(patch_hash=yoypwiw4x7ikhinpyfewievf3q)
 
-  vite-plugin-inspect@0.8.7(@nuxt/kit@3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3))(rollup@4.25.0)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0)):
+  vite-plugin-inspect@0.8.7(@nuxt/kit@3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3))(rollup@4.25.0)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0)):
     dependencies:
       '@antfu/utils': 0.7.10
       '@rollup/pluginutils': 5.1.3(rollup@4.25.0)
@@ -10505,14 +10546,14 @@ snapshots:
       perfect-debounce: 1.0.0
       picocolors: 1.1.1
       sirv: 2.0.4
-      vite: 5.4.10(@types/node@22.9.0)(terser@5.36.0)
+      vite: 5.4.11(@types/node@22.9.0)(terser@5.36.0)
     optionalDependencies:
       '@nuxt/kit': 3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
     transitivePeerDependencies:
       - rollup
       - supports-color
 
-  vite-plugin-vue-inspector@5.1.3(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0)):
+  vite-plugin-vue-inspector@5.1.3(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0)):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-proposal-decorators': 7.25.9(@babel/core@7.26.0)
@@ -10523,7 +10564,7 @@ snapshots:
       '@vue/compiler-dom': 3.5.12
       kolorist: 1.8.0
       magic-string: 0.30.12
-      vite: 5.4.10(@types/node@22.9.0)(terser@5.36.0)
+      vite: 5.4.11(@types/node@22.9.0)(terser@5.36.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -10532,6 +10573,16 @@ snapshots:
       esbuild: 0.21.5
       postcss: 8.4.47
       rollup: 4.24.3
+    optionalDependencies:
+      '@types/node': 22.9.0
+      fsevents: 2.3.3
+      terser: 5.36.0
+
+  vite@5.4.11(@types/node@22.9.0)(terser@5.36.0):
+    dependencies:
+      esbuild: 0.21.5
+      postcss: 8.4.49
+      rollup: 4.25.0
     optionalDependencies:
       '@types/node': 22.9.0
       fsevents: 2.3.3
