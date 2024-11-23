@@ -6,29 +6,29 @@
     "pnpm": ">= 9.0.4"
   },
   "devDependencies": {
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.9.3",
     "madge": "^8.0.0",
     "pnpm-patch-i": "^0.3.4",
     "vite-node": "^1.6.0"
   },
   "dependencies": {
-    "@effect/opentelemetry": "^0.39.14",
-    "@effect/platform": "^0.69.21",
-    "@effect/platform-node": "^0.64.23",
+    "@effect/opentelemetry": "^0.39.16",
+    "@effect/platform": "^0.69.25",
+    "@effect/platform-node": "^0.64.27",
     "@effect/sql": "^0.18.16",
-    "@effect/typeclass": "^0.29.14",
+    "@effect/typeclass": "^0.29.16",
     "@fp-ts/optic": "^0.25.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@opentelemetry/sdk-metrics": "^1.27.0",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
     "date-fns": "2.30.0",
-    "effect": "^3.10.14",
+    "effect": "^3.10.16",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.1",
     "primevue": "3.49.1",
     "tsx": "^4.19.2",
-    "typescript": "^5.6.3",
+    "typescript": "^5.7.2",
     "typescript-transform-paths": "^3.5.2"
   },
   "pnpm": {

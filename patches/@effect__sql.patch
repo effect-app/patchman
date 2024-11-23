@@ -1,3 +1,16 @@
+diff --git a/README.md b/README.md
+index 109acfd9fee612f3fe55071b8ac7283a548d295f..f231dfff3bf661721b3d4f06fff8dfe2d3e71cc9 100644
+--- a/README.md
++++ b/README.md
+@@ -33,7 +33,7 @@ Alternatively, you can also create the `SqlLive` layer using the `PgClient.layer
+ import { Config } from "effect"
+ import { PgClient } from "@effect/sql-pg"
+ 
+-const SqlLive = PgClient.layer({
++const SqlLive = PgClient.layerConfig({
+   database: Config.string("DATABASE")
+ })
+ ```
 diff --git a/dist/cjs/Model.js b/dist/cjs/Model.js
 index 2ff21b1522594426a56a505d039f4fabbbc541d4..84d816db58f47d016ab1b9ee411158042c597ffb 100644
 --- a/dist/cjs/Model.js
