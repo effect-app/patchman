@@ -29,7 +29,8 @@
     "primevue": "3.49.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
-    "typescript-transform-paths": "^3.5.2"
+    "typescript-transform-paths": "^3.5.2",
+    "vue-tsc": "^2.1.10"
   },
   "pnpm": {
     "patchedDependencies": {
@@ -46,7 +47,8 @@
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "madge": "patches/madge.patch",
       "@vue/compiler-core": "patches/@vue__compiler-core.patch",
-      "effect": "patches/effect.patch"
+      "effect": "patches/effect.patch",
+      "vue-tsc": "patches/vue-tsc.patch"
     }
   },
   "scripts": {
