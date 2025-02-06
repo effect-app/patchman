@@ -47,7 +47,8 @@
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "madge": "patches/madge.patch",
       "@vue/compiler-core": "patches/@vue__compiler-core.patch",
-      "effect": "patches/effect.patch"
+      "effect": "patches/effect.patch",
+      "@effect-app/cli": "patches/@effect-app__cli.patch"
     }
   },
   "scripts": {
