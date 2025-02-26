@@ -15,6 +15,7 @@
     "@effect/opentelemetry": "^0.44.2",
     "@effect/platform": "^0.77.2",
     "@effect/platform-node": "^0.73.2",
+    "@effect/rpc": "^0.52.2",
     "@effect/sql": "^0.30.2",
     "@effect/typeclass": "^0.32.2",
     "@fp-ts/optic": "^0.25.0",
@@ -46,7 +47,8 @@
       "@effect/sql": "patches/@effect__sql.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "madge": "patches/madge.patch",
-      "effect": "patches/effect.patch"
+      "effect": "patches/effect.patch",
+      "@effect/rpc": "patches/@effect__rpc.patch"
     }
   },
   "scripts": {

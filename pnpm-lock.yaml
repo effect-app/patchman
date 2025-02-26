@@ -8,6 +8,9 @@ patchedDependencies:
   '@effect/platform':
     hash: c051a1eb3012a1774c2a8c64d1ff121320d095d024080fb4b5897a1f7bca4966
     path: patches/@effect__platform.patch
+  '@effect/rpc':
+    hash: 30e8c484fb8adffefe4ba2b5c55e9ea82067aa6bcc40370ddbebea679998d036
+    path: patches/@effect__rpc.patch
   '@effect/sql':
     hash: 9c2eda24af07a4e23c761cf3824aac3d8bd3e8bafcd46bec02f49a19062c9009
     path: patches/@effect__sql.patch
@@ -58,6 +61,9 @@ importers:
       '@effect/platform-node':
         specifier: ^0.73.2
         version: 0.73.2(@effect/platform@0.77.2(patch_hash=c051a1eb3012a1774c2a8c64d1ff121320d095d024080fb4b5897a1f7bca4966)(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a)))(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a))
+      '@effect/rpc':
+        specifier: ^0.52.2
+        version: 0.52.2(patch_hash=30e8c484fb8adffefe4ba2b5c55e9ea82067aa6bcc40370ddbebea679998d036)(@effect/platform@0.77.2(patch_hash=c051a1eb3012a1774c2a8c64d1ff121320d095d024080fb4b5897a1f7bca4966)(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a)))(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a))
       '@effect/sql':
         specifier: ^0.30.2
         version: 0.30.2(patch_hash=9c2eda24af07a4e23c761cf3824aac3d8bd3e8bafcd46bec02f49a19062c9009)(f5ba12f22028a248f1dc7ab1f154785d)
@@ -384,6 +390,12 @@ packages:
   '@effect/platform@0.77.2':
     resolution: {integrity: sha512-stvroKHJVfjd3XhZJEPUAOgzqu9DH1vnGHIAjfs2ma6Z4qcjVpFXrxa0ZYmwRaWVIFsiADMenkN0I7XrRdAgLw==}
     peerDependencies:
+      effect: ^3.13.2
+
+  '@effect/rpc@0.52.2':
+    resolution: {integrity: sha512-Wlz6GzXQpyAQfdUaIkJVoB4sm6u/fBsORca7neu2Fi/YYrNuA94B7O+3PLtaIMyqxF1FCbkRoE0x3TBftXwDyA==}
+    peerDependencies:
+      '@effect/platform': ^0.77.2
       effect: ^3.13.2
 
   '@effect/schema@0.75.5':
@@ -5867,6 +5879,11 @@ snapshots:
       effect: 3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a)
       find-my-way-ts: 0.1.5
       multipasta: 0.2.5
+
+  '@effect/rpc@0.52.2(patch_hash=30e8c484fb8adffefe4ba2b5c55e9ea82067aa6bcc40370ddbebea679998d036)(@effect/platform@0.77.2(patch_hash=c051a1eb3012a1774c2a8c64d1ff121320d095d024080fb4b5897a1f7bca4966)(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a)))(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a))':
+    dependencies:
+      '@effect/platform': 0.77.2(patch_hash=c051a1eb3012a1774c2a8c64d1ff121320d095d024080fb4b5897a1f7bca4966)(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a))
+      effect: 3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a)
 
   '@effect/schema@0.75.5(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a))':
     dependencies:
