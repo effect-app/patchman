@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  '@effect-app/cli':
-    hash: 4dabbb515cc8b065945113eff641c4a591e8ed03a28febad7b008aa4a1ae110b
-    path: patches/@effect-app__cli.patch
   '@effect/platform':
     hash: c051a1eb3012a1774c2a8c64d1ff121320d095d024080fb4b5897a1f7bca4966
     path: patches/@effect__platform.patch
@@ -52,9 +49,6 @@ importers:
 
   .:
     dependencies:
-      '@effect-app/cli':
-        specifier: ^1.13.2
-        version: 1.13.2(patch_hash=4dabbb515cc8b065945113eff641c4a591e8ed03a28febad7b008aa4a1ae110b)
       '@effect/opentelemetry':
         specifier: ^0.44.2
         version: 0.44.2(@opentelemetry/api@1.8.0)(@opentelemetry/resources@1.30.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-metrics@1.30.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.8.0))(@opentelemetry/semantic-conventions@1.28.0)(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a))
@@ -330,10 +324,6 @@ packages:
   '@dependents/detective-less@5.0.0':
     resolution: {integrity: sha512-D/9dozteKcutI5OdxJd8rU+fL6XgaaRg60sPPJWkT33OCiRfkCu5wO5B/yXTaaL2e6EB0lcCBGe5E0XscZCvvQ==}
     engines: {node: '>=18'}
-
-  '@effect-app/cli@1.13.2':
-    resolution: {integrity: sha512-ljzy4j6naSnEWpYB0AjhiLhaIt2BtyLWotRQDZi+a7SEE8IKXJRalRMbArEDQWdugQdiyFAz+0uL9ipfIAP2Gg==}
-    hasBin: true
 
   '@effect/experimental@0.27.3':
     resolution: {integrity: sha512-Fk+WEuGV0MItxoy2npQax0uOab46vZPa9pZrFdoQ9UB0OxhFzW7N5KG2beUm+3QkJ60jqmW797jH3oBfgXSp2w==}
@@ -3966,10 +3956,6 @@ packages:
     resolution: {integrity: sha512-1uiY543L+N7Og4yswvlm5NCKgPKDEXd9AUR9Jh3gen6oOeBsesr6LqhXom1er3eRzSUcVRWXzhv8tSNrIfGHKw==}
     engines: {node: '>=18'}
 
-  node-watch@0.7.4:
-    resolution: {integrity: sha512-RinNxoz4W1cep1b928fuFhvAQ5ag/+1UlMDV7rbyGthBIgsiEouS4kvRayvvboxii4m8eolKOIBo3OjDqbc+uQ==}
-    engines: {node: '>=6'}
-
   nopt@8.1.0:
     resolution: {integrity: sha512-ieGu42u/Qsa4TFktmaKEwM6MQH0pOWnaB3htzh0JRtx84+Mebc0cbZYN5bC+6WTZ4+77xrL9Pn5m7CV6VIkV7A==}
     engines: {node: ^18.17.0 || >=20.5.0}
@@ -5834,10 +5820,6 @@ snapshots:
     dependencies:
       gonzales-pe: 4.3.0
       node-source-walk: 7.0.0
-
-  '@effect-app/cli@1.13.2(patch_hash=4dabbb515cc8b065945113eff641c4a591e8ed03a28febad7b008aa4a1ae110b)':
-    dependencies:
-      node-watch: 0.7.4
 
   '@effect/experimental@0.27.3(@effect/platform-node@0.73.2(@effect/platform@0.77.2(patch_hash=c051a1eb3012a1774c2a8c64d1ff121320d095d024080fb4b5897a1f7bca4966)(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a)))(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a)))(@effect/platform@0.77.2(patch_hash=c051a1eb3012a1774c2a8c64d1ff121320d095d024080fb4b5897a1f7bca4966)(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a)))(@effect/schema@0.75.5(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a)))(effect@3.13.2(patch_hash=5f8d62e610d7c019b0aef870700f80409ecbbc24515ba5fc7ecb99da3785a42a))(ioredis@5.5.0)(ws@8.18.0)':
     dependencies:
@@ -9635,8 +9617,6 @@ snapshots:
   node-source-walk@7.0.0:
     dependencies:
       '@babel/parser': 7.26.2
-
-  node-watch@0.7.4: {}
 
   nopt@8.1.0:
     dependencies:

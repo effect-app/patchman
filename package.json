@@ -12,7 +12,6 @@
     "vite-node": "^1.6.1"
   },
   "dependencies": {
-    "@effect-app/cli": "^1.13.2",
     "@effect/opentelemetry": "^0.44.2",
     "@effect/platform": "^0.77.2",
     "@effect/platform-node": "^0.73.2",
@@ -47,8 +46,7 @@
       "@effect/sql": "patches/@effect__sql.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "madge": "patches/madge.patch",
-      "effect": "patches/effect.patch",
-      "@effect-app/cli": "patches/@effect-app__cli.patch"
+      "effect": "patches/effect.patch"
     }
   },
   "scripts": {
