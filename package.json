@@ -29,6 +29,7 @@
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.2",
     "primevue": "3.49.1",
+    "ts-plugin-sort-import-suggestions": "^1.0.4",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
     "typescript-transform-paths": "^3.5.3",
@@ -50,7 +51,8 @@
       "madge": "patches/madge.patch",
       "effect": "patches/effect.patch",
       "@effect/rpc": "patches/@effect__rpc.patch",
-      "@sentry/core": "patches/@sentry__core.patch"
+      "@sentry/core": "patches/@sentry__core.patch",
+      "ts-plugin-sort-import-suggestions": "patches/ts-plugin-sort-import-suggestions.patch"
     }
   },
   "scripts": {

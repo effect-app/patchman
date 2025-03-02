@@ -47,6 +47,9 @@ patchedDependencies:
   primevue@3.49.1:
     hash: 944850b8c1828c923a11f74b9953aa809615d2a89ab51f954c4e2f7193ff8868
     path: patches/primevue@3.49.1.patch
+  ts-plugin-sort-import-suggestions:
+    hash: 4664506575d0f4e799401cb7140b6f15f34a6fe213da6314d68439f7e8d30561
+    path: patches/ts-plugin-sort-import-suggestions.patch
   typescript:
     hash: fe4a099d81bd61a9e6527083f3b0760c386580895e809e904b27201c050c2cbb
     path: patches/typescript.patch
@@ -106,6 +109,9 @@ importers:
       primevue:
         specifier: 3.49.1
         version: 3.49.1(patch_hash=944850b8c1828c923a11f74b9953aa809615d2a89ab51f954c4e2f7193ff8868)(vue@3.4.23(typescript@5.8.2(patch_hash=fe4a099d81bd61a9e6527083f3b0760c386580895e809e904b27201c050c2cbb)))
+      ts-plugin-sort-import-suggestions:
+        specifier: ^1.0.4
+        version: 1.0.4(patch_hash=4664506575d0f4e799401cb7140b6f15f34a6fe213da6314d68439f7e8d30561)
       tsx:
         specifier: ^4.19.3
         version: 4.19.3
@@ -5020,6 +5026,9 @@ packages:
   ts-graphviz@2.1.4:
     resolution: {integrity: sha512-0g465/ES70H0h5rcLUqaenKqNYekQaR9W0m0xUGy3FxueGujpGr+0GN2YWlgLIYSE2Xg0W7Uq1Qqnn7Cg+Af2w==}
     engines: {node: '>=18'}
+
+  ts-plugin-sort-import-suggestions@1.0.4:
+    resolution: {integrity: sha512-85n5lm2OQQ+b7aRNK9omU1gmjMNXRsgeLwojm5u4OSY5sVBkAHTcgMQPEeHMNlyyfFW0uXnwgqAU0pNfhD96Bw==}
 
   tsconfig-paths@4.2.0:
     resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
@@ -10918,6 +10927,8 @@ snapshots:
       '@ts-graphviz/ast': 2.0.5
       '@ts-graphviz/common': 2.1.4
       '@ts-graphviz/core': 2.0.5
+
+  ts-plugin-sort-import-suggestions@1.0.4(patch_hash=4664506575d0f4e799401cb7140b6f15f34a6fe213da6314d68439f7e8d30561): {}
 
   tsconfig-paths@4.2.0:
     dependencies:
