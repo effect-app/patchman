@@ -1,0 +1,26 @@
+diff --git a/build/cjs/utils-hoist/normalize.js b/build/cjs/utils-hoist/normalize.js
+index 07f5cd3c8fbf9f0eb4ea13b10302f8a4a346599a..32714a6603423b20b304b3f8965e3bde5b6cd472 100644
+--- a/build/cjs/utils-hoist/normalize.js
++++ b/build/cjs/utils-hoist/normalize.js
+@@ -250,7 +250,7 @@ function stringifyValue(
+ function getConstructorName(value) {
+   const prototype = Object.getPrototypeOf(value);
+ 
+-  return prototype ? prototype.constructor.name : 'null prototype';
++  return prototype && prototype.constructor ? prototype.constructor.name : 'null prototype';
+ }
+ 
+ /** Calculates bytes size of input string */
+diff --git a/build/esm/utils-hoist/normalize.js b/build/esm/utils-hoist/normalize.js
+index 82d3a427d5d041463e6d85e34138e0f2caf8fe56..6276fdfdbf98d67ebbccc6e2b66076d42576a118 100644
+--- a/build/esm/utils-hoist/normalize.js
++++ b/build/esm/utils-hoist/normalize.js
+@@ -248,7 +248,7 @@ function stringifyValue(
+ function getConstructorName(value) {
+   const prototype = Object.getPrototypeOf(value);
+ 
+-  return prototype ? prototype.constructor.name : 'null prototype';
++  return prototype && prototype.constructor ? prototype.constructor.name : 'null prototype';
+ }
+ 
+ /** Calculates bytes size of input string */
