@@ -1,26 +1,26 @@
-diff --git a/build/cjs/utils-hoist/normalize.js b/build/cjs/utils-hoist/normalize.js
-index 07f5cd3c8fbf9f0eb4ea13b10302f8a4a346599a..32714a6603423b20b304b3f8965e3bde5b6cd472 100644
---- a/build/cjs/utils-hoist/normalize.js
-+++ b/build/cjs/utils-hoist/normalize.js
-@@ -250,7 +250,7 @@ function stringifyValue(
- function getConstructorName(value) {
-   const prototype = Object.getPrototypeOf(value);
- 
--  return prototype ? prototype.constructor.name : 'null prototype';
-+  return prototype && prototype.constructor ? prototype.constructor.name : 'null prototype';
- }
- 
- /** Calculates bytes size of input string */
-diff --git a/build/esm/utils-hoist/normalize.js b/build/esm/utils-hoist/normalize.js
-index 82d3a427d5d041463e6d85e34138e0f2caf8fe56..6276fdfdbf98d67ebbccc6e2b66076d42576a118 100644
---- a/build/esm/utils-hoist/normalize.js
-+++ b/build/esm/utils-hoist/normalize.js
-@@ -248,7 +248,7 @@ function stringifyValue(
- function getConstructorName(value) {
-   const prototype = Object.getPrototypeOf(value);
- 
--  return prototype ? prototype.constructor.name : 'null prototype';
-+  return prototype && prototype.constructor ? prototype.constructor.name : 'null prototype';
- }
- 
- /** Calculates bytes size of input string */
+diff --git a/build/cjs/integrations/third-party-errors-filter.js b/build/cjs/integrations/third-party-errors-filter.js
+index 98b4f658d247bb420284ad9490cedd829a3f291c..d9f7cffd598e01d13d76e2438ddf5efd19f77dc5 100644
+--- a/build/cjs/integrations/third-party-errors-filter.js
++++ b/build/cjs/integrations/third-party-errors-filter.js
+@@ -80,7 +80,7 @@ function getBundleKeysForAllFramesWithFilenames(event) {
+   return (
+     frames
+       // Exclude frames without a filename since these are likely native code or built-ins
+-      .filter(frame => !!frame.filename)
++      .filter(frame => !!frame.filename && (frame.filename.startsWith('http://') || frame.filename.startsWith('https://') || frame.filename.startsWith('/')))
+       .map(frame => {
+         if (frame.module_metadata) {
+           return Object.keys(frame.module_metadata)
+diff --git a/build/esm/integrations/third-party-errors-filter.js b/build/esm/integrations/third-party-errors-filter.js
+index 0d7fa50d701e5d9d0796c3dde9473bcb1d4b7584..0a7bec5ee644498fb65ac2b47fafae5631601199 100644
+--- a/build/esm/integrations/third-party-errors-filter.js
++++ b/build/esm/integrations/third-party-errors-filter.js
+@@ -78,7 +78,7 @@ function getBundleKeysForAllFramesWithFilenames(event) {
+   return (
+     frames
+       // Exclude frames without a filename since these are likely native code or built-ins
+-      .filter(frame => !!frame.filename)
++      .filter(frame => !!frame.filename && (frame.filename.startsWith('http://') || frame.filename.startsWith('https://') || frame.filename.startsWith('/')))
+       .map(frame => {
+         if (frame.module_metadata) {
+           return Object.keys(frame.module_metadata)
