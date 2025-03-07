@@ -27,7 +27,7 @@ patchedDependencies:
     hash: eea28b10680421b1694a2c076da66f23967496e57bd21d30294877e30a9a455f
     path: patches/@phaphoso__eslint-plugin-dprint@0.5.2.patch
   '@sentry/core':
-    hash: bdff3c826dc635680f351291e0f8ef17f1032262c6b9019de7265190474d11bf
+    hash: c2c5cdd7de5d86f8bd8264753db16d696e7a3cdd92af7123b686ed053bc0bcb1
     path: patches/@sentry__core.patch
   '@vitejs/plugin-vue':
     hash: 757fcc4ec2a6cb02783b1331c756f4182d1f4a509cdaa971e45d4fc3f636de89
@@ -93,7 +93,7 @@ importers:
         version: 0.5.2(patch_hash=eea28b10680421b1694a2c076da66f23967496e57bd21d30294877e30a9a455f)(eslint@9.1.0)
       '@sentry/core':
         specifier: ^9.5.0
-        version: 9.5.0(patch_hash=bdff3c826dc635680f351291e0f8ef17f1032262c6b9019de7265190474d11bf)
+        version: 9.5.0(patch_hash=c2c5cdd7de5d86f8bd8264753db16d696e7a3cdd92af7123b686ed053bc0bcb1)
       date-fns:
         specifier: 2.30.0
         version: 2.30.0(patch_hash=e78293d43ecf1ec17dcb9ba323870443952893c78b45350cab8223b2f81f34f5)
@@ -6913,7 +6913,7 @@ snapshots:
 
   '@sec-ant/readable-stream@0.4.1': {}
 
-  '@sentry/core@9.5.0(patch_hash=bdff3c826dc635680f351291e0f8ef17f1032262c6b9019de7265190474d11bf)': {}
+  '@sentry/core@9.5.0(patch_hash=c2c5cdd7de5d86f8bd8264753db16d696e7a3cdd92af7123b686ed053bc0bcb1)': {}
 
   '@sindresorhus/merge-streams@2.3.0': {}
 
