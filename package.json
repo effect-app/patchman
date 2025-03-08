@@ -48,9 +48,12 @@
       "@effect/sql": "patches/@effect__sql.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "madge": "patches/madge.patch",
+      "ts-plugin-sort-import-suggestions": "patches/ts-plugin-sort-import-suggestions.patch",
       "effect": "patches/effect.patch",
-      "@effect/rpc": "patches/@effect__rpc.patch",
-      "ts-plugin-sort-import-suggestions": "patches/ts-plugin-sort-import-suggestions.patch"
+      "@effect/experimental": "patches/@effect__experimental.patch",
+      "@effect/platform-node": "patches/@effect__platform-node.patch",
+      "@effect/platform-node-shared": "patches/@effect__platform-node-shared.patch",
+      "@effect/rpc": "patches/@effect__rpc.patch"
     }
   },
   "scripts": {
