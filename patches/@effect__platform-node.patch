@@ -1,3 +1,51 @@
+diff --git a/NodeClusterRunnerHttp/package.json b/NodeClusterRunnerHttp/package.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..81145719e0b1a6fbdcd43224c28ac3310d132b57
+--- /dev/null
++++ b/NodeClusterRunnerHttp/package.json
+@@ -0,0 +1,6 @@
++{
++  "main": "../dist/cjs/NodeClusterRunnerHttp.js",
++  "module": "../dist/esm/NodeClusterRunnerHttp.js",
++  "types": "../dist/dts/NodeClusterRunnerHttp.d.ts",
++  "sideEffects": []
++}
+diff --git a/NodeClusterRunnerSocket/package.json b/NodeClusterRunnerSocket/package.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..d407c963a0810951ff1d3c1a0df2a62226086608
+--- /dev/null
++++ b/NodeClusterRunnerSocket/package.json
+@@ -0,0 +1,6 @@
++{
++  "main": "../dist/cjs/NodeClusterRunnerSocket.js",
++  "module": "../dist/esm/NodeClusterRunnerSocket.js",
++  "types": "../dist/dts/NodeClusterRunnerSocket.d.ts",
++  "sideEffects": []
++}
+diff --git a/NodeClusterShardManagerHttp/package.json b/NodeClusterShardManagerHttp/package.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..d1304d5f37fc2902dafef37938a95db80e7e2cbd
+--- /dev/null
++++ b/NodeClusterShardManagerHttp/package.json
+@@ -0,0 +1,6 @@
++{
++  "main": "../dist/cjs/NodeClusterShardManagerHttp.js",
++  "module": "../dist/esm/NodeClusterShardManagerHttp.js",
++  "types": "../dist/dts/NodeClusterShardManagerHttp.d.ts",
++  "sideEffects": []
++}
+diff --git a/NodeClusterShardManagerSocket/package.json b/NodeClusterShardManagerSocket/package.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..198516bb54b80e96dc2a88dbe8344a7f71bcd212
+--- /dev/null
++++ b/NodeClusterShardManagerSocket/package.json
+@@ -0,0 +1,6 @@
++{
++  "main": "../dist/cjs/NodeClusterShardManagerSocket.js",
++  "module": "../dist/esm/NodeClusterShardManagerSocket.js",
++  "types": "../dist/dts/NodeClusterShardManagerSocket.d.ts",
++  "sideEffects": []
++}
 diff --git a/NodeSocketServer/package.json b/NodeSocketServer/package.json
 new file mode 100644
 index 0000000000000000000000000000000000000000..f595f81078be0ab1ab14d3ccd16d52b2f4fc6f33
@@ -10,6 +58,193 @@ index 0000000000000000000000000000000000000000..f595f81078be0ab1ab14d3ccd16d52b2
 +  "types": "../dist/dts/NodeSocketServer.d.ts",
 +  "sideEffects": []
 +}
+diff --git a/dist/cjs/NodeClusterRunnerHttp.js b/dist/cjs/NodeClusterRunnerHttp.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..d53d6f27ee69f8cb14706133393c428c5d0ecc45
+--- /dev/null
++++ b/dist/cjs/NodeClusterRunnerHttp.js
+@@ -0,0 +1,51 @@
++"use strict";
++
++Object.defineProperty(exports, "__esModule", {
++  value: true
++});
++exports.layerHttpServer = exports.layer = void 0;
++var HttpRunner = _interopRequireWildcard(require("@effect/cluster/HttpRunner"));
++var MessageStorage = _interopRequireWildcard(require("@effect/cluster/MessageStorage"));
++var ShardingConfig = _interopRequireWildcard(require("@effect/cluster/ShardingConfig"));
++var ShardStorage = _interopRequireWildcard(require("@effect/cluster/ShardStorage"));
++var SqlMessageStorage = _interopRequireWildcard(require("@effect/cluster/SqlMessageStorage"));
++var SqlShardStorage = _interopRequireWildcard(require("@effect/cluster/SqlShardStorage"));
++var RpcSerialization = _interopRequireWildcard(require("@effect/rpc/RpcSerialization"));
++var Effect = _interopRequireWildcard(require("effect/Effect"));
++var Layer = _interopRequireWildcard(require("effect/Layer"));
++var Option = _interopRequireWildcard(require("effect/Option"));
++var _nodeHttp = require("node:http");
++var NodeHttpClient = _interopRequireWildcard(require("./NodeHttpClient.js"));
++var NodeHttpServer = _interopRequireWildcard(require("./NodeHttpServer.js"));
++var NodeSocket = _interopRequireWildcard(require("./NodeSocket.js"));
++function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
++function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
++/**
++ * @since 1.0.0
++ */
++
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++const layer = options => {
++  const layer = options.clientOnly
++  // client only
++  ? options.transport === "http" ? Layer.provide(HttpRunner.layerHttpClientOnly, NodeHttpClient.layerUndici) : Layer.provide(HttpRunner.layerWebsocketClientOnly, NodeSocket.layerWebSocketConstructor)
++  // with server
++  : options.transport === "http" ? Layer.provide(HttpRunner.layerHttp, [layerHttpServer, NodeHttpClient.layerUndici]) : Layer.provide(HttpRunner.layerWebsocket, [layerHttpServer, NodeSocket.layerWebSocketConstructor]);
++  return layer.pipe(Layer.provide(options?.storage === "sql" ? options.clientOnly ? [SqlMessageStorage.layer] : [SqlMessageStorage.layer, SqlShardStorage.layer] : [MessageStorage.layerNoop, ShardStorage.layerNoop]), Layer.provide(ShardingConfig.layerFromEnv(options?.shardingConfig)), Layer.provide(options?.serialization === "ndjson" ? RpcSerialization.layerNdjson : RpcSerialization.layerMsgPack));
++};
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++exports.layer = layer;
++const layerHttpServer = exports.layerHttpServer = /*#__PURE__*/Effect.gen(function* () {
++  const config = yield* ShardingConfig.ShardingConfig;
++  if (Option.isNone(config.runnerAddress)) {
++    return yield* Effect.dieMessage("NodeClusterHttpRunner.layerHttpServer: ShardingConfig.podAddress is None");
++  }
++  return NodeHttpServer.layer(_nodeHttp.createServer, config.runnerAddress.value);
++}).pipe(Layer.unwrapEffect);
++//# sourceMappingURL=NodeClusterRunnerHttp.js.map
+\ No newline at end of file
+diff --git a/dist/cjs/NodeClusterRunnerHttp.js.map b/dist/cjs/NodeClusterRunnerHttp.js.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..348b257de4776ce2cf555d170047b295c7df322c
+--- /dev/null
++++ b/dist/cjs/NodeClusterRunnerHttp.js.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterRunnerHttp.js","names":["HttpRunner","_interopRequireWildcard","require","MessageStorage","ShardingConfig","ShardStorage","SqlMessageStorage","SqlShardStorage","RpcSerialization","Effect","Layer","Option","_nodeHttp","NodeHttpClient","NodeHttpServer","NodeSocket","_getRequireWildcardCache","e","WeakMap","r","t","__esModule","default","has","get","n","__proto__","a","Object","defineProperty","getOwnPropertyDescriptor","u","hasOwnProperty","call","i","set","layer","options","clientOnly","transport","provide","layerHttpClientOnly","layerUndici","layerWebsocketClientOnly","layerWebSocketConstructor","layerHttp","layerHttpServer","layerWebsocket","pipe","storage","layerNoop","layerFromEnv","shardingConfig","serialization","layerNdjson","layerMsgPack","exports","gen","config","isNone","runnerAddress","dieMessage","createServer","value","unwrapEffect"],"sources":["../../src/NodeClusterRunnerHttp.ts"],"sourcesContent":[null],"mappings":"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","ignoreList":[]}
+\ No newline at end of file
+diff --git a/dist/cjs/NodeClusterRunnerSocket.js b/dist/cjs/NodeClusterRunnerSocket.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..58b24ee2e8bacc455d98c32858bc1c6b7322c5d2
+--- /dev/null
++++ b/dist/cjs/NodeClusterRunnerSocket.js
+@@ -0,0 +1,17 @@
++"use strict";
++
++Object.defineProperty(exports, "__esModule", {
++  value: true
++});
++var _NodeClusterRunnerSocket = require("@effect/platform-node-shared/NodeClusterRunnerSocket");
++Object.keys(_NodeClusterRunnerSocket).forEach(function (key) {
++  if (key === "default" || key === "__esModule") return;
++  if (key in exports && exports[key] === _NodeClusterRunnerSocket[key]) return;
++  Object.defineProperty(exports, key, {
++    enumerable: true,
++    get: function () {
++      return _NodeClusterRunnerSocket[key];
++    }
++  });
++});
++//# sourceMappingURL=NodeClusterRunnerSocket.js.map
+\ No newline at end of file
+diff --git a/dist/cjs/NodeClusterRunnerSocket.js.map b/dist/cjs/NodeClusterRunnerSocket.js.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..a75f9f63a66e4554214aed4f051de32c9b1475c3
+--- /dev/null
++++ b/dist/cjs/NodeClusterRunnerSocket.js.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterRunnerSocket.js","names":["_NodeClusterRunnerSocket","require","Object","keys","forEach","key","exports","defineProperty","enumerable","get"],"sources":["../../src/NodeClusterRunnerSocket.ts"],"sourcesContent":[null],"mappings":";;;;;AAQA,IAAAA,wBAAA,GAAAC,OAAA;AAAAC,MAAA,CAAAC,IAAA,CAAAH,wBAAA,EAAAI,OAAA,WAAAC,GAAA;EAAA,IAAAA,GAAA,kBAAAA,GAAA;EAAA,IAAAA,GAAA,IAAAC,OAAA,IAAAA,OAAA,CAAAD,GAAA,MAAAL,wBAAA,CAAAK,GAAA;EAAAH,MAAA,CAAAK,cAAA,CAAAD,OAAA,EAAAD,GAAA;IAAAG,UAAA;IAAAC,GAAA,WAAAA,CAAA;MAAA,OAAAT,wBAAA,CAAAK,GAAA;IAAA;EAAA;AAAA","ignoreList":[]}
+\ No newline at end of file
+diff --git a/dist/cjs/NodeClusterShardManagerHttp.js b/dist/cjs/NodeClusterShardManagerHttp.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..8746d876a50455ac4d2c42a1064e18f21ceee9bc
+--- /dev/null
++++ b/dist/cjs/NodeClusterShardManagerHttp.js
+@@ -0,0 +1,42 @@
++"use strict";
++
++Object.defineProperty(exports, "__esModule", {
++  value: true
++});
++exports.layerHttpServer = exports.layer = void 0;
++var HttpShardManager = _interopRequireWildcard(require("@effect/cluster/HttpShardManager"));
++var ShardingConfig = _interopRequireWildcard(require("@effect/cluster/ShardingConfig"));
++var ShardManager = _interopRequireWildcard(require("@effect/cluster/ShardManager"));
++var ShardStorage = _interopRequireWildcard(require("@effect/cluster/ShardStorage"));
++var SqlShardStorage = _interopRequireWildcard(require("@effect/cluster/SqlShardStorage"));
++var RpcSerialization = _interopRequireWildcard(require("@effect/rpc/RpcSerialization"));
++var Effect = _interopRequireWildcard(require("effect/Effect"));
++var Layer = _interopRequireWildcard(require("effect/Layer"));
++var _nodeHttp = require("node:http");
++var NodeHttpClient = _interopRequireWildcard(require("./NodeHttpClient.js"));
++var NodeHttpServer = _interopRequireWildcard(require("./NodeHttpServer.js"));
++var NodeSocket = _interopRequireWildcard(require("./NodeSocket.js"));
++function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
++function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
++/**
++ * @since 1.0.0
++ */
++
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++const layerHttpServer = exports.layerHttpServer = /*#__PURE__*/Effect.gen(function* () {
++  const config = yield* ShardingConfig.ShardingConfig;
++  return NodeHttpServer.layer(_nodeHttp.createServer, config.shardManagerAddress);
++}).pipe(Layer.unwrapEffect);
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++const layer = options => {
++  const layer = options.protocol === "http" ? HttpShardManager.layerHttp.pipe(Layer.provide([HttpShardManager.layerRunnerHealthHttp, layerHttpServer]), Layer.provide(NodeHttpClient.layerUndici)) : HttpShardManager.layerWebsocket.pipe(Layer.provide([HttpShardManager.layerRunnerHealthWebsocket, layerHttpServer]), Layer.provide(NodeSocket.layerWebSocketConstructor));
++  return layer.pipe(Layer.provide(options?.storage === "sql" ? SqlShardStorage.layer : ShardStorage.layerNoop), Layer.provide([ShardingConfig.layerFromEnv(options.shardingConfig), ShardManager.layerConfigFromEnv, options?.serialization === "ndjson" ? RpcSerialization.layerNdjson : RpcSerialization.layerMsgPack]));
++};
++exports.layer = layer;
++//# sourceMappingURL=NodeClusterShardManagerHttp.js.map
+\ No newline at end of file
+diff --git a/dist/cjs/NodeClusterShardManagerHttp.js.map b/dist/cjs/NodeClusterShardManagerHttp.js.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..6bb07aafa6d7bace8c05388dddbaf36ecb436479
+--- /dev/null
++++ b/dist/cjs/NodeClusterShardManagerHttp.js.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterShardManagerHttp.js","names":["HttpShardManager","_interopRequireWildcard","require","ShardingConfig","ShardManager","ShardStorage","SqlShardStorage","RpcSerialization","Effect","Layer","_nodeHttp","NodeHttpClient","NodeHttpServer","NodeSocket","_getRequireWildcardCache","e","WeakMap","r","t","__esModule","default","has","get","n","__proto__","a","Object","defineProperty","getOwnPropertyDescriptor","u","hasOwnProperty","call","i","set","layerHttpServer","exports","gen","config","layer","createServer","shardManagerAddress","pipe","unwrapEffect","options","protocol","layerHttp","provide","layerRunnerHealthHttp","layerUndici","layerWebsocket","layerRunnerHealthWebsocket","layerWebSocketConstructor","storage","layerNoop","layerFromEnv","shardingConfig","layerConfigFromEnv","serialization","layerNdjson","layerMsgPack"],"sources":["../../src/NodeClusterShardManagerHttp.ts"],"sourcesContent":[null],"mappings":"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","ignoreList":[]}
+\ No newline at end of file
+diff --git a/dist/cjs/NodeClusterShardManagerSocket.js b/dist/cjs/NodeClusterShardManagerSocket.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..258d3b7d12720ac56b229f8cf9b5336c7a6f6e41
+--- /dev/null
++++ b/dist/cjs/NodeClusterShardManagerSocket.js
+@@ -0,0 +1,17 @@
++"use strict";
++
++Object.defineProperty(exports, "__esModule", {
++  value: true
++});
++var _NodeClusterShardManagerSocket = require("@effect/platform-node-shared/NodeClusterShardManagerSocket");
++Object.keys(_NodeClusterShardManagerSocket).forEach(function (key) {
++  if (key === "default" || key === "__esModule") return;
++  if (key in exports && exports[key] === _NodeClusterShardManagerSocket[key]) return;
++  Object.defineProperty(exports, key, {
++    enumerable: true,
++    get: function () {
++      return _NodeClusterShardManagerSocket[key];
++    }
++  });
++});
++//# sourceMappingURL=NodeClusterShardManagerSocket.js.map
+\ No newline at end of file
+diff --git a/dist/cjs/NodeClusterShardManagerSocket.js.map b/dist/cjs/NodeClusterShardManagerSocket.js.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..12cd95ae2a6606505600b3013e10f7df6ac5ebdf
+--- /dev/null
++++ b/dist/cjs/NodeClusterShardManagerSocket.js.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterShardManagerSocket.js","names":["_NodeClusterShardManagerSocket","require","Object","keys","forEach","key","exports","defineProperty","enumerable","get"],"sources":["../../src/NodeClusterShardManagerSocket.ts"],"sourcesContent":[null],"mappings":";;;;;AAQA,IAAAA,8BAAA,GAAAC,OAAA;AAAAC,MAAA,CAAAC,IAAA,CAAAH,8BAAA,EAAAI,OAAA,WAAAC,GAAA;EAAA,IAAAA,GAAA,kBAAAA,GAAA;EAAA,IAAAA,GAAA,IAAAC,OAAA,IAAAA,OAAA,CAAAD,GAAA,MAAAL,8BAAA,CAAAK,GAAA;EAAAH,MAAA,CAAAK,cAAA,CAAAD,OAAA,EAAAD,GAAA;IAAAG,UAAA;IAAAC,GAAA,WAAAA,CAAA;MAAA,OAAAT,8BAAA,CAAAK,GAAA;IAAA;EAAA;AAAA","ignoreList":[]}
+\ No newline at end of file
 diff --git a/dist/cjs/NodeSocketServer.js b/dist/cjs/NodeSocketServer.js
 new file mode 100644
 index 0000000000000000000000000000000000000000..285497ada906ac0d1692563506f0fc0712314384
@@ -76,19 +311,27 @@ index 5b98fd203f230ad4fc77faaabf37606aa37a2f4e..d36e1e4f03ce6e5aabdaa0fe55f247aa
 +{"version":3,"file":"NodeWorker.js","names":["internal","_interopRequireWildcard","require","_getRequireWildcardCache","e","WeakMap","r","t","__esModule","default","has","get","n","__proto__","a","Object","defineProperty","getOwnPropertyDescriptor","u","hasOwnProperty","call","i","set","layerManager","exports","layerWorker","layer","layerPlatform"],"sources":["../../src/NodeWorker.ts"],"sourcesContent":[null],"mappings":";;;;;;AAMA,IAAAA,QAAA,GAAAC,uBAAA,CAAAC,OAAA;AAAgD,SAAAC,yBAAAC,CAAA,6BAAAC,OAAA,mBAAAC,CAAA,OAAAD,OAAA,IAAAE,CAAA,OAAAF,OAAA,YAAAF,wBAAA,YAAAA,CAAAC,CAAA,WAAAA,CAAA,GAAAG,CAAA,GAAAD,CAAA,KAAAF,CAAA;AAAA,SAAAH,wBAAAG,CAAA,EAAAE,CAAA,SAAAA,CAAA,IAAAF,CAAA,IAAAA,CAAA,CAAAI,UAAA,SAAAJ,CAAA,eAAAA,CAAA,uBAAAA,CAAA,yBAAAA,CAAA,WAAAK,OAAA,EAAAL,CAAA,QAAAG,CAAA,GAAAJ,wBAAA,CAAAG,CAAA,OAAAC,CAAA,IAAAA,CAAA,CAAAG,GAAA,CAAAN,CAAA,UAAAG,CAAA,CAAAI,GAAA,CAAAP,CAAA,OAAAQ,CAAA,KAAAC,SAAA,UAAAC,CAAA,GAAAC,MAAA,CAAAC,cAAA,IAAAD,MAAA,CAAAE,wBAAA,WAAAC,CAAA,IAAAd,CAAA,oBAAAc,CAAA,OAAAC,cAAA,CAAAC,IAAA,CAAAhB,CAAA,EAAAc,CAAA,SAAAG,CAAA,GAAAP,CAAA,GAAAC,MAAA,CAAAE,wBAAA,CAAAb,CAAA,EAAAc,CAAA,UAAAG,CAAA,KAAAA,CAAA,CAAAV,GAAA,IAAAU,CAAA,CAAAC,GAAA,IAAAP,MAAA,CAAAC,cAAA,CAAAJ,CAAA,EAAAM,CAAA,EAAAG,CAAA,IAAAT,CAAA,CAAAM,CAAA,IAAAd,CAAA,CAAAc,CAAA,YAAAN,CAAA,CAAAH,OAAA,GAAAL,CAAA,EAAAG,CAAA,IAAAA,CAAA,CAAAe,GAAA,CAAAlB,CAAA,EAAAQ,CAAA,GAAAA,CAAA;AAEhD;;;;AAIO,MAAMW,YAAY,GAAAC,OAAA,CAAAD,YAAA,GAAsCvB,QAAQ,CAACuB,YAAY;AAEpF;;;;AAIO,MAAME,WAAW,GAAAD,OAAA,CAAAC,WAAA,GAAuCzB,QAAQ,CAACyB,WAAW;AAEnF;;;;AAIO,MAAMC,KAAK,GAAAF,OAAA,CAAAE,KAAA,GAEwC1B,QAAQ,CAAC0B,KAAK;AAExE;;;;AAIO,MAAMC,aAAa,GAAAH,OAAA,CAAAG,aAAA,GAEiC3B,QAAQ,CAAC2B,aAAa","ignoreList":[]}
 \ No newline at end of file
 diff --git a/dist/cjs/index.js b/dist/cjs/index.js
-index f0d3e5c2a4037d622dd3fb65fcc6cea31b661a9d..b1bf7f40dc30e47c56d3bc99018cf8edc44adb1a 100644
+index f0d3e5c2a4037d622dd3fb65fcc6cea31b661a9d..0815ce0d88e92e7b9a38f388b9a168c33febdd87 100644
 --- a/dist/cjs/index.js
 +++ b/dist/cjs/index.js
-@@ -3,7 +3,7 @@
+@@ -3,7 +3,15 @@
  Object.defineProperty(exports, "__esModule", {
    value: true
  });
 -exports.Undici = exports.NodeWorkerRunner = exports.NodeWorker = exports.NodeTerminal = exports.NodeStream = exports.NodeSocket = exports.NodeSink = exports.NodeRuntime = exports.NodePath = exports.NodeMultipart = exports.NodeKeyValueStore = exports.NodeHttpServerRequest = exports.NodeHttpServer = exports.NodeHttpPlatform = exports.NodeHttpClient = exports.NodeFileSystem = exports.NodeContext = exports.NodeCommandExecutor = void 0;
-+exports.Undici = exports.NodeWorkerRunner = exports.NodeWorker = exports.NodeTerminal = exports.NodeStream = exports.NodeSocketServer = exports.NodeSocket = exports.NodeSink = exports.NodeRuntime = exports.NodePath = exports.NodeMultipart = exports.NodeKeyValueStore = exports.NodeHttpServerRequest = exports.NodeHttpServer = exports.NodeHttpPlatform = exports.NodeHttpClient = exports.NodeFileSystem = exports.NodeContext = exports.NodeCommandExecutor = void 0;
++exports.Undici = exports.NodeWorkerRunner = exports.NodeWorker = exports.NodeTerminal = exports.NodeStream = exports.NodeSocketServer = exports.NodeSocket = exports.NodeSink = exports.NodeRuntime = exports.NodePath = exports.NodeMultipart = exports.NodeKeyValueStore = exports.NodeHttpServerRequest = exports.NodeHttpServer = exports.NodeHttpPlatform = exports.NodeHttpClient = exports.NodeFileSystem = exports.NodeContext = exports.NodeCommandExecutor = exports.NodeClusterShardManagerSocket = exports.NodeClusterShardManagerHttp = exports.NodeClusterRunnerSocket = exports.NodeClusterRunnerHttp = void 0;
++var _NodeClusterRunnerHttp = _interopRequireWildcard(require("./NodeClusterRunnerHttp.js"));
++exports.NodeClusterRunnerHttp = _NodeClusterRunnerHttp;
++var _NodeClusterRunnerSocket = _interopRequireWildcard(require("./NodeClusterRunnerSocket.js"));
++exports.NodeClusterRunnerSocket = _NodeClusterRunnerSocket;
++var _NodeClusterShardManagerHttp = _interopRequireWildcard(require("./NodeClusterShardManagerHttp.js"));
++exports.NodeClusterShardManagerHttp = _NodeClusterShardManagerHttp;
++var _NodeClusterShardManagerSocket = _interopRequireWildcard(require("./NodeClusterShardManagerSocket.js"));
++exports.NodeClusterShardManagerSocket = _NodeClusterShardManagerSocket;
  var _NodeCommandExecutor = _interopRequireWildcard(require("./NodeCommandExecutor.js"));
  exports.NodeCommandExecutor = _NodeCommandExecutor;
  var _NodeContext = _interopRequireWildcard(require("./NodeContext.js"));
-@@ -30,6 +30,8 @@ var _NodeSink = _interopRequireWildcard(require("./NodeSink.js"));
+@@ -30,6 +38,8 @@ var _NodeSink = _interopRequireWildcard(require("./NodeSink.js"));
  exports.NodeSink = _NodeSink;
  var _NodeSocket = _interopRequireWildcard(require("./NodeSocket.js"));
  exports.NodeSocket = _NodeSocket;
@@ -158,6 +401,140 @@ index cb259e9bd08a479992c73c8c6b10bc1e0a08c3db..3539799beb62baa80556b65255585d1d
 \ No newline at end of file
 +{"version":3,"file":"workerRunner.js","names":["_WorkerError","require","Runner","_interopRequireWildcard","Cause","Context","Deferred","Effect","Exit","FiberSet","Layer","Runtime","Scope","WorkerThreads","_getRequireWildcardCache","e","WeakMap","r","t","__esModule","default","has","get","n","__proto__","a","Object","defineProperty","getOwnPropertyDescriptor","u","hasOwnProperty","call","i","set","platformRunnerImpl","PlatformRunner","of","PlatformRunnerTypeId","start","closeLatch","gen","parentPort","WorkerError","reason","cause","Error","port","send","_portId","message","transfers","sync","postMessage","run","fnUntraced","handler","runtime","interruptible","pipe","updateContext","omit","fiberSet","make","runFork","onExit","exit","_tag","isInterruptedOnly","unsafeDone","die","squash","on","result","isEffect","fiber","addObserver","unsafeAdd","close","void","layer","exports","succeed"],"sources":["../../../src/internal/workerRunner.ts"],"sourcesContent":[null],"mappings":"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","ignoreList":[]}
 \ No newline at end of file
+diff --git a/dist/dts/NodeClusterRunnerHttp.d.ts b/dist/dts/NodeClusterRunnerHttp.d.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..a2cb697996a9a94619ae9051ebbcea449972f348
+--- /dev/null
++++ b/dist/dts/NodeClusterRunnerHttp.d.ts
+@@ -0,0 +1,29 @@
++import type * as Runners from "@effect/cluster/Runners";
++import type { Sharding } from "@effect/cluster/Sharding";
++import * as ShardingConfig from "@effect/cluster/ShardingConfig";
++import type * as Etag from "@effect/platform/Etag";
++import type { HttpPlatform } from "@effect/platform/HttpPlatform";
++import type { HttpServer } from "@effect/platform/HttpServer";
++import type { ServeError } from "@effect/platform/HttpServerError";
++import type { SqlClient } from "@effect/sql/SqlClient";
++import type { SqlError } from "@effect/sql/SqlError";
++import type { ConfigError } from "effect/ConfigError";
++import * as Layer from "effect/Layer";
++import type { NodeContext } from "./NodeContext.js";
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export declare const layer: <const ClientOnly extends boolean = false, const Storage extends "noop" | "sql" = "noop">(options: {
++    readonly transport: "http" | "websocket";
++    readonly serialization?: "msgpack" | "ndjson" | undefined;
++    readonly clientOnly?: ClientOnly | undefined;
++    readonly storage?: Storage | undefined;
++    readonly shardingConfig?: Partial<ShardingConfig.ShardingConfig["Type"]> | undefined;
++}) => ClientOnly extends true ? Layer.Layer<Sharding | Runners.Runners, ConfigError | (Storage extends "sql" ? SqlError : never), Storage extends "sql" ? SqlClient : never> : Layer.Layer<Sharding | Runners.Runners, ServeError | ConfigError | (Storage extends "sql" ? SqlError : never), Storage extends "sql" ? SqlClient : never>;
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export declare const layerHttpServer: Layer.Layer<HttpPlatform | Etag.Generator | NodeContext | HttpServer, ServeError, ShardingConfig.ShardingConfig>;
++//# sourceMappingURL=NodeClusterRunnerHttp.d.ts.map
+\ No newline at end of file
+diff --git a/dist/dts/NodeClusterRunnerHttp.d.ts.map b/dist/dts/NodeClusterRunnerHttp.d.ts.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..44438e2c348d05b754078f709b119f760b01ca14
+--- /dev/null
++++ b/dist/dts/NodeClusterRunnerHttp.d.ts.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterRunnerHttp.d.ts","sourceRoot":"","sources":["../../src/NodeClusterRunnerHttp.ts"],"names":[],"mappings":"AAKA,OAAO,KAAK,KAAK,OAAO,MAAM,yBAAyB,CAAA;AACvD,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,0BAA0B,CAAA;AACxD,OAAO,KAAK,cAAc,MAAM,gCAAgC,CAAA;AAIhE,OAAO,KAAK,KAAK,IAAI,MAAM,uBAAuB,CAAA;AAClD,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,+BAA+B,CAAA;AACjE,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,6BAA6B,CAAA;AAC7D,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,kCAAkC,CAAA;AAElE,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,uBAAuB,CAAA;AACtD,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,sBAAsB,CAAA;AACpD,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,oBAAoB,CAAA;AAErD,OAAO,KAAK,KAAK,MAAM,cAAc,CAAA;AAGrC,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,kBAAkB,CAAA;AAKnD;;;GAGG;AACH,eAAO,MAAM,KAAK,SACV,UAAU,SAAS,OAAO,gBAC1B,OAAO,SAAS,MAAM,GAAG,KAAK,oBAC3B;IACT,QAAQ,CAAC,SAAS,EAAE,MAAM,GAAG,WAAW,CAAA;IACxC,QAAQ,CAAC,aAAa,CAAC,EAAE,SAAS,GAAG,QAAQ,GAAG,SAAS,CAAA;IACzD,QAAQ,CAAC,UAAU,CAAC,EAAE,UAAU,GAAG,SAAS,CAAA;IAC5C,QAAQ,CAAC,OAAO,CAAC,EAAE,OAAO,GAAG,SAAS,CAAA;IACtC,QAAQ,CAAC,cAAc,CAAC,EAAE,OAAO,CAAC,cAAc,CAAC,cAAc,CAAC,MAAM,CAAC,CAAC,GAAG,SAAS,CAAA;CACrF,KAAG,UAAU,SAAS,IAAI,GAAG,KAAK,CAAC,KAAK,CACrC,QAAQ,GAAG,OAAO,CAAC,OAAO,EAC1B,WAAW,GAAG,CAAC,OAAO,SAAS,KAAK,GAAG,QAAQ,GAAG,KAAK,CAAC,EACxD,OAAO,SAAS,KAAK,GAAG,SAAS,GAAG,KAAK,CAC1C,GACD,KAAK,CAAC,KAAK,CACT,QAAQ,GAAG,OAAO,CAAC,OAAO,EAC1B,UAAU,GAAG,WAAW,GAAG,CAAC,OAAO,SAAS,KAAK,GAAG,QAAQ,GAAG,KAAK,CAAC,EACrE,OAAO,SAAS,KAAK,GAAG,SAAS,GAAG,KAAK,CAwB5C,CAAA;AAED;;;GAGG;AACH,eAAO,MAAM,eAAe,EAAE,KAAK,CAAC,KAAK,CACrC,YAAY,GACZ,IAAI,CAAC,SAAS,GACd,WAAW,GACX,UAAU,EACZ,UAAU,EACV,cAAc,CAAC,cAAc,CAOJ,CAAA"}
+\ No newline at end of file
+diff --git a/dist/dts/NodeClusterRunnerSocket.d.ts b/dist/dts/NodeClusterRunnerSocket.d.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..4683e3166d2a072fc8b4d5224bd39985e655913c
+--- /dev/null
++++ b/dist/dts/NodeClusterRunnerSocket.d.ts
+@@ -0,0 +1,9 @@
++/**
++ * @since 1.0.0
++ */
++/**
++ * @since 1.0.0
++ * @category Re-exports
++ */
++export * from "@effect/platform-node-shared/NodeClusterRunnerSocket";
++//# sourceMappingURL=NodeClusterRunnerSocket.d.ts.map
+\ No newline at end of file
+diff --git a/dist/dts/NodeClusterRunnerSocket.d.ts.map b/dist/dts/NodeClusterRunnerSocket.d.ts.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..de009bc41c0a87d7ecb784ecae5e1fa019cf2265
+--- /dev/null
++++ b/dist/dts/NodeClusterRunnerSocket.d.ts.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterRunnerSocket.d.ts","sourceRoot":"","sources":["../../src/NodeClusterRunnerSocket.ts"],"names":[],"mappings":"AAAA;;GAEG;AAEH;;;GAGG;AACH,cAAc,sDAAsD,CAAA"}
+\ No newline at end of file
+diff --git a/dist/dts/NodeClusterShardManagerHttp.d.ts b/dist/dts/NodeClusterShardManagerHttp.d.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..6e61630cfda5b5ad7421a7f4962015a7839efd26
+--- /dev/null
++++ b/dist/dts/NodeClusterShardManagerHttp.d.ts
+@@ -0,0 +1,27 @@
++import * as ShardingConfig from "@effect/cluster/ShardingConfig";
++import * as ShardManager from "@effect/cluster/ShardManager";
++import type * as Etag from "@effect/platform/Etag";
++import type { HttpPlatform } from "@effect/platform/HttpPlatform";
++import type { HttpServer } from "@effect/platform/HttpServer";
++import type { ServeError } from "@effect/platform/HttpServerError";
++import type { SqlClient } from "@effect/sql/SqlClient";
++import type { SqlError } from "@effect/sql/SqlError";
++import type { ConfigError } from "effect/ConfigError";
++import * as Layer from "effect/Layer";
++import type { NodeContext } from "./NodeContext.js";
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export declare const layerHttpServer: Layer.Layer<HttpPlatform | Etag.Generator | NodeContext | HttpServer, ServeError, ShardingConfig.ShardingConfig>;
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export declare const layer: <const Storage extends "sql" | "noop" = "noop">(options: {
++    readonly protocol: "http" | "websocket";
++    readonly serialization?: "msgpack" | "ndjson" | undefined;
++    readonly shardingConfig?: Partial<ShardingConfig.ShardingConfig["Type"]> | undefined;
++    readonly storage?: Storage | undefined;
++}) => Layer.Layer<ShardManager.ShardManager, ServeError | ConfigError | (Storage extends "sql" ? SqlError : never), Storage extends "sql" ? SqlClient : never>;
++//# sourceMappingURL=NodeClusterShardManagerHttp.d.ts.map
+\ No newline at end of file
+diff --git a/dist/dts/NodeClusterShardManagerHttp.d.ts.map b/dist/dts/NodeClusterShardManagerHttp.d.ts.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..84216c10034ccfeba12083a33eeebc39f52c68dd
+--- /dev/null
++++ b/dist/dts/NodeClusterShardManagerHttp.d.ts.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterShardManagerHttp.d.ts","sourceRoot":"","sources":["../../src/NodeClusterShardManagerHttp.ts"],"names":[],"mappings":"AAIA,OAAO,KAAK,cAAc,MAAM,gCAAgC,CAAA;AAChE,OAAO,KAAK,YAAY,MAAM,8BAA8B,CAAA;AAG5D,OAAO,KAAK,KAAK,IAAI,MAAM,uBAAuB,CAAA;AAClD,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,+BAA+B,CAAA;AACjE,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,6BAA6B,CAAA;AAC7D,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,kCAAkC,CAAA;AAElE,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,uBAAuB,CAAA;AACtD,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,sBAAsB,CAAA;AACpD,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,oBAAoB,CAAA;AAErD,OAAO,KAAK,KAAK,MAAM,cAAc,CAAA;AAErC,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,kBAAkB,CAAA;AAKnD;;;GAGG;AACH,eAAO,MAAM,eAAe,EAAE,KAAK,CAAC,KAAK,CACrC,YAAY,GACZ,IAAI,CAAC,SAAS,GACd,WAAW,GACX,UAAU,EACZ,UAAU,EACV,cAAc,CAAC,cAAc,CAIJ,CAAA;AAE3B;;;GAGG;AACH,eAAO,MAAM,KAAK,SAAU,OAAO,SAAS,KAAK,GAAG,MAAM,oBAAoB;IAC5E,QAAQ,CAAC,QAAQ,EAAE,MAAM,GAAG,WAAW,CAAA;IACvC,QAAQ,CAAC,aAAa,CAAC,EAAE,SAAS,GAAG,QAAQ,GAAG,SAAS,CAAA;IACzD,QAAQ,CAAC,cAAc,CAAC,EAAE,OAAO,CAAC,cAAc,CAAC,cAAc,CAAC,MAAM,CAAC,CAAC,GAAG,SAAS,CAAA;IACpF,QAAQ,CAAC,OAAO,CAAC,EAAE,OAAO,GAAG,SAAS,CAAA;CACvC,KAAG,KAAK,CAAC,KAAK,CACb,YAAY,CAAC,YAAY,EACzB,UAAU,GAAG,WAAW,GAAG,CAAC,OAAO,SAAS,KAAK,GAAG,QAAQ,GAAG,KAAK,CAAC,EACrE,OAAO,SAAS,KAAK,GAAG,SAAS,GAAG,KAAK,CAmB1C,CAAA"}
+\ No newline at end of file
+diff --git a/dist/dts/NodeClusterShardManagerSocket.d.ts b/dist/dts/NodeClusterShardManagerSocket.d.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..a9ee7c3d98990dc9ffecd1ff07c32eaed98d4afe
+--- /dev/null
++++ b/dist/dts/NodeClusterShardManagerSocket.d.ts
+@@ -0,0 +1,9 @@
++/**
++ * @since 1.0.0
++ */
++/**
++ * @since 1.0.0
++ * @category Re-exports
++ */
++export * from "@effect/platform-node-shared/NodeClusterShardManagerSocket";
++//# sourceMappingURL=NodeClusterShardManagerSocket.d.ts.map
+\ No newline at end of file
+diff --git a/dist/dts/NodeClusterShardManagerSocket.d.ts.map b/dist/dts/NodeClusterShardManagerSocket.d.ts.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..e36cadc803334bef83c314787bbf21740bc7d640
+--- /dev/null
++++ b/dist/dts/NodeClusterShardManagerSocket.d.ts.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterShardManagerSocket.d.ts","sourceRoot":"","sources":["../../src/NodeClusterShardManagerSocket.ts"],"names":[],"mappings":"AAAA;;GAEG;AAEH;;;GAGG;AACH,cAAc,4DAA4D,CAAA"}
+\ No newline at end of file
 diff --git a/dist/dts/NodeSocketServer.d.ts b/dist/dts/NodeSocketServer.d.ts
 new file mode 100644
 index 0000000000000000000000000000000000000000..39949896f4ed664df75b25fff20fae983d9c9749
@@ -208,10 +585,30 @@ index 96c35ee4388accae2aa1cbc2e9f60c2673527930..f2605426fce4f3eeaf0c65ce6546eb62
 +{"version":3,"file":"NodeWorker.d.ts","sourceRoot":"","sources":["../../src/NodeWorker.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,KAAK,KAAK,MAAM,MAAM,yBAAyB,CAAA;AACtD,OAAO,KAAK,KAAK,KAAK,MAAM,cAAc,CAAA;AAC1C,OAAO,KAAK,KAAK,aAAa,MAAM,qBAAqB,CAAA;AAGzD;;;GAGG;AACH,eAAO,MAAM,YAAY,EAAE,KAAK,CAAC,KAAK,CAAC,MAAM,CAAC,aAAa,CAAyB,CAAA;AAEpF;;;GAGG;AACH,eAAO,MAAM,WAAW,EAAE,KAAK,CAAC,KAAK,CAAC,MAAM,CAAC,cAAc,CAAwB,CAAA;AAEnF;;;GAGG;AACH,eAAO,MAAM,KAAK,EAAE,CAClB,KAAK,EAAE,CAAC,EAAE,EAAE,MAAM,KAAK,aAAa,CAAC,MAAM,KACxC,KAAK,CAAC,KAAK,CAAC,MAAM,CAAC,aAAa,GAAG,MAAM,CAAC,OAAO,CAAkB,CAAA;AAExE;;;GAGG;AACH,eAAO,MAAM,aAAa,EAAE,CAC1B,KAAK,EAAE,CAAC,EAAE,EAAE,MAAM,KAAK,aAAa,CAAC,MAAM,KACxC,KAAK,CAAC,KAAK,CAAC,MAAM,CAAC,cAAc,GAAG,MAAM,CAAC,OAAO,CAA0B,CAAA"}
 \ No newline at end of file
 diff --git a/dist/dts/index.d.ts b/dist/dts/index.d.ts
-index 678aabd11fa1044a886a662a3e3f4db16fcbffb0..ab18979e690181e59a5fdc1e27beebf4bf0c5f9b 100644
+index 678aabd11fa1044a886a662a3e3f4db16fcbffb0..d90e191c59e29a03408999a9f55e5de51e3630f9 100644
 --- a/dist/dts/index.d.ts
 +++ b/dist/dts/index.d.ts
-@@ -50,6 +50,10 @@ export * as NodeSink from "./NodeSink.js";
+@@ -1,3 +1,19 @@
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterRunnerHttp from "./NodeClusterRunnerHttp.js";
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterRunnerSocket from "./NodeClusterRunnerSocket.js";
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterShardManagerHttp from "./NodeClusterShardManagerHttp.js";
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterShardManagerSocket from "./NodeClusterShardManagerSocket.js";
+ /**
+  * @since 1.0.0
+  */
+@@ -50,6 +66,10 @@ export * as NodeSink from "./NodeSink.js";
   * @since 1.0.0
   */
  export * as NodeSocket from "./NodeSocket.js";
@@ -223,13 +620,164 @@ index 678aabd11fa1044a886a662a3e3f4db16fcbffb0..ab18979e690181e59a5fdc1e27beebf4
   * @since 1.0.0
   */
 diff --git a/dist/dts/index.d.ts.map b/dist/dts/index.d.ts.map
-index 1d2b6516618204600f8d4af8eb3e42057ea1b8ef..df5fe121073d110b7ded0003b5f8ee74c8f1a09a 100644
+index 1d2b6516618204600f8d4af8eb3e42057ea1b8ef..81cad42d9d58182e4dee4fdd31fdd6ed9b035a55 100644
 --- a/dist/dts/index.d.ts.map
 +++ b/dist/dts/index.d.ts.map
 @@ -1 +1 @@
 -{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/index.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,KAAK,mBAAmB,MAAM,0BAA0B,CAAA;AAE/D;;GAEG;AACH,OAAO,KAAK,WAAW,MAAM,kBAAkB,CAAA;AAE/C;;GAEG;AACH,OAAO,KAAK,cAAc,MAAM,qBAAqB,CAAA;AAErD;;GAEG;AACH,OAAO,KAAK,cAAc,MAAM,qBAAqB,CAAA;AAErD;;GAEG;AACH,OAAO,KAAK,gBAAgB,MAAM,uBAAuB,CAAA;AAEzD;;GAEG;AACH,OAAO,KAAK,cAAc,MAAM,qBAAqB,CAAA;AAErD;;GAEG;AACH,OAAO,KAAK,qBAAqB,MAAM,4BAA4B,CAAA;AAEnE;;GAEG;AACH,OAAO,KAAK,iBAAiB,MAAM,wBAAwB,CAAA;AAE3D;;GAEG;AACH,OAAO,KAAK,aAAa,MAAM,oBAAoB,CAAA;AAEnD;;GAEG;AACH,OAAO,KAAK,QAAQ,MAAM,eAAe,CAAA;AAEzC;;GAEG;AACH,OAAO,KAAK,WAAW,MAAM,kBAAkB,CAAA;AAE/C;;GAEG;AACH,OAAO,KAAK,QAAQ,MAAM,eAAe,CAAA;AAEzC;;GAEG;AACH,OAAO,KAAK,UAAU,MAAM,iBAAiB,CAAA;AAE7C;;GAEG;AACH,OAAO,KAAK,UAAU,MAAM,iBAAiB,CAAA;AAE7C;;GAEG;AACH,OAAO,KAAK,YAAY,MAAM,mBAAmB,CAAA;AAEjD;;GAEG;AACH,OAAO,KAAK,UAAU,MAAM,iBAAiB,CAAA;AAE7C;;GAEG;AACH,OAAO,KAAK,gBAAgB,MAAM,uBAAuB,CAAA;AAEzD;;GAEG;AACH,OAAO,KAAK,MAAM,MAAM,aAAa,CAAA"}
 \ No newline at end of file
-+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/index.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,KAAK,mBAAmB,MAAM,0BAA0B,CAAA;AAE/D;;GAEG;AACH,OAAO,KAAK,WAAW,MAAM,kBAAkB,CAAA;AAE/C;;GAEG;AACH,OAAO,KAAK,cAAc,MAAM,qBAAqB,CAAA;AAErD;;GAEG;AACH,OAAO,KAAK,cAAc,MAAM,qBAAqB,CAAA;AAErD;;GAEG;AACH,OAAO,KAAK,gBAAgB,MAAM,uBAAuB,CAAA;AAEzD;;GAEG;AACH,OAAO,KAAK,cAAc,MAAM,qBAAqB,CAAA;AAErD;;GAEG;AACH,OAAO,KAAK,qBAAqB,MAAM,4BAA4B,CAAA;AAEnE;;GAEG;AACH,OAAO,KAAK,iBAAiB,MAAM,wBAAwB,CAAA;AAE3D;;GAEG;AACH,OAAO,KAAK,aAAa,MAAM,oBAAoB,CAAA;AAEnD;;GAEG;AACH,OAAO,KAAK,QAAQ,MAAM,eAAe,CAAA;AAEzC;;GAEG;AACH,OAAO,KAAK,WAAW,MAAM,kBAAkB,CAAA;AAE/C;;GAEG;AACH,OAAO,KAAK,QAAQ,MAAM,eAAe,CAAA;AAEzC;;GAEG;AACH,OAAO,KAAK,UAAU,MAAM,iBAAiB,CAAA;AAE7C;;GAEG;AACH,OAAO,KAAK,gBAAgB,MAAM,uBAAuB,CAAA;AAEzD;;GAEG;AACH,OAAO,KAAK,UAAU,MAAM,iBAAiB,CAAA;AAE7C;;GAEG;AACH,OAAO,KAAK,YAAY,MAAM,mBAAmB,CAAA;AAEjD;;GAEG;AACH,OAAO,KAAK,UAAU,MAAM,iBAAiB,CAAA;AAE7C;;GAEG;AACH,OAAO,KAAK,gBAAgB,MAAM,uBAAuB,CAAA;AAEzD;;GAEG;AACH,OAAO,KAAK,MAAM,MAAM,aAAa,CAAA"}
++{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../src/index.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH,OAAO,KAAK,qBAAqB,MAAM,4BAA4B,CAAA;AAEnE;;GAEG;AACH,OAAO,KAAK,uBAAuB,MAAM,8BAA8B,CAAA;AAEvE;;GAEG;AACH,OAAO,KAAK,2BAA2B,MAAM,kCAAkC,CAAA;AAE/E;;GAEG;AACH,OAAO,KAAK,6BAA6B,MAAM,oCAAoC,CAAA;AAEnF;;GAEG;AACH,OAAO,KAAK,mBAAmB,MAAM,0BAA0B,CAAA;AAE/D;;GAEG;AACH,OAAO,KAAK,WAAW,MAAM,kBAAkB,CAAA;AAE/C;;GAEG;AACH,OAAO,KAAK,cAAc,MAAM,qBAAqB,CAAA;AAErD;;GAEG;AACH,OAAO,KAAK,cAAc,MAAM,qBAAqB,CAAA;AAErD;;GAEG;AACH,OAAO,KAAK,gBAAgB,MAAM,uBAAuB,CAAA;AAEzD;;GAEG;AACH,OAAO,KAAK,cAAc,MAAM,qBAAqB,CAAA;AAErD;;GAEG;AACH,OAAO,KAAK,qBAAqB,MAAM,4BAA4B,CAAA;AAEnE;;GAEG;AACH,OAAO,KAAK,iBAAiB,MAAM,wBAAwB,CAAA;AAE3D;;GAEG;AACH,OAAO,KAAK,aAAa,MAAM,oBAAoB,CAAA;AAEnD;;GAEG;AACH,OAAO,KAAK,QAAQ,MAAM,eAAe,CAAA;AAEzC;;GAEG;AACH,OAAO,KAAK,WAAW,MAAM,kBAAkB,CAAA;AAE/C;;GAEG;AACH,OAAO,KAAK,QAAQ,MAAM,eAAe,CAAA;AAEzC;;GAEG;AACH,OAAO,KAAK,UAAU,MAAM,iBAAiB,CAAA;AAE7C;;GAEG;AACH,OAAO,KAAK,gBAAgB,MAAM,uBAAuB,CAAA;AAEzD;;GAEG;AACH,OAAO,KAAK,UAAU,MAAM,iBAAiB,CAAA;AAE7C;;GAEG;AACH,OAAO,KAAK,YAAY,MAAM,mBAAmB,CAAA;AAEjD;;GAEG;AACH,OAAO,KAAK,UAAU,MAAM,iBAAiB,CAAA;AAE7C;;GAEG;AACH,OAAO,KAAK,gBAAgB,MAAM,uBAAuB,CAAA;AAEzD;;GAEG;AACH,OAAO,KAAK,MAAM,MAAM,aAAa,CAAA"}
+\ No newline at end of file
+diff --git a/dist/esm/NodeClusterRunnerHttp.js b/dist/esm/NodeClusterRunnerHttp.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..22d9d8d75c6db623022ddf660439d16b955a965c
+--- /dev/null
++++ b/dist/esm/NodeClusterRunnerHttp.js
+@@ -0,0 +1,41 @@
++/**
++ * @since 1.0.0
++ */
++import * as HttpRunner from "@effect/cluster/HttpRunner";
++import * as MessageStorage from "@effect/cluster/MessageStorage";
++import * as ShardingConfig from "@effect/cluster/ShardingConfig";
++import * as ShardStorage from "@effect/cluster/ShardStorage";
++import * as SqlMessageStorage from "@effect/cluster/SqlMessageStorage";
++import * as SqlShardStorage from "@effect/cluster/SqlShardStorage";
++import * as RpcSerialization from "@effect/rpc/RpcSerialization";
++import * as Effect from "effect/Effect";
++import * as Layer from "effect/Layer";
++import * as Option from "effect/Option";
++import { createServer } from "node:http";
++import * as NodeHttpClient from "./NodeHttpClient.js";
++import * as NodeHttpServer from "./NodeHttpServer.js";
++import * as NodeSocket from "./NodeSocket.js";
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export const layer = options => {
++  const layer = options.clientOnly
++  // client only
++  ? options.transport === "http" ? Layer.provide(HttpRunner.layerHttpClientOnly, NodeHttpClient.layerUndici) : Layer.provide(HttpRunner.layerWebsocketClientOnly, NodeSocket.layerWebSocketConstructor)
++  // with server
++  : options.transport === "http" ? Layer.provide(HttpRunner.layerHttp, [layerHttpServer, NodeHttpClient.layerUndici]) : Layer.provide(HttpRunner.layerWebsocket, [layerHttpServer, NodeSocket.layerWebSocketConstructor]);
++  return layer.pipe(Layer.provide(options?.storage === "sql" ? options.clientOnly ? [SqlMessageStorage.layer] : [SqlMessageStorage.layer, SqlShardStorage.layer] : [MessageStorage.layerNoop, ShardStorage.layerNoop]), Layer.provide(ShardingConfig.layerFromEnv(options?.shardingConfig)), Layer.provide(options?.serialization === "ndjson" ? RpcSerialization.layerNdjson : RpcSerialization.layerMsgPack));
++};
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export const layerHttpServer = /*#__PURE__*/Effect.gen(function* () {
++  const config = yield* ShardingConfig.ShardingConfig;
++  if (Option.isNone(config.runnerAddress)) {
++    return yield* Effect.dieMessage("NodeClusterHttpRunner.layerHttpServer: ShardingConfig.podAddress is None");
++  }
++  return NodeHttpServer.layer(createServer, config.runnerAddress.value);
++}).pipe(Layer.unwrapEffect);
++//# sourceMappingURL=NodeClusterRunnerHttp.js.map
+\ No newline at end of file
+diff --git a/dist/esm/NodeClusterRunnerHttp.js.map b/dist/esm/NodeClusterRunnerHttp.js.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..7289b563a5044292827a535683eeb4737842b5e1
+--- /dev/null
++++ b/dist/esm/NodeClusterRunnerHttp.js.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterRunnerHttp.js","names":["HttpRunner","MessageStorage","ShardingConfig","ShardStorage","SqlMessageStorage","SqlShardStorage","RpcSerialization","Effect","Layer","Option","createServer","NodeHttpClient","NodeHttpServer","NodeSocket","layer","options","clientOnly","transport","provide","layerHttpClientOnly","layerUndici","layerWebsocketClientOnly","layerWebSocketConstructor","layerHttp","layerHttpServer","layerWebsocket","pipe","storage","layerNoop","layerFromEnv","shardingConfig","serialization","layerNdjson","layerMsgPack","gen","config","isNone","runnerAddress","dieMessage","value","unwrapEffect"],"sources":["../../src/NodeClusterRunnerHttp.ts"],"sourcesContent":[null],"mappings":"AAAA;;;AAGA,OAAO,KAAKA,UAAU,MAAM,4BAA4B;AACxD,OAAO,KAAKC,cAAc,MAAM,gCAAgC;AAGhE,OAAO,KAAKC,cAAc,MAAM,gCAAgC;AAChE,OAAO,KAAKC,YAAY,MAAM,8BAA8B;AAC5D,OAAO,KAAKC,iBAAiB,MAAM,mCAAmC;AACtE,OAAO,KAAKC,eAAe,MAAM,iCAAiC;AAKlE,OAAO,KAAKC,gBAAgB,MAAM,8BAA8B;AAIhE,OAAO,KAAKC,MAAM,MAAM,eAAe;AACvC,OAAO,KAAKC,KAAK,MAAM,cAAc;AACrC,OAAO,KAAKC,MAAM,MAAM,eAAe;AACvC,SAASC,YAAY,QAAQ,WAAW;AAExC,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AACrD,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AACrD,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;;AAIA,OAAO,MAAMC,KAAK,GAGhBC,OAMD,IASK;EAEJ,MAAMD,KAAK,GAA+BC,OAAO,CAACC;EAChD;EAAA,EACED,OAAO,CAACE,SAAS,KAAK,MAAM,GAC1BT,KAAK,CAACU,OAAO,CAAClB,UAAU,CAACmB,mBAAmB,EAAER,cAAc,CAACS,WAAW,CAAC,GACzEZ,KAAK,CAACU,OAAO,CAAClB,UAAU,CAACqB,wBAAwB,EAAER,UAAU,CAACS,yBAAyB;EAC3F;EAAA,EACEP,OAAO,CAACE,SAAS,KAAK,MAAM,GAC5BT,KAAK,CAACU,OAAO,CAAClB,UAAU,CAACuB,SAAS,EAAE,CAACC,eAAe,EAAEb,cAAc,CAACS,WAAW,CAAC,CAAC,GAClFZ,KAAK,CAACU,OAAO,CAAClB,UAAU,CAACyB,cAAc,EAAE,CAACD,eAAe,EAAEX,UAAU,CAACS,yBAAyB,CAAC,CAAC;EAErG,OAAOR,KAAK,CAACY,IAAI,CACflB,KAAK,CAACU,OAAO,CACXH,OAAO,EAAEY,OAAO,KAAK,KAAK,GACtBZ,OAAO,CAACC,UAAU,GAAG,CAACZ,iBAAiB,CAACU,KAAK,CAAC,GAAG,CAACV,iBAAiB,CAACU,KAAK,EAAET,eAAe,CAACS,KAAK,CAAC,GACjG,CAACb,cAAc,CAAC2B,SAAS,EAAEzB,YAAY,CAACyB,SAAS,CAAC,CACvD,EACDpB,KAAK,CAACU,OAAO,CAAChB,cAAc,CAAC2B,YAAY,CAACd,OAAO,EAAEe,cAAc,CAAC,CAAC,EACnEtB,KAAK,CAACU,OAAO,CACXH,OAAO,EAAEgB,aAAa,KAAK,QAAQ,GAAGzB,gBAAgB,CAAC0B,WAAW,GAAG1B,gBAAgB,CAAC2B,YAAY,CACnG,CACK;AACV,CAAC;AAED;;;;AAIA,OAAO,MAAMT,eAAe,gBAOxBjB,MAAM,CAAC2B,GAAG,CAAC,aAAS;EACtB,MAAMC,MAAM,GAAG,OAAOjC,cAAc,CAACA,cAAc;EACnD,IAAIO,MAAM,CAAC2B,MAAM,CAACD,MAAM,CAACE,aAAa,CAAC,EAAE;IACvC,OAAO,OAAO9B,MAAM,CAAC+B,UAAU,CAAC,0EAA0E,CAAC;EAC7G;EACA,OAAO1B,cAAc,CAACE,KAAK,CAACJ,YAAY,EAAEyB,MAAM,CAACE,aAAa,CAACE,KAAK,CAAC;AACvE,CAAC,CAAC,CAACb,IAAI,CAAClB,KAAK,CAACgC,YAAY,CAAC","ignoreList":[]}
+\ No newline at end of file
+diff --git a/dist/esm/NodeClusterRunnerSocket.js b/dist/esm/NodeClusterRunnerSocket.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..316efb41ce37b0ee1743e574df7a0c3831bd1c7c
+--- /dev/null
++++ b/dist/esm/NodeClusterRunnerSocket.js
+@@ -0,0 +1,9 @@
++/**
++ * @since 1.0.0
++ */
++/**
++ * @since 1.0.0
++ * @category Re-exports
++ */
++export * from "@effect/platform-node-shared/NodeClusterRunnerSocket";
++//# sourceMappingURL=NodeClusterRunnerSocket.js.map
+\ No newline at end of file
+diff --git a/dist/esm/NodeClusterRunnerSocket.js.map b/dist/esm/NodeClusterRunnerSocket.js.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..f22069a0552ff6b563c6654b83ce991571fb3384
+--- /dev/null
++++ b/dist/esm/NodeClusterRunnerSocket.js.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterRunnerSocket.js","names":[],"sources":["../../src/NodeClusterRunnerSocket.ts"],"sourcesContent":[null],"mappings":"AAAA;;;AAIA;;;;AAIA,cAAc,sDAAsD","ignoreList":[]}
+\ No newline at end of file
+diff --git a/dist/esm/NodeClusterShardManagerHttp.js b/dist/esm/NodeClusterShardManagerHttp.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..0466647c9b9aebe83a5d6f7f99549d81530d256d
+--- /dev/null
++++ b/dist/esm/NodeClusterShardManagerHttp.js
+@@ -0,0 +1,32 @@
++/**
++ * @since 1.0.0
++ */
++import * as HttpShardManager from "@effect/cluster/HttpShardManager";
++import * as ShardingConfig from "@effect/cluster/ShardingConfig";
++import * as ShardManager from "@effect/cluster/ShardManager";
++import * as ShardStorage from "@effect/cluster/ShardStorage";
++import * as SqlShardStorage from "@effect/cluster/SqlShardStorage";
++import * as RpcSerialization from "@effect/rpc/RpcSerialization";
++import * as Effect from "effect/Effect";
++import * as Layer from "effect/Layer";
++import { createServer } from "node:http";
++import * as NodeHttpClient from "./NodeHttpClient.js";
++import * as NodeHttpServer from "./NodeHttpServer.js";
++import * as NodeSocket from "./NodeSocket.js";
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export const layerHttpServer = /*#__PURE__*/Effect.gen(function* () {
++  const config = yield* ShardingConfig.ShardingConfig;
++  return NodeHttpServer.layer(createServer, config.shardManagerAddress);
++}).pipe(Layer.unwrapEffect);
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export const layer = options => {
++  const layer = options.protocol === "http" ? HttpShardManager.layerHttp.pipe(Layer.provide([HttpShardManager.layerRunnerHealthHttp, layerHttpServer]), Layer.provide(NodeHttpClient.layerUndici)) : HttpShardManager.layerWebsocket.pipe(Layer.provide([HttpShardManager.layerRunnerHealthWebsocket, layerHttpServer]), Layer.provide(NodeSocket.layerWebSocketConstructor));
++  return layer.pipe(Layer.provide(options?.storage === "sql" ? SqlShardStorage.layer : ShardStorage.layerNoop), Layer.provide([ShardingConfig.layerFromEnv(options.shardingConfig), ShardManager.layerConfigFromEnv, options?.serialization === "ndjson" ? RpcSerialization.layerNdjson : RpcSerialization.layerMsgPack]));
++};
++//# sourceMappingURL=NodeClusterShardManagerHttp.js.map
+\ No newline at end of file
+diff --git a/dist/esm/NodeClusterShardManagerHttp.js.map b/dist/esm/NodeClusterShardManagerHttp.js.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..cffe3750c9f5bd83c061c7492e07a439d747e4aa
+--- /dev/null
++++ b/dist/esm/NodeClusterShardManagerHttp.js.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterShardManagerHttp.js","names":["HttpShardManager","ShardingConfig","ShardManager","ShardStorage","SqlShardStorage","RpcSerialization","Effect","Layer","createServer","NodeHttpClient","NodeHttpServer","NodeSocket","layerHttpServer","gen","config","layer","shardManagerAddress","pipe","unwrapEffect","options","protocol","layerHttp","provide","layerRunnerHealthHttp","layerUndici","layerWebsocket","layerRunnerHealthWebsocket","layerWebSocketConstructor","storage","layerNoop","layerFromEnv","shardingConfig","layerConfigFromEnv","serialization","layerNdjson","layerMsgPack"],"sources":["../../src/NodeClusterShardManagerHttp.ts"],"sourcesContent":[null],"mappings":"AAAA;;;AAGA,OAAO,KAAKA,gBAAgB,MAAM,kCAAkC;AACpE,OAAO,KAAKC,cAAc,MAAM,gCAAgC;AAChE,OAAO,KAAKC,YAAY,MAAM,8BAA8B;AAC5D,OAAO,KAAKC,YAAY,MAAM,8BAA8B;AAC5D,OAAO,KAAKC,eAAe,MAAM,iCAAiC;AAKlE,OAAO,KAAKC,gBAAgB,MAAM,8BAA8B;AAIhE,OAAO,KAAKC,MAAM,MAAM,eAAe;AACvC,OAAO,KAAKC,KAAK,MAAM,cAAc;AACrC,SAASC,YAAY,QAAQ,WAAW;AAExC,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AACrD,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AACrD,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;;AAIA,OAAO,MAAMC,eAAe,gBAOxBN,MAAM,CAACO,GAAG,CAAC,aAAS;EACtB,MAAMC,MAAM,GAAG,OAAOb,cAAc,CAACA,cAAc;EACnD,OAAOS,cAAc,CAACK,KAAK,CAACP,YAAY,EAAEM,MAAM,CAACE,mBAAmB,CAAC;AACvE,CAAC,CAAC,CAACC,IAAI,CAACV,KAAK,CAACW,YAAY,CAAC;AAE3B;;;;AAIA,OAAO,MAAMH,KAAK,GAAmDI,OAKpE,IAIG;EACF,MAAMJ,KAAK,GAA+BI,OAAO,CAACC,QAAQ,KAAK,MAAM,GACnEpB,gBAAgB,CAACqB,SAAS,CAACJ,IAAI,CAC7BV,KAAK,CAACe,OAAO,CAAC,CAACtB,gBAAgB,CAACuB,qBAAqB,EAAEX,eAAe,CAAC,CAAC,EACxEL,KAAK,CAACe,OAAO,CAACb,cAAc,CAACe,WAAW,CAAC,CAC1C,GACDxB,gBAAgB,CAACyB,cAAc,CAACR,IAAI,CAClCV,KAAK,CAACe,OAAO,CAAC,CAACtB,gBAAgB,CAAC0B,0BAA0B,EAAEd,eAAe,CAAC,CAAC,EAC7EL,KAAK,CAACe,OAAO,CAACX,UAAU,CAACgB,yBAAyB,CAAC,CACpD;EACH,OAAOZ,KAAK,CAACE,IAAI,CACfV,KAAK,CAACe,OAAO,CAACH,OAAO,EAAES,OAAO,KAAK,KAAK,GAAGxB,eAAe,CAACW,KAAK,GAAGZ,YAAY,CAAC0B,SAAS,CAAC,EAC1FtB,KAAK,CAACe,OAAO,CAAC,CACZrB,cAAc,CAAC6B,YAAY,CAACX,OAAO,CAACY,cAAc,CAAC,EACnD7B,YAAY,CAAC8B,kBAAkB,EAC/Bb,OAAO,EAAEc,aAAa,KAAK,QAAQ,GAAG5B,gBAAgB,CAAC6B,WAAW,GAAG7B,gBAAgB,CAAC8B,YAAY,CACnG,CAAC,CACH;AACH,CAAC","ignoreList":[]}
+\ No newline at end of file
+diff --git a/dist/esm/NodeClusterShardManagerSocket.js b/dist/esm/NodeClusterShardManagerSocket.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..24585114d4da3950cbef09a24c3695a6923ce83d
+--- /dev/null
++++ b/dist/esm/NodeClusterShardManagerSocket.js
+@@ -0,0 +1,9 @@
++/**
++ * @since 1.0.0
++ */
++/**
++ * @since 1.0.0
++ * @category Re-exports
++ */
++export * from "@effect/platform-node-shared/NodeClusterShardManagerSocket";
++//# sourceMappingURL=NodeClusterShardManagerSocket.js.map
+\ No newline at end of file
+diff --git a/dist/esm/NodeClusterShardManagerSocket.js.map b/dist/esm/NodeClusterShardManagerSocket.js.map
+new file mode 100644
+index 0000000000000000000000000000000000000000..5a46cc300348082fe883c70c56c06b369f7319f8
+--- /dev/null
++++ b/dist/esm/NodeClusterShardManagerSocket.js.map
+@@ -0,0 +1 @@
++{"version":3,"file":"NodeClusterShardManagerSocket.js","names":[],"sources":["../../src/NodeClusterShardManagerSocket.ts"],"sourcesContent":[null],"mappings":"AAAA;;;AAIA;;;;AAIA,cAAc,4DAA4D","ignoreList":[]}
 \ No newline at end of file
 diff --git a/dist/esm/NodeSocketServer.js b/dist/esm/NodeSocketServer.js
 new file mode 100644
@@ -279,10 +827,30 @@ index f3f62b1992da586c322ecd42447f5c245d7c1784..35afcc0f1ca3142382f138da1f490e3f
 +{"version":3,"file":"NodeWorker.js","names":["internal","layerManager","layerWorker","layer","layerPlatform"],"sources":["../../src/NodeWorker.ts"],"sourcesContent":[null],"mappings":"AAMA,OAAO,KAAKA,QAAQ,MAAM,sBAAsB;AAEhD;;;;AAIA,OAAO,MAAMC,YAAY,GAAsCD,QAAQ,CAACC,YAAY;AAEpF;;;;AAIA,OAAO,MAAMC,WAAW,GAAuCF,QAAQ,CAACE,WAAW;AAEnF;;;;AAIA,OAAO,MAAMC,KAAK,GAEwCH,QAAQ,CAACG,KAAK;AAExE;;;;AAIA,OAAO,MAAMC,aAAa,GAEiCJ,QAAQ,CAACI,aAAa","ignoreList":[]}
 \ No newline at end of file
 diff --git a/dist/esm/index.js b/dist/esm/index.js
-index b834309033fbe044dcb905b31fadc9d632a22353..dc2a7f8cb7e777cf16dc253f9a95d092cfb912bd 100644
+index b834309033fbe044dcb905b31fadc9d632a22353..d3c522f71a92c2f78a6648829bcc12aec137f685 100644
 --- a/dist/esm/index.js
 +++ b/dist/esm/index.js
-@@ -50,6 +50,10 @@ export * as NodeSink from "./NodeSink.js";
+@@ -1,3 +1,19 @@
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterRunnerHttp from "./NodeClusterRunnerHttp.js";
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterRunnerSocket from "./NodeClusterRunnerSocket.js";
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterShardManagerHttp from "./NodeClusterShardManagerHttp.js";
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterShardManagerSocket from "./NodeClusterShardManagerSocket.js";
+ /**
+  * @since 1.0.0
+  */
+@@ -50,6 +66,10 @@ export * as NodeSink from "./NodeSink.js";
   * @since 1.0.0
   */
  export * as NodeSocket from "./NodeSocket.js";
@@ -294,13 +862,13 @@ index b834309033fbe044dcb905b31fadc9d632a22353..dc2a7f8cb7e777cf16dc253f9a95d092
   * @since 1.0.0
   */
 diff --git a/dist/esm/index.js.map b/dist/esm/index.js.map
-index 7c762318d0629f1cb7b2062350ee8e9b5e8e88e1..3890f1fb4975a96f265317d40723e324b7554be3 100644
+index 7c762318d0629f1cb7b2062350ee8e9b5e8e88e1..6eeaa2d3cee36fe5c278045ffad7e07172fc47fe 100644
 --- a/dist/esm/index.js.map
 +++ b/dist/esm/index.js.map
 @@ -1 +1 @@
 -{"version":3,"file":"index.js","names":["NodeCommandExecutor","NodeContext","NodeFileSystem","NodeHttpClient","NodeHttpPlatform","NodeHttpServer","NodeHttpServerRequest","NodeKeyValueStore","NodeMultipart","NodePath","NodeRuntime","NodeSink","NodeSocket","NodeStream","NodeTerminal","NodeWorker","NodeWorkerRunner","Undici"],"sources":["../../src/index.ts"],"sourcesContent":[null],"mappings":"AAAA;;;AAGA,OAAO,KAAKA,mBAAmB,MAAM,0BAA0B;AAE/D;;;AAGA,OAAO,KAAKC,WAAW,MAAM,kBAAkB;AAE/C;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,gBAAgB,MAAM,uBAAuB;AAEzD;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,qBAAqB,MAAM,4BAA4B;AAEnE;;;AAGA,OAAO,KAAKC,iBAAiB,MAAM,wBAAwB;AAE3D;;;AAGA,OAAO,KAAKC,aAAa,MAAM,oBAAoB;AAEnD;;;AAGA,OAAO,KAAKC,QAAQ,MAAM,eAAe;AAEzC;;;AAGA,OAAO,KAAKC,WAAW,MAAM,kBAAkB;AAE/C;;;AAGA,OAAO,KAAKC,QAAQ,MAAM,eAAe;AAEzC;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,YAAY,MAAM,mBAAmB;AAEjD;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,gBAAgB,MAAM,uBAAuB;AAEzD;;;AAGA,OAAO,KAAKC,MAAM,MAAM,aAAa","ignoreList":[]}
 \ No newline at end of file
-+{"version":3,"file":"index.js","names":["NodeCommandExecutor","NodeContext","NodeFileSystem","NodeHttpClient","NodeHttpPlatform","NodeHttpServer","NodeHttpServerRequest","NodeKeyValueStore","NodeMultipart","NodePath","NodeRuntime","NodeSink","NodeSocket","NodeSocketServer","NodeStream","NodeTerminal","NodeWorker","NodeWorkerRunner","Undici"],"sources":["../../src/index.ts"],"sourcesContent":[null],"mappings":"AAAA;;;AAGA,OAAO,KAAKA,mBAAmB,MAAM,0BAA0B;AAE/D;;;AAGA,OAAO,KAAKC,WAAW,MAAM,kBAAkB;AAE/C;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,gBAAgB,MAAM,uBAAuB;AAEzD;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,qBAAqB,MAAM,4BAA4B;AAEnE;;;AAGA,OAAO,KAAKC,iBAAiB,MAAM,wBAAwB;AAE3D;;;AAGA,OAAO,KAAKC,aAAa,MAAM,oBAAoB;AAEnD;;;AAGA,OAAO,KAAKC,QAAQ,MAAM,eAAe;AAEzC;;;AAGA,OAAO,KAAKC,WAAW,MAAM,kBAAkB;AAE/C;;;AAGA,OAAO,KAAKC,QAAQ,MAAM,eAAe;AAEzC;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,gBAAgB,MAAM,uBAAuB;AAEzD;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,YAAY,MAAM,mBAAmB;AAEjD;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,gBAAgB,MAAM,uBAAuB;AAEzD;;;AAGA,OAAO,KAAKC,MAAM,MAAM,aAAa","ignoreList":[]}
++{"version":3,"file":"index.js","names":["NodeClusterRunnerHttp","NodeClusterRunnerSocket","NodeClusterShardManagerHttp","NodeClusterShardManagerSocket","NodeCommandExecutor","NodeContext","NodeFileSystem","NodeHttpClient","NodeHttpPlatform","NodeHttpServer","NodeHttpServerRequest","NodeKeyValueStore","NodeMultipart","NodePath","NodeRuntime","NodeSink","NodeSocket","NodeSocketServer","NodeStream","NodeTerminal","NodeWorker","NodeWorkerRunner","Undici"],"sources":["../../src/index.ts"],"sourcesContent":[null],"mappings":"AAAA;;;AAGA,OAAO,KAAKA,qBAAqB,MAAM,4BAA4B;AAEnE;;;AAGA,OAAO,KAAKC,uBAAuB,MAAM,8BAA8B;AAEvE;;;AAGA,OAAO,KAAKC,2BAA2B,MAAM,kCAAkC;AAE/E;;;AAGA,OAAO,KAAKC,6BAA6B,MAAM,oCAAoC;AAEnF;;;AAGA,OAAO,KAAKC,mBAAmB,MAAM,0BAA0B;AAE/D;;;AAGA,OAAO,KAAKC,WAAW,MAAM,kBAAkB;AAE/C;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,gBAAgB,MAAM,uBAAuB;AAEzD;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,qBAAqB,MAAM,4BAA4B;AAEnE;;;AAGA,OAAO,KAAKC,iBAAiB,MAAM,wBAAwB;AAE3D;;;AAGA,OAAO,KAAKC,aAAa,MAAM,oBAAoB;AAEnD;;;AAGA,OAAO,KAAKC,QAAQ,MAAM,eAAe;AAEzC;;;AAGA,OAAO,KAAKC,WAAW,MAAM,kBAAkB;AAE/C;;;AAGA,OAAO,KAAKC,QAAQ,MAAM,eAAe;AAEzC;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,gBAAgB,MAAM,uBAAuB;AAEzD;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,YAAY,MAAM,mBAAmB;AAEjD;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,gBAAgB,MAAM,uBAAuB;AAEzD;;;AAGA,OAAO,KAAKC,MAAM,MAAM,aAAa","ignoreList":[]}
 \ No newline at end of file
 diff --git a/dist/esm/internal/worker.js b/dist/esm/internal/worker.js
 index 0af76056491d596fda713fb8fed4a8300c6106a1..b75bc03883487041cc2e5cc4f7d9fd0f8e1c7993 100644
@@ -353,10 +921,10 @@ index bf858ab1aa2f11e3c05f0b573d2ef98fed3635f9..13728b326aa607cbb197d084200cfdd2
 +{"version":3,"file":"workerRunner.js","names":["WorkerError","Runner","Cause","Context","Deferred","Effect","Exit","FiberSet","Layer","Runtime","Scope","WorkerThreads","platformRunnerImpl","PlatformRunner","of","PlatformRunnerTypeId","start","closeLatch","gen","parentPort","reason","cause","Error","port","send","_portId","message","transfers","sync","postMessage","run","fnUntraced","handler","runtime","interruptible","pipe","updateContext","omit","fiberSet","make","runFork","onExit","exit","_tag","isInterruptedOnly","unsafeDone","die","squash","on","result","isEffect","fiber","addObserver","unsafeAdd","close","void","layer","succeed"],"sources":["../../../src/internal/workerRunner.ts"],"sourcesContent":[null],"mappings":"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","ignoreList":[]}
 \ No newline at end of file
 diff --git a/package.json b/package.json
-index b07f5a8f78fc3c4a65ab8efa53676b63ef934035..b8cfd4285f4a7d92e17b83ca39d3efc68729faf9 100644
+index b07f5a8f78fc3c4a65ab8efa53676b63ef934035..43188643a1480f0ebdbacf18de8cfec0e6e1829e 100644
 --- a/package.json
 +++ b/package.json
-@@ -10,10 +10,10 @@
+@@ -10,13 +10,16 @@
    },
    "sideEffects": [],
    "dependencies": {
@@ -368,8 +936,41 @@ index b07f5a8f78fc3c4a65ab8efa53676b63ef934035..b8cfd4285f4a7d92e17b83ca39d3efc6
 +    "ws": "^8.18.0"
    },
    "peerDependencies": {
++    "@effect/cluster": "*",
      "@effect/platform": "^0.79.2",
-@@ -102,6 +102,11 @@
++    "@effect/rpc": "*",
++    "@effect/sql": "*",
+     "effect": "^3.13.11"
+   },
+   "publishConfig": {
+@@ -32,6 +35,26 @@
+       "import": "./dist/esm/index.js",
+       "default": "./dist/cjs/index.js"
+     },
++    "./NodeClusterRunnerHttp": {
++      "types": "./dist/dts/NodeClusterRunnerHttp.d.ts",
++      "import": "./dist/esm/NodeClusterRunnerHttp.js",
++      "default": "./dist/cjs/NodeClusterRunnerHttp.js"
++    },
++    "./NodeClusterRunnerSocket": {
++      "types": "./dist/dts/NodeClusterRunnerSocket.d.ts",
++      "import": "./dist/esm/NodeClusterRunnerSocket.js",
++      "default": "./dist/cjs/NodeClusterRunnerSocket.js"
++    },
++    "./NodeClusterShardManagerHttp": {
++      "types": "./dist/dts/NodeClusterShardManagerHttp.d.ts",
++      "import": "./dist/esm/NodeClusterShardManagerHttp.js",
++      "default": "./dist/cjs/NodeClusterShardManagerHttp.js"
++    },
++    "./NodeClusterShardManagerSocket": {
++      "types": "./dist/dts/NodeClusterShardManagerSocket.d.ts",
++      "import": "./dist/esm/NodeClusterShardManagerSocket.js",
++      "default": "./dist/cjs/NodeClusterShardManagerSocket.js"
++    },
+     "./NodeCommandExecutor": {
+       "types": "./dist/dts/NodeCommandExecutor.d.ts",
+       "import": "./dist/esm/NodeCommandExecutor.js",
+@@ -102,6 +125,11 @@
        "import": "./dist/esm/NodeSocket.js",
        "default": "./dist/cjs/NodeSocket.js"
      },
@@ -381,7 +982,26 @@ index b07f5a8f78fc3c4a65ab8efa53676b63ef934035..b8cfd4285f4a7d92e17b83ca39d3efc6
      "./NodeStream": {
        "types": "./dist/dts/NodeStream.d.ts",
        "import": "./dist/esm/NodeStream.js",
-@@ -172,6 +177,9 @@
+@@ -130,6 +158,18 @@
+   },
+   "typesVersions": {
+     "*": {
++      "NodeClusterRunnerHttp": [
++        "./dist/dts/NodeClusterRunnerHttp.d.ts"
++      ],
++      "NodeClusterRunnerSocket": [
++        "./dist/dts/NodeClusterRunnerSocket.d.ts"
++      ],
++      "NodeClusterShardManagerHttp": [
++        "./dist/dts/NodeClusterShardManagerHttp.d.ts"
++      ],
++      "NodeClusterShardManagerSocket": [
++        "./dist/dts/NodeClusterShardManagerSocket.d.ts"
++      ],
+       "NodeCommandExecutor": [
+         "./dist/dts/NodeCommandExecutor.d.ts"
+       ],
+@@ -172,6 +212,9 @@
        "NodeSocket": [
          "./dist/dts/NodeSocket.d.ts"
        ],
@@ -391,6 +1011,213 @@ index b07f5a8f78fc3c4a65ab8efa53676b63ef934035..b8cfd4285f4a7d92e17b83ca39d3efc6
        "NodeStream": [
          "./dist/dts/NodeStream.d.ts"
        ],
+diff --git a/src/NodeClusterRunnerHttp.ts b/src/NodeClusterRunnerHttp.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..01758cbd3166672b72981e77a884c247de7c56b1
+--- /dev/null
++++ b/src/NodeClusterRunnerHttp.ts
+@@ -0,0 +1,93 @@
++/**
++ * @since 1.0.0
++ */
++import * as HttpRunner from "@effect/cluster/HttpRunner"
++import * as MessageStorage from "@effect/cluster/MessageStorage"
++import type * as Runners from "@effect/cluster/Runners"
++import type { Sharding } from "@effect/cluster/Sharding"
++import * as ShardingConfig from "@effect/cluster/ShardingConfig"
++import * as ShardStorage from "@effect/cluster/ShardStorage"
++import * as SqlMessageStorage from "@effect/cluster/SqlMessageStorage"
++import * as SqlShardStorage from "@effect/cluster/SqlShardStorage"
++import type * as Etag from "@effect/platform/Etag"
++import type { HttpPlatform } from "@effect/platform/HttpPlatform"
++import type { HttpServer } from "@effect/platform/HttpServer"
++import type { ServeError } from "@effect/platform/HttpServerError"
++import * as RpcSerialization from "@effect/rpc/RpcSerialization"
++import type { SqlClient } from "@effect/sql/SqlClient"
++import type { SqlError } from "@effect/sql/SqlError"
++import type { ConfigError } from "effect/ConfigError"
++import * as Effect from "effect/Effect"
++import * as Layer from "effect/Layer"
++import * as Option from "effect/Option"
++import { createServer } from "node:http"
++import type { NodeContext } from "./NodeContext.js"
++import * as NodeHttpClient from "./NodeHttpClient.js"
++import * as NodeHttpServer from "./NodeHttpServer.js"
++import * as NodeSocket from "./NodeSocket.js"
++
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export const layer = <
++  const ClientOnly extends boolean = false,
++  const Storage extends "noop" | "sql" = "noop"
++>(options: {
++  readonly transport: "http" | "websocket"
++  readonly serialization?: "msgpack" | "ndjson" | undefined
++  readonly clientOnly?: ClientOnly | undefined
++  readonly storage?: Storage | undefined
++  readonly shardingConfig?: Partial<ShardingConfig.ShardingConfig["Type"]> | undefined
++}): ClientOnly extends true ? Layer.Layer<
++    Sharding | Runners.Runners,
++    ConfigError | (Storage extends "sql" ? SqlError : never),
++    Storage extends "sql" ? SqlClient : never
++  > :
++  Layer.Layer<
++    Sharding | Runners.Runners,
++    ServeError | ConfigError | (Storage extends "sql" ? SqlError : never),
++    Storage extends "sql" ? SqlClient : never
++  > =>
++{
++  const layer: Layer.Layer<any, any, any> = options.clientOnly
++    // client only
++    ? options.transport === "http"
++      ? Layer.provide(HttpRunner.layerHttpClientOnly, NodeHttpClient.layerUndici)
++      : Layer.provide(HttpRunner.layerWebsocketClientOnly, NodeSocket.layerWebSocketConstructor)
++    // with server
++    : options.transport === "http"
++    ? Layer.provide(HttpRunner.layerHttp, [layerHttpServer, NodeHttpClient.layerUndici])
++    : Layer.provide(HttpRunner.layerWebsocket, [layerHttpServer, NodeSocket.layerWebSocketConstructor])
++
++  return layer.pipe(
++    Layer.provide(
++      options?.storage === "sql"
++        ? options.clientOnly ? [SqlMessageStorage.layer] : [SqlMessageStorage.layer, SqlShardStorage.layer]
++        : [MessageStorage.layerNoop, ShardStorage.layerNoop]
++    ),
++    Layer.provide(ShardingConfig.layerFromEnv(options?.shardingConfig)),
++    Layer.provide(
++      options?.serialization === "ndjson" ? RpcSerialization.layerNdjson : RpcSerialization.layerMsgPack
++    )
++  ) as any
++}
++
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export const layerHttpServer: Layer.Layer<
++  | HttpPlatform
++  | Etag.Generator
++  | NodeContext
++  | HttpServer,
++  ServeError,
++  ShardingConfig.ShardingConfig
++> = Effect.gen(function*() {
++  const config = yield* ShardingConfig.ShardingConfig
++  if (Option.isNone(config.runnerAddress)) {
++    return yield* Effect.dieMessage("NodeClusterHttpRunner.layerHttpServer: ShardingConfig.podAddress is None")
++  }
++  return NodeHttpServer.layer(createServer, config.runnerAddress.value)
++}).pipe(Layer.unwrapEffect)
+diff --git a/src/NodeClusterRunnerSocket.ts b/src/NodeClusterRunnerSocket.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..f863b18e1202e58691d7a43b656dd671204cff80
+--- /dev/null
++++ b/src/NodeClusterRunnerSocket.ts
+@@ -0,0 +1,9 @@
++/**
++ * @since 1.0.0
++ */
++
++/**
++ * @since 1.0.0
++ * @category Re-exports
++ */
++export * from "@effect/platform-node-shared/NodeClusterRunnerSocket"
+diff --git a/src/NodeClusterShardManagerHttp.ts b/src/NodeClusterShardManagerHttp.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..40f688909fd22f82be27ad19c795ed90e9be2bd1
+--- /dev/null
++++ b/src/NodeClusterShardManagerHttp.ts
+@@ -0,0 +1,72 @@
++/**
++ * @since 1.0.0
++ */
++import * as HttpShardManager from "@effect/cluster/HttpShardManager"
++import * as ShardingConfig from "@effect/cluster/ShardingConfig"
++import * as ShardManager from "@effect/cluster/ShardManager"
++import * as ShardStorage from "@effect/cluster/ShardStorage"
++import * as SqlShardStorage from "@effect/cluster/SqlShardStorage"
++import type * as Etag from "@effect/platform/Etag"
++import type { HttpPlatform } from "@effect/platform/HttpPlatform"
++import type { HttpServer } from "@effect/platform/HttpServer"
++import type { ServeError } from "@effect/platform/HttpServerError"
++import * as RpcSerialization from "@effect/rpc/RpcSerialization"
++import type { SqlClient } from "@effect/sql/SqlClient"
++import type { SqlError } from "@effect/sql/SqlError"
++import type { ConfigError } from "effect/ConfigError"
++import * as Effect from "effect/Effect"
++import * as Layer from "effect/Layer"
++import { createServer } from "node:http"
++import type { NodeContext } from "./NodeContext.js"
++import * as NodeHttpClient from "./NodeHttpClient.js"
++import * as NodeHttpServer from "./NodeHttpServer.js"
++import * as NodeSocket from "./NodeSocket.js"
++
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export const layerHttpServer: Layer.Layer<
++  | HttpPlatform
++  | Etag.Generator
++  | NodeContext
++  | HttpServer,
++  ServeError,
++  ShardingConfig.ShardingConfig
++> = Effect.gen(function*() {
++  const config = yield* ShardingConfig.ShardingConfig
++  return NodeHttpServer.layer(createServer, config.shardManagerAddress)
++}).pipe(Layer.unwrapEffect)
++
++/**
++ * @since 1.0.0
++ * @category Layers
++ */
++export const layer = <const Storage extends "sql" | "noop" = "noop">(options: {
++  readonly protocol: "http" | "websocket"
++  readonly serialization?: "msgpack" | "ndjson" | undefined
++  readonly shardingConfig?: Partial<ShardingConfig.ShardingConfig["Type"]> | undefined
++  readonly storage?: Storage | undefined
++}): Layer.Layer<
++  ShardManager.ShardManager,
++  ServeError | ConfigError | (Storage extends "sql" ? SqlError : never),
++  Storage extends "sql" ? SqlClient : never
++> => {
++  const layer: Layer.Layer<any, any, any> = options.protocol === "http" ?
++    HttpShardManager.layerHttp.pipe(
++      Layer.provide([HttpShardManager.layerRunnerHealthHttp, layerHttpServer]),
++      Layer.provide(NodeHttpClient.layerUndici)
++    ) :
++    HttpShardManager.layerWebsocket.pipe(
++      Layer.provide([HttpShardManager.layerRunnerHealthWebsocket, layerHttpServer]),
++      Layer.provide(NodeSocket.layerWebSocketConstructor)
++    )
++  return layer.pipe(
++    Layer.provide(options?.storage === "sql" ? SqlShardStorage.layer : ShardStorage.layerNoop),
++    Layer.provide([
++      ShardingConfig.layerFromEnv(options.shardingConfig),
++      ShardManager.layerConfigFromEnv,
++      options?.serialization === "ndjson" ? RpcSerialization.layerNdjson : RpcSerialization.layerMsgPack
++    ])
++  )
++}
+diff --git a/src/NodeClusterShardManagerSocket.ts b/src/NodeClusterShardManagerSocket.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..1fed8e6c7f1076ec455d79ddfc0d6fd4920dbc15
+--- /dev/null
++++ b/src/NodeClusterShardManagerSocket.ts
+@@ -0,0 +1,9 @@
++/**
++ * @since 1.0.0
++ */
++
++/**
++ * @since 1.0.0
++ * @category Re-exports
++ */
++export * from "@effect/platform-node-shared/NodeClusterShardManagerSocket"
 diff --git a/src/NodeSocketServer.ts b/src/NodeSocketServer.ts
 new file mode 100644
 index 0000000000000000000000000000000000000000..3c7ec9e93066d9239908769e3fd4d8779e76d432
@@ -424,10 +1251,34 @@ index 6f0d5c91c950fe3f6e506391c1a779ac7f4db106..f39b69beea3416d2721bf0fbf5b4932e
 +  spawn: (id: number) => WorkerThreads.Worker
 +) => Layer.Layer<Worker.PlatformWorker | Worker.Spawner> = internal.layerPlatform
 diff --git a/src/index.ts b/src/index.ts
-index 3b31b5f93cd1f1ae361db9cb2f0f851a75ccbff1..2fee8a59ddfde0062b7b1dec83f2912c396d6668 100644
+index 3b31b5f93cd1f1ae361db9cb2f0f851a75ccbff1..2f0d8adbac01fd06a6cc30444fdf3aaaec922bc0 100644
 --- a/src/index.ts
 +++ b/src/index.ts
-@@ -63,6 +63,11 @@ export * as NodeSink from "./NodeSink.js"
+@@ -1,3 +1,23 @@
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterRunnerHttp from "./NodeClusterRunnerHttp.js"
++
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterRunnerSocket from "./NodeClusterRunnerSocket.js"
++
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterShardManagerHttp from "./NodeClusterShardManagerHttp.js"
++
++/**
++ * @since 1.0.0
++ */
++export * as NodeClusterShardManagerSocket from "./NodeClusterShardManagerSocket.js"
++
+ /**
+  * @since 1.0.0
+  */
+@@ -63,6 +83,11 @@ export * as NodeSink from "./NodeSink.js"
   */
  export * as NodeSocket from "./NodeSocket.js"
  

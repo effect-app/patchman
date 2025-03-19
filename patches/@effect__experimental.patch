@@ -8232,10 +8232,10 @@ index 65de973ef39619f9f03bc5623e6498f9dd68747d..6af6e34c94a0f7eabf748621b0d772af
 +{"version":3,"file":"index.js","names":["DevTools","Event","EventGroup","EventJournal","EventLog","EventLogEncryption","EventLogRemote","EventLogServer","Machine","PersistedCache","Persistence","Reactivity","RequestResolver","Sse","VariantSchema"],"sources":["../../src/index.ts"],"sourcesContent":[null],"mappings":"AAAA;;;AAGA,OAAO,KAAKA,QAAQ,MAAM,eAAe;AAEzC;;;AAGA,OAAO,KAAKC,KAAK,MAAM,YAAY;AAEnC;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,YAAY,MAAM,mBAAmB;AAEjD;;;AAGA,OAAO,KAAKC,QAAQ,MAAM,eAAe;AAEzC;;;AAGA,OAAO,KAAKC,kBAAkB,MAAM,yBAAyB;AAE7D;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,OAAO,MAAM,cAAc;AAEvC;;;AAGA,OAAO,KAAKC,cAAc,MAAM,qBAAqB;AAErD;;;AAGA,OAAO,KAAKC,WAAW,MAAM,kBAAkB;AAE/C;;;AAGA,OAAO,KAAKC,UAAU,MAAM,iBAAiB;AAE7C;;;AAGA,OAAO,KAAKC,eAAe,MAAM,sBAAsB;AAEvD;;;AAGA,OAAO,KAAKC,GAAG,MAAM,UAAU;AAE/B;;;AAGA,OAAO,KAAKC,aAAa,MAAM,oBAAoB","ignoreList":[]}
 \ No newline at end of file
 diff --git a/package.json b/package.json
-index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84e4b79538 100644
+index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..dd4e381dfd235e439f66f04303a65fd37d98f967 100644
 --- a/package.json
 +++ b/package.json
-@@ -10,16 +10,14 @@
+@@ -10,29 +10,20 @@
    },
    "sideEffects": [],
    "dependencies": {
@@ -8247,7 +8247,7 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
 -    "lmdb": "^3",
 -    "ws": "^8",
      "@effect/platform": "^0.66.2",
-     "@effect/platform-node": "^0.61.3",
+-    "@effect/platform-node": "^0.61.3",
 -    "@effect/schema": "^0.74.1",
 -    "effect": "^3.8.4"
 +    "effect": "^3.8.4",
@@ -8255,8 +8255,11 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
 +    "lmdb": "^3"
    },
    "peerDependenciesMeta": {
-     "@effect/platform-node": {
-@@ -30,9 +28,6 @@
+-    "@effect/platform-node": {
+-      "optional": true
+-    },
+     "ioredis": {
+       "optional": true
      },
      "lmdb": {
        "optional": true
@@ -8266,7 +8269,7 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
      }
    },
    "publishConfig": {
-@@ -48,11 +43,6 @@
+@@ -48,11 +39,6 @@
        "import": "./dist/esm/index.js",
        "default": "./dist/cjs/index.js"
      },
@@ -8278,7 +8281,7 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
      "./DevTools": {
        "types": "./dist/dts/DevTools.d.ts",
        "import": "./dist/esm/DevTools.js",
-@@ -73,6 +63,51 @@
+@@ -73,6 +59,46 @@
        "import": "./dist/esm/DevTools/Server.js",
        "default": "./dist/cjs/DevTools/Server.js"
      },
@@ -8312,11 +8315,6 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
 +      "import": "./dist/esm/EventLogRemote.js",
 +      "default": "./dist/cjs/EventLogRemote.js"
 +    },
-+    "./EventLogRemote/Node": {
-+      "types": "./dist/dts/EventLogRemote/Node.d.ts",
-+      "import": "./dist/esm/EventLogRemote/Node.js",
-+      "default": "./dist/cjs/EventLogRemote/Node.js"
-+    },
 +    "./EventLogServer": {
 +      "types": "./dist/dts/EventLogServer.d.ts",
 +      "import": "./dist/esm/EventLogServer.js",
@@ -8330,7 +8328,7 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
      "./Machine": {
        "types": "./dist/dts/Machine.d.ts",
        "import": "./dist/esm/Machine.js",
-@@ -93,16 +128,6 @@
+@@ -93,16 +119,6 @@
        "import": "./dist/esm/Machine/SerializableProcedureList.js",
        "default": "./dist/cjs/Machine/SerializableProcedureList.js"
      },
@@ -8347,7 +8345,7 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
      "./PersistedCache": {
        "types": "./dist/dts/PersistedCache.d.ts",
        "import": "./dist/esm/PersistedCache.js",
-@@ -123,20 +148,20 @@
+@@ -123,20 +139,20 @@
        "import": "./dist/esm/Persistence/Redis.js",
        "default": "./dist/cjs/Persistence/Redis.js"
      },
@@ -8377,7 +8375,7 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
      },
      "./VariantSchema": {
        "types": "./dist/dts/VariantSchema.d.ts",
-@@ -146,9 +171,6 @@
+@@ -146,9 +162,6 @@
    },
    "typesVersions": {
      "*": {
@@ -8387,7 +8385,7 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
        "DevTools": [
          "./dist/dts/DevTools.d.ts"
        ],
-@@ -161,6 +183,33 @@
+@@ -161,6 +174,30 @@
        "DevTools/Server": [
          "./dist/dts/DevTools/Server.d.ts"
        ],
@@ -8409,9 +8407,6 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
 +      "EventLogRemote": [
 +        "./dist/dts/EventLogRemote.d.ts"
 +      ],
-+      "EventLogRemote/Node": [
-+        "./dist/dts/EventLogRemote/Node.d.ts"
-+      ],
 +      "EventLogServer": [
 +        "./dist/dts/EventLogServer.d.ts"
 +      ],
@@ -8421,7 +8416,7 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
        "Machine": [
          "./dist/dts/Machine.d.ts"
        ],
-@@ -173,12 +222,6 @@
+@@ -173,12 +210,6 @@
        "Machine/SerializableProcedureList": [
          "./dist/dts/Machine/SerializableProcedureList.d.ts"
        ],
@@ -8434,7 +8429,7 @@ index 7f0da5eaddc91089ed832bbe56b9f3520fe3c3c1..033309a0cb15fff7899e34b894f7fe84
        "PersistedCache": [
          "./dist/dts/PersistedCache.d.ts"
        ],
-@@ -191,14 +234,14 @@
+@@ -191,14 +222,14 @@
        "Persistence/Redis": [
          "./dist/dts/Persistence/Redis.d.ts"
        ],
