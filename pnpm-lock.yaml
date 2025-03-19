@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
+  '@effect/cluster':
+    hash: 6370dea194231652f72171ff9eb14470ab2a8de092a166cf14277c423f43f86c
+    path: patches/@effect__cluster.patch
   '@effect/experimental':
     hash: 7f55687762a45cded32dd715129aa34f34710f63dfcce948d7a44db1ab6578c9
     path: patches/@effect__experimental.patch
@@ -64,6 +67,9 @@ importers:
 
   .:
     dependencies:
+      '@effect/cluster':
+        specifier: ^0.28.3
+        version: 0.28.3(patch_hash=6370dea194231652f72171ff9eb14470ab2a8de092a166cf14277c423f43f86c)(@effect/sql@0.32.3(patch_hash=e9b7c8a462cbfe6eed27683b88ec3a2f0c98e56ae1bca5665bdafd8eb246514d)(ab128806e1fd9da0bcc588a8ab02ccca))(effect@3.13.12(patch_hash=72c2fb78236e34c50d06932341e4f32bfa1d2703f1b944c890ac847a1bc434cc))
       '@effect/opentelemetry':
         specifier: ^0.44.12
         version: 0.44.12(@opentelemetry/api@1.9.0)(@opentelemetry/resources@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@1.25.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)(effect@3.13.12(patch_hash=72c2fb78236e34c50d06932341e4f32bfa1d2703f1b944c890ac847a1bc434cc))
@@ -345,6 +351,12 @@ packages:
   '@dependents/detective-less@5.0.0':
     resolution: {integrity: sha512-D/9dozteKcutI5OdxJd8rU+fL6XgaaRg60sPPJWkT33OCiRfkCu5wO5B/yXTaaL2e6EB0lcCBGe5E0XscZCvvQ==}
     engines: {node: '>=18'}
+
+  '@effect/cluster@0.28.3':
+    resolution: {integrity: sha512-hO5pOqyvrSP87qCFGquT9Lyb+7u53JY51QzhgW+AI9zI4g8Zl6PnQrvF8m3YV/eagoulL90XtivYyK9wM30ypw==}
+    peerDependencies:
+      '@effect/sql': ^0.32.3
+      effect: ^3.13.12
 
   '@effect/experimental@0.27.3':
     resolution: {integrity: sha512-Fk+WEuGV0MItxoy2npQax0uOab46vZPa9pZrFdoQ9UB0OxhFzW7N5KG2beUm+3QkJ60jqmW797jH3oBfgXSp2w==}
@@ -5905,6 +5917,11 @@ snapshots:
     dependencies:
       gonzales-pe: 4.3.0
       node-source-walk: 7.0.0
+
+  '@effect/cluster@0.28.3(patch_hash=6370dea194231652f72171ff9eb14470ab2a8de092a166cf14277c423f43f86c)(@effect/sql@0.32.3(patch_hash=e9b7c8a462cbfe6eed27683b88ec3a2f0c98e56ae1bca5665bdafd8eb246514d)(ab128806e1fd9da0bcc588a8ab02ccca))(effect@3.13.12(patch_hash=72c2fb78236e34c50d06932341e4f32bfa1d2703f1b944c890ac847a1bc434cc))':
+    dependencies:
+      '@effect/sql': 0.32.3(patch_hash=e9b7c8a462cbfe6eed27683b88ec3a2f0c98e56ae1bca5665bdafd8eb246514d)(ab128806e1fd9da0bcc588a8ab02ccca)
+      effect: 3.13.12(patch_hash=72c2fb78236e34c50d06932341e4f32bfa1d2703f1b944c890ac847a1bc434cc)
 
   '@effect/experimental@0.27.3(patch_hash=7f55687762a45cded32dd715129aa34f34710f63dfcce948d7a44db1ab6578c9)(@effect/platform-node@0.75.3(patch_hash=988380a3e7cda0b59758da8605f662e2e7d0cb298226bd6963aab9b74970c548)(@effect/platform@0.79.3(patch_hash=f59c34037d8d7fab1132484723e4b2140e0aa6d7eec67c989c9077138bc5cc5b)(effect@3.13.12(patch_hash=72c2fb78236e34c50d06932341e4f32bfa1d2703f1b944c890ac847a1bc434cc)))(effect@3.13.12(patch_hash=72c2fb78236e34c50d06932341e4f32bfa1d2703f1b944c890ac847a1bc434cc)))(@effect/platform@0.79.3(patch_hash=f59c34037d8d7fab1132484723e4b2140e0aa6d7eec67c989c9077138bc5cc5b)(effect@3.13.12(patch_hash=72c2fb78236e34c50d06932341e4f32bfa1d2703f1b944c890ac847a1bc434cc)))(@effect/schema@0.75.5(effect@3.13.12(patch_hash=72c2fb78236e34c50d06932341e4f32bfa1d2703f1b944c890ac847a1bc434cc)))(effect@3.13.12(patch_hash=72c2fb78236e34c50d06932341e4f32bfa1d2703f1b944c890ac847a1bc434cc))(ioredis@5.6.0)(ws@8.18.1)':
     dependencies:

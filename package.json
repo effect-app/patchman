@@ -12,6 +12,7 @@
     "vite-node": "^1.6.1"
   },
   "dependencies": {
+    "@effect/cluster": "^0.28.3",
     "@effect/opentelemetry": "^0.44.12",
     "@effect/platform": "^0.79.3",
     "@effect/platform-node": "^0.75.3",
@@ -53,7 +54,8 @@
       "@effect/experimental": "patches/@effect__experimental.patch",
       "@effect/platform-node": "patches/@effect__platform-node.patch",
       "@effect/platform-node-shared": "patches/@effect__platform-node-shared.patch",
-      "@effect/rpc": "patches/@effect__rpc.patch"
+      "@effect/rpc": "patches/@effect__rpc.patch",
+      "@effect/cluster": "patches/@effect__cluster.patch"
     }
   },
   "scripts": {

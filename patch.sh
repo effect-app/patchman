@@ -13,6 +13,7 @@ cd ../effect && pnpm build
 cd ../rpc && pnpm build
 cd ../sql && pnpm build
 # cd ../opentelemetry && pnpm build
+cd ../cluster && pnpm build
 cd ../platform && pnpm build
 cd ../platform-browser && pnpm build
 cd ../platform-node && pnpm build
