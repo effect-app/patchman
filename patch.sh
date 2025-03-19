@@ -34,4 +34,4 @@ npx pnpm-patch-i -y @effect/platform-browser ~/pj/effect/effect/packages/platfor
 npx pnpm-patch-i -y @effect/rpc ~/pj/effect/effect/packages/rpc/dist
 npx pnpm-patch-i -y @effect/sql ~/pj/effect/effect/packages/sql/dist
 
-~/pj/patchman.exp.sh
+~/pj/patchman.sh
