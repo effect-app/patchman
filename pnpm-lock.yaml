@@ -24,7 +24,7 @@ patchedDependencies:
     hash: eea28b10680421b1694a2c076da66f23967496e57bd21d30294877e30a9a455f
     path: patches/@phaphoso__eslint-plugin-dprint@0.5.2.patch
   '@vitejs/plugin-vue':
-    hash: 757fcc4ec2a6cb02783b1331c756f4182d1f4a509cdaa971e45d4fc3f636de89
+    hash: 9da084cd1d5e15f9909b72c4660d37a56403e6545aa0277febca0b36c5737792
     path: patches/@vitejs__plugin-vue.patch
   date-fns@2.30.0:
     hash: e78293d43ecf1ec17dcb9ba323870443952893c78b45350cab8223b2f81f34f5
@@ -6738,7 +6738,7 @@ snapshots:
     dependencies:
       '@nuxt/kit': 3.11.2(magicast@0.3.5)(rollup@4.36.0)
       '@rollup/plugin-replace': 5.0.7(rollup@4.36.0)
-      '@vitejs/plugin-vue': 5.2.3(patch_hash=757fcc4ec2a6cb02783b1331c756f4182d1f4a509cdaa971e45d4fc3f636de89)(vite@5.4.14(@types/node@22.13.10)(terser@5.39.0))(vue@3.4.23(typescript@5.8.2(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@vitejs/plugin-vue': 5.2.3(patch_hash=9da084cd1d5e15f9909b72c4660d37a56403e6545aa0277febca0b36c5737792)(vite@5.4.14(@types/node@22.13.10)(terser@5.39.0))(vue@3.4.23(typescript@5.8.2(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.4.14(@types/node@22.13.10)(terser@5.39.0))(vue@3.4.23(typescript@5.8.2(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       autoprefixer: 10.4.21(postcss@8.5.3)
       clear: 0.1.0
@@ -7332,7 +7332,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@5.2.3(patch_hash=757fcc4ec2a6cb02783b1331c756f4182d1f4a509cdaa971e45d4fc3f636de89)(vite@5.4.14(@types/node@22.13.10)(terser@5.39.0))(vue@3.4.23(typescript@5.8.2(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@vitejs/plugin-vue@5.2.3(patch_hash=9da084cd1d5e15f9909b72c4660d37a56403e6545aa0277febca0b36c5737792)(vite@5.4.14(@types/node@22.13.10)(terser@5.39.0))(vue@3.4.23(typescript@5.8.2(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
       vite: 5.4.14(@types/node@22.13.10)(terser@5.39.0)
       vue: 3.4.23(typescript@5.8.2(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))

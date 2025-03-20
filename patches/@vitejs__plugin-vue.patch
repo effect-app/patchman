@@ -1,9 +1,9 @@
 diff --git a/dist/index.cjs b/dist/index.cjs
-index 68cd520611ca5ea7bf29a2bb789b21615fa45714..a5a1702ffd49a13f4cbcde56f686734abd64e1ed 100644
+index 3439ef5ffee37f73f39e3451d1971af67f9b9cc2..6026d1cdc40948e29a55c8e14850033488f331ab 100644
 --- a/dist/index.cjs
 +++ b/dist/index.cjs
-@@ -2967,6 +2967,8 @@ function vuePlugin(rawOptions = {}) {
-       }
+@@ -2997,6 +2997,8 @@ function vuePlugin(rawOptions = {}) {
+       const ssr = opt?.ssr === true;
        const { filename, query } = parseVueRequest(id);
        if (query.vue) {
 +        // patroza: workaround for proxying a vite project under a nuxt path
@@ -12,11 +12,11 @@ index 68cd520611ca5ea7bf29a2bb789b21615fa45714..a5a1702ffd49a13f4cbcde56f686734a
            return fs__default.readFileSync(filename, "utf-8");
          }
 diff --git a/dist/index.mjs b/dist/index.mjs
-index 739335e4bad7f9356669f2d585cb44435fc615d6..9edb1126ac3ca98f199a37f153e9462b58f2ef1e 100644
+index 6c18c291efbda51454ee5a3d30ed0368e7a4688e..5e075362c5232f859f6bfe783314f27926324ed5 100644
 --- a/dist/index.mjs
 +++ b/dist/index.mjs
-@@ -2954,6 +2954,8 @@ function vuePlugin(rawOptions = {}) {
-       }
+@@ -2984,6 +2984,8 @@ function vuePlugin(rawOptions = {}) {
+       const ssr = opt?.ssr === true;
        const { filename, query } = parseVueRequest(id);
        if (query.vue) {
 +        // patroza: workaround for proxying a vite project under a nuxt path
