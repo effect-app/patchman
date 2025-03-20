@@ -12,12 +12,12 @@
     "vite-node": "^1.6.1"
   },
   "dependencies": {
-    "@effect/opentelemetry": "^0.44.12",
-    "@effect/platform": "^0.79.3",
-    "@effect/platform-node": "^0.75.3",
-    "@effect/rpc": "^0.54.3",
-    "@effect/sql": "^0.32.3",
-    "@effect/typeclass": "^0.32.12",
+    "@effect/opentelemetry": "^0.45.0",
+    "@effect/platform": "^0.80.0",
+    "@effect/platform-node": "^0.76.0",
+    "@effect/rpc": "^0.55.0",
+    "@effect/sql": "^0.33.0",
+    "@effect/typeclass": "^0.33.0",
     "@fp-ts/optic": ">=0.25.0",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
@@ -25,7 +25,7 @@
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
     "@sentry/core": "^9.6.1",
     "date-fns": "2.30.0",
-    "effect": "^3.13.12",
+    "effect": "^3.14.0",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.2",
     "primevue": "3.49.1",
@@ -49,7 +49,6 @@
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "madge": "patches/madge.patch",
       "effect": "patches/effect.patch",
-      "@effect/rpc": "patches/@effect__rpc.patch",
       "ts-plugin-sort-import-suggestions": "patches/ts-plugin-sort-import-suggestions.patch"
     }
   },
