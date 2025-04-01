@@ -9,6 +9,8 @@ echo "cleaning, codemodding and lint fixing effect repo"
 pnpm clean && pnpm codemod && pnpm lint-fix
 echo "building and patching effect packages"
 
+#npx pnpm-patch-i -y @tanstack/query-core /Users/patrickroza/pj/tanstack/query/packages/query-core/build
+
 declare -a arr=(
   "effect"
 #  "rpc"
