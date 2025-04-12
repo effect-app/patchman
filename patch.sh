@@ -29,7 +29,7 @@ do
   cd ~/pj/effect/effect/packages/${i}
   pnpm build
   cd $pwd
-  npx pnpm-patch-i -y ${i} ~/pj/effect/effect/packages/${i}/dist
+  pnpm pnpm-patch-i -y ${i} ~/pj/effect/effect/packages/${i}/dist
 done
 
 for i in "${arr[@]}"
@@ -37,7 +37,7 @@ do
   cd ~/pj/effect/effect/packages/${i}
   pnpm build
   cd $pwd
-  npx pnpm-patch-i -y @effect/${i} ~/pj/effect/effect/packages/${i}/dist
+  pnpm pnpm-patch-i -y @effect/${i} ~/pj/effect/effect/packages/${i}/dist
 done
 
 cd ~/pj/effect/effect
