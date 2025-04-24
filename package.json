@@ -57,7 +57,8 @@
       "@sentry/core": "patches/@sentry__core.patch",
       "@sentry/node": "patches/@sentry__node.patch",
       "@sentry/opentelemetry": "patches/@sentry__opentelemetry.patch"
-    }
+    },
+    "ignorePatchFailures": false
   },
   "scripts": {
     "start": "vite-node ./index.ts"
