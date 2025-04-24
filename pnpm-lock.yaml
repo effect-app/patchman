@@ -27,7 +27,7 @@ patchedDependencies:
     hash: 3f712cd9938ced78411a1401ef59d57eae3f15169cd15ddf42993eab1a013b05
     path: patches/@sentry__core.patch
   '@sentry/node':
-    hash: 2d2875d9bdace2833119fe04699dcbec7549ecda321555c247d082da20d55adb
+    hash: 11847bc0fabcfd08e09e28366a5cf6e9d9d0a922a0cc3a17d0e8ac9a7bd1fb5c
     path: patches/@sentry__node.patch
   '@sentry/opentelemetry':
     hash: 793e7021d4214f8387a82e5bedcaf1899ec929bccaa60385de91a24f69a3f11d
@@ -102,7 +102,7 @@ importers:
         version: 9.14.0(patch_hash=3f712cd9938ced78411a1401ef59d57eae3f15169cd15ddf42993eab1a013b05)
       '@sentry/node':
         specifier: ^9.14.0
-        version: 9.14.0(patch_hash=2d2875d9bdace2833119fe04699dcbec7549ecda321555c247d082da20d55adb)
+        version: 9.14.0(patch_hash=11847bc0fabcfd08e09e28366a5cf6e9d9d0a922a0cc3a17d0e8ac9a7bd1fb5c)
       '@sentry/opentelemetry':
         specifier: ^9.14.0
         version: 9.14.0(patch_hash=793e7021d4214f8387a82e5bedcaf1899ec929bccaa60385de91a24f69a3f11d)(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)
@@ -8293,7 +8293,7 @@ snapshots:
 
   '@sentry/core@9.14.0(patch_hash=3f712cd9938ced78411a1401ef59d57eae3f15169cd15ddf42993eab1a013b05)': {}
 
-  '@sentry/node@9.14.0(patch_hash=2d2875d9bdace2833119fe04699dcbec7549ecda321555c247d082da20d55adb)':
+  '@sentry/node@9.14.0(patch_hash=11847bc0fabcfd08e09e28366a5cf6e9d9d0a922a0cc3a17d0e8ac9a7bd1fb5c)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/context-async-hooks': 1.30.1(@opentelemetry/api@1.9.0)
