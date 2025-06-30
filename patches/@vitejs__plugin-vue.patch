@@ -1,8 +1,8 @@
 diff --git a/dist/index.cjs b/dist/index.cjs
-index 3439ef5ffee37f73f39e3451d1971af67f9b9cc2..6026d1cdc40948e29a55c8e14850033488f331ab 100644
+index f747d24c373346c53da6ad322bed0787bb5498e5..a12791c88772c50fcee83f21a5117ec65264dba1 100644
 --- a/dist/index.cjs
 +++ b/dist/index.cjs
-@@ -2997,6 +2997,8 @@ function vuePlugin(rawOptions = {}) {
+@@ -3026,6 +3026,8 @@ function vuePlugin(rawOptions = {}) {
        const ssr = opt?.ssr === true;
        const { filename, query } = parseVueRequest(id);
        if (query.vue) {
@@ -12,10 +12,10 @@ index 3439ef5ffee37f73f39e3451d1971af67f9b9cc2..6026d1cdc40948e29a55c8e148500334
            return fs__default.readFileSync(filename, "utf-8");
          }
 diff --git a/dist/index.mjs b/dist/index.mjs
-index 6c18c291efbda51454ee5a3d30ed0368e7a4688e..5e075362c5232f859f6bfe783314f27926324ed5 100644
+index 95ae290db210f1342c3018a2257f873d9e5aed62..779e4ac242265fa421d2671082334a9928accb5f 100644
 --- a/dist/index.mjs
 +++ b/dist/index.mjs
-@@ -2984,6 +2984,8 @@ function vuePlugin(rawOptions = {}) {
+@@ -3013,6 +3013,8 @@ function vuePlugin(rawOptions = {}) {
        const ssr = opt?.ssr === true;
        const { filename, query } = parseVueRequest(id);
        if (query.vue) {
