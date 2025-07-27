@@ -12,15 +12,15 @@
     "vite-node": "^3.2.4"
   },
   "dependencies": {
-    "@effect/opentelemetry": "^0.54.1",
-    "@effect/platform": "^0.88.2",
-    "@effect/platform-node": "^0.91.0",
-    "@effect/rpc": "^0.65.2",
-    "@effect/sql": "^0.42.1",
-    "@effect/typeclass": ">=0.35.14",
+    "@effect/opentelemetry": "^0.56.0",
+    "@effect/platform": "^0.90.0",
+    "@effect/platform-node": "^0.94.0",
+    "@effect/rpc": "^0.68.0",
+    "@effect/sql": "^0.44.0",
+    "@effect/typeclass": "^0.36.0",
     "@fp-ts/optic": ">=0.25.0",
     "@hebilicious/vue-query-nuxt": "~0.3.0",
-    "@kevinmarrec/nuxt-pwa": "^0.17.0",
+    "@kevinmarrec/nuxt-pwa": "~0.17.0",
     "@opentelemetry/sdk-metrics": "^2.0.1",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
     "@sentry/core": "9.14.0",
@@ -30,7 +30,7 @@
     "@tanstack/vue-query": "5.81.5",
     "@vitejs/plugin-vue": "5.2.4",
     "date-fns": "2.30.0",
-    "effect": ">=3.16.16",
+    "effect": "^3.17.2",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.2",
     "primevue": "3.49.1",
@@ -58,8 +58,7 @@
       "@tanstack/query-core": "patches/@tanstack__query-core.patch",
       "@sentry/core": "patches/@sentry__core.patch",
       "@sentry/node": "patches/@sentry__node.patch",
-      "@sentry/opentelemetry": "patches/@sentry__opentelemetry.patch",
-      "@effect/opentelemetry": "patches/@effect__opentelemetry.patch"
+      "@sentry/opentelemetry": "patches/@sentry__opentelemetry.patch"
     }
   },
   "scripts": {
