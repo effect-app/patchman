@@ -58,7 +58,8 @@
       "@tanstack/query-core": "patches/@tanstack__query-core.patch",
       "@sentry/core": "patches/@sentry__core.patch",
       "@sentry/node": "patches/@sentry__node.patch",
-      "@sentry/opentelemetry": "patches/@sentry__opentelemetry.patch"
+      "@sentry/opentelemetry": "patches/@sentry__opentelemetry.patch",
+      "@effect/opentelemetry": "patches/@effect__opentelemetry.patch"
     }
   },
   "scripts": {
