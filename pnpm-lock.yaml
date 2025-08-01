@@ -33,8 +33,11 @@ patchedDependencies:
     hash: 793e7021d4214f8387a82e5bedcaf1899ec929bccaa60385de91a24f69a3f11d
     path: patches/@sentry__opentelemetry.patch
   '@tanstack/query-core':
-    hash: 3b61d639e26d7011e87270351f2ee52cee5bae6c0a19980df17fa540f16ea765
+    hash: 351153003e430d89ebb99f44022c6de72d7e21f40056ebf2468626bec8e015c7
     path: patches/@tanstack__query-core.patch
+  '@vitejs/plugin-vue':
+    hash: 45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf
+    path: patches/@vitejs__plugin-vue.patch
   date-fns@2.30.0:
     hash: e78293d43ecf1ec17dcb9ba323870443952893c78b45350cab8223b2f81f34f5
     path: patches/date-fns@2.30.0.patch
@@ -84,7 +87,7 @@ importers:
         version: 0.25.0(patch_hash=2c18807bc058abfc40b24e3038710c0a66a3c12339fe52e220e886fd491f3297)(@effect/typeclass@0.36.0(effect@3.17.4(patch_hash=7c9ba4fa4e51fd88435c55e60078480c7419b52628066d582bff35b17ecc8bcf)))(effect@3.17.4(patch_hash=7c9ba4fa4e51fd88435c55e60078480c7419b52628066d582bff35b17ecc8bcf))
       '@hebilicious/vue-query-nuxt':
         specifier: ~0.3.0
-        version: 0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.81.5(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(nuxt@3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@22.16.5)(db0@0.3.2)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.7.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.46.2)(terser@5.43.1)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(rollup@4.46.2)(webpack-sources@3.2.3)
+        version: 0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.83.1(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(nuxt@3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@22.16.5)(db0@0.3.2)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.7.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.46.2)(terser@5.43.1)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(rollup@4.46.2)(webpack-sources@3.2.3)
       '@kevinmarrec/nuxt-pwa':
         specifier: ~0.17.0
         version: 0.17.0(patch_hash=e70fd3d972b25906e004ad1a200d9b6781dacbcdd3eb72d56bb0549419303d6c)
@@ -104,14 +107,14 @@ importers:
         specifier: 9.14.0
         version: 9.14.0(patch_hash=793e7021d4214f8387a82e5bedcaf1899ec929bccaa60385de91a24f69a3f11d)(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.34.0)
       '@tanstack/query-core':
-        specifier: 5.81.5
-        version: 5.81.5(patch_hash=3b61d639e26d7011e87270351f2ee52cee5bae6c0a19980df17fa540f16ea765)
+        specifier: 5.83.1
+        version: 5.83.1(patch_hash=351153003e430d89ebb99f44022c6de72d7e21f40056ebf2468626bec8e015c7)
       '@tanstack/vue-query':
-        specifier: 5.81.5
-        version: 5.81.5(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+        specifier: 5.83.1
+        version: 5.83.1(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vitejs/plugin-vue':
         specifier: 6.0.1
-        version: 6.0.1(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+        version: 6.0.1(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       date-fns:
         specifier: 2.30.0
         version: 2.30.0(patch_hash=e78293d43ecf1ec17dcb9ba323870443952893c78b45350cab8223b2f81f34f5)
@@ -2288,11 +2291,11 @@ packages:
     resolution: {integrity: sha512-Wo1iKt2b9OT7d+YGhvEPD3DXvPv2etTusIMhMUoG7fbhmxcXCtIjJDEygy91Y2JFlwGyjqiBPRozme7UD8hoqg==}
     engines: {node: '>=12'}
 
-  '@tanstack/query-core@5.81.5':
-    resolution: {integrity: sha512-ZJOgCy/z2qpZXWaj/oxvodDx07XcQa9BF92c0oINjHkoqUPsmm3uG08HpTaviviZ/N9eP1f9CM7mKSEkIo7O1Q==}
+  '@tanstack/query-core@5.83.1':
+    resolution: {integrity: sha512-OG69LQgT7jSp+5pPuCfzltq/+7l2xoweggjme9vlbCPa/d7D7zaqv5vN/S82SzSYZ4EDLTxNO1PWrv49RAS64Q==}
 
-  '@tanstack/vue-query@5.81.5':
-    resolution: {integrity: sha512-Ylt2pzRj1KyXOoidRemRoySU8ub3PXLKwGBr+iQxs6lhfvo1JlimTS2CANM2+3Uph+7JIIguFc8w0Mw3vSjVsw==}
+  '@tanstack/vue-query@5.83.1':
+    resolution: {integrity: sha512-Ss7LJGC2LZMZBsFFnrEfmQYcooDtJOjFZhmnXXUmlawk9EXHHDHUDaH2v7/r9jzyp2nOgABDQlDmjcBLXiyuvQ==}
     peerDependencies:
       '@vue/composition-api': ^1.1.2
       vue: ^2.6.0 || ^3.3.0
@@ -7478,10 +7481,10 @@ snapshots:
       '@effect/typeclass': 0.36.0(effect@3.17.4(patch_hash=7c9ba4fa4e51fd88435c55e60078480c7419b52628066d582bff35b17ecc8bcf))
       effect: 3.17.4(patch_hash=7c9ba4fa4e51fd88435c55e60078480c7419b52628066d582bff35b17ecc8bcf)
 
-  '@hebilicious/vue-query-nuxt@0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.81.5(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(nuxt@3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@22.16.5)(db0@0.3.2)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.7.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.46.2)(terser@5.43.1)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(rollup@4.46.2)(webpack-sources@3.2.3)':
+  '@hebilicious/vue-query-nuxt@0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.83.1(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(nuxt@3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@22.16.5)(db0@0.3.2)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.7.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.46.2)(terser@5.43.1)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(rollup@4.46.2)(webpack-sources@3.2.3)':
     dependencies:
       '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.46.2)(webpack-sources@3.2.3)
-      '@tanstack/vue-query': 5.81.5(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@tanstack/vue-query': 5.83.1(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       defu: 6.1.4
       esbuild: 0.19.12
       magicast: 0.3.5
@@ -7926,7 +7929,7 @@ snapshots:
     dependencies:
       '@nuxt/kit': 3.11.2(magicast@0.3.5)(rollup@4.46.2)
       '@rollup/plugin-replace': 5.0.7(rollup@4.46.2)
-      '@vitejs/plugin-vue': 5.2.4(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@vitejs/plugin-vue': 5.2.4(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       autoprefixer: 10.4.21(postcss@8.5.6)
       clear: 0.1.0
@@ -8615,12 +8618,12 @@ snapshots:
     dependencies:
       remove-accents: 0.5.0
 
-  '@tanstack/query-core@5.81.5(patch_hash=3b61d639e26d7011e87270351f2ee52cee5bae6c0a19980df17fa540f16ea765)': {}
+  '@tanstack/query-core@5.83.1(patch_hash=351153003e430d89ebb99f44022c6de72d7e21f40056ebf2468626bec8e015c7)': {}
 
-  '@tanstack/vue-query@5.81.5(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@tanstack/vue-query@5.83.1(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
       '@tanstack/match-sorter-utils': 8.19.4
-      '@tanstack/query-core': 5.81.5(patch_hash=3b61d639e26d7011e87270351f2ee52cee5bae6c0a19980df17fa540f16ea765)
+      '@tanstack/query-core': 5.83.1(patch_hash=351153003e430d89ebb99f44022c6de72d7e21f40056ebf2468626bec8e015c7)
       '@vue/devtools-api': 6.6.4
       vue: 3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
       vue-demi: 0.14.10(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
@@ -8829,12 +8832,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@5.2.4(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@vitejs/plugin-vue@5.2.4(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
       vite: 5.4.19(@types/node@22.16.5)(terser@5.43.1)
       vue: 3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
 
-  '@vitejs/plugin-vue@6.0.1(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@vitejs/plugin-vue@6.0.1(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.29
       vite: 5.4.19(@types/node@22.16.5)(terser@5.43.1)
