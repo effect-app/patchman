@@ -1,26 +1,13 @@
-diff --git a/dist/index.cjs b/dist/index.cjs
-index f747d24c373346c53da6ad322bed0787bb5498e5..a12791c88772c50fcee83f21a5117ec65264dba1 100644
---- a/dist/index.cjs
-+++ b/dist/index.cjs
-@@ -3026,6 +3026,8 @@ function vuePlugin(rawOptions = {}) {
-       const ssr = opt?.ssr === true;
-       const { filename, query } = parseVueRequest(id);
-       if (query.vue) {
-+        // patroza: workaround for proxying a vite project under a nuxt path
-+        if (filename.startsWith("/__skip_vite/configurator-app/")) return 
-         if (query.src) {
-           return fs__default.readFileSync(filename, "utf-8");
-         }
-diff --git a/dist/index.mjs b/dist/index.mjs
-index 95ae290db210f1342c3018a2257f873d9e5aed62..779e4ac242265fa421d2671082334a9928accb5f 100644
---- a/dist/index.mjs
-+++ b/dist/index.mjs
-@@ -3013,6 +3013,8 @@ function vuePlugin(rawOptions = {}) {
-       const ssr = opt?.ssr === true;
-       const { filename, query } = parseVueRequest(id);
-       if (query.vue) {
-+        // patroza: workaround for proxying a vite project under a nuxt path
-+        if (filename.startsWith("/__skip_vite/configurator-app/")) return 
-         if (query.src) {
-           return fs.readFileSync(filename, "utf-8");
-         }
+diff --git a/dist/index.js b/dist/index.js
+index c15c7abc522e45d65c43dff265a22082a5b3dbc0..7e3172a101dde25f31d8e3f2a2eb6e2d7fa9ebd7 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -2023,6 +2023,8 @@ function vuePlugin(rawOptions = {}) {
+ 				const ssr = opt?.ssr === true;
+ 				const { filename, query } = parseVueRequest(id);
+ 				if (query.vue) {
++          // patroza: workaround for proxying a vite project under a nuxt path
++          if (filename.startsWith("/__skip_vite/configurator-app/")) return 
+ 					if (query.src) return fs.readFileSync(filename, "utf-8");
+ 					const descriptor = getDescriptor(filename, options.value);
+ 					let block;

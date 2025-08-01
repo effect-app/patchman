@@ -35,9 +35,6 @@ patchedDependencies:
   '@tanstack/query-core':
     hash: 3b61d639e26d7011e87270351f2ee52cee5bae6c0a19980df17fa540f16ea765
     path: patches/@tanstack__query-core.patch
-  '@vitejs/plugin-vue':
-    hash: 823dfa6a03c2af9e67307d3607b5fe979720c58e319919ec47ae5e2ac8d6f402
-    path: patches/@vitejs__plugin-vue.patch
   date-fns@2.30.0:
     hash: e78293d43ecf1ec17dcb9ba323870443952893c78b45350cab8223b2f81f34f5
     path: patches/date-fns@2.30.0.patch
@@ -113,8 +110,8 @@ importers:
         specifier: 5.81.5
         version: 5.81.5(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vitejs/plugin-vue':
-        specifier: 5.2.4
-        version: 5.2.4(patch_hash=823dfa6a03c2af9e67307d3607b5fe979720c58e319919ec47ae5e2ac8d6f402)(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+        specifier: 6.0.1
+        version: 6.0.1(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       date-fns:
         specifier: 2.30.0
         version: 2.30.0(patch_hash=e78293d43ecf1ec17dcb9ba323870443952893c78b45350cab8223b2f81f34f5)
@@ -1954,6 +1951,9 @@ packages:
     peerDependencies:
       '@opentelemetry/api': ^1.8
 
+  '@rolldown/pluginutils@1.0.0-beta.29':
+    resolution: {integrity: sha512-NIJgOsMjbxAXvoGq/X0gD7VPMQ8j9g0BiDaNjVNVjvl+iKXxL3Jre0v31RmBYeLEmkbj2s02v8vFTbUXi5XS2Q==}
+
   '@rollup/plugin-alias@5.1.1':
     resolution: {integrity: sha512-PR9zDb+rOzkRb2VD+EuKB7UC41vU5DIwZ5qqCpk0KJudcWAyi8rvYOhS7+L5aZCspw1stTViLgN5v6FF1p5cgQ==}
     engines: {node: '>=14.0.0'}
@@ -2464,6 +2464,13 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0
+      vue: ^3.2.25
+
+  '@vitejs/plugin-vue@6.0.1':
+    resolution: {integrity: sha512-+MaE752hU0wfPFJEUAIxqw18+20euHHdxVtMvbFcOEpjEyfqXH/5DCoTHiVJ0J29EhTJdoTkjEv5YBKU9dnoTw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      vite: ^5.0.0 || ^6.0.0 || ^7.0.0
       vue: ^3.2.25
 
   '@volar/language-core@2.4.22':
@@ -7919,7 +7926,7 @@ snapshots:
     dependencies:
       '@nuxt/kit': 3.11.2(magicast@0.3.5)(rollup@4.46.2)
       '@rollup/plugin-replace': 5.0.7(rollup@4.46.2)
-      '@vitejs/plugin-vue': 5.2.4(patch_hash=823dfa6a03c2af9e67307d3607b5fe979720c58e319919ec47ae5e2ac8d6f402)(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@vitejs/plugin-vue': 5.2.4(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       autoprefixer: 10.4.21(postcss@8.5.6)
       clear: 0.1.0
@@ -8340,6 +8347,8 @@ snapshots:
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
     transitivePeerDependencies:
       - supports-color
+
+  '@rolldown/pluginutils@1.0.0-beta.29': {}
 
   '@rollup/plugin-alias@5.1.1(rollup@4.46.2)':
     optionalDependencies:
@@ -8820,8 +8829,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@5.2.4(patch_hash=823dfa6a03c2af9e67307d3607b5fe979720c58e319919ec47ae5e2ac8d6f402)(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@vitejs/plugin-vue@5.2.4(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
+      vite: 5.4.19(@types/node@22.16.5)(terser@5.43.1)
+      vue: 3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
+
+  '@vitejs/plugin-vue@6.0.1(vite@5.4.19(@types/node@22.16.5)(terser@5.43.1))(vue@3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+    dependencies:
+      '@rolldown/pluginutils': 1.0.0-beta.29
       vite: 5.4.19(@types/node@22.16.5)(terser@5.43.1)
       vue: 3.4.23(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
 
