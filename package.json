@@ -6,7 +6,7 @@
     "pnpm": ">= 9.0.4"
   },
   "devDependencies": {
-    "@types/node": "^22.16.5",
+    "@types/node": "^22.17.0",
     "madge": "^8.0.0",
     "pnpm-patch-i": "^0.4.1",
     "vite-node": "^3.2.4"
@@ -15,7 +15,7 @@
     "@effect/opentelemetry": ">=0.56.0",
     "@effect/platform": ">=0.90.0",
     "@effect/platform-node": ">=0.94.0",
-    "@effect/rpc": "^0.68.1",
+    "@effect/rpc": "^0.68.2",
     "@effect/sql": ">=0.44.0",
     "@effect/typeclass": ">=0.36.0",
     "@fp-ts/optic": ">=0.25.0",
@@ -30,7 +30,7 @@
     "@tanstack/vue-query": "5.83.1",
     "@vitejs/plugin-vue": "6.0.1",
     "date-fns": "2.30.0",
-    "effect": "^3.17.4",
+    "effect": "^3.17.5",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.2",
     "primevue": "3.49.1",
