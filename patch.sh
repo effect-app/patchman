@@ -17,7 +17,7 @@ declare -a arr1=(
 )
 
 declare -a arr=(
-#  "rpc"
+  "rpc"
   "sql"
   "platform"
 #  "platform-node"
