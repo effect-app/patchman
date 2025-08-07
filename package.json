@@ -15,7 +15,7 @@
     "@effect/opentelemetry": "^0.56.1",
     "@effect/platform": ">=0.90.0",
     "@effect/platform-node": "^0.94.1",
-    "@effect/rpc": "^0.68.2",
+    "@effect/rpc": "^0.68.3",
     "@effect/sql": ">=0.44.0",
     "@effect/typeclass": ">=0.36.0",
     "@fp-ts/optic": ">=0.25.0",
@@ -58,8 +58,7 @@
       "@sentry/core": "patches/@sentry__core.patch",
       "@sentry/node": "patches/@sentry__node.patch",
       "@sentry/opentelemetry": "patches/@sentry__opentelemetry.patch",
-      "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
-      "@effect/rpc": "patches/@effect__rpc.patch"
+      "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch"
     }
   },
   "scripts": {
