@@ -23,9 +23,9 @@
     "@kevinmarrec/nuxt-pwa": "~0.17.0",
     "@opentelemetry/sdk-metrics": "^2.0.1",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
-    "@sentry/core": "9.14.0",
-    "@sentry/node": "9.14.0",
-    "@sentry/opentelemetry": "9.14.0",
+    "@sentry/core": "10.2.0",
+    "@sentry/node": "10.2.0",
+    "@sentry/opentelemetry": "10.2.0",
     "@tanstack/query-core": "5.83.1",
     "@tanstack/vue-query": "5.83.1",
     "@vitejs/plugin-vue": "6.0.1",
@@ -55,9 +55,6 @@
       "effect": "patches/effect.patch",
       "ts-plugin-sort-import-suggestions": "patches/ts-plugin-sort-import-suggestions.patch",
       "@tanstack/query-core": "patches/@tanstack__query-core.patch",
-      "@sentry/core": "patches/@sentry__core.patch",
-      "@sentry/node": "patches/@sentry__node.patch",
-      "@sentry/opentelemetry": "patches/@sentry__opentelemetry.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch"
     }
   },
