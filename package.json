@@ -12,11 +12,11 @@
     "vite-node": "^3.2.4"
   },
   "dependencies": {
-    "@effect/opentelemetry": "^0.56.1",
+    "@effect/opentelemetry": ">=0.56.1",
     "@effect/platform": ">=0.90.0",
-    "@effect/platform-node": "^0.94.1",
+    "@effect/platform-node": "^0.94.2",
     "@effect/rpc": "^0.68.3",
-    "@effect/sql": ">=0.44.0",
+    "@effect/sql": "^0.44.1",
     "@effect/typeclass": ">=0.36.0",
     "@fp-ts/optic": ">=0.25.0",
     "@hebilicious/vue-query-nuxt": "~0.3.0",
@@ -30,7 +30,7 @@
     "@tanstack/vue-query": "5.83.1",
     "@vitejs/plugin-vue": "6.0.1",
     "date-fns": "2.30.0",
-    "effect": "^3.17.6",
+    "effect": ">=3.17.6",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.2",
     "primevue": "3.49.1",
