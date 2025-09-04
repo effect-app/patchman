@@ -6,17 +6,17 @@
     "pnpm": ">= 9.0.4"
   },
   "devDependencies": {
-    "@types/node": "^22.17.0",
+    "@types/node": "^22.18.1",
     "madge": "^8.0.0",
     "pnpm-patch-i": "^0.4.1",
     "vite-node": "^3.2.4"
   },
   "dependencies": {
-    "@effect/opentelemetry": ">=0.56.1",
-    "@effect/platform": ">=0.90.0",
+    "@effect/opentelemetry": "^0.56.5",
+    "@effect/platform": "^0.90.6",
     "@effect/platform-node": "^0.94.2",
-    "@effect/rpc": "^0.68.3",
-    "@effect/sql": "^0.44.1",
+    "@effect/rpc": "^0.69.2",
+    "@effect/sql": "^0.44.2",
     "@effect/typeclass": ">=0.36.0",
     "@fp-ts/optic": ">=0.25.0",
     "@hebilicious/vue-query-nuxt": "~0.3.0",
@@ -30,12 +30,12 @@
     "@tanstack/vue-query": "5.83.1",
     "@vitejs/plugin-vue": "6.0.1",
     "date-fns": "2.30.0",
-    "effect": ">=3.17.6",
+    "effect": "^3.17.13",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.2",
     "primevue": "3.49.1",
     "ts-plugin-sort-import-suggestions": "^1.0.4",
-    "tsx": "^4.20.3",
+    "tsx": "^4.20.5",
     "typescript": "^5.8.3",
     "typescript-transform-paths": "^3.5.5"
   },
