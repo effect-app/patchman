@@ -12,6 +12,7 @@
     "vite-node": "^3.2.4"
   },
   "dependencies": {
+    "@ben_12/eslint-plugin-dprint": "^1.7.4",
     "@effect/opentelemetry": "^0.56.5",
     "@effect/platform": "^0.90.6",
     "@effect/platform-node": "^0.94.2",
@@ -55,7 +56,8 @@
       "effect": "patches/effect.patch",
       "ts-plugin-sort-import-suggestions": "patches/ts-plugin-sort-import-suggestions.patch",
       "@tanstack/query-core": "patches/@tanstack__query-core.patch",
-      "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch"
+      "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
+      "@ben_12/eslint-plugin-dprint": "patches/@ben_12__eslint-plugin-dprint.patch"
     }
   },
   "scripts": {
