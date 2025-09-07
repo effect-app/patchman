@@ -14,8 +14,8 @@
   "dependencies": {
     "@ben_12/eslint-plugin-dprint": "^1.7.4",
     "@effect/opentelemetry": ">=0.56.5",
-    "@effect/platform": "^0.90.7",
-    "@effect/platform-node": "^0.96.1",
+    "@effect/platform": ">=0.90.7",
+    "@effect/platform-node": ">=0.96.1",
     "@effect/rpc": ">=0.69.2",
     "@effect/sql": ">=0.44.2",
     "@effect/typeclass": ">=0.36.0",
@@ -57,7 +57,8 @@
       "ts-plugin-sort-import-suggestions": "patches/ts-plugin-sort-import-suggestions.patch",
       "@tanstack/query-core": "patches/@tanstack__query-core.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
-      "@ben_12/eslint-plugin-dprint": "patches/@ben_12__eslint-plugin-dprint.patch"
+      "@ben_12/eslint-plugin-dprint": "patches/@ben_12__eslint-plugin-dprint.patch",
+      "@effect/opentelemetry": "patches/@effect__opentelemetry.patch"
     }
   },
   "scripts": {

@@ -21,7 +21,7 @@ declare -a arr=(
   "sql"
   "platform"
 #  "platform-node"
-#  "opentelemetry"
+  "opentelemetry"
 )
 
 for i in "${arr1[@]}"
