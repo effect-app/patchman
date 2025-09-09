@@ -8,6 +8,9 @@ patchedDependencies:
   '@ben_12/eslint-plugin-dprint':
     hash: 16c6d4c1b8952e573b0e7a0ea6bc3d4625d4684ac1b76ce5445b919e5001f93e
     path: patches/@ben_12__eslint-plugin-dprint.patch
+  '@effect/opentelemetry':
+    hash: 02fd4821eecebc06bf0b61f5225eaf764b7c53484071ff4e2685bf7c82d6ce5a
+    path: patches/@effect__opentelemetry.patch
   '@effect/platform':
     hash: 6ab80f3cd6344e7daa3784a987f3a7d163f0db97baa2534c4e3b3b57afc44c33
     path: patches/@effect__platform.patch
@@ -63,7 +66,7 @@ importers:
         version: 1.7.4(patch_hash=16c6d4c1b8952e573b0e7a0ea6bc3d4625d4684ac1b76ce5445b919e5001f93e)(eslint@9.1.0)
       '@effect/opentelemetry':
         specifier: '>=0.56.5'
-        version: 0.56.5(@effect/platform@0.90.7(patch_hash=6ab80f3cd6344e7daa3784a987f3a7d163f0db97baa2534c4e3b3b57afc44c33)(effect@3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2)))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.1.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.36.0)(effect@3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2))
+        version: 0.56.5(patch_hash=02fd4821eecebc06bf0b61f5225eaf764b7c53484071ff4e2685bf7c82d6ce5a)(@effect/platform@0.90.7(patch_hash=6ab80f3cd6344e7daa3784a987f3a7d163f0db97baa2534c4e3b3b57afc44c33)(effect@3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2)))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.1.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.37.0)(effect@3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2))
       '@effect/platform':
         specifier: '>=0.90.7'
         version: 0.90.7(patch_hash=6ab80f3cd6344e7daa3784a987f3a7d163f0db97baa2534c4e3b3b57afc44c33)(effect@3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2))
@@ -102,7 +105,7 @@ importers:
         version: 10.2.0
       '@sentry/opentelemetry':
         specifier: 10.2.0
-        version: 10.2.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.36.0)
+        version: 10.2.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.1.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.37.0)
       '@tanstack/query-core':
         specifier: 5.83.1
         version: 5.83.1(patch_hash=351153003e430d89ebb99f44022c6de72d7e21f40056ebf2468626bec8e015c7)
@@ -6500,10 +6503,10 @@ snapshots:
       ioredis: 5.7.0
       ws: 8.18.3
 
-  '@effect/opentelemetry@0.56.5(@effect/platform@0.90.7(patch_hash=6ab80f3cd6344e7daa3784a987f3a7d163f0db97baa2534c4e3b3b57afc44c33)(effect@3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2)))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.1.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.36.0)(effect@3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2))':
+  '@effect/opentelemetry@0.56.5(patch_hash=02fd4821eecebc06bf0b61f5225eaf764b7c53484071ff4e2685bf7c82d6ce5a)(@effect/platform@0.90.7(patch_hash=6ab80f3cd6344e7daa3784a987f3a7d163f0db97baa2534c4e3b3b57afc44c33)(effect@3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2)))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.1.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.37.0)(effect@3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2))':
     dependencies:
       '@effect/platform': 0.90.7(patch_hash=6ab80f3cd6344e7daa3784a987f3a7d163f0db97baa2534c4e3b3b57afc44c33)(effect@3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2))
-      '@opentelemetry/semantic-conventions': 1.36.0
+      '@opentelemetry/semantic-conventions': 1.37.0
       effect: 3.17.13(patch_hash=df600697c619ed6ebecb7834703859278fdbdc931d55d19f5990d8536e428ad2)
     optionalDependencies:
       '@opentelemetry/api': 1.9.0
@@ -8044,6 +8047,15 @@ snapshots:
       '@opentelemetry/core': 2.0.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions': 1.36.0
+      '@sentry/core': 10.2.0
+
+  '@sentry/opentelemetry@10.2.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.1.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.37.0)':
+    dependencies:
+      '@opentelemetry/api': 1.9.0
+      '@opentelemetry/context-async-hooks': 2.0.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/core': 2.1.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-base': 2.0.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/semantic-conventions': 1.37.0
       '@sentry/core': 10.2.0
 
   '@sindresorhus/is@7.0.2': {}
