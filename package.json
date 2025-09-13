@@ -12,9 +12,9 @@
     "vite-node": "^3.2.4"
   },
   "dependencies": {
-    "@ben_12/eslint-plugin-dprint": "^1.7.4",
-    "@effect/opentelemetry": ">=0.56.5",
-    "@effect/platform": ">=0.90.7",
+    "@ben_12/eslint-plugin-dprint": "^1.7.5",
+    "@effect/opentelemetry": "^0.56.6",
+    "@effect/platform": "^0.90.9",
     "@effect/platform-node": ">=0.96.1",
     "@effect/rpc": ">=0.69.2",
     "@effect/sql": ">=0.44.2",
