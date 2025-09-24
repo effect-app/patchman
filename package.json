@@ -30,6 +30,7 @@
     "@tanstack/query-core": "5.83.1",
     "@tanstack/vue-query": "5.83.1",
     "@vitejs/plugin-vue": "6.0.1",
+    "@vue/compiler-sfc": "3.5.21",
     "date-fns": "2.30.0",
     "effect": ">=3.17.13",
     "eslint-plugin-codegen": "^0.17.0",
@@ -58,7 +59,8 @@
       "@tanstack/query-core": "patches/@tanstack__query-core.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "@ben_12/eslint-plugin-dprint": "patches/@ben_12__eslint-plugin-dprint.patch",
-      "@effect/opentelemetry": "patches/@effect__opentelemetry.patch"
+      "@effect/opentelemetry": "patches/@effect__opentelemetry.patch",
+      "@vue/compiler-sfc": "patches/@vue__compiler-sfc.patch"
     }
   },
   "scripts": {
