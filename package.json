@@ -6,19 +6,19 @@
     "pnpm": ">= 9.0.4"
   },
   "devDependencies": {
-    "@types/node": "^22.18.5",
+    "@types/node": "^22.18.7",
     "madge": "^8.0.0",
     "pnpm-patch-i": "^0.4.1",
     "vite-node": "^3.2.4"
   },
   "dependencies": {
-    "@ben_12/eslint-plugin-dprint": "^1.7.6",
-    "@effect/opentelemetry": ">=0.56.6",
-    "@effect/platform": ">=0.90.9",
-    "@effect/platform-node": ">=0.96.1",
-    "@effect/rpc": ">=0.69.2",
-    "@effect/sql": ">=0.44.2",
-    "@effect/typeclass": ">=0.36.0",
+    "@ben_12/eslint-plugin-dprint": "^1.8.0",
+    "@effect/opentelemetry": "^0.58.0",
+    "@effect/platform": "^0.92.0",
+    "@effect/platform-node": "^0.98.0",
+    "@effect/rpc": "^0.71.0",
+    "@effect/sql": "^0.46.0",
+    "@effect/typeclass": "^0.37.0",
     "@fp-ts/optic": ">=0.25.0",
     "@hebilicious/vue-query-nuxt": "~0.3.0",
     "@kevinmarrec/nuxt-pwa": "~0.17.0",
@@ -32,12 +32,12 @@
     "@vitejs/plugin-vue": "6.0.1",
     "@vue/compiler-sfc": "3.5.21",
     "date-fns": "2.30.0",
-    "effect": ">=3.17.13",
+    "effect": "^3.18.0",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.2",
     "primevue": "3.49.1",
     "ts-plugin-sort-import-suggestions": "^1.0.4",
-    "tsx": "^4.20.5",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.2",
     "typescript-transform-paths": "^3.5.5"
   },
@@ -51,7 +51,6 @@
       "primevue@3.49.1": "patches/primevue@3.49.1.patch",
       "@fp-ts/optic": "patches/@fp-ts__optic.patch",
       "typescript": "patches/typescript.patch",
-      "@effect/platform": "patches/@effect__platform.patch",
       "@effect/sql": "patches/@effect__sql.patch",
       "madge": "patches/madge.patch",
       "effect": "patches/effect.patch",
@@ -59,7 +58,6 @@
       "@tanstack/query-core": "patches/@tanstack__query-core.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "@ben_12/eslint-plugin-dprint": "patches/@ben_12__eslint-plugin-dprint.patch",
-      "@effect/opentelemetry": "patches/@effect__opentelemetry.patch",
       "@vue/compiler-sfc": "patches/@vue__compiler-sfc.patch"
     }
   },

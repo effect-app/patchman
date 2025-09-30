@@ -19,9 +19,9 @@ declare -a arr1=(
 declare -a arr=(
   #"rpc"
   "sql"
-  "platform"
+#  "platform"
 #  "platform-node"
-  "opentelemetry"
+#  "opentelemetry"
 )
 
 for i in "${arr1[@]}"
