@@ -39,7 +39,8 @@
     "ts-plugin-sort-import-suggestions": "^1.0.4",
     "tsx": "^4.20.6",
     "typescript": "^5.9.2",
-    "typescript-transform-paths": "^3.5.5"
+    "typescript-transform-paths": "^3.5.5",
+    "vuetify": "^3.10.4"
   },
   "pnpm": {
     "patchedDependencies": {
@@ -58,7 +59,8 @@
       "@tanstack/query-core": "patches/@tanstack__query-core.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "@ben_12/eslint-plugin-dprint": "patches/@ben_12__eslint-plugin-dprint.patch",
-      "@vue/compiler-sfc": "patches/@vue__compiler-sfc.patch"
+      "@vue/compiler-sfc": "patches/@vue__compiler-sfc.patch",
+      "vuetify": "patches/vuetify.patch"
     }
   },
   "scripts": {

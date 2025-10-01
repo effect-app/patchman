@@ -1,0 +1,91 @@
+diff --git a/dist/vuetify-labs.cjs b/dist/vuetify-labs.cjs
+index bd8d4f1b54090b979e98934d3c8d56d437ded5d9..de8e6d6dbaafd4bdf0cd50d033c0d1098fa2929f 100644
+--- a/dist/vuetify-labs.cjs
++++ b/dist/vuetify-labs.cjs
+@@ -14883,7 +14883,7 @@
+       vue.watch(isActive, async val => {
+         if (!val) {
+           await vue.nextTick();
+-          overlay.value.activatorEl?.focus({
++          overlay.value?.activatorEl?.focus({
+             preventScroll: true
+           });
+         }
+diff --git a/dist/vuetify-labs.esm.js b/dist/vuetify-labs.esm.js
+index 22c1b22a47c24fd2043b3e589e55de73bd28f35b..a1586ceaae2a9f0df54093ecef976ce46a651bff 100644
+--- a/dist/vuetify-labs.esm.js
++++ b/dist/vuetify-labs.esm.js
+@@ -14879,7 +14879,7 @@ const VDialog = genericComponent()({
+     watch(isActive, async val => {
+       if (!val) {
+         await nextTick();
+-        overlay.value.activatorEl?.focus({
++        overlay.value?.activatorEl?.focus({
+           preventScroll: true
+         });
+       }
+diff --git a/dist/vuetify-labs.js b/dist/vuetify-labs.js
+index bd8d4f1b54090b979e98934d3c8d56d437ded5d9..de8e6d6dbaafd4bdf0cd50d033c0d1098fa2929f 100644
+--- a/dist/vuetify-labs.js
++++ b/dist/vuetify-labs.js
+@@ -14883,7 +14883,7 @@
+       vue.watch(isActive, async val => {
+         if (!val) {
+           await vue.nextTick();
+-          overlay.value.activatorEl?.focus({
++          overlay.value?.activatorEl?.focus({
+             preventScroll: true
+           });
+         }
+diff --git a/dist/vuetify.cjs b/dist/vuetify.cjs
+index 907c68e0541aa44c1ea1c09e0cb2a2c6bf86b1c6..47f5c32d4fbaf144d605a99c3d7ccd75e1003633 100644
+--- a/dist/vuetify.cjs
++++ b/dist/vuetify.cjs
+@@ -15129,7 +15129,7 @@
+       vue.watch(isActive, async val => {
+         if (!val) {
+           await vue.nextTick();
+-          overlay.value.activatorEl?.focus({
++          overlay.value?.activatorEl?.focus({
+             preventScroll: true
+           });
+         }
+diff --git a/dist/vuetify.esm.js b/dist/vuetify.esm.js
+index 867d4db057e8bcbfcc155af162a5e43069aa909f..d42cdd7e900dd0dc7709a173d7675a50133de4bf 100644
+--- a/dist/vuetify.esm.js
++++ b/dist/vuetify.esm.js
+@@ -15125,7 +15125,7 @@ const VDialog = genericComponent()({
+     watch(isActive, async val => {
+       if (!val) {
+         await nextTick();
+-        overlay.value.activatorEl?.focus({
++        overlay.value?.activatorEl?.focus({
+           preventScroll: true
+         });
+       }
+diff --git a/dist/vuetify.js b/dist/vuetify.js
+index fe36b66b45ba0938d8efe892ff26509c15581088..8ae684f71311c852157208368efcc8975b6316aa 100644
+--- a/dist/vuetify.js
++++ b/dist/vuetify.js
+@@ -15129,7 +15129,7 @@
+       vue.watch(isActive, async val => {
+         if (!val) {
+           await vue.nextTick();
+-          overlay.value.activatorEl?.focus({
++          overlay.value?.activatorEl?.focus({
+             preventScroll: true
+           });
+         }
+diff --git a/lib/components/VDialog/VDialog.js b/lib/components/VDialog/VDialog.js
+index 99c51f8c9355b8e527bf75544c4660e2c887222f..7fabfbf8917f9ca33ffe7faae3b7d3542f9df23f 100644
+--- a/lib/components/VDialog/VDialog.js
++++ b/lib/components/VDialog/VDialog.js
+@@ -109,7 +109,7 @@ export const VDialog = genericComponent()({
+     watch(isActive, async val => {
+       if (!val) {
+         await nextTick();
+-        overlay.value.activatorEl?.focus({
++        overlay.value?.activatorEl?.focus({
+           preventScroll: true
+         });
+       }
