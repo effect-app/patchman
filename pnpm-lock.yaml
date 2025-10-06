@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@ben_12/eslint-plugin-dprint':
-    hash: 16c6d4c1b8952e573b0e7a0ea6bc3d4625d4684ac1b76ce5445b919e5001f93e
+    hash: 5a4f071b7b8899bca87c821b2bbccf82f0d36a17c0a1969b0cec32dbe7dc5dba
     path: patches/@ben_12__eslint-plugin-dprint.patch
   '@effect/sql':
     hash: 0331e6fb28861d532bac873bb96ad4f7f002dd9e27d3896aa91b3d0b4c2cfaac
@@ -53,14 +53,17 @@ patchedDependencies:
   typescript:
     hash: 9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0
     path: patches/typescript.patch
+  vuetify:
+    hash: 3163e5cde167a45b18940a5a4e051ad383887c68ea652893becd9b3757a6c819
+    path: patches/vuetify.patch
 
 importers:
 
   .:
     dependencies:
       '@ben_12/eslint-plugin-dprint':
-        specifier: ^1.8.0
-        version: 1.8.0(patch_hash=16c6d4c1b8952e573b0e7a0ea6bc3d4625d4684ac1b76ce5445b919e5001f93e)(eslint@9.1.0)
+        specifier: ^1.9.0
+        version: 1.9.0(patch_hash=5a4f071b7b8899bca87c821b2bbccf82f0d36a17c0a1969b0cec32dbe7dc5dba)(eslint@9.1.0)
       '@effect/opentelemetry':
         specifier: ^0.58.0
         version: 0.58.0(@effect/platform@0.92.0(effect@3.18.0(patch_hash=43c3b64130695b34e77e33c4bce41699657064974a32b770f14bbeefe69bf30a)))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.1.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.37.0)(effect@3.18.0(patch_hash=43c3b64130695b34e77e33c4bce41699657064974a32b770f14bbeefe69bf30a))
@@ -144,7 +147,7 @@ importers:
         version: 3.5.5(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
       vuetify:
         specifier: ^3.10.4
-        version: 3.10.4(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+        version: 3.10.4(patch_hash=3163e5cde167a45b18940a5a4e051ad383887c68ea652893becd9b3757a6c819)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
     devDependencies:
       '@types/node':
         specifier: ^22.18.7
@@ -386,8 +389,8 @@ packages:
     resolution: {integrity: sha512-bkFqkLhh3pMBUQQkpVgWDWq/lqzc2678eUyDlTBhRqhCHFguYYGM0Efga7tYk4TogG/3x0EEl66/OQ+WGbWB/Q==}
     engines: {node: '>=6.9.0'}
 
-  '@ben_12/eslint-plugin-dprint@1.8.0':
-    resolution: {integrity: sha512-fCq7pMKaUzPZvxeBo7vnLWRkGxy++WOM2cX0+kWVYfIZFAe5+uaBaAAaC7sYx1Fa5QOf93zPfSyu4S/ELvxI2Q==}
+  '@ben_12/eslint-plugin-dprint@1.9.0':
+    resolution: {integrity: sha512-J9EEtbyv3nAVHjLJ328YSiVHaAPhelz/Wh1O/khlcFdrdpaDSIBBTbGtyNNC4ARz8sfg3PaLiCTjGxxNvwECIA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@dprint/dockerfile': ^0.3.3
@@ -6513,10 +6516,10 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@ben_12/eslint-plugin-dprint@1.8.0(patch_hash=16c6d4c1b8952e573b0e7a0ea6bc3d4625d4684ac1b76ce5445b919e5001f93e)(eslint@9.1.0)':
+  '@ben_12/eslint-plugin-dprint@1.9.0(patch_hash=5a4f071b7b8899bca87c821b2bbccf82f0d36a17c0a1969b0cec32dbe7dc5dba)(eslint@9.1.0)':
     dependencies:
       '@dprint/formatter': 0.4.1
-      debug: 4.4.1
+      debug: 4.4.3
       diff: 7.0.0
       eslint: 9.1.0
       jsonc-parser: 3.3.1
@@ -12735,7 +12738,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
 
-  vuetify@3.10.4(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
+  vuetify@3.10.4(patch_hash=3163e5cde167a45b18940a5a4e051ad383887c68ea652893becd9b3757a6c819)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
     dependencies:
       vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
     optionalDependencies:
