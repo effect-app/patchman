@@ -59,7 +59,8 @@
       "@tanstack/query-core": "patches/@tanstack__query-core.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "@ben_12/eslint-plugin-dprint": "patches/@ben_12__eslint-plugin-dprint.patch",
-      "vuetify": "patches/vuetify.patch"
+      "vuetify": "patches/vuetify.patch",
+      "@effect/opentelemetry": "patches/@effect__opentelemetry.patch"
     }
   },
   "scripts": {

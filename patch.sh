@@ -17,11 +17,11 @@ declare -a arr1=(
 )
 
 declare -a arr=(
-  #"rpc"
   "sql"
+  "opentelemetry"
+  #"rpc"
 #  "platform"
 #  "platform-node"
-#  "opentelemetry"
 )
 
 for i in "${arr1[@]}"
