@@ -6,19 +6,19 @@
     "pnpm": ">= 9.0.4"
   },
   "devDependencies": {
-    "@types/node": "^22.18.7",
+    "@types/node": "^22.19.1",
     "madge": "^8.0.0",
     "pnpm-patch-i": "^0.4.1",
     "vite-node": "^3.2.4"
   },
   "dependencies": {
     "@ben_12/eslint-plugin-dprint": "^1.12.0",
-    "@effect/opentelemetry": "^0.59.0",
-    "@effect/platform": "^0.93.0",
-    "@effect/platform-node": "^0.100.0",
-    "@effect/rpc": "^0.72.1",
-    "@effect/sql": "^0.48.0",
-    "@effect/typeclass": "^0.38.0",
+    "@effect/opentelemetry": "^0.59.1",
+    "@effect/platform": "^0.93.2",
+    "@effect/platform-node": ">=0.100.0",
+    "@effect/rpc": ">=0.72.1",
+    "@effect/sql": ">=0.48.0",
+    "@effect/typeclass": ">=0.38.0",
     "@fp-ts/optic": ">=0.25.0",
     "@hebilicious/vue-query-nuxt": "~0.3.0",
     "@kevinmarrec/nuxt-pwa": "~0.17.0",
@@ -32,7 +32,7 @@
     "@vitejs/plugin-vue": "6.0.1",
     "@vue/compiler-sfc": "3.5.21",
     "date-fns": "2.30.0",
-    "effect": "^3.19.3",
+    "effect": ">=3.19.3",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.2",
     "primevue": "3.49.1",
@@ -40,7 +40,7 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "typescript-transform-paths": "^3.5.5",
-    "vuetify": "^3.10.9"
+    "vuetify": "^3.10.11"
   },
   "pnpm": {
     "patchedDependencies": {
