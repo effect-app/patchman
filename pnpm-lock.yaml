@@ -54,7 +54,7 @@ patchedDependencies:
     hash: 9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0
     path: patches/typescript.patch
   vuetify:
-    hash: 3163e5cde167a45b18940a5a4e051ad383887c68ea652893becd9b3757a6c819
+    hash: 71e44eb9b85cd0f98c60ae3c1eae408d7c085165ba7a7b91265f2ccbf5a8146a
     path: patches/vuetify.patch
 
 importers:
@@ -64,6 +64,9 @@ importers:
       '@ben_12/eslint-plugin-dprint':
         specifier: ^1.14.0
         version: 1.14.0(patch_hash=5a4f071b7b8899bca87c821b2bbccf82f0d36a17c0a1969b0cec32dbe7dc5dba)(eslint@9.1.0)
+      '@effect/experimental':
+        specifier: ^0.58.0
+        version: 0.58.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))(ioredis@5.9.2)
       '@effect/opentelemetry':
         specifier: ^0.59.3
         version: 0.59.3(patch_hash=2941af19f05cdba2d8d59bc0ef9b423b053c849e99336c5ff9e418f7c99aafce)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.4.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.4.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.38.0)(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
@@ -72,13 +75,13 @@ importers:
         version: 0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       '@effect/platform-node':
         specifier: ^0.104.0
-        version: 0.104.0(@effect/cluster@0.29.0)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/rpc@0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/sql@0.49.0)(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
+        version: 0.104.0(8a3a52ff5ed12c63a90e311ad7b0aa0b)
       '@effect/rpc':
         specifier: ^0.73.0
         version: 0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       '@effect/sql':
         specifier: ^0.49.0
-        version: 0.49.0(patch_hash=1ab671e3dbd2909934b064bda29783f34d48391a2eef7803267a2aa14fde1ceb)(@effect/experimental@0.27.3)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
+        version: 0.49.0(patch_hash=1ab671e3dbd2909934b064bda29783f34d48391a2eef7803267a2aa14fde1ceb)(@effect/experimental@0.58.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))(ioredis@5.9.2))(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       '@effect/typeclass':
         specifier: '>=0.38.0'
         version: 0.38.0(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
@@ -87,7 +90,7 @@ importers:
         version: 0.25.0(patch_hash=2c18807bc058abfc40b24e3038710c0a66a3c12339fe52e220e886fd491f3297)(@effect/typeclass@0.38.0(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       '@hebilicious/vue-query-nuxt':
         specifier: ~0.3.0
-        version: 0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.83.1(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(nuxt@3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.4)(@types/node@22.19.6)(db0@0.3.4)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.9.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(rollup@4.55.1)(webpack-sources@3.2.3)
+        version: 0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.83.1(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(nuxt@3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.4)(@types/node@22.19.6)(db0@0.3.4)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.9.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(rollup@4.55.1)(webpack-sources@3.2.3)
       '@kevinmarrec/nuxt-pwa':
         specifier: ~0.17.0
         version: 0.17.0(patch_hash=e70fd3d972b25906e004ad1a200d9b6781dacbcdd3eb72d56bb0549419303d6c)
@@ -102,10 +105,10 @@ importers:
         version: 5.83.1(patch_hash=351153003e430d89ebb99f44022c6de72d7e21f40056ebf2468626bec8e015c7)
       '@tanstack/vue-query':
         specifier: 5.83.1
-        version: 5.83.1(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+        version: 5.83.1(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       '@vitejs/plugin-vue':
         specifier: 6.0.1
-        version: 6.0.1(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+        version: 6.0.1(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       '@vue/compiler-sfc':
         specifier: 3.5.21
         version: 3.5.21
@@ -123,7 +126,7 @@ importers:
         version: 3.23.2
       primevue:
         specifier: 3.49.1
-        version: 3.49.1(patch_hash=944850b8c1828c923a11f74b9953aa809615d2a89ab51f954c4e2f7193ff8868)(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+        version: 3.49.1(patch_hash=944850b8c1828c923a11f74b9953aa809615d2a89ab51f954c4e2f7193ff8868)(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       ts-plugin-sort-import-suggestions:
         specifier: ^1.0.4
         version: 1.0.4(patch_hash=4664506575d0f4e799401cb7140b6f15f34a6fe213da6314d68439f7e8d30561)
@@ -131,21 +134,21 @@ importers:
         specifier: ^4.21.0
         version: 4.21.0
       typescript:
-        specifier: ^5.9.3
-        version: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+        specifier: 5.9.2
+        version: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
       typescript-transform-paths:
         specifier: ^3.5.6
-        version: 3.5.6(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+        version: 3.5.6(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
       vuetify:
         specifier: ^3.11.6
-        version: 3.11.6(patch_hash=3163e5cde167a45b18940a5a4e051ad383887c68ea652893becd9b3757a6c819)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+        version: 3.11.6(patch_hash=71e44eb9b85cd0f98c60ae3c1eae408d7c085165ba7a7b91265f2ccbf5a8146a)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
     devDependencies:
       '@types/node':
         specifier: ^22.19.6
         version: 22.19.6
       madge:
         specifier: ^8.0.0
-        version: 8.0.0(patch_hash=3b735c6466af555c90facf7448eeda74af16f253cb8eb6aa1d33c7274df07f77)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+        version: 8.0.0(patch_hash=3b735c6466af555c90facf7448eeda74af16f253cb8eb6aa1d33c7274df07f77)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
       pnpm-patch-i:
         specifier: ^0.4.1
         version: 0.4.1
@@ -446,24 +449,17 @@ packages:
       '@effect/sql': ^0.33.0
       effect: ^3.14.0
 
-  '@effect/experimental@0.27.3':
-    resolution: {integrity: sha512-Fk+WEuGV0MItxoy2npQax0uOab46vZPa9pZrFdoQ9UB0OxhFzW7N5KG2beUm+3QkJ60jqmW797jH3oBfgXSp2w==}
+  '@effect/experimental@0.58.0':
+    resolution: {integrity: sha512-IEP9sapjF6rFy5TkoqDPc86st/fnqUfjT7Xa3pWJrFGr1hzaMXHo+mWsYOZS9LAOVKnpHuVziDK97EP5qsCHVA==}
     peerDependencies:
-      '@effect/platform': ^0.66.2
-      '@effect/platform-node': ^0.61.3
-      '@effect/schema': ^0.74.1
-      effect: ^3.8.4
+      '@effect/platform': ^0.94.0
+      effect: ^3.19.13
       ioredis: ^5
       lmdb: ^3
-      ws: ^8
     peerDependenciesMeta:
-      '@effect/platform-node':
-        optional: true
       ioredis:
         optional: true
       lmdb:
-        optional: true
-      ws:
         optional: true
 
   '@effect/opentelemetry@0.59.3':
@@ -523,12 +519,6 @@ packages:
     peerDependencies:
       '@effect/platform': ^0.94.0
       effect: ^3.19.13
-
-  '@effect/schema@0.75.5':
-    resolution: {integrity: sha512-TQInulTVCuF+9EIbJpyLP6dvxbQJMphrnRqgexm/Ze39rSjfhJuufF7XvU3SxTgg3HnL7B/kpORTJbHhlE6thw==}
-    deprecated: this package has been merged into the main effect package
-    peerDependencies:
-      effect: ^3.9.2
 
   '@effect/sql@0.49.0':
     resolution: {integrity: sha512-9UEKR+z+MrI/qMAmSvb/RiD9KlgIazjZUCDSpwNgm0lEK9/Q6ExEyfziiYFVCPiptp52cBw8uBHRic8hHnwqXA==}
@@ -4058,9 +4048,6 @@ packages:
   msgpackr@1.11.5:
     resolution: {integrity: sha512-UjkUHN0yqp9RWKy0Lplhh+wlpdt9oQBYgULZOiFhV3VclSF1JnSQWZ5r9gORQlNYaUKQoR8itv7g7z1xDDuACA==}
 
-  msgpackr@1.11.8:
-    resolution: {integrity: sha512-bC4UGzHhVvgDNS7kn9tV8fAucIYUBuGojcaLiz7v+P63Lmtm0Xeji8B/8tYKddALXxJLpwIeBmUN3u64C4YkRA==}
-
   muggle-string@0.4.1:
     resolution: {integrity: sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ==}
 
@@ -5332,8 +5319,8 @@ packages:
     peerDependencies:
       typescript: '>=3.6.5'
 
-  typescript@5.9.3:
-    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+  typescript@5.9.2:
+    resolution: {integrity: sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -6190,23 +6177,20 @@ snapshots:
 
   '@dprint/formatter@0.4.1': {}
 
-  '@effect/cluster@0.29.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/rpc@0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/sql@0.49.0)(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))':
+  '@effect/cluster@0.29.0(c2f1adbd8b089f72f79f2749a62cffcd)':
     dependencies:
       '@effect/platform': 0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       '@effect/rpc': 0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
-      '@effect/sql': 0.49.0(patch_hash=1ab671e3dbd2909934b064bda29783f34d48391a2eef7803267a2aa14fde1ceb)(@effect/experimental@0.27.3)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
+      '@effect/sql': 0.49.0(patch_hash=1ab671e3dbd2909934b064bda29783f34d48391a2eef7803267a2aa14fde1ceb)(@effect/experimental@0.58.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))(ioredis@5.9.2))(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       effect: 3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)
 
-  '@effect/experimental@0.27.3(@effect/platform-node@0.104.0)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/schema@0.75.5(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))(ioredis@5.9.2)(ws@8.19.0)':
+  '@effect/experimental@0.58.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))(ioredis@5.9.2)':
     dependencies:
       '@effect/platform': 0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
-      '@effect/schema': 0.75.5(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       effect: 3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)
-      msgpackr: 1.11.8
+      uuid: 11.1.0
     optionalDependencies:
-      '@effect/platform-node': 0.104.0(@effect/cluster@0.29.0)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/rpc@0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/sql@0.49.0)(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       ioredis: 5.9.2
-      ws: 8.19.0
 
   '@effect/opentelemetry@0.59.3(patch_hash=2941af19f05cdba2d8d59bc0ef9b423b053c849e99336c5ff9e418f7c99aafce)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.4.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.4.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.38.0)(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))':
     dependencies:
@@ -6219,12 +6203,12 @@ snapshots:
       '@opentelemetry/sdk-metrics': 2.4.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.1(@opentelemetry/api@1.9.0)
 
-  '@effect/platform-node-shared@0.57.0(@effect/cluster@0.29.0)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/rpc@0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/sql@0.49.0)(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))':
+  '@effect/platform-node-shared@0.57.0(8a3a52ff5ed12c63a90e311ad7b0aa0b)':
     dependencies:
-      '@effect/cluster': 0.29.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/rpc@0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/sql@0.49.0)(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
+      '@effect/cluster': 0.29.0(c2f1adbd8b089f72f79f2749a62cffcd)
       '@effect/platform': 0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       '@effect/rpc': 0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
-      '@effect/sql': 0.49.0(patch_hash=1ab671e3dbd2909934b064bda29783f34d48391a2eef7803267a2aa14fde1ceb)(@effect/experimental@0.27.3)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
+      '@effect/sql': 0.49.0(patch_hash=1ab671e3dbd2909934b064bda29783f34d48391a2eef7803267a2aa14fde1ceb)(@effect/experimental@0.58.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))(ioredis@5.9.2))(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       '@parcel/watcher': 2.5.4
       effect: 3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)
       multipasta: 0.2.7
@@ -6233,13 +6217,13 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@effect/platform-node@0.104.0(@effect/cluster@0.29.0)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/rpc@0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/sql@0.49.0)(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))':
+  '@effect/platform-node@0.104.0(8a3a52ff5ed12c63a90e311ad7b0aa0b)':
     dependencies:
-      '@effect/cluster': 0.29.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/rpc@0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/sql@0.49.0)(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
+      '@effect/cluster': 0.29.0(c2f1adbd8b089f72f79f2749a62cffcd)
       '@effect/platform': 0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
-      '@effect/platform-node-shared': 0.57.0(@effect/cluster@0.29.0)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/rpc@0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/sql@0.49.0)(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
+      '@effect/platform-node-shared': 0.57.0(8a3a52ff5ed12c63a90e311ad7b0aa0b)
       '@effect/rpc': 0.73.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
-      '@effect/sql': 0.49.0(patch_hash=1ab671e3dbd2909934b064bda29783f34d48391a2eef7803267a2aa14fde1ceb)(@effect/experimental@0.27.3)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
+      '@effect/sql': 0.49.0(patch_hash=1ab671e3dbd2909934b064bda29783f34d48391a2eef7803267a2aa14fde1ceb)(@effect/experimental@0.58.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))(ioredis@5.9.2))(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       effect: 3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)
       mime: 3.0.0
       undici: 7.16.0
@@ -6261,14 +6245,9 @@ snapshots:
       effect: 3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)
       msgpackr: 1.11.5
 
-  '@effect/schema@0.75.5(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))':
+  '@effect/sql@0.49.0(patch_hash=1ab671e3dbd2909934b064bda29783f34d48391a2eef7803267a2aa14fde1ceb)(@effect/experimental@0.58.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))(ioredis@5.9.2))(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))':
     dependencies:
-      effect: 3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)
-      fast-check: 3.23.2
-
-  '@effect/sql@0.49.0(patch_hash=1ab671e3dbd2909934b064bda29783f34d48391a2eef7803267a2aa14fde1ceb)(@effect/experimental@0.27.3)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))':
-    dependencies:
-      '@effect/experimental': 0.27.3(@effect/platform-node@0.104.0)(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(@effect/schema@0.75.5(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))(ioredis@5.9.2)(ws@8.19.0)
+      '@effect/experimental': 0.58.0(@effect/platform@0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)))(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))(ioredis@5.9.2)
       '@effect/platform': 0.93.8(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       effect: 3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)
       uuid: 11.1.0
@@ -6593,14 +6572,14 @@ snapshots:
       '@effect/typeclass': 0.38.0(effect@3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc))
       effect: 3.19.14(patch_hash=a12dc8f2d296f82664b0f522ff021a5c04c3c12eaac619a0db5269d34acd22cc)
 
-  '@hebilicious/vue-query-nuxt@0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.83.1(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(nuxt@3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.4)(@types/node@22.19.6)(db0@0.3.4)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.9.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(rollup@4.55.1)(webpack-sources@3.2.3)':
+  '@hebilicious/vue-query-nuxt@0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.83.1(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(nuxt@3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.4)(@types/node@22.19.6)(db0@0.3.4)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.9.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(rollup@4.55.1)(webpack-sources@3.2.3)':
     dependencies:
       '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.55.1)(webpack-sources@3.2.3)
-      '@tanstack/vue-query': 5.83.1(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      '@tanstack/vue-query': 5.83.1(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       defu: 6.1.4
       esbuild: 0.19.12
       magicast: 0.3.5
-      nuxt: 3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.4)(@types/node@22.19.6)(db0@0.3.4)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.9.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      nuxt: 3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.4)(@types/node@22.19.6)(db0@0.3.4)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.9.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -6796,13 +6775,13 @@ snapshots:
       rc9: 2.1.2
       semver: 7.7.3
 
-  '@nuxt/devtools@1.7.0(rollup@4.55.1)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
+  '@nuxt/devtools@1.7.0(rollup@4.55.1)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
     dependencies:
       '@antfu/utils': 0.7.10
       '@nuxt/devtools-kit': 1.7.0(magicast@0.3.5)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))
       '@nuxt/devtools-wizard': 1.7.0
       '@nuxt/kit': 3.20.2(magicast@0.3.5)
-      '@vue/devtools-core': 7.6.8(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      '@vue/devtools-core': 7.6.8(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       '@vue/devtools-kit': 7.6.8
       birpc: 0.2.19
       consola: 3.4.2
@@ -6985,12 +6964,12 @@ snapshots:
 
   '@nuxt/ui-templates@1.3.4': {}
 
-  '@nuxt/vite-builder@3.11.2(@types/node@22.19.6)(eslint@9.1.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue-tsc@2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
+  '@nuxt/vite-builder@3.11.2(@types/node@22.19.6)(eslint@9.1.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue-tsc@2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
     dependencies:
       '@nuxt/kit': 3.11.2(magicast@0.3.5)(rollup@4.55.1)
       '@rollup/plugin-replace': 5.0.7(rollup@4.55.1)
-      '@vitejs/plugin-vue': 5.2.4(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
-      '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      '@vitejs/plugin-vue': 5.2.4(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       autoprefixer: 10.4.23(postcss@8.5.6)
       clear: 0.1.0
       consola: 3.4.2
@@ -7019,8 +6998,8 @@ snapshots:
       unplugin: 1.16.1
       vite: 5.4.19(@types/node@22.19.6)(terser@5.45.0)
       vite-node: 1.6.1(@types/node@22.19.6)(terser@5.45.0)
-      vite-plugin-checker: 0.6.4(eslint@9.1.0)(optionator@0.9.4)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vite-plugin-checker: 0.6.4(eslint@9.1.0)(optionator@0.9.4)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
       vue-bundle-renderer: 2.2.0
     transitivePeerDependencies:
       - '@types/node'
@@ -7409,13 +7388,13 @@ snapshots:
 
   '@tanstack/query-core@5.83.1(patch_hash=351153003e430d89ebb99f44022c6de72d7e21f40056ebf2468626bec8e015c7)': {}
 
-  '@tanstack/vue-query@5.83.1(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
+  '@tanstack/vue-query@5.83.1(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
     dependencies:
       '@tanstack/match-sorter-utils': 8.19.4
       '@tanstack/query-core': 5.83.1(patch_hash=351153003e430d89ebb99f44022c6de72d7e21f40056ebf2468626bec8e015c7)
       '@vue/devtools-api': 6.6.4
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
-      vue-demi: 0.14.10(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue-demi: 0.14.10(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
 
   '@trysound/sax@0.2.0': {}
 
@@ -7472,7 +7451,7 @@ snapshots:
 
   '@typescript-eslint/types@7.18.0': {}
 
-  '@typescript-eslint/typescript-estree@7.18.0(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))':
+  '@typescript-eslint/typescript-estree@7.18.0(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))':
     dependencies:
       '@typescript-eslint/types': 7.18.0
       '@typescript-eslint/visitor-keys': 7.18.0
@@ -7481,9 +7460,9 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.5
       semver: 7.6.3
-      ts-api-utils: 1.4.0(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      ts-api-utils: 1.4.0(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
     optionalDependencies:
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
     transitivePeerDependencies:
       - supports-color
 
@@ -7512,13 +7491,13 @@ snapshots:
       '@unhead/schema': 1.11.20
       '@unhead/shared': 1.11.20
 
-  '@unhead/vue@1.11.20(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
+  '@unhead/vue@1.11.20(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
     dependencies:
       '@unhead/schema': 1.11.20
       '@unhead/shared': 1.11.20
       hookable: 5.5.3
       unhead: 1.11.20
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
 
   '@vercel/nft@1.2.0(encoding@0.1.13)(rollup@4.55.1)':
     dependencies:
@@ -7539,26 +7518,26 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vitejs/plugin-vue-jsx@3.1.0(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
+  '@vitejs/plugin-vue-jsx@3.1.0(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
     dependencies:
       '@babel/core': 7.28.6
       '@babel/plugin-transform-typescript': 7.28.6(@babel/core@7.28.6)
       '@vue/babel-plugin-jsx': 1.5.0(@babel/core@7.28.6)
       vite: 5.4.19(@types/node@22.19.6)(terser@5.45.0)
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@5.2.4(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
+  '@vitejs/plugin-vue@5.2.4(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
     dependencies:
       vite: 5.4.19(@types/node@22.19.6)(terser@5.45.0)
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
 
-  '@vitejs/plugin-vue@6.0.1(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
+  '@vitejs/plugin-vue@6.0.1(patch_hash=45c57179316527cdb435ab18612affe0b873768e7070aa1e023d69903d430fbf)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.29
       vite: 5.4.19(@types/node@22.19.6)(terser@5.45.0)
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
 
   '@volar/language-core@2.4.27':
     dependencies:
@@ -7575,7 +7554,7 @@ snapshots:
       vscode-uri: 3.1.0
     optional: true
 
-  '@vue-macros/common@1.16.1(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
+  '@vue-macros/common@1.16.1(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
     dependencies:
       '@vue/compiler-sfc': 3.5.21
       ast-kit: 1.4.3
@@ -7584,7 +7563,7 @@ snapshots:
       pathe: 2.0.3
       picomatch: 4.0.3
     optionalDependencies:
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
 
   '@vue/babel-helper-vue-transform-on@1.5.0': {}
 
@@ -7696,7 +7675,7 @@ snapshots:
 
   '@vue/devtools-api@6.6.4': {}
 
-  '@vue/devtools-core@7.6.8(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
+  '@vue/devtools-core@7.6.8(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
     dependencies:
       '@vue/devtools-kit': 7.6.8
       '@vue/devtools-shared': 7.7.9
@@ -7704,7 +7683,7 @@ snapshots:
       nanoid: 5.1.6
       pathe: 1.1.2
       vite-hot-client: 0.2.4(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
     transitivePeerDependencies:
       - vite
 
@@ -7722,7 +7701,7 @@ snapshots:
     dependencies:
       rfdc: 1.4.1
 
-  '@vue/language-core@2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))':
+  '@vue/language-core@2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))':
     dependencies:
       '@volar/language-core': 2.4.27
       '@vue/compiler-dom': 3.5.26
@@ -7733,7 +7712,7 @@ snapshots:
       muggle-string: 0.4.1
       path-browserify: 1.0.1
     optionalDependencies:
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
     optional: true
 
   '@vue/reactivity@3.4.23':
@@ -7751,11 +7730,11 @@ snapshots:
       '@vue/shared': 3.4.23
       csstype: 3.2.3
 
-  '@vue/server-renderer@3.4.23(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
+  '@vue/server-renderer@3.4.23(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))':
     dependencies:
       '@vue/compiler-ssr': 3.4.23
       '@vue/shared': 3.4.23
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
 
   '@vue/shared@3.4.23': {}
 
@@ -8422,7 +8401,7 @@ snapshots:
       commander: 12.1.0
       filing-cabinet: 5.0.2
       precinct: 12.1.2
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
     transitivePeerDependencies:
       - supports-color
 
@@ -8471,16 +8450,16 @@ snapshots:
 
   detective-stylus@5.0.0: {}
 
-  detective-typescript@13.0.0(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
+  detective-typescript@13.0.0(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
     dependencies:
-      '@typescript-eslint/typescript-estree': 7.18.0(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      '@typescript-eslint/typescript-estree': 7.18.0(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
       ast-module-types: 6.0.0
       node-source-walk: 7.0.0
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
     transitivePeerDependencies:
       - supports-color
 
-  detective-vue2@2.1.0(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
+  detective-vue2@2.1.0(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
     dependencies:
       '@dependents/detective-less': 5.0.0
       '@vue/compiler-sfc': 3.5.21
@@ -8488,8 +8467,8 @@ snapshots:
       detective-sass: 6.0.0
       detective-scss: 5.0.0
       detective-stylus: 5.0.0
-      detective-typescript: 13.0.0(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      detective-typescript: 13.0.0(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
     transitivePeerDependencies:
       - supports-color
 
@@ -9039,7 +9018,7 @@ snapshots:
       sass-lookup: 6.0.1
       stylus-lookup: 6.0.0
       tsconfig-paths: 4.2.0
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
 
   fill-range@7.1.1:
     dependencies:
@@ -9809,7 +9788,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  madge@8.0.0(patch_hash=3b735c6466af555c90facf7448eeda74af16f253cb8eb6aa1d33c7274df07f77)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
+  madge@8.0.0(patch_hash=3b735c6466af555c90facf7448eeda74af16f253cb8eb6aa1d33c7274df07f77)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
     dependencies:
       chalk: 4.1.2
       commander: 7.2.0
@@ -9824,7 +9803,7 @@ snapshots:
       ts-graphviz: 2.1.4
       walkdir: 0.4.1
     optionalDependencies:
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
     transitivePeerDependencies:
       - supports-color
 
@@ -9977,10 +9956,6 @@ snapshots:
     optional: true
 
   msgpackr@1.11.5:
-    optionalDependencies:
-      msgpackr-extract: 3.0.3
-
-  msgpackr@1.11.8:
     optionalDependencies:
       msgpackr-extract: 3.0.3
 
@@ -10192,18 +10167,18 @@ snapshots:
 
   nuxi@3.32.0: {}
 
-  nuxt@3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.4)(@types/node@22.19.6)(db0@0.3.4)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.9.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
+  nuxt@3.11.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.4)(@types/node@22.19.6)(db0@0.3.4)(encoding@0.1.13)(eslint@9.1.0)(ioredis@5.9.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
     dependencies:
       '@nuxt/devalue': 2.0.2
-      '@nuxt/devtools': 1.7.0(rollup@4.55.1)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      '@nuxt/devtools': 1.7.0(rollup@4.55.1)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       '@nuxt/kit': 3.11.2(magicast@0.3.5)(rollup@4.55.1)
       '@nuxt/schema': 3.11.2(rollup@4.55.1)
       '@nuxt/telemetry': 2.6.6(magicast@0.3.5)
       '@nuxt/ui-templates': 1.3.4
-      '@nuxt/vite-builder': 3.11.2(@types/node@22.19.6)(eslint@9.1.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue-tsc@2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      '@nuxt/vite-builder': 3.11.2(@types/node@22.19.6)(eslint@9.1.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.55.1)(terser@5.45.0)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue-tsc@2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       '@unhead/dom': 1.11.20
       '@unhead/ssr': 1.11.20
-      '@unhead/vue': 1.11.20(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      '@unhead/vue': 1.11.20(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       '@vue/shared': 3.5.26
       acorn: 8.11.3
       c12: 1.11.2(magicast@0.3.5)
@@ -10243,13 +10218,13 @@ snapshots:
       unenv: 1.10.0
       unimport: 3.14.6(rollup@4.55.1)
       unplugin: 1.16.1
-      unplugin-vue-router: 0.7.0(rollup@4.55.1)(vue-router@4.6.4(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      unplugin-vue-router: 0.7.0(rollup@4.55.1)(vue-router@4.6.4(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       unstorage: 1.17.4(@netlify/blobs@9.1.2)(db0@0.3.4)(ioredis@5.9.2)
       untyped: 1.5.2
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
       vue-bundle-renderer: 2.2.0
       vue-devtools-stub: 0.1.0
-      vue-router: 4.6.4(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      vue-router: 4.6.4(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
     optionalDependencies:
       '@parcel/watcher': 2.5.4
       '@types/node': 22.19.6
@@ -10764,12 +10739,12 @@ snapshots:
       detective-sass: 6.0.0
       detective-scss: 5.0.0
       detective-stylus: 5.0.0
-      detective-typescript: 13.0.0(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
-      detective-vue2: 2.1.0(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      detective-typescript: 13.0.0(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      detective-vue2: 2.1.0(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
       module-definition: 6.0.0
       node-source-walk: 7.0.0
       postcss: 8.4.47
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
     transitivePeerDependencies:
       - supports-color
 
@@ -10792,9 +10767,9 @@ snapshots:
     dependencies:
       parse-ms: 4.0.0
 
-  primevue@3.49.1(patch_hash=944850b8c1828c923a11f74b9953aa809615d2a89ab51f954c4e2f7193ff8868)(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
+  primevue@3.49.1(patch_hash=944850b8c1828c923a11f74b9953aa809615d2a89ab51f954c4e2f7193ff8868)(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
     dependencies:
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
 
   process-nextick-args@2.0.1: {}
 
@@ -11481,9 +11456,9 @@ snapshots:
 
   tr46@0.0.3: {}
 
-  ts-api-utils@1.4.0(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
+  ts-api-utils@1.4.0(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
     dependencies:
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
 
   ts-graphviz@2.1.4:
     dependencies:
@@ -11563,12 +11538,12 @@ snapshots:
       is-typed-array: 1.1.13
       possible-typed-array-names: 1.0.0
 
-  typescript-transform-paths@3.5.6(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
+  typescript-transform-paths@3.5.6(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
     dependencies:
       minimatch: 9.0.5
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
 
-  typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0): {}
+  typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0): {}
 
   ufo@1.5.4: {}
 
@@ -11692,11 +11667,11 @@ snapshots:
       pathe: 2.0.3
       picomatch: 4.0.3
 
-  unplugin-vue-router@0.7.0(rollup@4.55.1)(vue-router@4.6.4(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
+  unplugin-vue-router@0.7.0(rollup@4.55.1)(vue-router@4.6.4(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
     dependencies:
       '@babel/types': 7.28.6
       '@rollup/pluginutils': 5.3.0(rollup@4.55.1)
-      '@vue-macros/common': 1.16.1(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      '@vue-macros/common': 1.16.1(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       ast-walker-scope: 0.5.0(rollup@4.55.1)
       chokidar: 3.6.0
       fast-glob: 3.3.3
@@ -11708,7 +11683,7 @@ snapshots:
       unplugin: 1.16.1
       yaml: 2.8.2
     optionalDependencies:
-      vue-router: 4.6.4(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      vue-router: 4.6.4(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
     transitivePeerDependencies:
       - rollup
       - vue
@@ -11865,7 +11840,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-checker@0.6.4(eslint@9.1.0)(optionator@0.9.4)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
+  vite-plugin-checker@0.6.4(eslint@9.1.0)(optionator@0.9.4)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0))(vue-tsc@2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
     dependencies:
       '@babel/code-frame': 7.28.6
       ansi-escapes: 4.3.2
@@ -11886,8 +11861,8 @@ snapshots:
     optionalDependencies:
       eslint: 9.1.0
       optionator: 0.9.4
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
-      vue-tsc: 2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      vue-tsc: 2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
 
   vite-plugin-inspect@0.8.9(@nuxt/kit@3.20.2(magicast@0.3.5))(rollup@4.55.1)(vite@5.4.19(@types/node@22.19.6)(terser@5.45.0)):
     dependencies:
@@ -11959,39 +11934,39 @@ snapshots:
     dependencies:
       ufo: 1.6.3
 
-  vue-demi@0.14.10(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
+  vue-demi@0.14.10(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
     dependencies:
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
 
   vue-devtools-stub@0.1.0: {}
 
-  vue-router@4.6.4(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
+  vue-router@4.6.4(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
     dependencies:
       '@vue/devtools-api': 6.6.4
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
 
-  vue-tsc@2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
+  vue-tsc@2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
     dependencies:
       '@volar/typescript': 2.4.27
-      '@vue/language-core': 2.2.8(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      '@vue/language-core': 2.2.8(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
     optional: true
 
-  vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
+  vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)):
     dependencies:
       '@vue/compiler-dom': 3.4.23
       '@vue/compiler-sfc': 3.4.23
       '@vue/runtime-dom': 3.4.23
-      '@vue/server-renderer': 3.4.23(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
+      '@vue/server-renderer': 3.4.23(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)))
       '@vue/shared': 3.4.23
     optionalDependencies:
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
 
-  vuetify@3.11.6(patch_hash=3163e5cde167a45b18940a5a4e051ad383887c68ea652893becd9b3757a6c819)(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue@3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
+  vuetify@3.11.6(patch_hash=71e44eb9b85cd0f98c60ae3c1eae408d7c085165ba7a7b91265f2ccbf5a8146a)(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))(vue@3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))):
     dependencies:
-      vue: 3.4.23(typescript@5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
+      vue: 3.4.23(typescript@5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0))
     optionalDependencies:
-      typescript: 5.9.3(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
+      typescript: 5.9.2(patch_hash=9f9678d78a879a2cbd842897c639ebfa754353e8098bac340a8ce599ae2161c0)
 
   walkdir@0.4.1: {}
 
