@@ -1,8 +1,8 @@
-diff --git a/dist/index.js b/dist/index.js
-index c15c7abc522e45d65c43dff265a22082a5b3dbc0..7e3172a101dde25f31d8e3f2a2eb6e2d7fa9ebd7 100644
---- a/dist/index.js
-+++ b/dist/index.js
-@@ -2023,6 +2023,8 @@ function vuePlugin(rawOptions = {}) {
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 09d3418894dfc0cb747c5f68cb3c74554a2c1e79..71940fb0269502ccc9f95b4ee83b8202ae7e8479 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -1700,6 +1700,8 @@ function vuePlugin(rawOptions = {}) {
  				const ssr = opt?.ssr === true;
  				const { filename, query } = parseVueRequest(id);
  				if (query.vue) {
