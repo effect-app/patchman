@@ -43,7 +43,7 @@
   "pnpm": {
     "patchedDependencies": {
       "@kevinmarrec/nuxt-pwa@0.17.0": "patches/@kevinmarrec__nuxt-pwa@0.17.0.patch",
-      "eslint-plugin-codegen@0.17.0": "patches/eslint-plugin-codegen@0.17.0.patch",
+      "eslint-plugin-codegen": "patches/eslint-plugin-codegen.patch",
       "@phaphoso/eslint-plugin-dprint@0.5.2": "patches/@phaphoso__eslint-plugin-dprint@0.5.2.patch",
       "date-fns@2.30.0": "patches/date-fns@2.30.0.patch",
       "@hebilicious/vue-query-nuxt@0.3.0": "patches/@hebilicious__vue-query-nuxt@0.3.0.patch",
