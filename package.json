@@ -30,7 +30,7 @@
     "@vitejs/plugin-vue": "6.0.1",
     "@vue/compiler-sfc": "3.5.21",
     "date-fns": "2.30.0",
-    "effect": "^3.19.14",
+    "effect": "4.0.0-beta.37",
     "eslint-plugin-codegen": "^0.17.0",
     "fast-check": "^3.23.2",
     "primevue": "3.49.1",
@@ -52,13 +52,13 @@
       "typescript": "patches/typescript.patch",
       "@effect/sql": "patches/@effect__sql.patch",
       "madge": "patches/madge.patch",
-      "effect": "patches/effect.patch",
       "ts-plugin-sort-import-suggestions": "patches/ts-plugin-sort-import-suggestions.patch",
       "@tanstack/query-core": "patches/@tanstack__query-core.patch",
       "@vitejs/plugin-vue": "patches/@vitejs__plugin-vue.patch",
       "@ben_12/eslint-plugin-dprint": "patches/@ben_12__eslint-plugin-dprint.patch",
       "vuetify": "patches/vuetify.patch",
-      "@effect/opentelemetry": "patches/@effect__opentelemetry.patch"
+      "@effect/opentelemetry": "patches/@effect__opentelemetry.patch",
+      "effect": "patches/effect.patch"
     }
   },
   "scripts": {
