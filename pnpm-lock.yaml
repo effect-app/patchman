@@ -32,9 +32,6 @@ patchedDependencies:
   date-fns@2.30.0:
     hash: e78293d43ecf1ec17dcb9ba323870443952893c78b45350cab8223b2f81f34f5
     path: patches/date-fns@2.30.0.patch
-  effect:
-    hash: 12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379
-    path: patches/effect.patch
   eslint-plugin-codegen:
     hash: c7a8546a270abdcd8317f0584f04f3bca89e9aeaab011d433623e3def2405058
     path: patches/eslint-plugin-codegen.patch
@@ -63,7 +60,7 @@ importers:
         version: 1.16.1(patch_hash=5a4f071b7b8899bca87c821b2bbccf82f0d36a17c0a1969b0cec32dbe7dc5dba)(eslint@10.1.0(jiti@2.6.1))
       '@fp-ts/optic':
         specifier: '>=0.25.0'
-        version: 0.25.0(patch_hash=2c18807bc058abfc40b24e3038710c0a66a3c12339fe52e220e886fd491f3297)(@effect/typeclass@0.40.0(effect@4.0.0-beta.38(patch_hash=12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379)))(effect@4.0.0-beta.38(patch_hash=12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379))
+        version: 0.25.0(patch_hash=2c18807bc058abfc40b24e3038710c0a66a3c12339fe52e220e886fd491f3297)(@effect/typeclass@0.40.0(effect@4.0.0-beta.40))(effect@4.0.0-beta.40)
       '@hebilicious/vue-query-nuxt':
         specifier: ~0.3.0
         version: 0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.83.1(vue@3.5.30(typescript@6.0.2(patch_hash=6a20b8df080eb8a9c34008e1802ecfd839f4e90e07f1ee97f78694dbd95a520e))))(nuxt@3.21.2(@parcel/watcher@2.5.6)(@types/node@22.19.15)(@vue/compiler-sfc@3.5.21)(cac@6.7.14)(db0@0.3.4)(eslint@10.1.0(jiti@2.6.1))(ioredis@5.10.1)(magicast@0.3.5)(optionator@0.9.4)(rollup-plugin-visualizer@7.0.1(rollup@4.60.0))(rollup@4.60.0)(terser@5.46.1)(tsx@4.21.0)(typescript@6.0.2(patch_hash=6a20b8df080eb8a9c34008e1802ecfd839f4e90e07f1ee97f78694dbd95a520e))(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3))
@@ -92,8 +89,8 @@ importers:
         specifier: 2.30.0
         version: 2.30.0(patch_hash=e78293d43ecf1ec17dcb9ba323870443952893c78b45350cab8223b2f81f34f5)
       effect:
-        specifier: 4.0.0-beta.38
-        version: 4.0.0-beta.38(patch_hash=12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379)
+        specifier: 4.0.0-beta.40
+        version: 4.0.0-beta.40
       eslint-plugin-codegen:
         specifier: ^0.17.0
         version: 0.17.0(patch_hash=c7a8546a270abdcd8317f0584f04f3bca89e9aeaab011d433623e3def2405058)
@@ -2490,8 +2487,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  effect@4.0.0-beta.38:
-    resolution: {integrity: sha512-4Sr5dJqfexSuH0CiXBisLavcTMmzcN0al62aTOHujBGmS6s2VA4Yg25bvvuQbCWTPXv4+zEC5zDupIGY420m1g==}
+  effect@4.0.0-beta.40:
+    resolution: {integrity: sha512-GA7Q1TglPIrEjg/Dtj3AvXbyh00A4sAXgu3JGDUHRPZ4hxMRC5CMAsCzCH0140zetRMpe7LOH8uVi5gb4t/8oQ==}
 
   electron-to-chromium@1.5.321:
     resolution: {integrity: sha512-L2C7Q279W2D/J4PLZLk7sebOILDSWos7bMsMNN06rK482umHUrh/3lM8G7IlHFOYip2oAg5nha1rCMxr/rs6ZQ==}
@@ -5376,9 +5373,9 @@ snapshots:
 
   '@dxup/unimport@0.1.2': {}
 
-  '@effect/typeclass@0.40.0(effect@4.0.0-beta.38(patch_hash=12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379))':
+  '@effect/typeclass@0.40.0(effect@4.0.0-beta.40)':
     dependencies:
-      effect: 4.0.0-beta.38(patch_hash=12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379)
+      effect: 4.0.0-beta.40
 
   '@emnapi/core@1.9.1':
     dependencies:
@@ -5573,10 +5570,10 @@ snapshots:
       '@eslint/core': 1.1.1
       levn: 0.4.1
 
-  '@fp-ts/optic@0.25.0(patch_hash=2c18807bc058abfc40b24e3038710c0a66a3c12339fe52e220e886fd491f3297)(@effect/typeclass@0.40.0(effect@4.0.0-beta.38(patch_hash=12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379)))(effect@4.0.0-beta.38(patch_hash=12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379))':
+  '@fp-ts/optic@0.25.0(patch_hash=2c18807bc058abfc40b24e3038710c0a66a3c12339fe52e220e886fd491f3297)(@effect/typeclass@0.40.0(effect@4.0.0-beta.40))(effect@4.0.0-beta.40)':
     dependencies:
-      '@effect/typeclass': 0.40.0(effect@4.0.0-beta.38(patch_hash=12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379))
-      effect: 4.0.0-beta.38(patch_hash=12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379)
+      '@effect/typeclass': 0.40.0(effect@4.0.0-beta.40)
+      effect: 4.0.0-beta.40
 
   '@hebilicious/vue-query-nuxt@0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.83.1(vue@3.5.30(typescript@6.0.2(patch_hash=6a20b8df080eb8a9c34008e1802ecfd839f4e90e07f1ee97f78694dbd95a520e))))(nuxt@3.21.2(@parcel/watcher@2.5.6)(@types/node@22.19.15)(@vue/compiler-sfc@3.5.21)(cac@6.7.14)(db0@0.3.4)(eslint@10.1.0(jiti@2.6.1))(ioredis@5.10.1)(magicast@0.3.5)(optionator@0.9.4)(rollup-plugin-visualizer@7.0.1(rollup@4.60.0))(rollup@4.60.0)(terser@5.46.1)(tsx@4.21.0)(typescript@6.0.2(patch_hash=6a20b8df080eb8a9c34008e1802ecfd839f4e90e07f1ee97f78694dbd95a520e))(vite@7.3.1(@types/node@22.19.15)(jiti@2.6.1)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(yaml@2.8.3))':
     dependencies:
@@ -7453,7 +7450,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  effect@4.0.0-beta.38(patch_hash=12662b49e73ab4a9f76d2bc8ebfc9d375d3fe4dcad40632ffd6e3d828ea70379):
+  effect@4.0.0-beta.40:
     dependencies:
       '@standard-schema/spec': 1.1.0
       fast-check: 4.6.0
