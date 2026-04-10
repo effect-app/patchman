@@ -55,6 +55,8 @@
     }
   },
   "scripts": {
-    "start": "vite-node ./index.ts"
+    "start": "vite-node ./index.ts",
+    "patch:dir": "./patch-package-dir.sh",
+    "patch:query-core": "./patch-query-core.sh"
   }
 }
