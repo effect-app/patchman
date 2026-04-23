@@ -1,0 +1,201 @@
+diff --git a/portal/Portal.vue b/portal/Portal.vue
+index a8cdc0540685801744a69464bac54411c87ae027..a516b7512ad074934cca4abf82b3208f64b190ef 100644
+--- a/portal/Portal.vue
++++ b/portal/Portal.vue
+@@ -3,7 +3,7 @@
+         <slot></slot>
+     </template>
+     <template v-else-if="mounted">
+-        <Teleport :to="appendTo">
++        <Teleport :to="globalOrAppendTo">
+             <slot></slot>
+         </Teleport>
+     </template>
+@@ -11,6 +11,9 @@
+ 
+ <script>
+ import { isClient } from '@primeuix/utils/dom';
++import { ref } from 'vue';
++
++export const globalAppendTo = ref();
+ 
+ export default {
+     name: 'Portal',
+@@ -33,6 +36,9 @@ export default {
+         this.mounted = isClient();
+     },
+     computed: {
++        globalOrAppendTo() {
++            return this.appendTo === 'body' ? globalAppendTo.value ?? this.appendTo : this.appendTo;
++        },
+         inline() {
+             return this.disabled || this.appendTo === 'self';
+         }
+diff --git a/portal/index.d.ts b/portal/index.d.ts
+index 2c7f4c69f4eebe5612e833f80770835fb71589bd..8fc5c0d0b352dacde7984d37b99de6da99bff44a 100644
+--- a/portal/index.d.ts
++++ b/portal/index.d.ts
+@@ -1,5 +1,5 @@
+ import type { DefineComponent, EmitFn, HintedString } from '@primevue/core';
+-import { VNode } from 'vue';
++import { Ref, VNode } from 'vue';
+ 
+ type PortalAppendToType = HintedString<'body' | 'self'> | undefined | HTMLElement;
+ 
+@@ -28,6 +28,8 @@ declare type PortalEmitsOptions = {};
+ 
+ export declare type PortalEmits = EmitFn<PortalEmitsOptions>;
+ 
++export declare const globalAppendTo: Ref<HTMLElement | undefined>;
++
+ declare const Portal: DefineComponent<PortalProps, PortalSlots, PortalEmits>;
+ 
+ declare module 'vue' {
+diff --git a/portal/index.mjs b/portal/index.mjs
+index b2e2537127bd2d0a6ccd021b3acdcaa360d7cdb3..2fc226e8937359b1b1bbf6e73d08af9e1d95d956 100644
+--- a/portal/index.mjs
++++ b/portal/index.mjs
+@@ -1,5 +1,7 @@
+ import { isClient } from '@primeuix/utils/dom';
+-import { renderSlot, openBlock, createBlock, Teleport, createCommentVNode } from 'vue';
++import { ref, renderSlot, openBlock, createBlock, Teleport, createCommentVNode } from 'vue';
++
++var globalAppendTo = ref();
+ 
+ var script = {
+   name: 'Portal',
+@@ -22,6 +24,10 @@ var script = {
+     this.mounted = isClient();
+   },
+   computed: {
++    globalOrAppendTo: function globalOrAppendTo() {
++      var _globalAppendTo$value;
++      return this.appendTo === 'body' ? (_globalAppendTo$value = globalAppendTo.value) !== null && _globalAppendTo$value !== void 0 ? _globalAppendTo$value : this.appendTo : this.appendTo;
++    },
+     inline: function inline() {
+       return this.disabled || this.appendTo === 'self';
+     }
+@@ -33,11 +39,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
+     key: 0
+   }) : $data.mounted ? (openBlock(), createBlock(Teleport, {
+     key: 1,
+-    to: $props.appendTo
++    to: $options.globalOrAppendTo
+   }, [renderSlot(_ctx.$slots, "default")], 8, ["to"])) : createCommentVNode("", true);
+ }
+ 
+ script.render = render;
+ 
+-export { script as default };
++export { script as default, globalAppendTo };
+ //# sourceMappingURL=index.mjs.map
+diff --git a/toast/ToastMessage.vue b/toast/ToastMessage.vue
+index aeee221ee714425dcb0c04f655ad1ce512f23219..ca907bca6d2e0ee11743009fb889da807596bd9c 100644
+--- a/toast/ToastMessage.vue
++++ b/toast/ToastMessage.vue
+@@ -116,31 +116,27 @@ export default {
+             this.onClick?.({ originalEvent: event, message: this.message });
+         },
+         handleMouseEnter(event) {
+-            if (this.onMouseEnter) {
+-                this.onMouseEnter({ originalEvent: event, message: this.message });
++            this.onMouseEnter?.({ originalEvent: event, message: this.message });
+ 
+-                if (event.defaultPrevented) {
+-                    return;
+-                }
++            if (event.defaultPrevented) {
++                return;
++            }
+ 
+-                if (this.message.life) {
+-                    this.lifeRemaining = this.createdAt + this.lifeRemaining - new Date().valueOf();
+-                    this.createdAt = null;
+-                    this.clearCloseTimeout();
+-                }
++            if (this.message.life) {
++                this.lifeRemaining = this.createdAt + this.lifeRemaining - new Date().valueOf();
++                this.createdAt = null;
++                this.clearCloseTimeout();
+             }
+         },
+         handleMouseLeave(event) {
+-            if (this.onMouseLeave) {
+-                this.onMouseLeave({ originalEvent: event, message: this.message });
++            this.onMouseLeave?.({ originalEvent: event, message: this.message });
+ 
+-                if (event.defaultPrevented) {
+-                    return;
+-                }
++            if (event.defaultPrevented) {
++                return;
++            }
+ 
+-                if (this.message.life) {
+-                    this.startTimeout();
+-                }
++            if (this.message.life) {
++                this.startTimeout();
+             }
+         }
+     },
+diff --git a/toast/index.mjs b/toast/index.mjs
+index 5f9d3bd49b4d937c9cf8c34e9fcb57fd38d9dcf9..2b2fbaca2227e74a70505af83224b37a463ade73 100644
+--- a/toast/index.mjs
++++ b/toast/index.mjs
+@@ -186,33 +186,31 @@ var script$1 = {
+       });
+     },
+     handleMouseEnter: function handleMouseEnter(event) {
+-      if (this.onMouseEnter) {
+-        this.onMouseEnter({
+-          originalEvent: event,
+-          message: this.message
+-        });
+-        if (event.defaultPrevented) {
+-          return;
+-        }
+-        if (this.message.life) {
+-          this.lifeRemaining = this.createdAt + this.lifeRemaining - new Date().valueOf();
+-          this.createdAt = null;
+-          this.clearCloseTimeout();
+-        }
++      var _this$onMouseEnter;
++      (_this$onMouseEnter = this.onMouseEnter) === null || _this$onMouseEnter === void 0 || _this$onMouseEnter.call(this, {
++        originalEvent: event,
++        message: this.message
++      });
++      if (event.defaultPrevented) {
++        return;
++      }
++      if (this.message.life) {
++        this.lifeRemaining = this.createdAt + this.lifeRemaining - new Date().valueOf();
++        this.createdAt = null;
++        this.clearCloseTimeout();
+       }
+     },
+     handleMouseLeave: function handleMouseLeave(event) {
+-      if (this.onMouseLeave) {
+-        this.onMouseLeave({
+-          originalEvent: event,
+-          message: this.message
+-        });
+-        if (event.defaultPrevented) {
+-          return;
+-        }
+-        if (this.message.life) {
+-          this.startTimeout();
+-        }
++      var _this$onMouseLeave;
++      (_this$onMouseLeave = this.onMouseLeave) === null || _this$onMouseLeave === void 0 || _this$onMouseLeave.call(this, {
++        originalEvent: event,
++        message: this.message
++      });
++      if (event.defaultPrevented) {
++        return;
++      }
++      if (this.message.life) {
++        this.startTimeout();
+       }
+     }
+   },
